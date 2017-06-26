@@ -1,0 +1,5 @@
+language: swift
+xcode_workspace: Meow.xcworkspace
+xcode_scheme: Meow
+
+
