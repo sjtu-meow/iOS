@@ -20,6 +20,8 @@
 		BF7878721F0100FF000FB7C6 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878711F0100FF000FB7C6 /* NewPostViewController.swift */; };
 		BF7878741F01010F000FB7C6 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878731F01010F000FB7C6 /* MyViewController.swift */; };
 		BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878751F010178000FB7C6 /* LoginViewController.swift */; };
+		BFE11D381F010AF200EED963 /* MomentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE11D361F010AF200EED963 /* MomentCell.xib */; };
+		BFE11D3A1F010DA600EED963 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE11D391F010DA600EED963 /* LoginView.xib */; };
 		C22E101695374861866E64E5 /* Pods_MeowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3612EC24166F9C122D5CDCC1 /* Pods_MeowTests.framework */; };
 		F766C86074602285186EC72F /* Pods_Meow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6E60B8501B878CBD0FCF4C /* Pods_Meow.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,8 @@
 		BF7878711F0100FF000FB7C6 /* NewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		BF7878731F01010F000FB7C6 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		BF7878751F010178000FB7C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BFE11D371F010AF200EED963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MomentCell.xib; sourceTree = "<group>"; };
+		BFE11D391F010DA600EED963 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		CA79F670B8B78BFA429DA2B5 /* Pods-MeowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.release.xcconfig"; sourceTree = "<group>"; };
 		D3373C17F9AC2E37EA35D5CF /* Pods-MeowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowUITests/Pods-MeowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F4EAF4C51299AB8CB42357F2 /* Pods-Meow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meow/Pods-Meow.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 		BF78783B1F00F2C9000FB7C6 /* Meow */ = {
 			isa = PBXGroup;
 			children = (
+				BFE11D351F010ADD00EED963 /* View */,
+				BFE11D341F010A8D00EED963 /* View Model */,
 				BF78786A1F010015000FB7C6 /* View Controller */,
 				BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */,
 				BF7878401F00F2C9000FB7C6 /* Main.storyboard */,
@@ -163,6 +169,22 @@
 				BF7878751F010178000FB7C6 /* LoginViewController.swift */,
 			);
 			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		BFE11D341F010A8D00EED963 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Model";
+			sourceTree = "<group>";
+		};
+		BFE11D351F010ADD00EED963 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFE11D361F010AF200EED963 /* MomentCell.xib */,
+				BFE11D391F010DA600EED963 /* LoginView.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		CF107B246708526B0BB79552 /* Frameworks */ = {
@@ -308,6 +330,8 @@
 				BF7878471F00F2C9000FB7C6 /* LaunchScreen.storyboard in Resources */,
 				BF7878441F00F2C9000FB7C6 /* Assets.xcassets in Resources */,
 				BF7878421F00F2C9000FB7C6 /* Main.storyboard in Resources */,
+				BFE11D3A1F010DA600EED963 /* LoginView.xib in Resources */,
+				BFE11D381F010AF200EED963 /* MomentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +564,14 @@
 				BF7878461F00F2C9000FB7C6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BFE11D361F010AF200EED963 /* MomentCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFE11D371F010AF200EED963 /* Base */,
+			);
+			name = MomentCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
