@@ -196,6 +196,7 @@
 			buildConfigurationList = BF7878611F00F2C9000FB7C6 /* Build configuration list for PBXNativeTarget "Meow" */;
 			buildPhases = (
 				4CB05C235BBE5C246EF01896 /* [CP] Check Pods Manifest.lock */,
+				BFE11D331F01051300EED963 /* Run Script */,
 				BF7878351F00F2C9000FB7C6 /* Sources */,
 				BF7878361F00F2C9000FB7C6 /* Frameworks */,
 				BF7878371F00F2C9000FB7C6 /* Resources */,
@@ -431,6 +432,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		BFE11D331F01051300EED963 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
 		};
 		D91974DE7948124C4AD07159 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

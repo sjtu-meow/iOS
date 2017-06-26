@@ -14,6 +14,9 @@ PODS:
   - Moya/ReactiveSwift (8.0.5):
     - Moya/Core
     - ReactiveSwift (~> 1.1)
+  - R.swift (3.3.0):
+    - R.swift.Library (~> 3.0.2)
+  - R.swift.Library (3.0.2)
   - ReactiveSwift (1.1.3):
     - Result (~> 3.2)
   - Result (3.2.3)
@@ -23,6 +26,7 @@ DEPENDENCIES:
   - ImageSlideshow
   - ImageSlideshow/Alamofire
   - Moya/ReactiveSwift
+  - R.swift
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -30,10 +34,12 @@ SPEC CHECKSUMS:
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   ImageSlideshow: a68a76fc618ebd2b7481ce355ad67d7097203976
   Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
+  R.swift: bde9704d50ff36820f49e266bc88ef545e1e9b36
+  R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
   ReactiveSwift: f54ba12c2e799003432930fa55495315ae44f32b
   Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: ebc6543517c4caeba70b9353f3bf40283a60a8c7
+PODFILE CHECKSUM: 21b5ca2cbfe17c86b5c10738387306f64f7b7f62
 
 COCOAPODS: 1.2.1

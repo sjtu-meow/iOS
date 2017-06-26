@@ -32,3 +32,5 @@ xcuserdata/
 timeline.xctimeline
 playground.xcworkspace
 
+*.generated.swift
+.idea

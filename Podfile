@@ -9,6 +9,7 @@ target 'Meow' do
   pod 'ImageSlideshow'
   pod 'ImageSlideshow/Alamofire'
   pod 'SwiftyJSON'
+  pod 'R.swift' 
   
   target 'MeowTests' do
     inherit! :search_paths
