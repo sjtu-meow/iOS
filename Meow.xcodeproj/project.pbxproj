@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		56B7293EE5F94719A447731F /* Pods_MeowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1186F1CE3D8690900D00F2C5 /* Pods_MeowUITests.framework */; };
 		BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */; };
-		BF78783F1F00F2C9000FB7C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78783E1F00F2C9000FB7C6 /* ViewController.swift */; };
 		BF7878421F00F2C9000FB7C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7878401F00F2C9000FB7C6 /* Main.storyboard */; };
 		BF7878441F00F2C9000FB7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7878431F00F2C9000FB7C6 /* Assets.xcassets */; };
 		BF7878471F00F2C9000FB7C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7878451F00F2C9000FB7C6 /* LaunchScreen.storyboard */; };
 		BF7878521F00F2C9000FB7C6 /* MeowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878511F00F2C9000FB7C6 /* MeowTests.swift */; };
 		BF78785D1F00F2C9000FB7C6 /* MeowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78785C1F00F2C9000FB7C6 /* MeowUITests.swift */; };
+		BF78786C1F01007D000FB7C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78786B1F01007D000FB7C6 /* HomeViewController.swift */; };
+		BF78786E1F0100D4000FB7C6 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78786D1F0100D4000FB7C6 /* ArticleViewController.swift */; };
+		BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */; };
+		BF7878721F0100FF000FB7C6 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878711F0100FF000FB7C6 /* NewPostViewController.swift */; };
+		BF7878741F01010F000FB7C6 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878731F01010F000FB7C6 /* MyViewController.swift */; };
+		BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878751F010178000FB7C6 /* LoginViewController.swift */; };
 		C22E101695374861866E64E5 /* Pods_MeowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3612EC24166F9C122D5CDCC1 /* Pods_MeowTests.framework */; };
 		F766C86074602285186EC72F /* Pods_Meow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6E60B8501B878CBD0FCF4C /* Pods_Meow.framework */; };
 /* End PBXBuildFile section */
@@ -44,7 +49,6 @@
 		A08DD2E53506F36693AD12C5 /* Pods-MeowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF7878391F00F2C9000FB7C6 /* Meow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF78783E1F00F2C9000FB7C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF7878411F00F2C9000FB7C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF7878431F00F2C9000FB7C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF7878461F00F2C9000FB7C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +59,12 @@
 		BF7878581F00F2C9000FB7C6 /* MeowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF78785C1F00F2C9000FB7C6 /* MeowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowUITests.swift; sourceTree = "<group>"; };
 		BF78785E1F00F2C9000FB7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF78786B1F01007D000FB7C6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BF78786D1F0100D4000FB7C6 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		BF7878711F0100FF000FB7C6 /* NewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		BF7878731F01010F000FB7C6 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		BF7878751F010178000FB7C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA79F670B8B78BFA429DA2B5 /* Pods-MeowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.release.xcconfig"; sourceTree = "<group>"; };
 		D3373C17F9AC2E37EA35D5CF /* Pods-MeowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowUITests/Pods-MeowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F4EAF4C51299AB8CB42357F2 /* Pods-Meow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meow/Pods-Meow.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,8 +124,8 @@
 		BF78783B1F00F2C9000FB7C6 /* Meow */ = {
 			isa = PBXGroup;
 			children = (
+				BF78786A1F010015000FB7C6 /* View Controller */,
 				BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */,
-				BF78783E1F00F2C9000FB7C6 /* ViewController.swift */,
 				BF7878401F00F2C9000FB7C6 /* Main.storyboard */,
 				BF7878431F00F2C9000FB7C6 /* Assets.xcassets */,
 				BF7878451F00F2C9000FB7C6 /* LaunchScreen.storyboard */,
@@ -140,6 +150,19 @@
 				BF78785E1F00F2C9000FB7C6 /* Info.plist */,
 			);
 			path = MeowUITests;
+			sourceTree = "<group>";
+		};
+		BF78786A1F010015000FB7C6 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF78786B1F01007D000FB7C6 /* HomeViewController.swift */,
+				BF78786D1F0100D4000FB7C6 /* ArticleViewController.swift */,
+				BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */,
+				BF7878711F0100FF000FB7C6 /* NewPostViewController.swift */,
+				BF7878731F01010F000FB7C6 /* MyViewController.swift */,
+				BF7878751F010178000FB7C6 /* LoginViewController.swift */,
+			);
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 		CF107B246708526B0BB79552 /* Frameworks */ = {
@@ -446,8 +469,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF78783F1F00F2C9000FB7C6 /* ViewController.swift in Sources */,
+				BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */,
+				BF78786E1F0100D4000FB7C6 /* ArticleViewController.swift in Sources */,
+				BF7878741F01010F000FB7C6 /* MyViewController.swift in Sources */,
+				BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */,
+				BF78786C1F01007D000FB7C6 /* HomeViewController.swift in Sources */,
 				BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */,
+				BF7878721F0100FF000FB7C6 /* NewPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,6 +726,7 @@
 				BF7878631F00F2C9000FB7C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF7878641F00F2C9000FB7C6 /* Build configuration list for PBXNativeTarget "MeowTests" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +735,7 @@
 				BF7878661F00F2C9000FB7C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF7878671F00F2C9000FB7C6 /* Build configuration list for PBXNativeTarget "MeowUITests" */ = {
 			isa = XCConfigurationList;
@@ -714,6 +744,7 @@
 				BF7878691F00F2C9000FB7C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
