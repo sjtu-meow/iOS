@@ -16,29 +16,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XEP-Ep-yzj">
-                    <rect key="frame" x="0.0" y="84" width="375" height="88"/>
+                    <rect key="frame" x="20" y="84" width="335" height="88"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="账号" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4zs-aN-ovj">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="21"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="密码" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ba-KS-SvN">
-                            <rect key="frame" x="0.0" y="29" width="375" height="21"/>
+                            <rect key="frame" x="0.0" y="29" width="335" height="21"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VXM-Yx-AWR">
-                            <rect key="frame" x="0.0" y="58" width="375" height="30"/>
+                            <rect key="frame" x="0.0" y="58" width="335" height="30"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvE-1y-26u">
-                                    <rect key="frame" x="0.0" y="0.0" width="182.5" height="30"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="162.5" height="30"/>
                                     <state key="normal" title="登录"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMw-U6-COb">
-                                    <rect key="frame" x="192.5" y="0.0" width="182.5" height="30"/>
+                                    <rect key="frame" x="172.5" y="0.0" width="162.5" height="30"/>
                                     <state key="normal" title="注册"/>
                                 </button>
                             </subviews>
@@ -54,14 +54,14 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="XEP-Ep-yzj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DE9-1g-Ppc"/>
-                <constraint firstItem="5FH-w9-UwK" firstAttribute="leading" secondItem="XEP-Ep-yzj" secondAttribute="leading" id="FBC-ew-eoy"/>
+                <constraint firstItem="XEP-Ep-yzj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="BKQ-r0-aRj"/>
                 <constraint firstItem="XEP-Ep-yzj" firstAttribute="top" secondItem="5FH-w9-UwK" secondAttribute="bottom" constant="20" id="MB9-Qz-AvT"/>
-                <constraint firstItem="5FH-w9-UwK" firstAttribute="trailing" secondItem="XEP-Ep-yzj" secondAttribute="trailing" id="eaP-P2-NNR"/>
+                <constraint firstAttribute="trailing" secondItem="XEP-Ep-yzj" secondAttribute="trailing" constant="20" id="fRE-Tl-caB"/>
                 <constraint firstItem="5FH-w9-UwK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="faH-9U-ZG5"/>
-                <constraint firstAttribute="trailing" secondItem="XEP-Ep-yzj" secondAttribute="trailing" id="zZ3-Ar-a2F"/>
+                <constraint firstItem="5FH-w9-UwK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oo4-af-yQc"/>
+                <constraint firstItem="5FH-w9-UwK" firstAttribute="centerX" secondItem="XEP-Ep-yzj" secondAttribute="centerX" id="xbM-hr-jlw"/>
             </constraints>
-            <point key="canvasLocation" x="36" y="58"/>
+            <point key="canvasLocation" x="35.5" y="57.5"/>
         </view>
     </objects>
 </document>
