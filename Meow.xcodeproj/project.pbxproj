@@ -170,7 +170,6 @@
 				BF390A4C1F01FBFD00555B93 /* GlobalFunctions.swift */,
 				BF390A4E1F01FCE500555B93 /* Logger.swift */,
 				BF7878431F00F2C9000FB7C6 /* Assets.xcassets */,
-				2443A6681F02064C0032BEB9 /* MomentTableViewCell.xib */,
 				BF390A421F016F8500555B93 /* API */,
 				BF7878451F00F2C9000FB7C6 /* LaunchScreen.storyboard */,
 				BF7878401F00F2C9000FB7C6 /* Main.storyboard */,
@@ -224,6 +223,7 @@
 		BFE11D351F010ADD00EED963 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2443A6681F02064C0032BEB9 /* MomentTableViewCell.xib */,
 				BFE11D361F010AF200EED963 /* MomentCell.xib */,
 				BFE11D391F010DA600EED963 /* LoginView.xib */,
 			);
