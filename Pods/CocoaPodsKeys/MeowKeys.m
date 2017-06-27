@@ -42,7 +42,7 @@ static NSString *_podKeysdeba09f9e3f81c6533a638efc9bb27ba(MeowKeys *self, SEL _c
 {
   
     
-      char cString[2] = { MeowKeysData[79], '\0' };
+      char cString[2] = { MeowKeysData[23], '\0' };
     
     return [NSString stringWithCString:cString encoding:NSUTF8StringEncoding];
   
@@ -52,14 +52,14 @@ static NSString *_podKeys4e139fdec88dd5fc288e6b01d2cd53f6(MeowKeys *self, SEL _c
 {
   
     
-      char cString[2] = { MeowKeysData[77], '\0' };
+      char cString[2] = { MeowKeysData[26], '\0' };
     
     return [NSString stringWithCString:cString encoding:NSUTF8StringEncoding];
   
 }
 
 
-static char MeowKeysData[82] = "eiMuxXV6joIfb8L+WQSko+5X7nvu44WyP4Hgq8F2hAD0czt9JJ7vKOpt9cSBawkbJEQQDMQXxdyls1=1\\\"";
+static char MeowKeysData[62] = "YfUW5NdHVzyIwfnOTSOjZUH1031VGctnrnhDQ8RszS3uQOZ8GM9MJpzGbJM=\\\"";
 
 - (NSString *)description
 {

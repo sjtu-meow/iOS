@@ -11,6 +11,9 @@
 		BF390A451F01700500555B93 /* MeowAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A441F01700500555B93 /* MeowAPI.swift */; };
 		BF390A471F01702D00555B93 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A461F01702D00555B93 /* Networking.swift */; };
 		BF390A491F01704B00555B93 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A481F01704B00555B93 /* NetworkLogger.swift */; };
+		BF390A4B1F01F58500555B93 /* JSONConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A4A1F01F58500555B93 /* JSONConvertible.swift */; };
+		BF390A4D1F01FBFD00555B93 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A4C1F01FBFD00555B93 /* GlobalFunctions.swift */; };
+		BF390A4F1F01FCE500555B93 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A4E1F01FCE500555B93 /* Logger.swift */; };
 		BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */; };
 		BF7878421F00F2C9000FB7C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7878401F00F2C9000FB7C6 /* Main.storyboard */; };
 		BF7878441F00F2C9000FB7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7878431F00F2C9000FB7C6 /* Assets.xcassets */; };
@@ -55,6 +58,9 @@
 		BF390A441F01700500555B93 /* MeowAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeowAPI.swift; sourceTree = "<group>"; };
 		BF390A461F01702D00555B93 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		BF390A481F01704B00555B93 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		BF390A4A1F01F58500555B93 /* JSONConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONConvertible.swift; sourceTree = "<group>"; };
+		BF390A4C1F01FBFD00555B93 /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		BF390A4E1F01FCE500555B93 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		BF7878391F00F2C9000FB7C6 /* Meow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF7878411F00F2C9000FB7C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 		BF390A431F016FAE00555B93 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF390A4A1F01F58500555B93 /* JSONConvertible.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -151,6 +158,7 @@
 		BF78783B1F00F2C9000FB7C6 /* Meow */ = {
 			isa = PBXGroup;
 			children = (
+				BF390A4E1F01FCE500555B93 /* Logger.swift */,
 				BF390A431F016FAE00555B93 /* Model */,
 				BF390A421F016F8500555B93 /* API */,
 				BFE11D351F010ADD00EED963 /* View */,
@@ -161,6 +169,7 @@
 				BF7878431F00F2C9000FB7C6 /* Assets.xcassets */,
 				BF7878451F00F2C9000FB7C6 /* LaunchScreen.storyboard */,
 				BF7878481F00F2C9000FB7C6 /* Info.plist */,
+				BF390A4C1F01FBFD00555B93 /* GlobalFunctions.swift */,
 			);
 			path = Meow;
 			sourceTree = "<group>";
@@ -535,14 +544,17 @@
 			files = (
 				BF390A491F01704B00555B93 /* NetworkLogger.swift in Sources */,
 				BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */,
+				BF390A4D1F01FBFD00555B93 /* GlobalFunctions.swift in Sources */,
 				BF78786E1F0100D4000FB7C6 /* ArticleViewController.swift in Sources */,
 				BF390A451F01700500555B93 /* MeowAPI.swift in Sources */,
 				BF390A471F01702D00555B93 /* Networking.swift in Sources */,
 				BF7878741F01010F000FB7C6 /* MyViewController.swift in Sources */,
 				BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */,
 				BF78786C1F01007D000FB7C6 /* HomeViewController.swift in Sources */,
+				BF390A4F1F01FCE500555B93 /* Logger.swift in Sources */,
 				BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */,
 				BF7878721F0100FF000FB7C6 /* NewPostViewController.swift in Sources */,
+				BF390A4B1F01F58500555B93 /* JSONConvertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

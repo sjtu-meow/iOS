@@ -19,6 +19,7 @@ target 'Meow' do
   pod 'R.swift' 
   pod 'AVOSCloud'
   pod 'QCloudCOSV4'
+  pod 'DateToolsSwift'
 
   target 'MeowTests' do
     inherit! :search_paths
