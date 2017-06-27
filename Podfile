@@ -4,7 +4,10 @@ plugin 'cocoapods-keys', {
   :project => 'Meow',
   :keys => [
     'LeanCloudAppId',
-    'LeanCloudClientKey'
+    'LeanCloudClientKey',
+    'QCloudCOSAppId',
+    'QCloudCOSSecretId',
+    'QCloudCOSSecretKey'
   ]
 }
 target 'Meow' do

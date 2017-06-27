@@ -15,6 +15,9 @@
 
   @dynamic leanCloudAppId;
   @dynamic leanCloudClientKey;
+  @dynamic qCloudCOSAppId;
+  @dynamic qCloudCOSSecretId;
+  @dynamic qCloudCOSSecretKey;
 
 #pragma clang diagnostic pop
 
@@ -31,6 +34,18 @@
     implementation = _podKeys4e139fdec88dd5fc288e6b01d2cd53f6;
   }
 
+  if ([key isEqualToString:@"qCloudCOSAppId"]) {
+    implementation = _podKeys46720e4ba6388af75e100b3a0fe0099a;
+  }
+
+  if ([key isEqualToString:@"qCloudCOSSecretId"]) {
+    implementation = _podKeys7108f4404f13bfc926a3320ea002d017;
+  }
+
+  if ([key isEqualToString:@"qCloudCOSSecretKey"]) {
+    implementation = _podKeys28af2783dd2c62b3c52e2a65ddff72ac;
+  }
+
   if (!implementation) {
     return [super resolveInstanceMethod:name];
   }
@@ -42,7 +57,7 @@ static NSString *_podKeysdeba09f9e3f81c6533a638efc9bb27ba(MeowKeys *self, SEL _c
 {
   
     
-      char cString[2] = { MeowKeysData[23], '\0' };
+      char cString[34] = { MeowKeysData[974], MeowKeysData[202], MeowKeysData[535], MeowKeysData[1500], MeowKeysData[1774], MeowKeysData[979], MeowKeysData[3114], MeowKeysData[2186], MeowKeysData[3226], MeowKeysData[527], MeowKeysData[2710], MeowKeysData[1003], MeowKeysData[3560], MeowKeysData[3372], MeowKeysData[1589], MeowKeysData[2469], MeowKeysData[394], MeowKeysData[2389], MeowKeysData[1674], MeowKeysData[1930], MeowKeysData[3588], MeowKeysData[3322], MeowKeysData[1321], MeowKeysData[2347], MeowKeysData[1291], MeowKeysData[2233], MeowKeysData[1536], MeowKeysData[2122], MeowKeysData[2270], MeowKeysData[809], MeowKeysData[562], MeowKeysData[361], MeowKeysData[407], '\0' };
     
     return [NSString stringWithCString:cString encoding:NSUTF8StringEncoding];
   
@@ -52,20 +67,53 @@ static NSString *_podKeys4e139fdec88dd5fc288e6b01d2cd53f6(MeowKeys *self, SEL _c
 {
   
     
-      char cString[2] = { MeowKeysData[26], '\0' };
+      char cString[25] = { MeowKeysData[2070], MeowKeysData[345], MeowKeysData[2168], MeowKeysData[1636], MeowKeysData[1067], MeowKeysData[943], MeowKeysData[1300], MeowKeysData[3022], MeowKeysData[2984], MeowKeysData[1692], MeowKeysData[3116], MeowKeysData[1972], MeowKeysData[431], MeowKeysData[2886], MeowKeysData[1123], MeowKeysData[2923], MeowKeysData[2856], MeowKeysData[822], MeowKeysData[2730], MeowKeysData[1212], MeowKeysData[1342], MeowKeysData[3046], MeowKeysData[198], MeowKeysData[2562], '\0' };
+    
+    return [NSString stringWithCString:cString encoding:NSUTF8StringEncoding];
+  
+}
+
+static NSString *_podKeys46720e4ba6388af75e100b3a0fe0099a(MeowKeys *self, SEL _cmd)
+{
+  
+    
+      char cString[11] = { MeowKeysData[549], MeowKeysData[1625], MeowKeysData[877], MeowKeysData[2445], MeowKeysData[2663], MeowKeysData[3567], MeowKeysData[2057], MeowKeysData[347], MeowKeysData[1497], MeowKeysData[1360], '\0' };
+    
+    return [NSString stringWithCString:cString encoding:NSUTF8StringEncoding];
+  
+}
+
+static NSString *_podKeys7108f4404f13bfc926a3320ea002d017(MeowKeys *self, SEL _cmd)
+{
+  
+    
+      char cString[37] = { MeowKeysData[168], MeowKeysData[1441], MeowKeysData[3225], MeowKeysData[3530], MeowKeysData[1309], MeowKeysData[2667], MeowKeysData[873], MeowKeysData[1049], MeowKeysData[2658], MeowKeysData[254], MeowKeysData[1286], MeowKeysData[3062], MeowKeysData[1422], MeowKeysData[1552], MeowKeysData[284], MeowKeysData[503], MeowKeysData[3117], MeowKeysData[977], MeowKeysData[905], MeowKeysData[577], MeowKeysData[2184], MeowKeysData[2144], MeowKeysData[2366], MeowKeysData[1039], MeowKeysData[499], MeowKeysData[783], MeowKeysData[2618], MeowKeysData[1357], MeowKeysData[3238], MeowKeysData[1573], MeowKeysData[2118], MeowKeysData[2242], MeowKeysData[417], MeowKeysData[1020], MeowKeysData[1476], MeowKeysData[2979], '\0' };
+    
+    return [NSString stringWithCString:cString encoding:NSUTF8StringEncoding];
+  
+}
+
+static NSString *_podKeys28af2783dd2c62b3c52e2a65ddff72ac(MeowKeys *self, SEL _cmd)
+{
+  
+    
+      char cString[33] = { MeowKeysData[253], MeowKeysData[423], MeowKeysData[1472], MeowKeysData[2421], MeowKeysData[2212], MeowKeysData[1927], MeowKeysData[3302], MeowKeysData[810], MeowKeysData[2009], MeowKeysData[920], MeowKeysData[1746], MeowKeysData[3236], MeowKeysData[47], MeowKeysData[650], MeowKeysData[2078], MeowKeysData[11], MeowKeysData[327], MeowKeysData[1464], MeowKeysData[2794], MeowKeysData[2185], MeowKeysData[2356], MeowKeysData[211], MeowKeysData[3288], MeowKeysData[1008], MeowKeysData[800], MeowKeysData[1887], MeowKeysData[1557], MeowKeysData[2786], MeowKeysData[243], MeowKeysData[1271], MeowKeysData[2289], MeowKeysData[2604], '\0' };
     
     return [NSString stringWithCString:cString encoding:NSUTF8StringEncoding];
   
 }
 
 
-static char MeowKeysData[62] = "YfUW5NdHVzyIwfnOTSOjZUH1031VGctnrnhDQ8RszS3uQOZ8GM9MJpzGbJM=\\\"";
+static char MeowKeysData[3602] = "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\\\"";
 
 - (NSString *)description
 {
   return [@{
             @"leanCloudAppId": self.leanCloudAppId,
             @"leanCloudClientKey": self.leanCloudClientKey,
+            @"qCloudCOSAppId": self.qCloudCOSAppId,
+            @"qCloudCOSSecretId": self.qCloudCOSSecretId,
+            @"qCloudCOSSecretKey": self.qCloudCOSSecretKey,
   } description];
 }
 

@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly) NSString *leanCloudAppId;
 @property (readonly) NSString *leanCloudClientKey;
+@property (readonly) NSString *qCloudCOSAppId;
+@property (readonly) NSString *qCloudCOSSecretId;
+@property (readonly) NSString *qCloudCOSSecretKey;
 
 @end
 
