@@ -34,3 +34,4 @@ playground.xcworkspace
 
 *.generated.swift
 .idea
+.env

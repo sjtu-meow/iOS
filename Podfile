@@ -1,5 +1,12 @@
 platform :ios, '9.0'
 
+plugin 'cocoapods-keys', {
+  :project => 'Meow',
+  :keys => [
+    'LeanCloudAppId',
+    'LeanCloudClientKey'
+  ]
+}
 target 'Meow' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
@@ -10,7 +17,8 @@ target 'Meow' do
   pod 'ImageSlideshow/Alamofire'
   pod 'SwiftyJSON'
   pod 'R.swift' 
-  
+  pod 'AVOSCloud'
+
   target 'MeowTests' do
     inherit! :search_paths
     # Pods for testing
