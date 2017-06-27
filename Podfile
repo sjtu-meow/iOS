@@ -5,7 +5,7 @@ target 'Meow' do
   use_frameworks!
 
   # Pods for Meow
-  pod 'Moya/ReactiveSwift'
+  pod 'Moya/RxSwift'
   pod 'ImageSlideshow'
   pod 'ImageSlideshow/Alamofire'
   pod 'SwiftyJSON'
