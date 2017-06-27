@@ -41,4 +41,8 @@ class MeowAPIProvider {
     }
 
     
+    func request(_ target: MeowAPI) -> Observable<Response> {
+        return delegate.request(target)
+    }
+    
 }
