@@ -33,7 +33,7 @@
         <!--文章-->
         <scene sceneID="F2n-M1-ILX">
             <objects>
-                <tableViewController title="文章" id="AlW-pk-E3D" customClass="ArticleVIewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="文章" id="AlW-pk-E3D" customClass="ArticleViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Root View Controller" id="GP8-S7-h5W"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDq-89-76P" userLabel="First Responder" sceneMemberID="firstResponder"/>
