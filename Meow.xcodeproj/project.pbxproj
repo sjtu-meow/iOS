@@ -33,6 +33,7 @@
 		BFE11D381F010AF200EED963 /* MomentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE11D361F010AF200EED963 /* MomentCell.xib */; };
 		BFE11D3A1F010DA600EED963 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE11D391F010DA600EED963 /* LoginView.xib */; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
+		BFF1395D1F02AE55006DF489 /* COSProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395C1F02AE55006DF489 /* COSProvider.swift */; };
 		C22E101695374861866E64E5 /* Pods_MeowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3612EC24166F9C122D5CDCC1 /* Pods_MeowTests.framework */; };
 		F766C86074602285186EC72F /* Pods_Meow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6E60B8501B878CBD0FCF4C /* Pods_Meow.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,8 @@
 		BFE11D371F010AF200EED963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MomentCell.xib; sourceTree = "<group>"; };
 		BFE11D391F010DA600EED963 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
+		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
+		BFF1395C1F02AE55006DF489 /* COSProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COSProvider.swift; sourceTree = "<group>"; };
 		CA79F670B8B78BFA429DA2B5 /* Pods-MeowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.release.xcconfig"; sourceTree = "<group>"; };
 		D3373C17F9AC2E37EA35D5CF /* Pods-MeowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowUITests/Pods-MeowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F4EAF4C51299AB8CB42357F2 /* Pods-Meow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meow/Pods-Meow.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,14 +172,8 @@
 		BF78783B1F00F2C9000FB7C6 /* Meow */ = {
 			isa = PBXGroup;
 			children = (
-				BF7878481F00F2C9000FB7C6 /* Info.plist */,
-				BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */,
-				BF390A4C1F01FBFD00555B93 /* GlobalFunctions.swift */,
 				BF390A4E1F01FCE500555B93 /* Logger.swift */,
-				BF7878431F00F2C9000FB7C6 /* Assets.xcassets */,
 				BF390A421F016F8500555B93 /* API */,
-				BF7878451F00F2C9000FB7C6 /* LaunchScreen.storyboard */,
-				BF7878401F00F2C9000FB7C6 /* Main.storyboard */,
 				BF390A431F016FAE00555B93 /* Model */,
 				BFE11D351F010ADD00EED963 /* View */,
 				BF78786A1F010015000FB7C6 /* View Controller */,
@@ -188,6 +185,8 @@
 				BF7878481F00F2C9000FB7C6 /* Info.plist */,
 				BF390A4C1F01FBFD00555B93 /* GlobalFunctions.swift */,
 				BFF139581F025163006DF489 /* Observable+MapTo.swift */,
+				BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */,
+				BFF1395C1F02AE55006DF489 /* COSProvider.swift */,
 			);
 			path = Meow;
 			sourceTree = "<group>";
@@ -577,6 +576,7 @@
 				BF78786C1F01007D000FB7C6 /* HomeViewController.swift in Sources */,
 				BF390A4F1F01FCE500555B93 /* Logger.swift in Sources */,
 				BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */,
+				BFF1395D1F02AE55006DF489 /* COSProvider.swift in Sources */,
 				BF7878721F0100FF000FB7C6 /* NewPostViewController.swift in Sources */,
 				BF390A4B1F01F58500555B93 /* JSONConvertible.swift in Sources */,
 				BF390A511F02053A00555B93 /* Token.swift in Sources */,
@@ -745,6 +745,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.sjtumeow.Meow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "meow/Meow-Bridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -758,6 +759,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.sjtumeow.Meow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "meow/Meow-Bridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
