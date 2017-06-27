@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2443A6691F02064C0032BEB9 /* MomentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2443A6681F02064C0032BEB9 /* MomentTableViewCell.xib */; };
 		56B7293EE5F94719A447731F /* Pods_MeowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1186F1CE3D8690900D00F2C5 /* Pods_MeowUITests.framework */; };
 		BF390A451F01700500555B93 /* MeowAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A441F01700500555B93 /* MeowAPI.swift */; };
 		BF390A471F01702D00555B93 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A461F01702D00555B93 /* Networking.swift */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		1186F1CE3D8690900D00F2C5 /* Pods_MeowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6E60B8501B878CBD0FCF4C /* Pods_Meow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2443A6681F02064C0032BEB9 /* MomentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MomentTableViewCell.xib; sourceTree = "<group>"; };
 		3612EC24166F9C122D5CDCC1 /* Pods_MeowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8858B54026EC68FEB34336F5 /* Pods-MeowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowUITests/Pods-MeowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A08DD2E53506F36693AD12C5 /* Pods-MeowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,18 +160,19 @@
 		BF78783B1F00F2C9000FB7C6 /* Meow */ = {
 			isa = PBXGroup;
 			children = (
-				BF390A4E1F01FCE500555B93 /* Logger.swift */,
-				BF390A431F016FAE00555B93 /* Model */,
-				BF390A421F016F8500555B93 /* API */,
-				BFE11D351F010ADD00EED963 /* View */,
-				BFE11D341F010A8D00EED963 /* View Model */,
-				BF78786A1F010015000FB7C6 /* View Controller */,
-				BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */,
-				BF7878401F00F2C9000FB7C6 /* Main.storyboard */,
-				BF7878431F00F2C9000FB7C6 /* Assets.xcassets */,
-				BF7878451F00F2C9000FB7C6 /* LaunchScreen.storyboard */,
 				BF7878481F00F2C9000FB7C6 /* Info.plist */,
+				BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */,
 				BF390A4C1F01FBFD00555B93 /* GlobalFunctions.swift */,
+				BF390A4E1F01FCE500555B93 /* Logger.swift */,
+				BF7878431F00F2C9000FB7C6 /* Assets.xcassets */,
+				2443A6681F02064C0032BEB9 /* MomentTableViewCell.xib */,
+				BF390A421F016F8500555B93 /* API */,
+				BF7878451F00F2C9000FB7C6 /* LaunchScreen.storyboard */,
+				BF7878401F00F2C9000FB7C6 /* Main.storyboard */,
+				BF390A431F016FAE00555B93 /* Model */,
+				BFE11D351F010ADD00EED963 /* View */,
+				BF78786A1F010015000FB7C6 /* View Controller */,
+				BFE11D341F010A8D00EED963 /* View Model */,
 			);
 			path = Meow;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7878471F00F2C9000FB7C6 /* LaunchScreen.storyboard in Resources */,
+				2443A6691F02064C0032BEB9 /* MomentTableViewCell.xib in Resources */,
 				BF7878441F00F2C9000FB7C6 /* Assets.xcassets in Resources */,
 				BF7878421F00F2C9000FB7C6 /* Main.storyboard in Resources */,
 				BFE11D3A1F010DA600EED963 /* LoginView.xib in Resources */,

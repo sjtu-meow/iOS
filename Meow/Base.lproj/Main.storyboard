@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tng-qH-ueX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tng-qH-ueX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,8 +19,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gvw-Hl-tVF" kind="relationship" relationship="viewControllers" id="A8t-rT-hCd"/>
                         <segue destination="VnB-Lx-9bs" kind="relationship" relationship="viewControllers" id="bhT-Pc-8ry"/>
+                        <segue destination="gvw-Hl-tVF" kind="relationship" relationship="viewControllers" id="A8t-rT-hCd"/>
                         <segue destination="uD4-7S-PQR" kind="relationship" relationship="viewControllers" id="hcu-BM-b4t"/>
                         <segue destination="fSa-KZ-6di" kind="relationship" relationship="viewControllers" id="M1F-tr-a6N"/>
                         <segue destination="KyE-FT-7Gb" kind="relationship" relationship="viewControllers" id="bay-Zw-yRL"/>
