@@ -39,6 +39,9 @@ class MeowAPIProvider {
         delegate = RxMoyaProvider<MeowAPI>(endpointClosure: endpointClosure)
 
     }
-
+    
+    func request(_ target: MeowAPI) -> Observable<Response> {
+        return delegate.request(target)
+    }
     
 }
