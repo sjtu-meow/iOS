@@ -7,7 +7,7 @@
 
 import Moya
 
-enum MeowAPI {
+enum MeowAPI  {
     case moments
 }
 

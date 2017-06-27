@@ -14,6 +14,8 @@
 		BF390A4B1F01F58500555B93 /* JSONConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A4A1F01F58500555B93 /* JSONConvertible.swift */; };
 		BF390A4D1F01FBFD00555B93 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A4C1F01FBFD00555B93 /* GlobalFunctions.swift */; };
 		BF390A4F1F01FCE500555B93 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A4E1F01FCE500555B93 /* Logger.swift */; };
+		BF390A511F02053A00555B93 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A501F02053A00555B93 /* Token.swift */; };
+		BF390A551F021A5C00555B93 /* TokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A541F021A5C00555B93 /* TokenTests.swift */; };
 		BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */; };
 		BF7878421F00F2C9000FB7C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7878401F00F2C9000FB7C6 /* Main.storyboard */; };
 		BF7878441F00F2C9000FB7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7878431F00F2C9000FB7C6 /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 		BF390A4A1F01F58500555B93 /* JSONConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONConvertible.swift; sourceTree = "<group>"; };
 		BF390A4C1F01FBFD00555B93 /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		BF390A4E1F01FCE500555B93 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		BF390A501F02053A00555B93 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		BF390A541F021A5C00555B93 /* TokenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenTests.swift; sourceTree = "<group>"; };
 		BF7878391F00F2C9000FB7C6 /* Meow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF7878411F00F2C9000FB7C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				BF390A4A1F01F58500555B93 /* JSONConvertible.swift */,
+				BF390A501F02053A00555B93 /* Token.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			children = (
 				BF7878511F00F2C9000FB7C6 /* MeowTests.swift */,
 				BF7878531F00F2C9000FB7C6 /* Info.plist */,
+				BF390A541F021A5C00555B93 /* TokenTests.swift */,
 			);
 			path = MeowTests;
 			sourceTree = "<group>";
@@ -555,6 +561,7 @@
 				BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */,
 				BF7878721F0100FF000FB7C6 /* NewPostViewController.swift in Sources */,
 				BF390A4B1F01F58500555B93 /* JSONConvertible.swift in Sources */,
+				BF390A511F02053A00555B93 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7878521F00F2C9000FB7C6 /* MeowTests.swift in Sources */,
+				BF390A551F021A5C00555B93 /* TokenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
