@@ -2,4 +2,8 @@ language: swift
 xcode_workspace: Meow.xcworkspace
 xcode_scheme: Meow
 
+script:
+    - xcodebuild -showsdks
+    - instruments -s devices
+    - xcodebuild test -workspace Meow.xcworkspace -scheme Meow -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.0'
 
