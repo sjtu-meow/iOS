@@ -21,7 +21,11 @@ class SignupViewController: UIViewController {
     
     
     @IBAction func getVerificationCode(_ sender: Any) {
-        AVSMS.sendValidationCode(phoneNumber: "15821883353", callback: nil)
+        
+        AVSMS.sendValidationCode(phoneNumber: "15821883353") {
+            (succeeded, error) in
+            
+        }
         
     }
     
