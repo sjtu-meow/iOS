@@ -23,7 +23,8 @@ target 'Meow' do
   pod 'AVOSCloud'
   pod 'QCloudCOSV4'
   pod 'DateToolsSwift'
-
+  pod 'PKHUD', '~> 4.0'
+  
   target 'MeowTests' do
     inherit! :search_paths
     # Pods for testing

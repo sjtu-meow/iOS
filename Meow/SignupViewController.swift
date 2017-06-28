@@ -8,6 +8,7 @@
 
 import UIKit
 import AVOSCloud
+import PKHUD
 
 class SignupViewController: UIViewController {
     
@@ -22,41 +23,59 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var signupButton: UIButton!
     
    
-    var countdown = 60
+    var countdown: Int = 5
     var timer: Timer!
     @IBAction func getVerificationCode(_ sender: Any) {
         verifyButton.isEnabled = false
+        countdown = 5
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
-        timer.fire()
+        
         AVSMS.sendValidationCode(phoneNumber: "15821883353") {
             (succeeded, error) in
             
         }
-        
     }
     
     func updateCounter(){
         if countdown == 0 {
-            countdown = 60
             timer.invalidate()
-            
             verifyButton.isEnabled = true
-            verifyButton.titleLabel?.text = "获取验证码"
+            
         }
         else{
             countdown -= 1
-            verifyButton.titleLabel?.text = "\(countdown)秒后点击重发"
-    
+            verifyButton.setTitle("\(countdown)秒后点击重发", for: UIControlState.disabled)
+            
         }
         
     }
     
     @IBAction func signup(_ sender: Any) {
-        let username = usernameText.text,
-            password = passwordText.text,
-            confirm = confirmText.text,
-            phone = phoneText.text,
-            verify = verificationText.text
+        guard let username = usernameText.text,
+              let password = passwordText.text,
+              let confirm = confirmText.text,
+              let phone = phoneText.text,
+              let verificationCode = verificationText.text
+        else  {return}
+        
+
+        
+        //verify verfication code
+        AVOSCloud.verifySmsCode(verificationCode, mobilePhoneNumber: phone){(succeeded, error) in
+            if succeeded{
+            }
+            else{
+                let verificationCodeError = UIAlertController()
+            }
+            }
+        
+        
+        //verify confirm & password consistency
+        if password != confirm{
+            return
+        }
+        
+        
         dismiss(animated: true, completion: nil)
     }
 }

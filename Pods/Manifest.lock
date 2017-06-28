@@ -17,6 +17,7 @@ PODS:
   - Moya/RxSwift (8.0.5):
     - Moya/Core
     - RxSwift (~> 3.0)
+  - PKHUD (4.2.3)
   - QCloudCOSV4 (1.4.0)
   - R.swift (3.3.0):
     - R.swift.Library (~> 3.0.2)
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - ImageSlideshow/Alamofire
   - Keys (from `Pods/CocoaPodsKeys`)
   - Moya/RxSwift
+  - PKHUD (~> 4.0)
   - QCloudCOSV4
   - R.swift
   - SwiftyJSON
@@ -48,6 +50,7 @@ SPEC CHECKSUMS:
   ImageSlideshow: a68a76fc618ebd2b7481ce355ad67d7097203976
   Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
   Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
+  PKHUD: c7692163a09875cbf15827dc581df3c5cf7f1015
   QCloudCOSV4: 865d1f956b056da94101b54965979f669991ec95
   R.swift: bde9704d50ff36820f49e266bc88ef545e1e9b36
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
@@ -55,6 +58,6 @@ SPEC CHECKSUMS:
   RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: '09d488adc80152f737713a5ff5c3b210958d790b'
+PODFILE CHECKSUM: 48d456f56a8f6391eed00d518445c296a5683047
 
 COCOAPODS: 1.2.1

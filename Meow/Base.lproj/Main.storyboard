@@ -96,7 +96,7 @@
         <!--注册-->
         <scene sceneID="cwH-dv-n8U">
             <objects>
-                <viewController id="ZsH-4K-3SK" userLabel="注册" customClass="SignupViewController" sceneMemberID="viewController">
+                <viewController id="ZsH-4K-3SK" userLabel="注册" customClass="SignupViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WhV-Eu-nWb"/>
                         <viewControllerLayoutGuide type="bottom" id="X6N-7y-Nlh"/>
@@ -124,13 +124,13 @@
                                         <rect key="frame" x="0.0" y="38" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="确认密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CzF-H6-MQc">
                                         <rect key="frame" x="0.0" y="76" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HkT-Nh-Fib">
                                         <rect key="frame" x="0.0" y="114" width="335" height="30"/>
@@ -145,7 +145,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzF-jE-toJ">
                                                 <rect key="frame" x="258" y="0.0" width="77" height="30"/>
@@ -177,7 +177,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="confirmText" destination="CzF-H6-MQc" id="Mrb-fA-URJ"/>
+                        <outlet property="confirmText" destination="CzF-H6-MQc" id="Ccn-aj-Bn3"/>
                         <outlet property="passwordText" destination="tLq-Pa-uP2" id="TF9-zn-sQE"/>
                         <outlet property="phoneText" destination="HkT-Nh-Fib" id="ZaP-gG-646"/>
                         <outlet property="signupButton" destination="JFP-w3-sYp" id="vaL-Fx-uyf"/>
@@ -320,7 +320,7 @@
         <scene sceneID="F1q-o4-B3x">
             <objects>
                 <tableViewController title="首页" id="Rdg-dy-bs8" customClass="HomeViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cOK-pT-bos">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cOK-pT-bos">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
