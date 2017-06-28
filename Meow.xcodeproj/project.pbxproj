@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2443A6691F02064C0032BEB9 /* MomentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2443A6681F02064C0032BEB9 /* MomentTableViewCell.xib */; };
-		2443A66B1F0251A50032BEB9 /* SignupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2443A66A1F0251A50032BEB9 /* SignupView.xib */; };
 		56B7293EE5F94719A447731F /* Pods_MeowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1186F1CE3D8690900D00F2C5 /* Pods_MeowUITests.framework */; };
 		BF390A451F01700500555B93 /* MeowAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A441F01700500555B93 /* MeowAPI.swift */; };
 		BF390A471F01702D00555B93 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A461F01702D00555B93 /* Networking.swift */; };
@@ -31,8 +30,11 @@
 		BF7878741F01010F000FB7C6 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878731F01010F000FB7C6 /* MyViewController.swift */; };
 		BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878751F010178000FB7C6 /* LoginViewController.swift */; };
 		BFE11D3A1F010DA600EED963 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE11D391F010DA600EED963 /* LoginView.xib */; };
+		BFE11D381F010AF200EED963 /* MomentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE11D361F010AF200EED963 /* MomentCell.xib */; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
 		BFF1395D1F02AE55006DF489 /* COSProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395C1F02AE55006DF489 /* COSProvider.swift */; };
+		BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395E1F02C089006DF489 /* SMSExtention.swift */; };
+		BFF139611F034053006DF489 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139601F034053006DF489 /* SignupViewController.swift */; };
 		C22E101695374861866E64E5 /* Pods_MeowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3612EC24166F9C122D5CDCC1 /* Pods_MeowTests.framework */; };
 		F766C86074602285186EC72F /* Pods_Meow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6E60B8501B878CBD0FCF4C /* Pods_Meow.framework */; };
 /* End PBXBuildFile section */
@@ -58,7 +60,6 @@
 		1186F1CE3D8690900D00F2C5 /* Pods_MeowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6E60B8501B878CBD0FCF4C /* Pods_Meow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2443A6681F02064C0032BEB9 /* MomentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MomentTableViewCell.xib; sourceTree = "<group>"; };
-		2443A66A1F0251A50032BEB9 /* SignupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupView.xib; sourceTree = "<group>"; };
 		3612EC24166F9C122D5CDCC1 /* Pods_MeowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8858B54026EC68FEB34336F5 /* Pods-MeowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowUITests/Pods-MeowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A08DD2E53506F36693AD12C5 /* Pods-MeowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,9 +90,12 @@
 		BF7878731F01010F000FB7C6 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		BF7878751F010178000FB7C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BFE11D391F010DA600EED963 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		BFE11D371F010AF200EED963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MomentCell.xib; sourceTree = "<group>"; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
 		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
 		BFF1395C1F02AE55006DF489 /* COSProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COSProvider.swift; sourceTree = "<group>"; };
+		BFF1395E1F02C089006DF489 /* SMSExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSExtention.swift; sourceTree = "<group>"; };
+		BFF139601F034053006DF489 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CA79F670B8B78BFA429DA2B5 /* Pods-MeowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.release.xcconfig"; sourceTree = "<group>"; };
 		D3373C17F9AC2E37EA35D5CF /* Pods-MeowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowUITests/Pods-MeowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F4EAF4C51299AB8CB42357F2 /* Pods-Meow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meow/Pods-Meow.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 				BFF139581F025163006DF489 /* Observable+MapTo.swift */,
 				BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */,
 				BFF1395C1F02AE55006DF489 /* COSProvider.swift */,
+				BFF1395E1F02C089006DF489 /* SMSExtention.swift */,
 			);
 			path = Meow;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				BF7878711F0100FF000FB7C6 /* NewPostViewController.swift */,
 				BF7878731F01010F000FB7C6 /* MyViewController.swift */,
 				BF7878751F010178000FB7C6 /* LoginViewController.swift */,
+				BFF139601F034053006DF489 /* SignupViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -234,6 +240,7 @@
 				2443A6681F02064C0032BEB9 /* MomentTableViewCell.xib */,
 				BFE11D391F010DA600EED963 /* LoginView.xib */,
 				2443A66A1F0251A50032BEB9 /* SignupView.xib */,
+				BFE11D361F010AF200EED963 /* MomentCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -381,9 +388,9 @@
 				BF7878471F00F2C9000FB7C6 /* LaunchScreen.storyboard in Resources */,
 				2443A6691F02064C0032BEB9 /* MomentTableViewCell.xib in Resources */,
 				BF7878441F00F2C9000FB7C6 /* Assets.xcassets in Resources */,
-				2443A66B1F0251A50032BEB9 /* SignupView.xib in Resources */,
 				BF7878421F00F2C9000FB7C6 /* Main.storyboard in Resources */,
 				BFE11D3A1F010DA600EED963 /* LoginView.xib in Resources */,
+				BFE11D381F010AF200EED963 /* MomentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +573,7 @@
 				BF78786E1F0100D4000FB7C6 /* ArticleViewController.swift in Sources */,
 				BF390A451F01700500555B93 /* MeowAPI.swift in Sources */,
 				BF390A471F01702D00555B93 /* Networking.swift in Sources */,
+				BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */,
 				BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */,
 				BF7878741F01010F000FB7C6 /* MyViewController.swift in Sources */,
 				BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */,
@@ -574,6 +582,7 @@
 				BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */,
 				BFF1395D1F02AE55006DF489 /* COSProvider.swift in Sources */,
 				BF7878721F0100FF000FB7C6 /* NewPostViewController.swift in Sources */,
+				BFF139611F034053006DF489 /* SignupViewController.swift in Sources */,
 				BF390A4B1F01F58500555B93 /* JSONConvertible.swift in Sources */,
 				BF390A511F02053A00555B93 /* Token.swift in Sources */,
 			);

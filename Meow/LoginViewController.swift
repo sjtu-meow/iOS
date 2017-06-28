@@ -13,9 +13,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var registerButton: UIButton!
-
-    override func viewDidLoad() {
+    @IBOutlet weak var signupButton: UIButton!
+    
+    
+    @IBAction func login(_ sender: Any) {
+        let username = usernameText.text, password = passwordText.text
+    
+        dismiss(animated: true, completion: nil )
+    }
+    
+    @IBAction func signup(_ sender: Any) {
         
     }
 }
