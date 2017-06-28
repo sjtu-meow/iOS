@@ -207,6 +207,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aY9-ND-abq">
                                                 <rect key="frame" x="0.0" y="0.0" width="162.5" height="30"/>
                                                 <state key="normal" title="登录"/>
+                                                <connections>
+                                                    <action selector="login:" destination="bY3-ZX-wAL" eventType="touchUpInside" id="6ZF-bV-TGx"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx9-uU-Elv">
                                                 <rect key="frame" x="172.5" y="0.0" width="162.5" height="30"/>
@@ -233,6 +236,12 @@
                             <constraint firstItem="h6F-pJ-Rhy" firstAttribute="top" secondItem="iIa-Vh-3IQ" secondAttribute="top" constant="20" id="t2f-CY-2XP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="aY9-ND-abq" id="q2n-qg-C2N"/>
+                        <outlet property="passwordText" destination="a6S-f9-V8S" id="cBW-tH-UsM"/>
+                        <outlet property="signupButton" destination="fx9-uU-Elv" id="ZNY-J6-xpf"/>
+                        <outlet property="usernameText" destination="p6v-Ot-qvs" id="ntv-Xd-2QX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUP-Az-IEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

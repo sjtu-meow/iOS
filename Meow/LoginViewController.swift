@@ -8,7 +8,18 @@
 
 import UIKit
 
-
 class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var usernameText: UITextField!
+    @IBOutlet weak var passwordText: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
+    
+    
+    @IBAction func login(_ sender: Any) {
+        let username = usernameText.text, password = passwordText.text
+        
+        dismiss(animated: true, completion: nil )
+    }
     
 }
