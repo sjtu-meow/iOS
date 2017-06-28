@@ -404,7 +404,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="注册" id="9Ss-On-tl2">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="abr-ui-rgn"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="abr-ui-rgn">
+                            <connections>
+                                <action selector="cancel:" destination="ZsH-4K-3SK" id="sdx-ja-dNq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="confirmText" destination="CzF-H6-MQc" id="Ccn-aj-Bn3"/>
