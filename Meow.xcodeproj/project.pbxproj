@@ -32,6 +32,7 @@
 		BF7878721F0100FF000FB7C6 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878711F0100FF000FB7C6 /* NewPostViewController.swift */; };
 		BF7878741F01010F000FB7C6 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878731F01010F000FB7C6 /* MyViewController.swift */; };
 		BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878751F010178000FB7C6 /* LoginViewController.swift */; };
+		BF9E75DF1F03AB6C00723541 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E75DE1F03AB6C00723541 /* R.generated.swift */; };
 		BFE11D381F010AF200EED963 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
 		BFF1395D1F02AE55006DF489 /* COSProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395C1F02AE55006DF489 /* COSProvider.swift */; };
@@ -94,6 +95,7 @@
 		BF7878711F0100FF000FB7C6 /* NewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		BF7878731F01010F000FB7C6 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		BF7878751F010178000FB7C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF9E75DE1F03AB6C00723541 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
 		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
 		BFF1395C1F02AE55006DF489 /* COSProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COSProvider.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		BF78783B1F00F2C9000FB7C6 /* Meow */ = {
 			isa = PBXGroup;
 			children = (
+				BF9E75DE1F03AB6C00723541 /* R.generated.swift */,
 				BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */,
 				BF7878481F00F2C9000FB7C6 /* Info.plist */,
 				BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */,
@@ -578,6 +581,7 @@
 				BF78786E1F0100D4000FB7C6 /* ArticleViewController.swift in Sources */,
 				BF390A451F01700500555B93 /* MeowAPI.swift in Sources */,
 				BF390A471F01702D00555B93 /* Networking.swift in Sources */,
+				BF9E75DF1F03AB6C00723541 /* R.generated.swift in Sources */,
 				BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */,
 				BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */,
 				BF7878741F01010F000FB7C6 /* MyViewController.swift in Sources */,

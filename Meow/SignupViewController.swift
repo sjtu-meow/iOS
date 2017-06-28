@@ -58,24 +58,25 @@ class SignupViewController: UIViewController {
               let verificationCode = verificationText.text
         else  {return}
         
-
+        //verify confirm & password consistency
+        if password != confirm{
+            HUD.flash(.labeledError(title: "密码输入不一致", subtitle: nil), delay: 1)
+            return
+        }
+        
         
         //verify verfication code
         AVOSCloud.verifySmsCode(verificationCode, mobilePhoneNumber: phone){(succeeded, error) in
             if succeeded{
             }
             else{
-                let verificationCodeError = UIAlertController()
+                HUD.flash(.labeledError(title: "短信验证码错误", subtitle: nil), delay: 1)
+                return
             }
             }
         
         
-        //verify confirm & password consistency
-        if password != confirm{
-            return
-        }
+
         
-        
-        dismiss(animated: true, completion: nil)
     }
 }
