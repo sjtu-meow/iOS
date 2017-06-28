@@ -7,4 +7,4 @@ osx_image:
 script:
     - xcodebuild -showsdks
     - instruments -s devices
-    - xcodebuild test -workspace Meow.xcworkspace -scheme Meow -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.0' -destination 'platform=iOS Simulator,name=iPhone6,OS=10.3.1'
+    - xcodebuild test -quiet -workspace Meow.xcworkspace -scheme Meow -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.0' -destination 'platform=iOS Simulator,name=iPhone6,OS=10.3.1'
