@@ -120,43 +120,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HCc-ca-ksg">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HCc-ca-ksg" userLabel="主体">
                                 <rect key="frame" x="20" y="84" width="335" height="220"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iIv-9x-8p6">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iIv-9x-8p6">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tLq-Pa-uP2">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tLq-Pa-uP2">
                                         <rect key="frame" x="0.0" y="38" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="确认密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CzF-H6-MQc">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="确认密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CzF-H6-MQc">
                                         <rect key="frame" x="0.0" y="76" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HkT-Nh-Fib">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HkT-Nh-Fib">
                                         <rect key="frame" x="0.0" y="114" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dhn-82-i4t">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dhn-82-i4t">
                                         <rect key="frame" x="0.0" y="152" width="335" height="30"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DfH-WF-4b4">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DfH-WF-4b4">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzF-jE-toJ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzF-jE-toJ">
                                                 <rect key="frame" x="258" y="0.0" width="77" height="30"/>
                                                 <state key="normal" title="获取验证码"/>
                                                 <connections>
@@ -165,7 +165,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFP-w3-sYp">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFP-w3-sYp">
                                         <rect key="frame" x="0.0" y="190" width="335" height="30"/>
                                         <state key="normal" title="注册"/>
                                         <connections>
@@ -179,9 +179,12 @@
                         <constraints>
                             <constraint firstItem="HCc-ca-ksg" firstAttribute="leading" secondItem="NRB-aV-6pS" secondAttribute="leading" constant="20" id="OrH-6g-Tli"/>
                             <constraint firstAttribute="trailing" secondItem="HCc-ca-ksg" secondAttribute="trailing" constant="20" id="nWU-6g-c8f"/>
+                            <constraint firstItem="HCc-ca-ksg" firstAttribute="top" secondItem="WhV-Eu-nWb" secondAttribute="bottom" constant="20" id="vuD-AH-B4Z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="注册" id="gB9-Iw-y6Q"/>
+                    <navigationItem key="navigationItem" title="注册" id="9Ss-On-tl2">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="abr-ui-rgn"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="confirmText" destination="CzF-H6-MQc" id="Ccn-aj-Bn3"/>
                         <outlet property="passwordText" destination="tLq-Pa-uP2" id="TF9-zn-sQE"/>
@@ -194,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBh-7q-fjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="2934"/>
+            <point key="canvasLocation" x="1408.8" y="2014.5427286356824"/>
         </scene>
         <!--登录 & 注册-->
         <scene sceneID="Qy7-xK-Wb7">
@@ -210,7 +213,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAw-Ez-MFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="455.19999999999999" y="2014.5427286356824"/>
+            <point key="canvasLocation" x="-1444" y="2015"/>
         </scene>
         <!--登录-->
         <scene sceneID="yfR-jy-XZX">
@@ -224,36 +227,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qrT-gQ-xnV">
-                                <rect key="frame" x="20" y="84" width="335" height="88"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qrT-gQ-xnV" userLabel="主体">
+                                <rect key="frame" x="20" y="84" width="335" height="106"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p6v-Ot-qvs">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="21"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p6v-Ot-qvs">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a6S-f9-V8S">
-                                        <rect key="frame" x="0.0" y="29" width="335" height="21"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a6S-f9-V8S">
+                                        <rect key="frame" x="0.0" y="38" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ntM-d8-sLm">
-                                        <rect key="frame" x="0.0" y="58" width="335" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ntM-d8-sLm">
+                                        <rect key="frame" x="0.0" y="76" width="335" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aY9-ND-abq" userLabel="登录">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aY9-ND-abq" userLabel="登录">
                                                 <rect key="frame" x="0.0" y="0.0" width="162.5" height="30"/>
                                                 <state key="normal" title="登录"/>
                                                 <connections>
                                                     <action selector="login:" destination="bY3-ZX-wAL" eventType="touchUpInside" id="6ZF-bV-TGx"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx9-uU-Elv">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx9-uU-Elv">
                                                 <rect key="frame" x="172.5" y="0.0" width="162.5" height="30"/>
                                                 <state key="normal" title="注册"/>
                                                 <connections>
-                                                    <segue destination="ZsH-4K-3SK" kind="show" id="QTf-X2-e8e"/>
+                                                    <segue destination="Uhv-Oc-vLH" kind="presentation" id="QTf-X2-e8e"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -264,6 +267,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qrT-gQ-xnV" firstAttribute="leading" secondItem="iIa-Vh-3IQ" secondAttribute="leading" constant="20" id="Iu4-7g-kah"/>
+                            <constraint firstItem="qrT-gQ-xnV" firstAttribute="top" secondItem="Nrc-0a-wuL" secondAttribute="bottom" constant="20" id="PdB-XT-i5W"/>
                             <constraint firstAttribute="trailing" secondItem="qrT-gQ-xnV" secondAttribute="trailing" constant="20" id="fqg-QJ-Wf5"/>
                         </constraints>
                     </view>
@@ -391,22 +395,22 @@
             <point key="canvasLocation" x="-484" y="-1363"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Pwm-dk-XGc">
+        <scene sceneID="SIs-R4-aC0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jHm-lx-TFv" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uhv-Oc-vLH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jsg-am-r0D">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VdV-cQ-EWc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="bY3-ZX-wAL" kind="relationship" relationship="rootViewController" id="3PG-jJ-eWp"/>
+                        <segue destination="ZsH-4K-3SK" kind="relationship" relationship="rootViewController" id="C55-kM-yAp"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mg0-ek-zvY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xwo-ff-pcx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1444" y="2014.5427286356824"/>
+            <point key="canvasLocation" x="469.60000000000002" y="2014.5427286356824"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
