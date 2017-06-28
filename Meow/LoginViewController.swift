@@ -18,8 +18,11 @@ class LoginViewController: UIViewController {
     
     @IBAction func login(_ sender: Any) {
         let username = usernameText.text, password = passwordText.text
-        
+    
         dismiss(animated: true, completion: nil )
     }
     
+    @IBAction func signup(_ sender: Any) {
+        
+    }
 }
