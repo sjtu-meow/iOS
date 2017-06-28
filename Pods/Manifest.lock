@@ -33,7 +33,7 @@ DEPENDENCIES:
   - ImageSlideshow/Alamofire
   - Keys (from `Pods/CocoaPodsKeys`)
   - Moya/RxSwift
-  - PKHUD
+  - PKHUD (~> 4.0)
   - QCloudCOSV4
   - R.swift
   - SwiftyJSON
@@ -58,6 +58,6 @@ SPEC CHECKSUMS:
   RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 2fae6b22c8c560e1078b110327bbea22e614f46e
+PODFILE CHECKSUM: 48d456f56a8f6391eed00d518445c296a5683047
 
 COCOAPODS: 1.2.1
