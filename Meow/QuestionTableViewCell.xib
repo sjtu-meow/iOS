@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="219" id="JKg-bo-G63">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="219" id="JKg-bo-G63" userLabel="Question Table View Cell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JKg-bo-G63" id="UfF-nm-yio">
@@ -71,7 +71,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ci-nx-AXa">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ci-nx-AXa" userLabel="赞/评论">
                                 <rect key="frame" x="0.0" y="76.5" width="107.5" height="14.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1o-YX-vQN">
@@ -109,7 +109,7 @@
                     <constraint firstAttribute="trailingMargin" secondItem="Oba-M6-QrK" secondAttribute="trailing" constant="16" id="yys-wB-VML"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="65.5" y="66.5"/>
+            <point key="canvasLocation" x="1961" y="-55"/>
         </tableViewCell>
     </objects>
     <resources>
