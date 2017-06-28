@@ -30,7 +30,6 @@
 		BF7878721F0100FF000FB7C6 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878711F0100FF000FB7C6 /* NewPostViewController.swift */; };
 		BF7878741F01010F000FB7C6 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878731F01010F000FB7C6 /* MyViewController.swift */; };
 		BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878751F010178000FB7C6 /* LoginViewController.swift */; };
-		BFE11D381F010AF200EED963 /* MomentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE11D361F010AF200EED963 /* MomentCell.xib */; };
 		BFE11D3A1F010DA600EED963 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE11D391F010DA600EED963 /* LoginView.xib */; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
 		BFF1395D1F02AE55006DF489 /* COSProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395C1F02AE55006DF489 /* COSProvider.swift */; };
@@ -89,7 +88,6 @@
 		BF7878711F0100FF000FB7C6 /* NewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		BF7878731F01010F000FB7C6 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		BF7878751F010178000FB7C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		BFE11D371F010AF200EED963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MomentCell.xib; sourceTree = "<group>"; };
 		BFE11D391F010DA600EED963 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
 		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
@@ -234,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				2443A6681F02064C0032BEB9 /* MomentTableViewCell.xib */,
-				BFE11D361F010AF200EED963 /* MomentCell.xib */,
 				BFE11D391F010DA600EED963 /* LoginView.xib */,
 				2443A66A1F0251A50032BEB9 /* SignupView.xib */,
 			);
@@ -387,7 +384,6 @@
 				2443A66B1F0251A50032BEB9 /* SignupView.xib in Resources */,
 				BF7878421F00F2C9000FB7C6 /* Main.storyboard in Resources */,
 				BFE11D3A1F010DA600EED963 /* LoginView.xib in Resources */,
-				BFE11D381F010AF200EED963 /* MomentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,14 +626,6 @@
 				BF7878461F00F2C9000FB7C6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		BFE11D361F010AF200EED963 /* MomentCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFE11D371F010AF200EED963 /* Base */,
-			);
-			name = MomentCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
