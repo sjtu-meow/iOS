@@ -24,6 +24,7 @@
 		24F7F44C1F049C47001A0FFA /* AnswerNotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F44B1F049C47001A0FFA /* AnswerNotificationTableViewCell.xib */; };
 		24F7F4521F049EC7001A0FFA /* ArticleUserPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4511F049EC7001A0FFA /* ArticleUserPageTableViewCell.xib */; };
 		24F7F4541F049F4A001A0FFA /* ArticleProfilePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4531F049F4A001A0FFA /* ArticleProfilePageTableViewCell.xib */; };
+		24F7F4571F04A4BE001A0FFA /* UserPageRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4561F04A4BE001A0FFA /* UserPageRecordTableViewCell.xib */; };
 		56B7293EE5F94719A447731F /* Pods_MeowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1186F1CE3D8690900D00F2C5 /* Pods_MeowUITests.framework */; };
 		BF390A451F01700500555B93 /* MeowAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A441F01700500555B93 /* MeowAPI.swift */; };
 		BF390A471F01702D00555B93 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A461F01702D00555B93 /* Networking.swift */; };
@@ -92,6 +93,7 @@
 		24F7F44B1F049C47001A0FFA /* AnswerNotificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerNotificationTableViewCell.xib; sourceTree = "<group>"; };
 		24F7F4511F049EC7001A0FFA /* ArticleUserPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleUserPageTableViewCell.xib; sourceTree = "<group>"; };
 		24F7F4531F049F4A001A0FFA /* ArticleProfilePageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleProfilePageTableViewCell.xib; sourceTree = "<group>"; };
+		24F7F4561F04A4BE001A0FFA /* UserPageRecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserPageRecordTableViewCell.xib; sourceTree = "<group>"; };
 		3612EC24166F9C122D5CDCC1 /* Pods_MeowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8858B54026EC68FEB34336F5 /* Pods-MeowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowUITests/Pods-MeowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A08DD2E53506F36693AD12C5 /* Pods-MeowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +214,14 @@
 			name = "Question Cell";
 			sourceTree = "<group>";
 		};
+		24F7F4551F04A496001A0FFA /* Record/Search Cell */ = {
+			isa = PBXGroup;
+			children = (
+				24F7F4561F04A4BE001A0FFA /* UserPageRecordTableViewCell.xib */,
+			);
+			name = "Record/Search Cell";
+			sourceTree = "<group>";
+		};
 		BF390A421F016F8500555B93 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,10 +331,11 @@
 			isa = PBXGroup;
 			children = (
 				24F7F4421F0492B3001A0FFA /* ArticleAnswerCommentTableViewCell.xib */,
+				24F7F4551F04A496001A0FFA /* Record/Search Cell */,
+				24F7F44A1F04997F001A0FFA /* Nofication Cell */,
 				24F7F44D1F049DA7001A0FFA /* Answer Cell */,
 				24F7F44E1F049DB6001A0FFA /* Article Cell */,
 				24F7F44F1F049DBF001A0FFA /* Moment Cell */,
-				24F7F44A1F04997F001A0FFA /* Nofication Cell */,
 				24F7F4501F049DC7001A0FFA /* Question Cell */,
 			);
 			name = View;
@@ -486,6 +497,7 @@
 				24F7F4541F049F4A001A0FFA /* ArticleProfilePageTableViewCell.xib in Resources */,
 				24A14CF21F03EA6900967F45 /* AnswerHomePageTableViewCell.xib in Resources */,
 				24F7F43D1F048A57001A0FFA /* QuestionTableViewCell.xib in Resources */,
+				24F7F4571F04A4BE001A0FFA /* UserPageRecordTableViewCell.xib in Resources */,
 				24F7F43F1F048D14001A0FFA /* QuestionDetailTableViewCell.xib in Resources */,
 				BFE11D381F010AF200EED963 /* (null) in Resources */,
 				2443A6751F03530A0032BEB9 /* MomentCommentTableViewCell.xib in Resources */,
