@@ -495,6 +495,117 @@
             </objects>
             <point key="canvasLocation" x="-484" y="2766.5667166416792"/>
         </scene>
+        <!--发布文章-->
+        <scene sceneID="v6h-1n-ysB">
+            <objects>
+                <viewController id="CwK-ex-Fiu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s0r-j6-vyh"/>
+                        <viewControllerLayoutGuide type="bottom" id="yRb-yj-0zr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uGA-mc-bzp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="iwi-0S-AH9" userLabel="文字输入">
+                                <rect key="frame" x="16" y="72" width="343" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iwi-0S-AH9" firstAttribute="bottom" secondItem="yRb-yj-0zr" secondAttribute="top" constant="-8" id="BnF-gx-NqK"/>
+                            <constraint firstItem="iwi-0S-AH9" firstAttribute="trailing" secondItem="uGA-mc-bzp" secondAttribute="trailing" constant="-16" id="FrG-C2-pEI"/>
+                            <constraint firstItem="iwi-0S-AH9" firstAttribute="top" secondItem="s0r-j6-vyh" secondAttribute="bottom" constant="8" id="J5N-mp-HGM"/>
+                            <constraint firstItem="iwi-0S-AH9" firstAttribute="leading" secondItem="uGA-mc-bzp" secondAttribute="leading" constant="16" id="bti-ql-WgA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="发布文章" id="sVn-18-Xnc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="JSZ-vV-4vY"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="2dq-td-fo6"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u7K-bL-4L5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-484" y="3483.5082458770617"/>
+        </scene>
+        <!--发布问题-->
+        <scene sceneID="4fv-Sr-xc5">
+            <objects>
+                <viewController id="wBq-Rt-dnl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b8f-CX-qzw"/>
+                        <viewControllerLayoutGuide type="bottom" id="HY8-iX-Bzq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DbV-Gs-t2h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M9a-Io-FWM">
+                                <rect key="frame" x="16" y="72" width="343" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HY8-iX-Bzq" firstAttribute="top" secondItem="M9a-Io-FWM" secondAttribute="bottom" constant="8" id="ABf-Yi-2al"/>
+                            <constraint firstItem="M9a-Io-FWM" firstAttribute="top" secondItem="b8f-CX-qzw" secondAttribute="bottom" constant="8" id="U2u-B9-73b"/>
+                            <constraint firstAttribute="trailing" secondItem="M9a-Io-FWM" secondAttribute="trailing" constant="16" id="Uip-DH-mA2"/>
+                            <constraint firstItem="M9a-Io-FWM" firstAttribute="leading" secondItem="DbV-Gs-t2h" secondAttribute="leading" constant="16" id="aiI-Hg-5Ly"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="发布问题" id="HlM-o5-YDk">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3uv-7E-dWV"/>
+                        <barButtonItem key="rightBarButtonItem" title="下一步" id="27C-32-FwW">
+                            <connections>
+                                <segue destination="B8o-RB-6kU" kind="show" id="vEF-LD-UC4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQ1-dT-HiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-484" y="4236"/>
+        </scene>
+        <!--发布问题-->
+        <scene sceneID="f3U-Cr-LTB">
+            <objects>
+                <viewController id="Rzf-7z-7fW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pNd-mc-bqX"/>
+                        <viewControllerLayoutGuide type="bottom" id="acD-Cd-gVV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vui-Tg-lrZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JGw-hf-QfR">
+                                <rect key="frame" x="16" y="72" width="343" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="acD-Cd-gVV" firstAttribute="top" secondItem="JGw-hf-QfR" secondAttribute="bottom" constant="8" id="4c8-1Y-tnl"/>
+                            <constraint firstItem="JGw-hf-QfR" firstAttribute="top" secondItem="pNd-mc-bqX" secondAttribute="bottom" constant="8" id="Oax-SK-Ohi"/>
+                            <constraint firstItem="JGw-hf-QfR" firstAttribute="leading" secondItem="Vui-Tg-lrZ" secondAttribute="leading" constant="16" id="oU1-8Z-ewa"/>
+                            <constraint firstAttribute="trailing" secondItem="JGw-hf-QfR" secondAttribute="trailing" constant="16" id="wX7-Bc-LVq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="发布问题" id="lMi-mg-Xef">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="9q9-Lj-JxA"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Abw-qf-9z9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1364" y="4235.5322338830592"/>
+        </scene>
         <!--登录-->
         <scene sceneID="yfR-jy-XZX">
             <objects>
@@ -705,6 +816,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LWf-Pc-ecp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1444" y="2766.5667166416792"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jkN-Ww-cci">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8V4-hP-95D" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7ak-PP-sX6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CwK-ex-Fiu" kind="relationship" relationship="rootViewController" id="ocy-lZ-AYQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nNV-DX-pmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1444" y="3484"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kLj-HH-9Wr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5xx-cI-ouV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RY0-kj-Hzy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wBq-Rt-dnl" kind="relationship" relationship="rootViewController" id="GpC-dp-iso"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJM-x9-ddj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1444" y="4235.5322338830592"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tP8-R1-94s">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B8o-RB-6kU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mea-CR-NkR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Rzf-7z-7fW" kind="relationship" relationship="rootViewController" id="lN6-FE-YpU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3r-ud-LTP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424.80000000000001" y="4235.5322338830592"/>
         </scene>
     </scenes>
     <resources>
