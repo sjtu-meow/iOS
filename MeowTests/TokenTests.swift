@@ -10,12 +10,11 @@ import XCTest
 
 class TokenTests : XCTestCase {
     func testLoadAndSave() {
-        let access = "access", refresh = "refresh"
-        let token = Token(access: access, refresh: refresh )
+        let access = "access"
+        let token = Token(access: access)
         token.save()
         let restored = Token.load()
         XCTAssertNotNil(restored)
         XCTAssertEqual(restored!.access, access)
-        XCTAssertEqual(token.refresh, refresh)
     }
 }
