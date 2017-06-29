@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="89" id="MNy-Ig-g8c">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MNy-Ig-g8c" id="sw0-Uf-Dkd">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="51.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="TfY-3m-GMC" userLabel="主体">
+                        <rect key="frame" x="16" y="10" width="343" height="31.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7gB-Ra-o0F" userLabel="行">
+                                <rect key="frame" x="0.0" y="0.0" width="163" height="31.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TOC-tV-5eg" userLabel="图标">
+                                        <rect key="frame" x="0.0" y="4.5" width="23" height="23"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="FYJ-1e-sJ1"/>
+                                            <constraint firstAttribute="width" constant="23" id="bJp-dB-NQf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="jY9-fn-Tct" userLabel="文字">
+                                        <rect key="frame" x="31" y="0.0" width="132" height="31.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YdR-ke-RqW">
+                                                <rect key="frame" x="0.0" y="0.0" width="69.5" height="17"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXr-rS-OmJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="26.5" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="的动态" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNw-OZ-eK7">
+                                                        <rect key="frame" x="26.5" y="0.0" width="43" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 站着拉屎？ - 扶着朕。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlE-Q3-opo">
+                                                <rect key="frame" x="0.0" y="17" width="132" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TfY-3m-GMC" firstAttribute="bottom" secondItem="sw0-Uf-Dkd" secondAttribute="bottom" constant="-10" id="0lc-SV-hP0"/>
+                    <constraint firstItem="TfY-3m-GMC" firstAttribute="top" secondItem="sw0-Uf-Dkd" secondAttribute="top" constant="10" id="33J-e9-oZT"/>
+                    <constraint firstItem="TfY-3m-GMC" firstAttribute="leading" secondItem="sw0-Uf-Dkd" secondAttribute="leading" constant="16" id="FBl-Nb-khu"/>
+                    <constraint firstItem="TfY-3m-GMC" firstAttribute="trailing" secondItem="sw0-Uf-Dkd" secondAttribute="trailing" constant="-16" id="QeS-Sw-1r3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="83.5" y="-345.5"/>
+        </tableViewCell>
+    </objects>
+</document>
