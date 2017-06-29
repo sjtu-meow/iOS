@@ -84,7 +84,7 @@
         <!--ArticleContentNavigationController-->
         <scene sceneID="XrA-bz-Me9">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ArticleContentNavigationController" id="Ks7-1r-tDo" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ArticlePage" referencedIdentifier="ArticleContentNavigationController" id="Ks7-1r-tDo" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XnP-fl-fcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="322" y="-838"/>
@@ -139,7 +139,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FKj-mo-T80" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gC9-yZ-1HS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gC9-yZ-1HS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
