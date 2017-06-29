@@ -26,7 +26,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5vm-a3-aXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2630" y="-1"/>
+            <point key="canvasLocation" x="-2567" y="-34"/>
         </scene>
         <!--文章-->
         <scene sceneID="F2n-M1-ILX">
@@ -53,11 +53,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="文章" id="GP8-S7-h5W">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hm4-M8-tma">
-                            <connections>
-                                <segue destination="fSa-KZ-6di" kind="presentation" id="qIl-fK-Iiv"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hm4-M8-tma"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDq-89-76P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -282,11 +278,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="问答" id="TtC-CK-2DK">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QlP-Px-IdB">
-                            <connections>
-                                <segue destination="fSa-KZ-6di" kind="presentation" id="aGa-Cs-oio"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QlP-Px-IdB"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8KH-W5-3Fd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -309,25 +301,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcO-ev-0uy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1444" y="432"/>
-        </scene>
-        <!--发布-->
-        <scene sceneID="IZU-Ty-xiy">
-            <objects>
-                <viewController title="发布" id="fSa-KZ-6di" customClass="NewPostViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rcq-4v-7N3"/>
-                        <viewControllerLayoutGuide type="bottom" id="fjR-6d-jdN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bgp-JV-j37">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="0Y3-aW-aHG"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eMj-E7-Vdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1290" y="-776"/>
         </scene>
         <!--注册-->
         <scene sceneID="cwH-dv-n8U">
@@ -608,11 +581,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="首页" id="d1z-wg-bsH"/>
                     <navigationItem key="navigationItem" title="首页" id="Nqz-FK-Q2c">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HN4-kU-rth">
-                            <connections>
-                                <segue destination="fSa-KZ-6di" kind="presentation" id="WaH-wQ-SIQ"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HN4-kU-rth"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1l-Og-XOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -638,7 +607,4 @@
             <point key="canvasLocation" x="469.60000000000002" y="2014.5427286356824"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="WaH-wQ-SIQ"/>
-    </inferredMetricsTieBreakers>
 </document>
