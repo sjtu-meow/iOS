@@ -127,14 +127,14 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIm-aO-Vwk">
                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="赞" backgroundImage="ButtonOutlineSmall">
+                                                <state key="normal" title="赞" backgroundImage="ButtonSmallOutline">
                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIG-TL-jHv">
                                                 <rect key="frame" x="40" y="0.0" width="35" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="评论" backgroundImage="ButtonOutlineSmall">
+                                                <state key="normal" title="评论" backgroundImage="ButtonSmallOutline">
                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
@@ -185,7 +185,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ButtonOutlineSmall" width="35" height="21"/>
+        <image name="ButtonSmallOutline" width="35" height="21"/>
         <image name="DefaultAvatar" width="300" height="300"/>
     </resources>
 </document>
