@@ -244,7 +244,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dx9-qW-ghy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-484" y="1229"/>
+            <point key="canvasLocation" x="-484" y="1227"/>
         </scene>
         <!--问答-->
         <scene sceneID="ivj-j0-ONn">
@@ -413,6 +413,88 @@
             </objects>
             <point key="canvasLocation" x="-1444" y="2015"/>
         </scene>
+        <!--发布点滴-->
+        <scene sceneID="YHI-DD-pFp">
+            <objects>
+                <viewController id="Cow-IN-CHT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pMJ-QG-xsK"/>
+                        <viewControllerLayoutGuide type="bottom" id="WJj-dZ-LhD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ayy-4M-pcx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sdc-Pt-Aua" userLabel="主体">
+                                <rect key="frame" x="16" y="72" width="343" height="241"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="fU0-kO-oqv" userLabel="文字输入">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="170"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="nOD-xA-Ejx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kcv-gu-qHZ" userLabel="上传图片">
+                                        <rect key="frame" x="0.0" y="178" width="343" height="63"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="4Ur-II-3Cc"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="133" id="SQe-9B-XZ3"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="7" minimumInteritemSpacing="7" id="4K8-V1-fni">
+                                            <size key="itemSize" width="63" height="63"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ycl-he-9Ti">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AddImagePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="EPY-VX-Oht">
+                                                            <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstItem="EPY-VX-Oht" firstAttribute="bottom" secondItem="Ycl-he-9Ti" secondAttribute="bottom" id="CzU-C3-sLF"/>
+                                                    <constraint firstItem="EPY-VX-Oht" firstAttribute="leading" secondItem="Ycl-he-9Ti" secondAttribute="leading" id="KbZ-u3-7lB"/>
+                                                    <constraint firstItem="EPY-VX-Oht" firstAttribute="trailing" secondItem="Ycl-he-9Ti" secondAttribute="trailing" id="bBv-2f-4T0"/>
+                                                    <constraint firstItem="EPY-VX-Oht" firstAttribute="top" secondItem="Ycl-he-9Ti" secondAttribute="top" id="dhe-iC-SCD"/>
+                                                </constraints>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fU0-kO-oqv" firstAttribute="leading" secondItem="Sdc-Pt-Aua" secondAttribute="leading" id="6Ss-mN-UDX"/>
+                                    <constraint firstItem="fU0-kO-oqv" firstAttribute="trailing" secondItem="Sdc-Pt-Aua" secondAttribute="trailing" id="ghP-mc-XCv"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sdc-Pt-Aua" firstAttribute="trailing" secondItem="Ayy-4M-pcx" secondAttribute="trailing" constant="-16" id="bty-Ge-f5M"/>
+                            <constraint firstItem="Sdc-Pt-Aua" firstAttribute="leading" secondItem="Ayy-4M-pcx" secondAttribute="leading" constant="16" id="kKy-Tj-kfc"/>
+                            <constraint firstItem="Sdc-Pt-Aua" firstAttribute="top" secondItem="pMJ-QG-xsK" secondAttribute="bottom" constant="8" id="luj-ba-aJa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="发布点滴" id="5BT-Fd-6c9">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bFV-5O-4by"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Mrd-hA-e1y"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RjV-kK-lzJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-484" y="2766.5667166416792"/>
+        </scene>
         <!--登录-->
         <scene sceneID="yfR-jy-XZX">
             <objects>
@@ -478,7 +560,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUP-Az-IEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-504.80000000000001" y="2014.5427286356824"/>
+            <point key="canvasLocation" x="-484" y="2015"/>
         </scene>
         <!--我-->
         <scene sceneID="ODJ-h5-2qG">
@@ -606,5 +688,26 @@
             </objects>
             <point key="canvasLocation" x="469.60000000000002" y="2014.5427286356824"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XJ0-xg-4hG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wZv-nb-C2W" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="grf-e8-Qvg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cow-IN-CHT" kind="relationship" relationship="rootViewController" id="HcV-7z-Tx4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LWf-Pc-ecp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1444" y="2766.5667166416792"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="AddImagePlaceholder" width="111" height="111"/>
+    </resources>
 </document>
