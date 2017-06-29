@@ -60,6 +60,9 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jY9-fn-Tct" secondAttribute="trailing" id="Lnm-zd-Xrh"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                     </stackView>
