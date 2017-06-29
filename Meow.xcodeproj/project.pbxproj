@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2411AD061F052CFB00910051 /* UserProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2411AD051F052CFB00910051 /* UserProfileTableViewCell.xib */; };
+		2411AD081F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2411AD071F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib */; };
 		2443A6691F02064C0032BEB9 /* MomentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2443A6681F02064C0032BEB9 /* MomentTableViewCell.xib */; };
 		2443A6751F03530A0032BEB9 /* MomentCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2443A6741F03530A0032BEB9 /* MomentCommentTableViewCell.xib */; };
 		24A14CEE1F03599100967F45 /* ArticleHomePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A14CED1F03599100967F45 /* ArticleHomePageTableViewCell.xib */; };
@@ -84,6 +85,7 @@
 		1186F1CE3D8690900D00F2C5 /* Pods_MeowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6E60B8501B878CBD0FCF4C /* Pods_Meow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2411AD051F052CFB00910051 /* UserProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProfileTableViewCell.xib; sourceTree = "<group>"; };
+		2411AD071F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProfileWithButtonsTableViewCell.xib; sourceTree = "<group>"; };
 		2443A6681F02064C0032BEB9 /* MomentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MomentTableViewCell.xib; sourceTree = "<group>"; };
 		2443A6741F03530A0032BEB9 /* MomentCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MomentCommentTableViewCell.xib; sourceTree = "<group>"; };
 		24A14CED1F03599100967F45 /* ArticleHomePageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleHomePageTableViewCell.xib; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				2411AD051F052CFB00910051 /* UserProfileTableViewCell.xib */,
+				2411AD071F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib */,
 				24F7F4641F04FAF8001A0FFA /* PostTypePicker.xib */,
 				24F7F4421F0492B3001A0FFA /* ArticleAnswerCommentTableViewCell.xib */,
 				24F7F4551F04A496001A0FFA /* Record/Search Cell */,
@@ -520,6 +523,7 @@
 				24F7F45F1F04A87E001A0FFA /* ArticleRecordTableViewCell.xib in Resources */,
 				24A14CF01F03599F00967F45 /* QuestionHomePageTableViewCell.xib in Resources */,
 				24F7F45D1F04A7C4001A0FFA /* MomentRecordTableViewCell.xib in Resources */,
+				2411AD081F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib in Resources */,
 				24F7F43B1F04894E001A0FFA /* AnswerTableViewCell.xib in Resources */,
 				24F7F4541F049F4A001A0FFA /* ArticleProfilePageTableViewCell.xib in Resources */,
 				24A14CF21F03EA6900967F45 /* AnswerHomePageTableViewCell.xib in Resources */,
