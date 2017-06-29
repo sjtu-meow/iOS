@@ -105,7 +105,7 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="jrP-0y-YSz" secondAttribute="bottom" constant="10" id="Sbs-jo-mYa"/>
+                    <constraint firstItem="jrP-0y-YSz" firstAttribute="bottom" secondItem="eaP-ZM-hyh" secondAttribute="bottom" constant="-10" id="Sbs-jo-mYa"/>
                     <constraint firstItem="jrP-0y-YSz" firstAttribute="trailing" secondItem="eaP-ZM-hyh" secondAttribute="trailing" constant="-16" id="YTT-dy-q7y"/>
                     <constraint firstItem="jrP-0y-YSz" firstAttribute="top" secondItem="eaP-ZM-hyh" secondAttribute="top" constant="10" id="rrx-sT-sAy"/>
                     <constraint firstItem="jrP-0y-YSz" firstAttribute="leading" secondItem="eaP-ZM-hyh" secondAttribute="leading" constant="16" id="t2p-ie-LTy"/>
