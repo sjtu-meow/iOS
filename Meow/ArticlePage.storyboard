@@ -163,9 +163,9 @@
         <!--Navigation Controller-->
         <scene sceneID="gO2-Ef-LMt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oEV-DF-uN7" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ArticleContentNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="oEV-DF-uN7" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ix9-So-hBd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ix9-So-hBd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

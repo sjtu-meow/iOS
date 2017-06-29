@@ -352,7 +352,7 @@
         <!--Navigation Controller-->
         <scene sceneID="lBi-PP-V7Y">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Fa-6z-dtp" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CommentNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="2Fa-6z-dtp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uB9-W1-eYL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

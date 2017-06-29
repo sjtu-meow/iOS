@@ -58,14 +58,6 @@
             </objects>
             <point key="canvasLocation" x="-484" y="504"/>
         </scene>
-        <!--AnswerContentNavigationController-->
-        <scene sceneID="wXu-jv-fy2">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="AnswerContentNavigationController" storyboardName="Main" referencedIdentifier="AnswerContentNavigationController" id="4aQ-Yt-rk9" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j9j-Dw-nVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3070.4000000000001" y="711.544227886057"/>
-        </scene>
         <!--问题详情-->
         <scene sceneID="yrf-fI-GsO">
             <objects>
@@ -105,7 +97,7 @@
         <!--Navigation Controller-->
         <scene sceneID="UqN-XC-4sU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z7t-H1-caa" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="QuestionContentNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Z7t-H1-caa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qCC-do-OBJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -197,11 +189,13 @@
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="tIY-Ef-tYF" userLabel="插图">
                                         <rect key="frame" x="0.0" y="198.5" width="343" height="238.5"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="tIY-Ef-tYF" secondAttribute="height" multiplier="125:87" id="5H5-5d-F6f"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="tIY-Ef-tYF" firstAttribute="leading" secondItem="xNl-Zc-tnD" secondAttribute="leading" id="wu0-im-01o"/>
                                     <constraint firstAttribute="trailing" secondItem="tIY-Ef-tYF" secondAttribute="trailing" id="y9N-XN-POS"/>
@@ -211,6 +205,7 @@
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <items>
                                     <tabBarItem title="赞 (3)" id="YyU-Wu-ECT"/>
                                     <tabBarItem title="评论 (3)" id="NCG-ny-R8F"/>
@@ -220,6 +215,7 @@
                             </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="xNl-Zc-tnD" firstAttribute="leading" secondItem="ulR-xQ-08v" secondAttribute="leading" constant="16" id="7WG-SM-5tN"/>
                             <constraint firstItem="xNl-Zc-tnD" firstAttribute="trailing" secondItem="ulR-xQ-08v" secondAttribute="trailing" constant="-16" id="ShS-pQ-y6c"/>
@@ -235,7 +231,7 @@
         <!--Navigation Controller-->
         <scene sceneID="VU6-Ba-T48">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wfj-4F-a2Q" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AnswerContentNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="wfj-4F-a2Q" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9DU-te-VI9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -256,6 +252,6 @@
         <image name="DefaultImage" width="250" height="174"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="03F-cH-jpk"/>
+        <segue reference="4B9-Zg-uvN"/>
     </inferredMetricsTieBreakers>
 </document>
