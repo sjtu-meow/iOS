@@ -12,10 +12,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="156" id="1uc-MZ-3lx">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1uc-MZ-3lx" id="STj-0O-ox0">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="155.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OOZ-8i-9Yo" userLabel="主体">
@@ -137,6 +137,7 @@
                     </stackView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="OOZ-8i-9Yo" secondAttribute="bottom" constant="10" id="EIt-H4-aZc"/>
                     <constraint firstAttribute="trailing" secondItem="OOZ-8i-9Yo" secondAttribute="trailing" constant="16" id="Hf0-cW-R8p"/>
                     <constraint firstItem="OOZ-8i-9Yo" firstAttribute="leading" secondItem="STj-0O-ox0" secondAttribute="leading" constant="16" id="T4D-H7-ArN"/>
                     <constraint firstItem="OOZ-8i-9Yo" firstAttribute="top" secondItem="STj-0O-ox0" secondAttribute="top" constant="10" id="TWR-az-GLp"/>
