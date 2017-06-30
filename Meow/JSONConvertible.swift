@@ -119,6 +119,12 @@ func <- <T:JSONConvertible>(lhs:inout T, rhs:JSON) -> Void {
     }
 }
 
+func <- <T:JSONConvertible>(lhs:inout T!, rhs:JSON) -> Void {
+    if let newVal:T = JSON_resolve([rhs]) {
+        lhs = newVal
+    }
+}
+
 func <- <T:JSONConvertible>(lhs:inout T, rhs:(JSON,T)) -> Void {
     lhs = (JSON_resolve([rhs.0]) ?? rhs.1)
 }
