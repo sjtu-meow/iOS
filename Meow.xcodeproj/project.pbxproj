@@ -22,6 +22,7 @@
 		24A14CF21F03EA6900967F45 /* AnswerHomePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A14CF11F03EA6900967F45 /* AnswerHomePageTableViewCell.xib */; };
 		24EFC6861F05DE110005A52D /* MomentPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EFC6851F05DE110005A52D /* MomentPostViewController.swift */; };
 		24EFC68D1F05F1560005A52D /* ImagePostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EFC68C1F05F1560005A52D /* ImagePostCollectionViewCell.swift */; };
+		24EFC6931F0677BC0005A52D /* MomentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EFC6921F0677BC0005A52D /* MomentTableViewCell.swift */; };
 		24F7F4391F04864A001A0FFA /* ArticlePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4381F04864A001A0FFA /* ArticlePageTableViewCell.xib */; };
 		24F7F43B1F04894E001A0FFA /* AnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F43A1F04894E001A0FFA /* AnswerTableViewCell.xib */; };
 		24F7F43D1F048A57001A0FFA /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F43C1F048A57001A0FFA /* QuestionTableViewCell.xib */; };
@@ -114,6 +115,7 @@
 		24A14CF11F03EA6900967F45 /* AnswerHomePageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerHomePageTableViewCell.xib; sourceTree = "<group>"; };
 		24EFC6851F05DE110005A52D /* MomentPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentPostViewController.swift; sourceTree = "<group>"; };
 		24EFC68C1F05F1560005A52D /* ImagePostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePostCollectionViewCell.swift; sourceTree = "<group>"; };
+		24EFC6921F0677BC0005A52D /* MomentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentTableViewCell.swift; sourceTree = "<group>"; };
 		24F7F4381F04864A001A0FFA /* ArticlePageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticlePageTableViewCell.xib; sourceTree = "<group>"; };
 		24F7F43A1F04894E001A0FFA /* AnswerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerTableViewCell.xib; sourceTree = "<group>"; };
 		24F7F43C1F048A57001A0FFA /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
@@ -229,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				24EFC6851F05DE110005A52D /* MomentPostViewController.swift */,
-				24EFC68C1F05F1560005A52D /* ImagePostCollectionViewCell.swift */,
 			);
 			name = "Post Controller";
 			sourceTree = "<group>";
@@ -406,7 +407,9 @@
 		BFE11D341F010A8D00EED963 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				24EFC68C1F05F1560005A52D /* ImagePostCollectionViewCell.swift */,
 				BF44D37F1F06312600A137E6 /* BannerCellViewModel.swift */,
+				24EFC6921F0677BC0005A52D /* MomentTableViewCell.swift */,
 			);
 			name = "View Model";
 			sourceTree = "<group>";
@@ -414,16 +417,16 @@
 		BFE11D351F010ADD00EED963 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2411AD051F052CFB00910051 /* UserProfileTableViewCell.xib */,
-				2411AD071F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib */,
-				24F7F4641F04FAF8001A0FFA /* PostTypePicker.xib */,
-				24F7F4421F0492B3001A0FFA /* ArticleAnswerCommentTableViewCell.xib */,
 				24F7F4551F04A496001A0FFA /* Record/Search Cell */,
 				24F7F44A1F04997F001A0FFA /* Nofication Cell */,
 				24F7F44D1F049DA7001A0FFA /* Answer Cell */,
 				24F7F44E1F049DB6001A0FFA /* Article Cell */,
 				24F7F44F1F049DBF001A0FFA /* Moment Cell */,
 				24F7F4501F049DC7001A0FFA /* Question Cell */,
+				2411AD051F052CFB00910051 /* UserProfileTableViewCell.xib */,
+				2411AD071F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib */,
+				24F7F4641F04FAF8001A0FFA /* PostTypePicker.xib */,
+				24F7F4421F0492B3001A0FFA /* ArticleAnswerCommentTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -785,6 +788,7 @@
 				BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */,
 				D97B34FE1F05E9C300BCB027 /* Moment.swift in Sources */,
 				D97B34FA1F05DCC300BCB027 /* Item.swift in Sources */,
+				24EFC6931F0677BC0005A52D /* MomentTableViewCell.swift in Sources */,
 				D97B35001F061A9100BCB027 /* Article.swift in Sources */,
 				BF390A4D1F01FBFD00555B93 /* GlobalFunctions.swift in Sources */,
 				BF44D3801F06312600A137E6 /* BannerCellViewModel.swift in Sources */,
