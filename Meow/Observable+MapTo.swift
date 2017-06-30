@@ -15,7 +15,7 @@ enum MeowError: String {
 extension MeowError: Swift.Error { }
 
 extension Observable {
-    func map <T:JSONConvertible>(to type: T.Type) -> Observable<T> {
+    func mapTo <T: JSONConvertible>(type: T.Type) -> Observable<T> {
         return map {
             (element) -> T in
             
@@ -29,7 +29,7 @@ extension Observable {
         }
     }
     
-    func mapTo<T: JSONConvertible>(arrayOf classType: T.Type) -> Observable<[T]> {
+    func mapTo<T: JSONConvertible>(arrayOf type: T.Type) -> Observable<[T]> {
         return self.map {
             (element) -> [T] in
             guard let array = element as? [AnyObject], let jsonArray = array as? [JSON] else {
