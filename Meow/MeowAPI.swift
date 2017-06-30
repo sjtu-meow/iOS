@@ -9,6 +9,9 @@ import Moya
 
 enum MeowAPI  {
     case moments
+    case signup(phone: String, password: String, validationCode: String )
+    case login(phone: String, password: String)
+
 }
 
 extension MeowAPI: TargetType {
@@ -25,18 +28,39 @@ extension MeowAPI: TargetType {
             
         case .moments:
             return "/moments"
+        case .login:
+            return "/login"
+        case .signup:
+            return "/signup"
+        
         }
     }
     
     /// The HTTP method used in the request.
-    var method: Moya.Method { return .get }
+    var method: Moya.Method {
+        switch self {
+        case .login,.signup:
+            return .post
+        default:
+            return .get 
+        }
+    }
 
     public var parameterEncoding: ParameterEncoding {
         return JSONEncoding.default
     }
     
-    var parameters: [String: Any]? { return nil  }
-    
+    var parameters: [String: Any]? {
+        switch self {
+        case .login(let phone, let password):
+            return ["phone": phone, "password": password]
+        case .signup(let phone, let password, let validationCode):
+            return ["phone": phone, "password": password, "validationCode": validationCode]
+        default:
+            return nil
+        }
+    }
+
     var sampleData: Data { return Data()  }
 
     
