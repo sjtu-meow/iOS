@@ -70,6 +70,8 @@
 		D97B34FA1F05DCC300BCB027 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B34F91F05DCC300BCB027 /* Item.swift */; };
 		D97B34FC1F05DEF500BCB027 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B34FB1F05DEF400BCB027 /* Profile.swift */; };
 		D97B34FE1F05E9C300BCB027 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B34FD1F05E9C300BCB027 /* Moment.swift */; };
+		D97B35001F061A9100BCB027 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B34FF1F061A9100BCB027 /* Article.swift */; };
+		D97B35021F061C7200BCB027 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B35011F061C7200BCB027 /* Banner.swift */; };
 		F766C86074602285186EC72F /* Pods_Meow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6E60B8501B878CBD0FCF4C /* Pods_Meow.framework */; };
 /* End PBXBuildFile section */
 
@@ -165,6 +167,8 @@
 		D97B34F91F05DCC300BCB027 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D97B34FB1F05DEF400BCB027 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		D97B34FD1F05E9C300BCB027 /* Moment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
+		D97B34FF1F061A9100BCB027 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		D97B35011F061C7200BCB027 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		F4EAF4C51299AB8CB42357F2 /* Pods-Meow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meow/Pods-Meow.release.xcconfig"; sourceTree = "<group>"; };
 		F7F285DE9E9D46F1E363EF9D /* Pods-Meow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meow/Pods-Meow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -290,11 +294,13 @@
 			isa = PBXGroup;
 			children = (
 				BF390A4A1F01F58500555B93 /* JSONConvertible.swift */,
+				D97B34FF1F061A9100BCB027 /* Article.swift */,
 				BF390A501F02053A00555B93 /* Token.swift */,
 				BF44D3771F05D60900A137E6 /* Media.swift */,
 				D97B34F91F05DCC300BCB027 /* Item.swift */,
 				D97B34FB1F05DEF400BCB027 /* Profile.swift */,
 				D97B34FD1F05E9C300BCB027 /* Moment.swift */,
+				D97B35011F061C7200BCB027 /* Banner.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -756,6 +762,7 @@
 				BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */,
 				D97B34FE1F05E9C300BCB027 /* Moment.swift in Sources */,
 				D97B34FA1F05DCC300BCB027 /* Item.swift in Sources */,
+				D97B35001F061A9100BCB027 /* Article.swift in Sources */,
 				BF390A4D1F01FBFD00555B93 /* GlobalFunctions.swift in Sources */,
 				BF78786E1F0100D4000FB7C6 /* ArticleViewController.swift in Sources */,
 				BF390A451F01700500555B93 /* MeowAPI.swift in Sources */,
@@ -773,6 +780,7 @@
 				BF7878721F0100FF000FB7C6 /* NewPostViewController.swift in Sources */,
 				BFF139611F034053006DF489 /* SignupViewController.swift in Sources */,
 				D97B34FC1F05DEF500BCB027 /* Profile.swift in Sources */,
+				D97B35021F061C7200BCB027 /* Banner.swift in Sources */,
 				BF390A4B1F01F58500555B93 /* JSONConvertible.swift in Sources */,
 				BF390A511F02053A00555B93 /* Token.swift in Sources */,
 			);

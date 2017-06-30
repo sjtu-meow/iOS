@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-class Moment: ItemProtocol{
+struct Moment: ItemProtocol {
     var id: Int!
     var type: ItemType!
     var profile: Profile!
@@ -17,7 +17,7 @@ class Moment: ItemProtocol{
     var medias: [Media]?
 }
 
-extension Moment: JSONConvertible{
+extension Moment: JSONConvertible {
     static func fromJSON(_ json: JSON) -> Self? {
         guard let item = Item.fromJSON(json)
             else { return nil }

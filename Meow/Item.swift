@@ -9,11 +9,11 @@
 import Foundation
 import SwiftyJSON
 
-enum ItemType:Int{
+enum ItemType: Int {
     case moment = 0, artical = 1, question = 2, answer = 3
 }
 
-protocol ItemProtocol{
+protocol ItemProtocol {
     var id: Int! {get set}
     var type: ItemType! {get set}
     var profile: Profile! {get set}
@@ -28,7 +28,7 @@ class Item: ItemProtocol {
 }
 
 
-extension Item: JSONConvertible{
+extension Item: JSONConvertible {
     static func fromJSON(_ json: JSON) -> Self? {
        
         guard let id = json["id"].int,

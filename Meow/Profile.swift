@@ -9,7 +9,7 @@
 
 import SwiftyJSON
 
-struct Profile{
+struct Profile {
     //var id: Int?
     var nickname: String?
     var bio: String?
@@ -17,7 +17,7 @@ struct Profile{
     var userId: Int!
 }
 
-extension Profile: JSONConvertible{
+extension Profile: JSONConvertible {
     static func fromJSON(_ json: JSON) -> Profile? {
         guard let userId = json["userId"].int
             else{ return nil}
