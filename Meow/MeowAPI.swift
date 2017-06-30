@@ -11,11 +11,12 @@ enum MeowAPI  {
     case moments
     case signup(phone: String, password: String, validationCode: String )
     case login(phone: String, password: String)
+    case banners
 
 }
 
 extension MeowAPI: TargetType {
-    var base: String { return "http://meow.io/api" }
+    var base: String { return "http://localhost:8080" }
     
     var baseURL: URL { return URL(string: base)! }
     
@@ -32,6 +33,9 @@ extension MeowAPI: TargetType {
             return "/login"
         case .signup:
             return "/signup"
+        case .banners:
+            return "/banners"
+        
         
         }
     }

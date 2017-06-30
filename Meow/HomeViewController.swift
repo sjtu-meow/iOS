@@ -6,8 +6,15 @@
 //
 
 import UIKit
+import RxSwift
 
 class HomeViewController: UITableViewController {
+    let disposeBag = DisposeBag()
+    
+    var banners: [Banner]?
+    
+    var items: [ItemProtocol]?
+    
     override func viewDidLoad() {
        
         let vc = R.storyboard.postPages.postMomentNavigationController()
