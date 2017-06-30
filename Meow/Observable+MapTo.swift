@@ -36,16 +36,9 @@ extension Observable {
                 throw MeowError.badData
             }
             
-            do {
-                let models = try jsonArray.map {
-                    (jsonElement) -> T in
-                    guard let model = T.fromJSON(jsonElement) else {
-                        throw MeowError.badCast
-                    }
-                    return model
-                }
-            
-                return models
+            return jsonArray.flatMap {
+                (jsonElement) -> T? in
+                T.fromJSON(jsonElement)
             }
         }
     }
