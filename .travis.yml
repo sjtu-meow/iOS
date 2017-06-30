@@ -2,7 +2,7 @@ language: swift
 osx_image: 
     - xcode8.3
     - xcode8
-    - xcode7.1
+    - xcode7.3
 
 script:
     - xcodebuild -showsdks
