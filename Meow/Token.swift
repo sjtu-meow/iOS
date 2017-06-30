@@ -20,7 +20,7 @@ extension Token {
         if let access = access {
             return Token(access: access)
         }
-        return nil 
+        return nil
     }
     
     func save() {

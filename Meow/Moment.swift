@@ -18,11 +18,11 @@ struct Moment: ItemProtocol {
 }
 
 extension Moment: JSONConvertible {
-    static func fromJSON(_ json: JSON) -> Self? {
+    static func fromJSON(_ json: JSON) -> Moment? {
         guard let item = Item.fromJSON(json)
             else { return nil }
         
-        var moment: Moment
+        var moment = self.init()
         moment.id = item.id
         moment.type = item.type
         moment.profile = item.profile

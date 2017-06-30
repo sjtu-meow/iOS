@@ -20,7 +20,7 @@ protocol ItemProtocol {
 }
 
 
-class Item: ItemProtocol {
+struct Item: ItemProtocol {
     var id: Int!
     var type: ItemType!
     var profile: Profile!
@@ -29,14 +29,14 @@ class Item: ItemProtocol {
 
 
 extension Item: JSONConvertible {
-    static func fromJSON(_ json: JSON) -> Self? {
+    static func fromJSON(_ json: JSON) -> Item? {
        
         guard let id = json["id"].int,
               let type = json["type"].int,
               let profile = Profile.fromJSON(json["profile"])
             else { return nil }
         
-        var item = self()
+        var item = self.init()
         item.id = id
         item.type = ItemType.init(rawValue: type)
         item.profile = profile
