@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Rswift
 
 class HomeViewController: UITableViewController {
     let disposeBag = DisposeBag()
@@ -18,8 +19,7 @@ class HomeViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         loadData()
         
         let vc = R.storyboard.postPages.postMomentNavigationController()
@@ -27,6 +27,12 @@ class HomeViewController: UITableViewController {
         present(vc!, animated: true, completion: nil)
         logger.log("hello world")
         COSProvider.shared.upload(path: "logger.txt", filename: "log", directory: "/")
+    
+        tableView.register(BannerCellViewModel.self, forCellReuseIdentifier: "bannerCell")
+        tableView.register(R.nib.momentTableViewCell)
+        tableView.register(R.nib.answerHomePageTableViewCell)
+        tableView.register(R.nib.questionHomePageTableViewCell)
+        tableView.register(R.nib.articleHomePageTableViewCell)
     }
        
     
@@ -57,26 +63,26 @@ class HomeViewController: UITableViewController {
         if section == 0 /* banners: one cell */ {
             return 1
         }
-        /* items: content + comments */
-        return 1 // TODO: add comment cells
+        /* item sections: one cell for each item */
+        return self.items?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 && indexPath.row == 0 {
-            return tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.bannerCell.identifier)!
+        if indexPath.section == 0 {
+            return tableView.dequeueReusableCell(withIdentifier: "bannerCell")!
         }
-        let item = self.items![indexPath.section - 1]
+        let item = self.items![indexPath.row]
         
         // FIXME: check whether it is a comment cell
         switch(item.type!) {
         case .moment:
-            return tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.momentCell.identifier)!
+            return tableView.dequeueReusableCell(withIdentifier: R.nib.momentTableViewCell.identifier)!
         case .answer:
-            return tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.answerCell.identifier)!
+            return tableView.dequeueReusableCell(withIdentifier: R.nib.answerHomePageTableViewCell.identifier)!
         case .artical:
-            return tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.articleCell.identifier)!
+            return tableView.dequeueReusableCell(withIdentifier: R.nib.articleHomePageTableViewCell.identifier)!
         case .question:
-            return tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionCell.identifier)!
+            return tableView.dequeueReusableCell(withIdentifier: R.nib.questionHomePageTableViewCell.identifier)!
         }
     }
 }
