@@ -224,7 +224,6 @@
         <!--我的通知-->
         <scene sceneID="mSU-3K-sba">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aco-2l-0fZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Ra0-8F-2t0" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="g5H-Ee-U8k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -247,6 +246,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="我的通知" id="SCI-cM-Cyu"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aco-2l-0fZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4002.4000000000001" y="928.78560719640188"/>
         </scene>

@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UITableViewController {
     override func viewDidLoad() {
        
-        let vc = R.storyboard.main.loginSignupNavigationController()
+        let vc = R.storyboard.postPages.postMoment()
 
         present(vc!, animated: true, completion: nil)
         logger.log("hello world")
