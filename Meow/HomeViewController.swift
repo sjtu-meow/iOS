@@ -6,14 +6,35 @@
 //
 
 import UIKit
+import RxSwift
 
 class HomeViewController: UITableViewController {
+    let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
-       
-        //let vc = R.storyboard.main.loginSignupNavigationController()
+        super.viewDidLoad()
+        
+        loadData()
+    }
 
-        //present(vc!, animated: true, completion: nil)
-        logger.log("hello world")
-        COSProvider.shared.upload(path: "logger.txt", filename: "log", directory: "/")
+    func loadData() {
+       /* MeowAPIProvider.shared.request(.banners)
+            .map{ (json) in
+                [Banner].fromJSON(json)
+        }
+        */
+        
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.bannerCell.identifier)!
     }
 }
