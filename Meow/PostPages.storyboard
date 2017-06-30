@@ -21,23 +21,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JFc-1A-Jjp" userLabel="主体">
-                                <rect key="frame" x="16" y="72" width="343" height="241"/>
+                                <rect key="frame" x="16" y="72" width="343" height="278"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="KfV-Rr-vo4" userLabel="文字输入">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="170"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="KfV-Rr-vo4" userLabel="文字输入">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="120"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="170" id="fmu-HB-gqo"/>
+                                            <constraint firstAttribute="height" constant="120" id="fmu-HB-gqo"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="tFD-JL-dym" id="tYg-Hh-WEZ"/>
+                                        </connections>
                                     </textView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qaw-B8-xKI" userLabel="上传图片" customClass="ImagePostCollectionView" customModule="Meow" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="178" width="343" height="63"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qaw-B8-xKI" userLabel="上传图片">
+                                        <rect key="frame" x="0.0" y="128" width="343" height="150"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="63" id="IB3-wf-log"/>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="133" id="fLY-7N-g8d"/>
+                                            <constraint firstAttribute="height" constant="150" id="IB3-wf-log"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="7" minimumInteritemSpacing="7" id="AJz-8z-eKV">
                                             <size key="itemSize" width="63" height="63"/>
@@ -80,25 +81,28 @@
                                     <constraint firstItem="KfV-Rr-vo4" firstAttribute="leading" secondItem="JFc-1A-Jjp" secondAttribute="leading" id="qLL-0c-P92"/>
                                 </constraints>
                             </stackView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXe-wh-gNp">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="发布点滴" id="btU-oe-6yp">
-                                        <barButtonItem key="rightBarButtonItem" title="发布" id="rVJ-ds-186"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EXe-wh-gNp" firstAttribute="trailing" secondItem="INs-UP-Q60" secondAttribute="trailing" id="0QY-Zb-evF"/>
-                            <constraint firstItem="EXe-wh-gNp" firstAttribute="leading" secondItem="INs-UP-Q60" secondAttribute="leading" id="24Y-F0-eAi"/>
                             <constraint firstItem="JFc-1A-Jjp" firstAttribute="trailing" secondItem="INs-UP-Q60" secondAttribute="trailing" constant="-16" id="CsO-Xm-X9l"/>
-                            <constraint firstItem="EXe-wh-gNp" firstAttribute="top" secondItem="hUt-Jd-SC4" secondAttribute="bottom" id="MAd-WA-C9U"/>
                             <constraint firstItem="JFc-1A-Jjp" firstAttribute="leading" secondItem="INs-UP-Q60" secondAttribute="leading" constant="16" id="MP8-ju-MRJ"/>
-                            <constraint firstItem="JFc-1A-Jjp" firstAttribute="top" secondItem="EXe-wh-gNp" secondAttribute="bottom" constant="8" id="OeA-7f-K1f"/>
+                            <constraint firstItem="JFc-1A-Jjp" firstAttribute="top" secondItem="hUt-Jd-SC4" secondAttribute="bottom" constant="8" id="hCl-t5-Hme"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="发布点滴" id="DQM-44-QcY">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="r9F-0U-Q51">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="tFD-JL-dym" id="7ox-df-b7O"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="发布" id="rVJ-ds-186">
+                            <connections>
+                                <action selector="postButtonTapped:" destination="tFD-JL-dym" id="9Om-re-wcr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="momentContentTextView" destination="KfV-Rr-vo4" id="L9b-dM-nb1"/>
                         <outlet property="momentImageCollectionView" destination="Qaw-B8-xKI" id="syB-X9-RGm"/>
@@ -106,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1Q-Qd-3tk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1444" y="2848"/>
+            <point key="canvasLocation" x="-504.80000000000001" y="2847.5262368815593"/>
         </scene>
         <!--发布文章-->
         <scene sceneID="hiz-Zb-2UN">
@@ -121,13 +125,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="TjM-8w-fjb" userLabel="文字输入">
-                                <rect key="frame" x="16" y="72" width="343" height="587"/>
+                                <rect key="frame" x="16" y="116" width="343" height="543"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJp-Oo-UUG">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="发布文章" id="BE6-qT-Qr7"/>
                                 </items>
@@ -151,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WfG-QL-FS1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-484" y="2848"/>
+            <point key="canvasLocation" x="1252" y="2847.5262368815593"/>
         </scene>
         <!--发布问题-->
         <scene sceneID="ZRm-tW-3x4">
@@ -379,6 +383,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cya-7X-tU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1444" y="5055"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Efe-vh-fHQ">
+            <objects>
+                <navigationController storyboardIdentifier="PostMomentNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="SBU-S2-gcL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0YC-PI-to9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tFD-JL-dym" kind="relationship" relationship="rootViewController" id="uGP-Nf-XnA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FD0-gV-AN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1444" y="2847.5262368815593"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CZY-kI-Fv2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vI-w4-Yci" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V7r-Ij-ejI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iCo-4o-9bp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lN2-DK-cHZ" kind="relationship" relationship="rootViewController" id="0Ms-hh-naV"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="312.80000000000001" y="2847.5262368815593"/>
         </scene>
     </scenes>
     <resources>

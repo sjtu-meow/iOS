@@ -10,9 +10,9 @@ import UIKit
 class HomeViewController: UITableViewController {
     override func viewDidLoad() {
        
-        let vc = R.storyboard.postPages.postMoment()
+        let vc = R.storyboard.postPages.postMomentNavigationController()
 
-        //present(vc!, animated: true, completion: nil)
+        present(vc!, animated: true, completion: nil)
         logger.log("hello world")
         COSProvider.shared.upload(path: "logger.txt", filename: "log", directory: "/")
     }
