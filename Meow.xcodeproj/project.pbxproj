@@ -215,14 +215,14 @@
 		24EFC6841F05D9940005A52D /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				2411AD141F05406000910051 /* ArticlePage.storyboard */,
-				2411AD121F053F0900910051 /* HomePage.storyboard */,
-				2411AD1C1F05432900910051 /* LoginSignupPage.storyboard */,
-				2411AD1A1F05423C00910051 /* PostPages.storyboard */,
-				2411AD181F05417600910051 /* QuestionAnswerPage.storyboard */,
 				BF7878451F00F2C9000FB7C6 /* LaunchScreen.storyboard */,
 				BF7878401F00F2C9000FB7C6 /* Main.storyboard */,
+				2411AD121F053F0900910051 /* HomePage.storyboard */,
+				2411AD141F05406000910051 /* ArticlePage.storyboard */,
+				2411AD181F05417600910051 /* QuestionAnswerPage.storyboard */,
 				2411AD0F1F053CA600910051 /* SelfPage.storyboard */,
+				2411AD1A1F05423C00910051 /* PostPages.storyboard */,
+				2411AD1C1F05432900910051 /* LoginSignupPage.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";

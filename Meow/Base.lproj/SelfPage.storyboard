@@ -300,10 +300,10 @@
             </objects>
             <point key="canvasLocation" x="4000.8000000000002" y="1635.832083958021"/>
         </scene>
-        <!--MomentContentNavigationController-->
+        <!--MomentContent-->
         <scene sceneID="hML-SZ-OlU">
             <objects>
-                <viewControllerPlaceholder storyboardName="HomePage" referencedIdentifier="MomentContentNavigationController" id="Y1t-Ku-VQc" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="HomePage" referencedIdentifier="MomentContent" id="Y1t-Ku-VQc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBy-U5-mz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5245" y="3525"/>
@@ -512,10 +512,10 @@
             </objects>
             <point key="canvasLocation" x="5242" y="3766"/>
         </scene>
-        <!--QuestionContentNavigationController-->
+        <!--QuestionContent-->
         <scene sceneID="Qp7-Oa-BQj">
             <objects>
-                <viewControllerPlaceholder storyboardName="QuestionAnswerPage" referencedIdentifier="QuestionContentNavigationController" id="Alb-zG-jcE" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="QuestionAnswerPage" referencedIdentifier="QuestionContent" id="Alb-zG-jcE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHa-tS-TdP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5249" y="3685"/>
