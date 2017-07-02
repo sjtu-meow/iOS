@@ -15,7 +15,7 @@
 		2411AD191F05417600910051 /* QuestionAnswerPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2411AD181F05417600910051 /* QuestionAnswerPage.storyboard */; };
 		2411AD1B1F05423C00910051 /* PostPages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2411AD1A1F05423C00910051 /* PostPages.storyboard */; };
 		2411AD1D1F05432900910051 /* LoginSignupPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2411AD1C1F05432900910051 /* LoginSignupPage.storyboard */; };
-		2443A6691F02064C0032BEB9 /* MomentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2443A6681F02064C0032BEB9 /* MomentTableViewCell.xib */; };
+		2443A6691F02064C0032BEB9 /* MomentHomePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2443A6681F02064C0032BEB9 /* MomentHomePageTableViewCell.xib */; };
 		2443A6751F03530A0032BEB9 /* MomentCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2443A6741F03530A0032BEB9 /* MomentCommentTableViewCell.xib */; };
 		24A14CEE1F03599100967F45 /* ArticleHomePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A14CED1F03599100967F45 /* ArticleHomePageTableViewCell.xib */; };
 		24A14CF01F03599F00967F45 /* QuestionHomePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A14CEF1F03599F00967F45 /* QuestionHomePageTableViewCell.xib */; };
@@ -107,7 +107,7 @@
 		2411AD181F05417600910051 /* QuestionAnswerPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QuestionAnswerPage.storyboard; sourceTree = "<group>"; };
 		2411AD1A1F05423C00910051 /* PostPages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostPages.storyboard; sourceTree = "<group>"; };
 		2411AD1C1F05432900910051 /* LoginSignupPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginSignupPage.storyboard; sourceTree = "<group>"; };
-		2443A6681F02064C0032BEB9 /* MomentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MomentTableViewCell.xib; sourceTree = "<group>"; };
+		2443A6681F02064C0032BEB9 /* MomentHomePageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MomentHomePageTableViewCell.xib; sourceTree = "<group>"; };
 		2443A6741F03530A0032BEB9 /* MomentCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MomentCommentTableViewCell.xib; sourceTree = "<group>"; };
 		24A14CED1F03599100967F45 /* ArticleHomePageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleHomePageTableViewCell.xib; sourceTree = "<group>"; };
 		24A14CEF1F03599F00967F45 /* QuestionHomePageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionHomePageTableViewCell.xib; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				2443A6741F03530A0032BEB9 /* MomentCommentTableViewCell.xib */,
-				2443A6681F02064C0032BEB9 /* MomentTableViewCell.xib */,
+				2443A6681F02064C0032BEB9 /* MomentHomePageTableViewCell.xib */,
 			);
 			name = "Moment Cell";
 			sourceTree = "<group>";
@@ -572,7 +572,7 @@
 				24F7F4521F049EC7001A0FFA /* ArticleUserPageTableViewCell.xib in Resources */,
 				24F7F4391F04864A001A0FFA /* ArticlePageTableViewCell.xib in Resources */,
 				BF7878471F00F2C9000FB7C6 /* LaunchScreen.storyboard in Resources */,
-				2443A6691F02064C0032BEB9 /* MomentTableViewCell.xib in Resources */,
+				2443A6691F02064C0032BEB9 /* MomentHomePageTableViewCell.xib in Resources */,
 				24F7F4651F04FAF8001A0FFA /* PostTypePicker.xib in Resources */,
 				2411AD191F05417600910051 /* QuestionAnswerPage.storyboard in Resources */,
 				24F7F4471F049855001A0FFA /* MessageNotificationTableViewCell.xib in Resources */,

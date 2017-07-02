@@ -24,11 +24,11 @@ class HomeViewController: UITableViewController {
         
         let vc = R.storyboard.postPages.postMomentNavigationController()
         
-        present(vc!, animated: true, completion: nil)
-        logger.log("hello world")
+        //present(vc!, animated: true, completion: nil)
+        //logger.log("hello world")
         
         tableView.register(BannerCellViewModel.self, forCellReuseIdentifier: "bannerCell")
-        tableView.register(R.nib.momentTableViewCell)
+        tableView.register(R.nib.momentHomePageTableViewCell)
         tableView.register(R.nib.answerHomePageTableViewCell)
         tableView.register(R.nib.questionHomePageTableViewCell)
         tableView.register(R.nib.articleHomePageTableViewCell)
@@ -75,7 +75,7 @@ class HomeViewController: UITableViewController {
         // FIXME: check whether it is a comment cell
         switch(item.type!) {
         case .moment:
-            return tableView.dequeueReusableCell(withIdentifier: R.nib.momentTableViewCell.identifier)!
+            return tableView.dequeueReusableCell(withIdentifier: R.nib.momentHomePageTableViewCell.identifier)!
         case .answer:
             return tableView.dequeueReusableCell(withIdentifier: R.nib.answerHomePageTableViewCell.identifier)!
         case .artical:
