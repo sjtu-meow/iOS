@@ -23,6 +23,13 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var signupButton: UIButton!
     
    
+    // Navigation
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+
+    
+    
     var countdown: Int = 5
     var timer: Timer!
     @IBAction func getVerificationCode(_ sender: Any) {

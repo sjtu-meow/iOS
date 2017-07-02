@@ -8,14 +8,39 @@
 import RxSwift
 import SwiftyJSON
 
+enum MeowError: String {
+    case badCast, badData
+}
+
+extension MeowError: Swift.Error { }
+
 extension Observable {
-    func map <T:JSONConvertible>(to type: T.Type) -> Observable<T?> {
+    func mapTo <T: JSONConvertible>(type: T.Type) -> Observable<T> {
         return map {
-            (element) -> T? in
-            if let element = element as? JSON {
-                return T.fromJSON(element)
+            (element) -> T in
+            
+            guard let json = element as? JSON else {
+                throw MeowError.badData
             }
-            return nil 
+            guard let model = T.fromJSON(json) else {
+                throw MeowError.badCast
+            }
+            return model
         }
     }
+    
+    func mapTo<T: JSONConvertible>(arrayOf type: T.Type) -> Observable<[T]> {
+        return self.map {
+            (element) -> [T] in
+            guard let array = element as? [AnyObject], let jsonArray = array as? [JSON] else {
+                throw MeowError.badData
+            }
+            
+            return jsonArray.flatMap {
+                (jsonElement) -> T? in
+                T.fromJSON(jsonElement)
+            }
+        }
+    }
+
 }

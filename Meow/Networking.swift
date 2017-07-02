@@ -9,6 +9,7 @@ import Foundation
 import Moya
 import RxSwift
 import Alamofire
+import SwiftyJSON
 
 class MeowAPIProvider {
     open static var shared: MeowAPIProvider = MeowAPIProvider()
@@ -41,8 +42,10 @@ class MeowAPIProvider {
     }
 
     
-    func request(_ target: MeowAPI) -> Observable<Response> {
+    func request(_ target: MeowAPI) -> Observable<Any> {
         return delegate.request(target)
+            .filterSuccessfulStatusCodes()
+            .mapJSON()
     }
     
 }

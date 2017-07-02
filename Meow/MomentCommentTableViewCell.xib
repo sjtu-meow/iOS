@@ -10,18 +10,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kTe-YM-ELj" userLabel="Moment Comment Table View Cell">
-            <rect key="frame" x="0.0" y="0.0" width="343" height="17"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="72" id="kTe-YM-ELj" userLabel="Moment Comment Table View Cell">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="18"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kTe-YM-ELj" id="qre-WT-WDW">
-                <rect key="frame" x="0.0" y="0.0" width="343" height="16.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="343" height="17.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Jmm-Db-FbB" userLabel="主体">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="17"/>
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="17.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="XRm-tK-dc1" userLabel="评论">
-                                <rect key="frame" x="0.0" y="0.0" width="101" height="17"/>
+                                <rect key="frame" x="0.0" y="0.0" width="101" height="17.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEM-sH-709" userLabel="用户名">
                                         <rect key="frame" x="0.0" y="0.0" width="29" height="17"/>
@@ -35,7 +35,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="蛤蛤蛤蛤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaP-6U-b6U" userLabel="评论内容">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="蛤蛤蛤蛤" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaP-6U-b6U" userLabel="评论内容">
                                         <rect key="frame" x="43.5" y="0.0" width="57.5" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,11 +48,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="Jmm-Db-FbB" firstAttribute="top" secondItem="qre-WT-WDW" secondAttribute="top" id="9kc-Bl-zun"/>
+                    <constraint firstAttribute="bottom" secondItem="Jmm-Db-FbB" secondAttribute="bottom" id="I8c-8F-mTI"/>
                     <constraint firstAttribute="trailing" secondItem="Jmm-Db-FbB" secondAttribute="trailing" id="rZG-gN-WVc"/>
                     <constraint firstItem="Jmm-Db-FbB" firstAttribute="leading" secondItem="qre-WT-WDW" secondAttribute="leading" id="sEP-tk-lfC"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="63" y="-79"/>
+            <point key="canvasLocation" x="62.5" y="-52"/>
         </tableViewCell>
     </objects>
 </document>

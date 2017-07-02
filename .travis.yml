@@ -1,7 +1,5 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode8.3
 
 script:
-    - xcodebuild -showsdks
-    - instruments -s devices
-    - xcodebuild test -workspace Meow.xcworkspace -scheme Meow -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.0' -destination 'platform=iOS Simulator,name=iPhone6,OS=10.0' | xcpretty
+    - xcodebuild test -workspace Meow.xcworkspace -scheme Meow -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.0' -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0' | xcpretty
