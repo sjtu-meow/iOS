@@ -2,4 +2,4 @@ language: objective-c
 osx_image: xcode8.3
 
 script:
-    - xcodebuild test -workspace Meow.xcworkspace -scheme Meow -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0' | xcpretty
+    - xcodebuild test -workspace Meow.xcworkspace -scheme Meow -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0' | xcpretty -c; exit ${PIPESTATUS[0]}
