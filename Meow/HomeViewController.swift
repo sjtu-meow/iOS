@@ -26,8 +26,7 @@ class HomeViewController: UITableViewController {
         
         present(vc!, animated: true, completion: nil)
         logger.log("hello world")
-        COSProvider.shared.upload(path: "logger.txt", filename: "log", directory: "/")
-    
+        
         tableView.register(BannerCellViewModel.self, forCellReuseIdentifier: "bannerCell")
         tableView.register(R.nib.momentTableViewCell)
         tableView.register(R.nib.answerHomePageTableViewCell)

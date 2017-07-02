@@ -67,7 +67,6 @@
 		BF9E75DF1F03AB6C00723541 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E75DE1F03AB6C00723541 /* R.generated.swift */; };
 		BFE11D381F010AF200EED963 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
-		BFF1395D1F02AE55006DF489 /* COSProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395C1F02AE55006DF489 /* COSProvider.swift */; };
 		BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395E1F02C089006DF489 /* SMSExtention.swift */; };
 		BFF139611F034053006DF489 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139601F034053006DF489 /* SignupViewController.swift */; };
 		C22E101695374861866E64E5 /* Pods_MeowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3612EC24166F9C122D5CDCC1 /* Pods_MeowTests.framework */; };
@@ -168,7 +167,6 @@
 		BF9E75DE1F03AB6C00723541 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
 		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
-		BFF1395C1F02AE55006DF489 /* COSProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COSProvider.swift; sourceTree = "<group>"; };
 		BFF1395E1F02C089006DF489 /* SMSExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSExtention.swift; sourceTree = "<group>"; };
 		BFF139601F034053006DF489 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CA79F670B8B78BFA429DA2B5 /* Pods-MeowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -360,7 +358,6 @@
 				BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */,
 				BF7878481F00F2C9000FB7C6 /* Info.plist */,
 				BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */,
-				BFF1395C1F02AE55006DF489 /* COSProvider.swift */,
 				BF390A4C1F01FBFD00555B93 /* GlobalFunctions.swift */,
 				BF390A4E1F01FCE500555B93 /* Logger.swift */,
 				BFF139581F025163006DF489 /* Observable+MapTo.swift */,
@@ -807,7 +804,6 @@
 				BF390A4F1F01FCE500555B93 /* Logger.swift in Sources */,
 				BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */,
 				BF44D3781F05D60900A137E6 /* Media.swift in Sources */,
-				BFF1395D1F02AE55006DF489 /* COSProvider.swift in Sources */,
 				BFF139611F034053006DF489 /* SignupViewController.swift in Sources */,
 				D97B34FC1F05DEF500BCB027 /* Profile.swift in Sources */,
 				D97B35021F061C7200BCB027 /* Banner.swift in Sources */,

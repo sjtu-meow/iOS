@@ -5,9 +5,6 @@ plugin 'cocoapods-keys', {
   :keys => [
     'LeanCloudAppId',
     'LeanCloudClientKey',
-    'QCloudCOSAppId',
-    'QCloudCOSSecretId',
-    'QCloudCOSSecretKey'
   ]
 }
 target 'Meow' do
@@ -21,7 +18,7 @@ target 'Meow' do
   pod 'SwiftyJSON'
   pod 'R.swift' 
   pod 'AVOSCloud'
-  pod 'QCloudCOSV4'
+  pod 'Qiniu'
   pod 'DateToolsSwift'
   pod 'PKHUD', '~> 4.0'
   
