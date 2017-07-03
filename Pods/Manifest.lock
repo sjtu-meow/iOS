@@ -45,6 +45,7 @@ PODS:
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - AlamofireImage
   - AVOSCloud
   - DateToolsSwift
   - ImageSlideshow
@@ -78,6 +79,6 @@ SPEC CHECKSUMS:
   RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 81440b5ba69aa1a15d76227caa42e5ef799b4bde
+PODFILE CHECKSUM: ac32da7c0f6ba99a4503285a3ffc652380917d75
 
 COCOAPODS: 1.2.1

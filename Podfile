@@ -21,6 +21,7 @@ target 'Meow' do
   pod 'Qiniu'
   pod 'DateToolsSwift'
   pod 'PKHUD', '~> 4.0'
+  pod 'AlamofireImage'
   
   target 'MeowTests' do
     inherit! :search_paths
