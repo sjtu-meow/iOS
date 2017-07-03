@@ -12,6 +12,7 @@ enum MeowAPI  {
     case signup(phone: String, password: String, validationCode: String )
     case login(phone: String, password: String)
     case banners
+    case articles
 
 }
 
@@ -35,6 +36,8 @@ extension MeowAPI: TargetType {
             return "/signup"
         case .banners:
             return "/banners"
+        case .articles:
+            return "/articles"
         
         
         }

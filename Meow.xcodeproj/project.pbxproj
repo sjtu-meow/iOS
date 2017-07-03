@@ -76,6 +76,7 @@
 		D97B35001F061A9100BCB027 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B34FF1F061A9100BCB027 /* Article.swift */; };
 		D97B35021F061C7200BCB027 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B35011F061C7200BCB027 /* Banner.swift */; };
 		D97B35041F06245600BCB027 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B35031F06245600BCB027 /* Answer.swift */; };
+		D97B35081F067E7D00BCB027 /* ArticlePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B35071F067E7D00BCB027 /* ArticlePageTableViewCell.swift */; };
 		F766C86074602285186EC72F /* Pods_Meow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6E60B8501B878CBD0FCF4C /* Pods_Meow.framework */; };
 /* End PBXBuildFile section */
 
@@ -178,6 +179,7 @@
 		D97B35011F061C7200BCB027 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		D97B35031F06245600BCB027 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		D97B35051F0624AF00BCB027 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		D97B35071F067E7D00BCB027 /* ArticlePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlePageTableViewCell.swift; sourceTree = "<group>"; };
 		F4EAF4C51299AB8CB42357F2 /* Pods-Meow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meow/Pods-Meow.release.xcconfig"; sourceTree = "<group>"; };
 		F7F285DE9E9D46F1E363EF9D /* Pods-Meow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meow/Pods-Meow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,6 +262,7 @@
 			children = (
 				24A14CED1F03599100967F45 /* ArticleHomePageTableViewCell.xib */,
 				24F7F4381F04864A001A0FFA /* ArticlePageTableViewCell.xib */,
+				D97B35071F067E7D00BCB027 /* ArticlePageTableViewCell.swift */,
 				24F7F4511F049EC7001A0FFA /* ArticleUserPageTableViewCell.xib */,
 				24F7F4531F049F4A001A0FFA /* ArticleProfilePageTableViewCell.xib */,
 			);
@@ -392,8 +395,8 @@
 			isa = PBXGroup;
 			children = (
 				24EFC6871F05DEA70005A52D /* Post Controller */,
-				BF78786B1F01007D000FB7C6 /* HomeViewController.swift */,
 				BF78786D1F0100D4000FB7C6 /* ArticleViewController.swift */,
+				BF78786B1F01007D000FB7C6 /* HomeViewController.swift */,
 				BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */,
 				BF7878731F01010F000FB7C6 /* MyViewController.swift */,
 				BF7878751F010178000FB7C6 /* LoginViewController.swift */,
@@ -781,6 +784,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF390A491F01704B00555B93 /* NetworkLogger.swift in Sources */,
+				D97B35081F067E7D00BCB027 /* ArticlePageTableViewCell.swift in Sources */,
 				24EFC68D1F05F1560005A52D /* ImagePostCollectionViewCell.swift in Sources */,
 				BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */,
 				D97B34FE1F05E9C300BCB027 /* Moment.swift in Sources */,
