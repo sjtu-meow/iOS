@@ -15,6 +15,8 @@ struct Moment: ItemProtocol {
     var profile: Profile!
     var content: String?
     var medias: [Media]?
+    var like: Int? // FIXME: not empty
+    var comment: Int?
 }
 
 extension Moment: JSONConvertible {
@@ -28,6 +30,8 @@ extension Moment: JSONConvertible {
         moment.profile = item.profile
         moment.content <- json["content"]
         moment.medias <- json["medias"]
+        moment.like <- json["like"]
+        moment.comment <- json["comment"]
         return moment
     }
 }

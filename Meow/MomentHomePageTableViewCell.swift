@@ -7,25 +7,27 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MomentHomePageTableViewCell: UITableViewCell {
 
     //MARK: - Property
+    /* user profile info */
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nicknameLabel: UILabel!
-    @IBOutlet weak var nicknameBioSepetatorLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
-    @IBOutlet weak var momentTextLabel: UILabel!
-    @IBOutlet weak var momentImageCollectionView: UICollectionView!
-    @IBOutlet weak var thumbupCountLabel: UILabel!
-    @IBOutlet weak var thumbupTextLabel: UILabel!
-    @IBOutlet weak var thumbupCommentSeperatorLabel: UILabel!
-    @IBOutlet weak var commentCountLabel: UILabel!
-    @IBOutlet weak var commentTextLabel: UILabel!
-    @IBOutlet weak var commentListSeperatorView: UIView!
-    @IBOutlet weak var commentListTableView: UITableView!
-    @IBOutlet weak var commentTextField: UITextField!
     
+    /* moment */
+    @IBOutlet weak var momentContentLabel: UILabel!
+    @IBOutlet weak var mediaCollectionView: UICollectionView!
+    
+    /* like & comment */
+    @IBOutlet weak var likeLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
+    
+    // comment content
+    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -38,6 +40,31 @@ class MomentHomePageTableViewCell: UITableViewCell {
     }
     
     func configure(model: Moment) {
+        let moment = model
+        let profile = moment.profile
+        
+        if let avatar = profile?.avatar {
+            avatarImageView.af_setImage(withURL: avatar)
+        }
+        nicknameLabel.text = profile?.nickname
+        bioLabel.text = profile?.bio
+        
+        momentContentLabel.text = moment.content
+        // collection?
+        
+        likeLabel.text = String(describing: moment.like) 
+        commentLabel.text = String(describing: moment.comment)
+        
+        // comment
+        
     }
+    
+    
+    // like function
+    @IBAction func like(_ sender: UIButton) {
+    }
+    // comment function
+    
+    
 
 }

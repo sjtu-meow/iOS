@@ -50,6 +50,7 @@ class HomeViewController: UITableViewController {
             .subscribe(onNext: {
                 [weak self] (items) in
                 self?.items = items
+                self?.tableView.reloadData()
             })
             .addDisposableTo(disposeBag)
     }
@@ -71,7 +72,7 @@ class HomeViewController: UITableViewController {
         /* banners */
         if indexPath.section == 0 {
             let view = tableView.dequeueReusableCell(withIdentifier: "bannerViewCell")!
-            (view as! BannerViewCell).configure(banners: self.banners)
+            //(view as! BannerViewCell).configure(banners: self.banners)
             return view
         }
         
@@ -86,7 +87,7 @@ class HomeViewController: UITableViewController {
             return view
         case .answer:
             let view = tableView.dequeueReusableCell(withIdentifier: R.nib.answerHomePageTableViewCell.identifier)!
-            (view as! AnswerHomePageTableViewCell).config(model: item as! Answer)
+            (view as! AnswerHomePageTableViewCell).configure(model: item as! Answer)
             return view
         case .article:
             let view = tableView.dequeueReusableCell(withIdentifier: R.nib.articleHomePageTableViewCell.identifier)!

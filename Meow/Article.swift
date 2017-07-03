@@ -16,6 +16,9 @@ struct Article: ItemProtocol {
     var summary: String?
     var readCount: Int!
     var cover: URL?
+    var like: Int? // FIXME: not empty
+    var comment: Int?
+    
 }
 
 extension Article: JSONConvertible {
@@ -34,6 +37,8 @@ extension Article: JSONConvertible {
         article.summary <- json["summary"]
         article.readCount = readCount
         article.cover <- json["cover"]
+        article.like <- json["like"]
+        article.comment <- json["comment"]
         
         return article
     }

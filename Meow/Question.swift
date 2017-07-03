@@ -15,6 +15,9 @@ struct Question: ItemProtocol {
     var title: String!
     var content: String!
     var answersId: [Int]?
+    var like: Int? // FIXME: not empty
+    var comment: Int?
+    
 }
 
 extension Question: JSONConvertible {
@@ -31,6 +34,8 @@ extension Question: JSONConvertible {
         question.title = title
         question.content = content
         question.answersId <- json["answersId"]
+        question.like <- json["like"]
+        question.comment <- json["comment"]
         
         return question
     }

@@ -13,7 +13,7 @@ struct Profile {
     //var id: Int?
     var nickname: String?
     var bio: String?
-    var avatar: String?
+    var avatar: URL?
     var userId: Int!
 }
 

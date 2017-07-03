@@ -8,9 +8,38 @@
 
 import Foundation
 import UIKit
+import AlamofireImage
 
 class AnswerHomePageTableViewCell: UITableViewCell {
-    func config(model: Answer) {
+
+    /* user profile info */
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var nicknameLabel: UILabel!
+    
+    /* question & answer info */
+    @IBOutlet weak var questionTitleLabel: UILabel!
+    @IBOutlet weak var answerContentLabel: UILabel!
+    
+    /* like & comment */
+    @IBOutlet weak var likeLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
+    
+    
+    func configure(model: Answer) {
+        let answer = model
+        let profile = answer.profile
+        
+        if let avatar = profile?.avatar {
+            avatarImageView.af_setImage(withURL: avatar)
+        }
+        nicknameLabel.text = profile?.nickname
+        
+        questionTitleLabel.text = answer.questionTitle
+        answerContentLabel.text = answer.content
+        
+        likeLabel.text = String(describing: answer.like)
+        commentLabel.text = String(describing: answer.comment)
+        
     }
     
 }
