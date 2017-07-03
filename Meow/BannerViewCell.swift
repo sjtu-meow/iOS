@@ -34,7 +34,8 @@ class BannerViewCell: UITableViewCell {
     
     var onTapBanner:((Banner?)->Void)?
     
-    func configure(banners: [Banner]!) {
+    func configure(banners: [Banner]) {
+        guard banners.count > 0 else { return }
         self.banners = banners
         let sources = self.banners
             .map {

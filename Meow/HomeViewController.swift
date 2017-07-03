@@ -12,9 +12,9 @@ import Rswift
 class HomeViewController: UITableViewController {
     let disposeBag = DisposeBag()
     
-    var banners: [Banner]?
+    var banners = [Banner]()
     
-    var items: [ItemProtocol]?
+    var items = [ItemProtocol]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ class HomeViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1 /* banners */ + ((items != nil) ? 1 : 0) /* items */
+        return 1 /* banners */ + 1 /* items */
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,7 +63,7 @@ class HomeViewController: UITableViewController {
             return 1
         }
         /* item sections: one cell for each item */
-        return self.items?.count ?? 0
+        return self.items.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,9 +74,10 @@ class HomeViewController: UITableViewController {
             (view as! BannerViewCell).configure(banners: self.banners)
             return view
         }
+        tableView.beginUpdates()
         
         /* items */
-        let item = self.items![indexPath.row]
+        let item = self.items[indexPath.row]
         
         // FIXME: check whether it is a comment cell
         switch(item.type!) {
