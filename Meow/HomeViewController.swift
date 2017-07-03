@@ -75,7 +75,10 @@ class HomeViewController: UITableViewController {
         // FIXME: check whether it is a comment cell
         switch(item.type!) {
         case .moment:
-            return tableView.dequeueReusableCell(withIdentifier: R.nib.momentHomePageTableViewCell.identifier)!
+            let view = tableView.dequeueReusableCell(withIdentifier: R.nib.momentHomePageTableViewCell.identifier)!
+            (view as! MomentTableViewCell).configure(model: item as! Moment)
+            return view
+            
         case .answer:
             return tableView.dequeueReusableCell(withIdentifier: R.nib.answerHomePageTableViewCell.identifier)!
         case .artical:
