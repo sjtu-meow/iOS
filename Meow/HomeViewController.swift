@@ -82,7 +82,6 @@ class HomeViewController: UITableViewController {
             (view as! BannerViewCell).configure(banners: self.banners)
             return view
         }
-        tableView.beginUpdates()
         
         /* items */
         let item = self.items[indexPath.row]
