@@ -10,17 +10,21 @@ import SwiftyJSON
 struct Banner {
     var url: String!
     var itemId: Int!
+    var itemType: ItemType!
 }
 
 extension Banner: JSONConvertible {
     static func fromJSON(_ json: JSON) -> Banner? {
-        guard let url = json["url"].string,
-              let itemId = json["itemId"].int
+        guard   let url = json["url"].string,
+                let itemId = json["itemId"].int,
+                let rawType = json["itemType"].int,
+                let itemType = ItemType(rawValue: rawType)
             else { return nil }
         
         var banner = self.init()
         banner.url = url
         banner.itemId = itemId
+        banner.itemType = itemType
         
         return banner
     }
