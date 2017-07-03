@@ -18,6 +18,7 @@ struct Article: ItemProtocol {
     var cover: URL?
     var like: Int? // FIXME: not empty
     var comment: Int?
+    //content? 
     
 }
 

@@ -268,7 +268,6 @@
 			children = (
 				24A14CED1F03599100967F45 /* ArticleHomePageTableViewCell.xib */,
 				24F7F4381F04864A001A0FFA /* ArticlePageTableViewCell.xib */,
-				D97B35071F067E7D00BCB027 /* ArticlePageTableViewCell.swift */,
 				24F7F4511F049EC7001A0FFA /* ArticleUserPageTableViewCell.xib */,
 				24F7F4531F049F4A001A0FFA /* ArticleProfilePageTableViewCell.xib */,
 			);
@@ -454,6 +453,7 @@
 		D97B350B1F0A122E00BCB027 /* Article Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D97B35071F067E7D00BCB027 /* ArticlePageTableViewCell.swift */,
 				D97B35091F0A11C900BCB027 /* ArticleHomePageTableViewCell.swift */,
 			);
 			name = "Article Cell";

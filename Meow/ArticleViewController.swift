@@ -8,6 +8,7 @@
 import UIKit
 import SwiftyJSON
 import RxSwift
+import Rswift
 
 class ArticleViewController: UITableViewController {
     
@@ -23,6 +24,32 @@ class ArticleViewController: UITableViewController {
                 self?.articles = articles
             })
         .addDisposableTo(disposeBag)
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        loadArticles()
+        
+        tableView.registerHeaderFooterView(R.nib.articlePageTableViewCell)
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.articles?.count ?? 0
+    }
+    
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let view = tableView.dequeueReusableCell(withIdentifier: "articlePageTableViewCell")!
+        if let article = self.articles?[indexPath.row]{
+            (view as! ArticlePageTableViewCell).configure(model: article)
+        }
+        return view
     }
 }
 

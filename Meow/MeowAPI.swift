@@ -12,7 +12,9 @@ enum MeowAPI  {
     case signup(phone: String, password: String, validationCode: String )
     case login(phone: String, password: String)
     case banners
+    case homepage // api?
     case articles
+    case questions
 
 }
 
@@ -27,9 +29,12 @@ extension MeowAPI: TargetType {
     
     var path: String {
         switch self {
-            
+        case .homepage:
+            return "/homepage"
         case .moments:
             return "/moments"
+        case .questions:
+            return "/questions" //which one? question for homepage or ?
         case .login:
             return "/auth"
         case .signup:

@@ -53,6 +53,11 @@ class HomeViewController: UITableViewController {
                 self?.tableView.reloadData()
             })
             .addDisposableTo(disposeBag)
+        
+        
+
+        
+        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

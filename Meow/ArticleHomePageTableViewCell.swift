@@ -10,7 +10,36 @@ import Foundation
 import UIKit
 
 class ArticleHomePageTableViewCell: UITableViewCell {
-    func configure(model: Article){
     
+    /* user profile info */
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var nicknameLabel: UILabel!
+    
+    
+    /* article info */
+    @IBOutlet weak var articleTitleLabel: UILabel!
+    @IBOutlet weak var articleSummaryLabel: UILabel!
+        // image?
+    
+    
+    /* like & comment */
+    @IBOutlet weak var likeLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
+        // readcount?
+    
+    func configure(model: Article){
+        let article = model
+        let profile = article.profile
+        
+        if let avatar = profile?.avatar {
+            avatarImageView.af_setImage(withURL: avatar)
+        }
+        nicknameLabel.text = profile?.nickname
+        
+        articleTitleLabel.text = article.title
+        articleSummaryLabel.text = article.summary
+        
+        likeLabel.text = String(describing: article.like)
+        commentLabel.text = String(describing: article.comment)
     }
 }

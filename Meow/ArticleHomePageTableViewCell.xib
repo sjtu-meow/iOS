@@ -143,6 +143,14 @@
                     <constraint firstItem="OOZ-8i-9Yo" firstAttribute="top" secondItem="STj-0O-ox0" secondAttribute="top" constant="10" id="TWR-az-GLp"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="articleSummaryLabel" destination="sVA-hK-9pP" id="aj3-fC-IQs"/>
+                <outlet property="articleTitleLabel" destination="m9h-Zp-CfW" id="4eE-32-l9A"/>
+                <outlet property="avatarImageView" destination="nUL-dG-IMp" id="7Lp-dN-Zdc"/>
+                <outlet property="commentLabel" destination="jeF-Bd-LgT" id="J7T-oQ-uHw"/>
+                <outlet property="likeLabel" destination="Wlo-if-Txi" id="2sR-n9-np5"/>
+                <outlet property="nicknameLabel" destination="I1r-7Z-ROo" id="Ha9-I8-Zr1"/>
+            </connections>
             <point key="canvasLocation" x="57.5" y="42"/>
         </tableViewCell>
     </objects>
