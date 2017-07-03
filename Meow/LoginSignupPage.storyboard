@@ -106,13 +106,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LKE-ip-lhu" userLabel="主体">
-                                <rect key="frame" x="20" y="84" width="335" height="220"/>
+                                <rect key="frame" x="20" y="84" width="335" height="182"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tca-zq-xzS">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMe-WW-QAw">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iN6-ZE-qLt">
                                         <rect key="frame" x="0.0" y="38" width="335" height="30"/>
@@ -126,14 +126,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMe-WW-QAw">
-                                        <rect key="frame" x="0.0" y="114" width="335" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                                    </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bw4-xg-7gp">
-                                        <rect key="frame" x="0.0" y="152" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="114" width="335" height="30"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w8h-9D-pX8">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
@@ -151,7 +145,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axh-ki-PjN">
-                                        <rect key="frame" x="0.0" y="190" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="152" width="335" height="30"/>
                                         <state key="normal" title="注册"/>
                                         <connections>
                                             <action selector="signup:" destination="Blt-hk-XUr" eventType="touchUpInside" id="FAX-Vs-xBI"/>
@@ -179,7 +173,6 @@
                         <outlet property="passwordText" destination="iN6-ZE-qLt" id="Jzf-ih-S0M"/>
                         <outlet property="phoneText" destination="UMe-WW-QAw" id="7eO-g3-kHO"/>
                         <outlet property="signupButton" destination="axh-ki-PjN" id="8Sm-JB-Gar"/>
-                        <outlet property="usernameText" destination="Tca-zq-xzS" id="T70-71-q1P"/>
                         <outlet property="verificationText" destination="w8h-9D-pX8" id="azC-Wv-vEQ"/>
                         <outlet property="verifyButton" destination="U6Z-Fm-t0n" id="OCy-yw-kmu"/>
                     </connections>

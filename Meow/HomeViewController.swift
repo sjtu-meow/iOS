@@ -10,11 +10,13 @@ import RxSwift
 import Rswift
 
 class HomeViewController: UITableViewController {
+    let bannerViewIdentifier = "bannerViewCell"
+    
     let disposeBag = DisposeBag()
     
-    var banners: [Banner]?
+    var banners = [Banner]()
     
-    var items: [ItemProtocol]?
+    var items = [ItemProtocol]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,7 @@ class HomeViewController: UITableViewController {
         // present(vc!, animated: true, completion: nil)
         //logger.log("hello world")
         
-        tableView.register(BannerViewCell.self, forCellReuseIdentifier: "bannerViewCell")
+        tableView.register(BannerViewCell.self, forCellReuseIdentifier: bannerViewIdentifier)
         tableView.register(R.nib.momentHomePageTableViewCell)
         tableView.register(R.nib.answerHomePageTableViewCell)
         tableView.register(R.nib.questionHomePageTableViewCell)
@@ -61,7 +63,7 @@ class HomeViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1 /* banners */ + ((items != nil) ? 1 : 0) /* items */
+        return 1 /* banners */ + 1 /* items */
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,20 +71,21 @@ class HomeViewController: UITableViewController {
             return 1
         }
         /* item sections: one cell for each item */
-        return self.items?.count ?? 0
+        return self.items.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         /* banners */
         if indexPath.section == 0 {
-            let view = tableView.dequeueReusableCell(withIdentifier: "bannerViewCell")!
-            //(view as! BannerViewCell).configure(banners: self.banners)
+            let view = tableView.dequeueReusableCell(withIdentifier: bannerViewIdentifier)!
+            (view as! BannerViewCell).configure(banners: self.banners)
             return view
         }
+        tableView.beginUpdates()
         
         /* items */
-        let item = self.items![indexPath.row]
+        let item = self.items[indexPath.row]
         
         // FIXME: check whether it is a comment cell
         switch(item.type!) {
