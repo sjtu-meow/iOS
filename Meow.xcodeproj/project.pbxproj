@@ -320,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				BF390A4A1F01F58500555B93 /* JSONConvertible.swift */,
+				BFF139581F025163006DF489 /* Observable+MapTo.swift */,
 				D97B34FF1F061A9100BCB027 /* Article.swift */,
 				BF390A501F02053A00555B93 /* Token.swift */,
 				BF44D3771F05D60900A137E6 /* Media.swift */,
@@ -369,7 +370,6 @@
 				BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */,
 				BF390A4C1F01FBFD00555B93 /* GlobalFunctions.swift */,
 				BF390A4E1F01FCE500555B93 /* Logger.swift */,
-				BFF139581F025163006DF489 /* Observable+MapTo.swift */,
 				BF9E75DE1F03AB6C00723541 /* R.generated.swift */,
 				BFF1395E1F02C089006DF489 /* SMSExtention.swift */,
 				BF7878431F00F2C9000FB7C6 /* Assets.xcassets */,
