@@ -15,6 +15,7 @@ enum MeowAPI  {
     case homepage // api?
     case articles
     case questions
+    case uploadToken
 
 }
 
@@ -43,8 +44,9 @@ extension MeowAPI: TargetType {
             return "/banners"
         case .articles:
             return "/articles"
-        
-        
+        case .uploadToken:
+            return "/upload/token"
+    
         }
     }
     
