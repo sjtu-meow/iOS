@@ -27,7 +27,7 @@ class HomeViewController: UITableViewController {
         //present(vc!, animated: true, completion: nil)
         //logger.log("hello world")
         
-        tableView.register(BannerCellViewModel.self, forCellReuseIdentifier: "bannerCell")
+        tableView.register(BannerViewCell.self, forCellReuseIdentifier: "bannerViewCell")
         tableView.register(R.nib.momentHomePageTableViewCell)
         tableView.register(R.nib.answerHomePageTableViewCell)
         tableView.register(R.nib.questionHomePageTableViewCell)
@@ -55,7 +55,7 @@ class HomeViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1 /* banners */ + (items?.count ?? 0) /* items */
+        return 1 /* banners */ + ((items != nil) ? 1 : 0) /* items */
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,24 +67,34 @@ class HomeViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        /* banners */
         if indexPath.section == 0 {
-            return tableView.dequeueReusableCell(withIdentifier: "bannerCell")!
+            let view = tableView.dequeueReusableCell(withIdentifier: "bannerViewCell")!
+            (view as! BannerViewCell).configure(banners: self.banners)
+            return view
         }
+        
+        /* items */
         let item = self.items![indexPath.row]
         
         // FIXME: check whether it is a comment cell
         switch(item.type!) {
         case .moment:
             let view = tableView.dequeueReusableCell(withIdentifier: R.nib.momentHomePageTableViewCell.identifier)!
-            (view as! MomentTableViewCell).configure(model: item as! Moment)
+            (view as! MomentHomePageTableViewCell).configure(model: item as! Moment)
             return view
-            
         case .answer:
-            return tableView.dequeueReusableCell(withIdentifier: R.nib.answerHomePageTableViewCell.identifier)!
-        case .artical:
-            return tableView.dequeueReusableCell(withIdentifier: R.nib.articleHomePageTableViewCell.identifier)!
+            let view = tableView.dequeueReusableCell(withIdentifier: R.nib.answerHomePageTableViewCell.identifier)!
+            (view as! AnswerHomePageTableViewCell).config(model: item as! Answer)
+            return view
+        case .article:
+            let view = tableView.dequeueReusableCell(withIdentifier: R.nib.articleHomePageTableViewCell.identifier)!
+            (view as! ArticleHomePageTableViewCell).configure(model: item as! Article)
+            return view
         case .question:
-            return tableView.dequeueReusableCell(withIdentifier: R.nib.questionHomePageTableViewCell.identifier)!
+            let view = tableView.dequeueReusableCell(withIdentifier: R.nib.questionHomePageTableViewCell.identifier)!
+            (view as! QuestionHomePageTableViewCell).conf
         }
     }
 }

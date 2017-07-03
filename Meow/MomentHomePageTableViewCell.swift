@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MomentTableViewCell: UITableViewCell {
+class MomentHomePageTableViewCell: UITableViewCell {
 
     //MARK: - Property
     @IBOutlet weak var avatarImageView: UIImageView!
@@ -37,7 +37,7 @@ class MomentTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(model:Moment){
+    func configure(model:Moment) {
         return self
     }
 

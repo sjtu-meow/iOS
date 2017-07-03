@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 
 enum ItemType: Int {
-    case moment = 0, artical = 1, question = 2, answer = 3
+    case moment = 0, article = 1, question = 2, answer = 3
 }
 
 protocol ItemProtocol {
