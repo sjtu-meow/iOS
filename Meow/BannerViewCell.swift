@@ -11,22 +11,30 @@ import RxSwift
 
 class BannerViewCell: UITableViewCell {
 
-    @IBOutlet weak var slideShow: ImageSlideshow!
+    var slideShow: ImageSlideshow!
     let disposeBag = DisposeBag()
     
     var banners: [Banner]!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        slideShow = ImageSlideshow()
         
         slideShow.contentScaleMode = .scaleToFill
         slideShow.slideshowInterval = 5
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTapBanner))
         slideShow.addGestureRecognizer(recognizer)
+        contentView.addSubview(slideShow)
         
     }
     
+
     func didTapBanner() {
         let index = slideShow.currentPage
         onTapBanner?(banners?[index])
@@ -35,12 +43,16 @@ class BannerViewCell: UITableViewCell {
     var onTapBanner:((Banner?)->Void)?
     
     func configure(banners: [Banner]) {
-        guard banners.count > 0 else { return }
         self.banners = banners
-        let sources = self.banners
-            .map {
-                (banner) in
-                AlamofireSource(url: URL(string: banner.url)!)
+        let sources = banners
+            .flatMap {
+                (banner) -> AlamofireSource? in
+                let url = URL(string: banner.url)
+                if let url = url {
+                    return AlamofireSource(url: url)
+                }
+                logger.log("Invalid banner url \(banner.url)")
+                return nil
             }
         slideShow.setImageInputs(sources)
     }

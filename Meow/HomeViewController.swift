@@ -52,6 +52,7 @@ class HomeViewController: UITableViewController {
             .subscribe(onNext: {
                 [weak self] (items) in
                 self?.items = items
+                self?.tableView.reloadData()
             })
             .addDisposableTo(disposeBag)
     }
