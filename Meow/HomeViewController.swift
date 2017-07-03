@@ -94,7 +94,8 @@ class HomeViewController: UITableViewController {
             return view
         case .question:
             let view = tableView.dequeueReusableCell(withIdentifier: R.nib.questionHomePageTableViewCell.identifier)!
-            (view as! QuestionHomePageTableViewCell).conf
+            (view as! QuestionHomePageTableViewCell).configure(model: item as! Question)
+            return view
         }
     }
 }

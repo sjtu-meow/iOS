@@ -80,6 +80,7 @@
 		D97B350A1F0A11C900BCB027 /* ArticleHomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B35091F0A11C900BCB027 /* ArticleHomePageTableViewCell.swift */; };
 		D97B350F1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B350E1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift */; };
 		D97B35121F0A133300BCB027 /* AnswerHomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B35111F0A133300BCB027 /* AnswerHomePageTableViewCell.swift */; };
+		D98EF6E01F0A1BA300A524AF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98EF6DF1F0A1BA300A524AF /* Question.swift */; };
 		F766C86074602285186EC72F /* Pods_Meow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6E60B8501B878CBD0FCF4C /* Pods_Meow.framework */; };
 /* End PBXBuildFile section */
 
@@ -181,11 +182,11 @@
 		D97B34FF1F061A9100BCB027 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		D97B35011F061C7200BCB027 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		D97B35031F06245600BCB027 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
-		D97B35051F0624AF00BCB027 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D97B35071F067E7D00BCB027 /* ArticlePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlePageTableViewCell.swift; sourceTree = "<group>"; };
 		D97B35091F0A11C900BCB027 /* ArticleHomePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleHomePageTableViewCell.swift; sourceTree = "<group>"; };
 		D97B350E1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionHomePageTableViewCell.swift; sourceTree = "<group>"; };
 		D97B35111F0A133300BCB027 /* AnswerHomePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerHomePageTableViewCell.swift; sourceTree = "<group>"; };
+		D98EF6DF1F0A1BA300A524AF /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		F4EAF4C51299AB8CB42357F2 /* Pods-Meow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meow/Pods-Meow.release.xcconfig"; sourceTree = "<group>"; };
 		F7F285DE9E9D46F1E363EF9D /* Pods-Meow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meow/Pods-Meow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -329,7 +330,7 @@
 				D97B34FD1F05E9C300BCB027 /* Moment.swift */,
 				D97B35011F061C7200BCB027 /* Banner.swift */,
 				D97B35031F06245600BCB027 /* Answer.swift */,
-				D97B35051F0624AF00BCB027 /* Question.swift */,
+				D98EF6DF1F0A1BA300A524AF /* Question.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -827,6 +828,7 @@
 				BF390A491F01704B00555B93 /* NetworkLogger.swift in Sources */,
 				D97B35081F067E7D00BCB027 /* ArticlePageTableViewCell.swift in Sources */,
 				24EFC68D1F05F1560005A52D /* ImagePostCollectionViewCell.swift in Sources */,
+				D98EF6E01F0A1BA300A524AF /* Question.swift in Sources */,
 				BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */,
 				D97B34FE1F05E9C300BCB027 /* Moment.swift in Sources */,
 				D97B34FA1F05DCC300BCB027 /* Item.swift in Sources */,

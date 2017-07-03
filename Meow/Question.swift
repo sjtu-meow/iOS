@@ -20,8 +20,8 @@ struct Question: ItemProtocol {
 extension Question: JSONConvertible {
     static func fromJSON(_ json: JSON) -> Question? {
         guard let item = Item.fromJSON(json),
-              let title = json["title"].string,
-              let content = json["content"].string
+            let title = json["title"].string,
+            let content = json["content"].string
             else { return nil }
         
         var question = self.init()
