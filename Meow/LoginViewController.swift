@@ -7,6 +7,7 @@
 
 
 import UIKit
+import RxSwift
 
 class LoginViewController: UIViewController {
     
@@ -16,11 +17,22 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     
+    let disposeBag = DisposeBag()
     
     @IBAction func login(_ sender: Any) {
-        let username = usernameText.text, password = passwordText.text
-    
-        dismiss(animated: true, completion: nil )
+        guard let username = usernameText.text, let password = passwordText.text else { return }
+        
+        
+        
+        MeowAPIProvider.shared.request(.login(phone: username, password: password))
+            .mapTo(type:Token.self)
+            .subscribe(onNext: {
+                token in
+                token.save()
+                MeowAPIProvider.refresh()
+            })
+            .addDisposableTo(disposeBag)
+        //dismiss(animated: true, completion: nil )
     }
     
     @IBAction func signup(_ sender: Any) {
