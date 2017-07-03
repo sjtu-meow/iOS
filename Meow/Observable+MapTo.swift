@@ -32,11 +32,11 @@ extension Observable {
     func mapTo<T: JSONConvertible>(arrayOf type: T.Type) -> Observable<[T]> {
         return self.map {
             (element) -> [T] in
-            guard let array = element as? [AnyObject], let jsonArray = array as? [JSON] else {
+            guard let json = element as? JSON else {
                 throw MeowError.badData
             }
-            
-            return jsonArray.flatMap {
+            let array = json.arrayValue
+            return array.flatMap {
                 (jsonElement) -> T? in
                 T.fromJSON(jsonElement)
             }

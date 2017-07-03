@@ -31,7 +31,7 @@ extension MeowAPI: TargetType {
         case .moments:
             return "/moments"
         case .login:
-            return "/login"
+            return "/auth"
         case .signup:
             return "/signup"
         case .banners:

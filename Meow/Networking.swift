@@ -46,6 +46,7 @@ class MeowAPIProvider {
         return delegate.request(target)
             .filterSuccessfulStatusCodes()
             .mapJSON()
+            .map{json in JSON(json)}
     }
     
 }

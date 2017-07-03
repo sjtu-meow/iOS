@@ -5,7 +5,7 @@
 //  Copyright © 2017年 喵喵喵的伙伴. All rights reserved.
 //
 
-import Foundation
+import SwiftyJSON
 
 struct Token {
     var access: String
@@ -26,5 +26,12 @@ extension Token {
     func save() {
         let defaults = UserDefaults.standard
         defaults.set(access, forKey: AccessKey)
+    }
+}
+
+extension Token: JSONConvertible {
+    static func fromJSON(_ json: JSON) -> Token? {
+        guard let token = json["token"].string else { return nil }
+        return Token(access: token)
     }
 }
