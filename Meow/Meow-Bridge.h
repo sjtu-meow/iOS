@@ -8,8 +8,5 @@
 #ifndef Meow_Bridge_h
 #define Meow_Bridge_h
 
-#import "COSClient.h"
-#import "COSTask.h"
-
 
 #endif /* Meow_Bridge_h */

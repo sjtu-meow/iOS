@@ -17,7 +17,7 @@ enum MeowAPI  {
 }
 
 extension MeowAPI: TargetType {
-    var base: String { return "http://localhost:8080" }
+    var base: String { return "http://localhost:8080/api" }
     
     var baseURL: URL { return URL(string: base)! }
     
