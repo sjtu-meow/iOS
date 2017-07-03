@@ -72,9 +72,11 @@ class SignupViewController: UIViewController {
         
         
         //verify verfication code
-        AVOSCloud.verifySmsCode(verificationCode, mobilePhoneNumber: phone){(succeeded, error) in
+        AVOSCloud.verifySmsCode(verificationCode, mobilePhoneNumber: phone){
+            [weak self]
+            (succeeded, error) in
             if succeeded{
-                postSignupForm(phone:phone, password: password, validationCode: verificationCode)
+                self?.postSignupForm(phone: phone, password: password, validationCode: verificationCode)
             }
             else{
                 HUD.flash(.labeledError(title: "短信验证码错误", subtitle: nil), delay: 1)
