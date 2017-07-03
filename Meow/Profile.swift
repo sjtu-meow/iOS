@@ -19,7 +19,7 @@ struct Profile {
 
 extension Profile: JSONConvertible {
     static func fromJSON(_ json: JSON) -> Profile? {
-        guard let userId = json["userId"].int
+        guard let userId = json["id"].int
             else{ return nil}
         
         var profile = self.init()
