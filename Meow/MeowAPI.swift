@@ -62,7 +62,7 @@ extension MeowAPI: TargetType {
         case .login(let phone, let password):
             return ["phone": phone, "password": password]
         case .signup(let phone, let password, let validationCode):
-            return ["phone": phone, "password": password, "validationCode": validationCode]
+            return ["phone": phone, "password": password, "code": validationCode]
         default:
             return nil
         }
