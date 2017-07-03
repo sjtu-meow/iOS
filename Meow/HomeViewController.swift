@@ -10,6 +10,8 @@ import RxSwift
 import Rswift
 
 class HomeViewController: UITableViewController {
+    let bannerViewIdentifier = "bannerViewCell"
+    
     let disposeBag = DisposeBag()
     
     var banners = [Banner]()
@@ -27,7 +29,7 @@ class HomeViewController: UITableViewController {
         // present(vc!, animated: true, completion: nil)
         //logger.log("hello world")
         
-        tableView.register(BannerViewCell.self, forCellReuseIdentifier: "bannerViewCell")
+        tableView.register(BannerViewCell.self, forCellReuseIdentifier: bannerViewIdentifier)
         tableView.register(R.nib.momentHomePageTableViewCell)
         tableView.register(R.nib.answerHomePageTableViewCell)
         tableView.register(R.nib.questionHomePageTableViewCell)
@@ -70,7 +72,7 @@ class HomeViewController: UITableViewController {
         
         /* banners */
         if indexPath.section == 0 {
-            let view = tableView.dequeueReusableCell(withIdentifier: "bannerViewCell")!
+            let view = tableView.dequeueReusableCell(withIdentifier: bannerViewIdentifier)!
             (view as! BannerViewCell).configure(banners: self.banners)
             return view
         }
