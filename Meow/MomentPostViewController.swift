@@ -87,7 +87,7 @@ class MomentPostViewController: UIViewController, UICollectionViewDataSource, UI
         // response to tapping at the add button
         if indexPath.row >= uploadedImages.count {
             let imagePickerController = UIImagePickerController()
-            imagePickerController.sourceType = .photoLibrary
+            imagePickerController.sourceType = .camera
             
             // Make sure ViewController is notified when the user picks an image.
             imagePickerController.delegate = self

@@ -23,6 +23,7 @@ class LoginViewController: UIViewController {
         guard let username = usernameText.text, let password = passwordText.text else { return }
         
         
+        //dismiss(animated: true, completion: nil )
         
         MeowAPIProvider.shared.request(.login(phone: username, password: password))
             .mapTo(type:Token.self)

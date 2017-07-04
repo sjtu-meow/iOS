@@ -9,6 +9,7 @@
 import UIKit
 import AVOSCloud
 import Keys
+import Rswift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,9 +22,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         let keys = MeowKeys()
-        // Initialize Leancloud
         
+        // Initialize Leancloud
         AVOSCloud.setApplicationId(keys.leanCloudAppId, clientKey: keys.leanCloudClientKey)
+        
+        /* login page */
+//        if Token.load() == nil {
+//            let vc = R.storyboard.loginSignupPage.loginSignupController()!
+//            vc.modalPresentationStyle = .fullScreen
+//            self.window?.rootViewController?.present(vc, animated: true, completion: nil)
+//        }
         
         return true
     }
@@ -44,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
