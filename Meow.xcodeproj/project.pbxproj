@@ -72,6 +72,7 @@
 		BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395E1F02C089006DF489 /* SMSExtention.swift */; };
 		BFF139611F034053006DF489 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139601F034053006DF489 /* SignupViewController.swift */; };
 		C22E101695374861866E64E5 /* Pods_MeowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3612EC24166F9C122D5CDCC1 /* Pods_MeowTests.framework */; };
+		D93969291F0B406600B95C8B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93969281F0B406600B95C8B /* MainTabBarController.swift */; };
 		D97B34FA1F05DCC300BCB027 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B34F91F05DCC300BCB027 /* Item.swift */; };
 		D97B34FC1F05DEF500BCB027 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B34FB1F05DEF400BCB027 /* Profile.swift */; };
 		D97B34FE1F05E9C300BCB027 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B34FD1F05E9C300BCB027 /* Moment.swift */; };
@@ -180,6 +181,7 @@
 		BFF139601F034053006DF489 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CA79F670B8B78BFA429DA2B5 /* Pods-MeowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.release.xcconfig"; sourceTree = "<group>"; };
 		D3373C17F9AC2E37EA35D5CF /* Pods-MeowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowUITests/Pods-MeowUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D93969281F0B406600B95C8B /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D97B34F91F05DCC300BCB027 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D97B34FB1F05DEF400BCB027 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		D97B34FD1F05E9C300BCB027 /* Moment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 				BF7878751F010178000FB7C6 /* LoginViewController.swift */,
 				BFF139601F034053006DF489 /* SignupViewController.swift */,
 				BF44D37B1F062AEF00A137E6 /* MainViewController.swift */,
+				D93969281F0B406600B95C8B /* MainTabBarController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -834,6 +837,7 @@
 			files = (
 				BF390A491F01704B00555B93 /* NetworkLogger.swift in Sources */,
 				D97B35081F067E7D00BCB027 /* ArticlePageTableViewCell.swift in Sources */,
+				D93969291F0B406600B95C8B /* MainTabBarController.swift in Sources */,
 				24EFC68D1F05F1560005A52D /* ImagePostCollectionViewCell.swift in Sources */,
 				D98EF6E01F0A1BA300A524AF /* Question.swift in Sources */,
 				BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */,

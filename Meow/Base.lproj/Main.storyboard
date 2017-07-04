@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="aMX-2I-HhS">
             <objects>
-                <tabBarController id="tng-qH-ueX" sceneMemberID="viewController">
+                <tabBarController id="tng-qH-ueX" customClass="MainTabBarController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="h2K-qo-hwU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -20,8 +20,8 @@
                     <connections>
                         <segue destination="gvw-Hl-tVF" kind="relationship" relationship="viewControllers" id="hjh-xB-BRt"/>
                         <segue destination="VnB-Lx-9bs" kind="relationship" relationship="viewControllers" id="MAI-1S-IzE"/>
-                        <segue destination="KyE-FT-7Gb" kind="relationship" relationship="viewControllers" id="CeQ-UH-KMz"/>
                         <segue destination="uD4-7S-PQR" kind="relationship" relationship="viewControllers" id="t2I-KV-xah"/>
+                        <segue destination="KyE-FT-7Gb" kind="relationship" relationship="viewControllers" id="CeQ-UH-KMz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5vm-a3-aXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -33,7 +33,7 @@
             <objects>
                 <navigationController title="问答" id="uD4-7S-PQR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="GWH-m2-XgJ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Suw-2V-JXI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Suw-2V-JXI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -50,7 +50,7 @@
             <objects>
                 <navigationController title="我" id="KyE-FT-7Gb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="lfh-hB-swk"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="A09-Y1-21J">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A09-Y1-21J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -67,7 +67,7 @@
             <objects>
                 <navigationController title="文章" id="VnB-Lx-9bs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="UUx-y7-fx0"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="SSH-fg-p1K">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SSH-fg-p1K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -84,7 +84,7 @@
             <objects>
                 <navigationController title="首页" id="gvw-Hl-tVF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="wNX-fw-NL1"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="mMf-zb-BP3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mMf-zb-BP3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
