@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -126,27 +126,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="TjM-8w-fjb" userLabel="文字输入">
-                                <rect key="frame" x="16" y="116" width="343" height="543"/>
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJp-Oo-UUG">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="发布文章" id="BE6-qT-Qr7"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VJp-Oo-UUG" firstAttribute="leading" secondItem="nhf-bd-deY" secondAttribute="leading" id="AZs-EL-G6Q"/>
-                            <constraint firstItem="VJp-Oo-UUG" firstAttribute="top" secondItem="OYQ-0v-hJv" secondAttribute="bottom" id="DuP-AM-oBh"/>
+                            <constraint firstItem="TjM-8w-fjb" firstAttribute="top" secondItem="OYQ-0v-hJv" secondAttribute="bottom" id="LlK-U8-dPh"/>
                             <constraint firstItem="TjM-8w-fjb" firstAttribute="trailing" secondItem="nhf-bd-deY" secondAttribute="trailing" constant="-16" id="O3l-s3-E6P"/>
-                            <constraint firstAttribute="trailing" secondItem="VJp-Oo-UUG" secondAttribute="trailing" id="Pf0-6K-02B"/>
-                            <constraint firstItem="TjM-8w-fjb" firstAttribute="top" secondItem="VJp-Oo-UUG" secondAttribute="bottom" constant="8" id="Z0b-9e-Qkh"/>
                             <constraint firstItem="TjM-8w-fjb" firstAttribute="leading" secondItem="nhf-bd-deY" secondAttribute="leading" constant="16" id="onm-Ob-iZO"/>
-                            <constraint firstItem="TjM-8w-fjb" firstAttribute="bottom" secondItem="wqJ-eE-3qf" secondAttribute="top" constant="-8" id="wwo-fj-0vf"/>
+                            <constraint firstItem="TjM-8w-fjb" firstAttribute="bottom" secondItem="wqJ-eE-3qf" secondAttribute="top" id="ov8-kC-3iG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="发布文章" id="8iI-m6-t88">
@@ -353,6 +344,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Efe-vh-fHQ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FD0-gV-AN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="PostMomentNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="SBU-S2-gcL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0YC-PI-to9">
@@ -364,7 +356,6 @@
                         <segue destination="tFD-JL-dym" kind="relationship" relationship="rootViewController" id="uGP-Nf-XnA"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FD0-gV-AN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1444" y="2847.5262368815593"/>
         </scene>

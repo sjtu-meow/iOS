@@ -20,7 +20,7 @@ class MeowAPIProvider {
     
     let delegate: RxMoyaProvider<MeowAPI>
     
-    let token: Token?
+    private let token: Token?
     
     private init() {
         token = Token.load()
