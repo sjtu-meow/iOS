@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,18 +21,17 @@
                         <rect key="frame" x="16" y="10" width="343" height="373.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NLv-Yn-hSK" userLabel="用户">
-                                <rect key="frame" x="0.0" y="0.0" width="172.5" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="172.5" height="73"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" image="DefaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="0No-Px-7NK" userLabel="头像">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="0.0" y="16.5" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="aqI-Pd-kJU"/>
-                                            <constraint firstAttribute="width" secondItem="0No-Px-7NK" secondAttribute="height" multiplier="1:1" id="krA-C6-j8O"/>
                                             <constraint firstAttribute="height" constant="40" id="ye1-2U-q3o"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Enh-MX-zBS" userLabel="文字">
-                                        <rect key="frame" x="48" y="4.5" width="124.5" height="31.5"/>
+                                        <rect key="frame" x="48" y="21" width="124.5" height="31.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1I-QU-zkM" userLabel="个人信息">
                                                 <rect key="frame" x="0.0" y="0.0" width="124.5" height="17"/>
@@ -71,13 +69,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="被主人举起来之后它竟然喷出了彩虹！从来没有见过这么有意思的猫呢～" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8I5-fQ-TrR" userLabel="内容">
-                                <rect key="frame" x="0.0" y="48" width="343" height="33.5"/>
+                                <rect key="frame" x="0.0" y="81" width="343" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="l1P-fh-CR3" userLabel="缩略图">
-                                <rect key="frame" x="0.0" y="89.5" width="343" height="100"/>
+                                <rect key="frame" x="0.0" y="122.5" width="343" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="9mA-Xx-Gnd"/>
@@ -90,7 +88,7 @@
                                 </collectionViewFlowLayout>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1P3-nU-zaF" userLabel="赞/评论">
-                                <rect key="frame" x="0.0" y="197.5" width="343" height="21"/>
+                                <rect key="frame" x="0.0" y="230.5" width="343" height="21"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCk-TD-BP1" userLabel="赞/评论统计">
                                         <rect key="frame" x="0.0" y="3.5" width="107.5" height="14.5"/>
@@ -152,19 +150,15 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSN-CC-gmq" userLabel="分割线">
-                                <rect key="frame" x="0.0" y="226.5" width="343" height="1"/>
+                                <rect key="frame" x="0.0" y="259.5" width="343" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="qhY-6D-DeC"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Reh-6T-H4m" userLabel="评论">
-                                <rect key="frame" x="0.0" y="235.5" width="343" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="M1Z-lg-Qcg"/>
-                                </constraints>
-                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H3o-Wg-8eU" userLabel="评论">
+                                <rect key="frame" x="0.0" y="268.5" width="343" height="67"/>
+                            </stackView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="评论" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3CU-0n-PDq" userLabel="评论输入">
                                 <rect key="frame" x="0.0" y="343.5" width="343" height="30"/>
                                 <nil key="textColor"/>
@@ -173,9 +167,7 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Reh-6T-H4m" secondAttribute="trailing" id="11F-8K-t4s"/>
                             <constraint firstItem="1P3-nU-zaF" firstAttribute="leading" secondItem="3pi-dc-uSs" secondAttribute="leading" id="M3W-2l-78c"/>
-                            <constraint firstItem="Reh-6T-H4m" firstAttribute="leading" secondItem="3pi-dc-uSs" secondAttribute="leading" id="P5X-BX-lsj"/>
                             <constraint firstAttribute="trailing" secondItem="l1P-fh-CR3" secondAttribute="trailing" id="SWC-uF-cxX"/>
                             <constraint firstAttribute="trailing" secondItem="3CU-0n-PDq" secondAttribute="trailing" id="lEn-qc-973"/>
                             <constraint firstAttribute="trailing" secondItem="1P3-nU-zaF" secondAttribute="trailing" id="udq-4k-VBE"/>
@@ -198,11 +190,6 @@
                 <outlet property="mediaCollectionView" destination="l1P-fh-CR3" id="s5c-tM-QID"/>
                 <outlet property="momentContentLabel" destination="8I5-fQ-TrR" id="nHN-k1-fag"/>
                 <outlet property="nicknameLabel" destination="SyQ-ot-WIm" id="6LN-3s-Oeo"/>
-                <outlet property="commentListSeperatorView" destination="uSN-CC-gmq" id="oFd-WU-M0O"/>
-                <outlet property="commentListTableView" destination="Reh-6T-H4m" id="SQy-WZ-bNw"/>
-                <outlet property="commentTextField" destination="3CU-0n-PDq" id="OXs-o6-Chw"/>
-                <outlet property="commentTextLabel" destination="iUH-0s-5bZ" id="6cB-SC-tNz"/>
-                <outlet property="usernameLabel" destination="SyQ-ot-WIm" id="Cgf-5I-isO"/>
             </connections>
             <point key="canvasLocation" x="45.5" y="442"/>
         </tableViewCell>

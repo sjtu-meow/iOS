@@ -11,27 +11,22 @@ import RxSwift
 
 class BannerViewCell: UITableViewCell {
 
-    var slideShow: ImageSlideshow!
+   
+    @IBOutlet weak var slideShow: ImageSlideshow!
     let disposeBag = DisposeBag()
     
     var banners: [Banner]!
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
+ 
+    override func awakeFromNib() {
+        super.awakeFromNib()
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        slideShow = ImageSlideshow()
-        
-        slideShow.contentScaleMode = .scaleToFill
+       slideShow.contentScaleMode = .scaleToFill
         slideShow.slideshowInterval = 5
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTapBanner))
         slideShow.addGestureRecognizer(recognizer)
         contentView.addSubview(slideShow)
-        
     }
     
 
