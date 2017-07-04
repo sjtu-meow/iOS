@@ -24,9 +24,9 @@ class HomeViewController: UITableViewController {
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         loadData()
         
-        // let vc = R.storyboard.loginSignupPage.loginViewController()
+         let vc = R.storyboard.postPages.postMomentNavigationController()!
         
-        // present(vc!, animated: true, completion: nil)
+         present(vc, animated: true, completion: nil)
         //logger.log("hello world")
         
         tableView.register(BannerViewCell.self, forCellReuseIdentifier: bannerViewIdentifier)
