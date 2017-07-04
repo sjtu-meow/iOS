@@ -49,6 +49,7 @@
 		BF31E9261F0B6229001236D8 /* MediaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E9251F0B6229001236D8 /* MediaViewCell.swift */; };
 		BF31E9281F0B7347001236D8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E9271F0B7347001236D8 /* SearchViewController.swift */; };
 		BF31E92A1F0B7FCF001236D8 /* PostTypePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E9291F0B7FCF001236D8 /* PostTypePickerViewController.swift */; };
+		BF31E92C1F0BACC5001236D8 /* QiniuProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E92B1F0BACC5001236D8 /* QiniuProvider.swift */; };
 		BF390A451F01700500555B93 /* MeowAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A441F01700500555B93 /* MeowAPI.swift */; };
 		BF390A471F01702D00555B93 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A461F01702D00555B93 /* Networking.swift */; };
 		BF390A491F01704B00555B93 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A481F01704B00555B93 /* NetworkLogger.swift */; };
@@ -154,6 +155,7 @@
 		BF31E9251F0B6229001236D8 /* MediaViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewCell.swift; sourceTree = "<group>"; };
 		BF31E9271F0B7347001236D8 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BF31E9291F0B7FCF001236D8 /* PostTypePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTypePickerViewController.swift; sourceTree = "<group>"; };
+		BF31E92B1F0BACC5001236D8 /* QiniuProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QiniuProvider.swift; sourceTree = "<group>"; };
 		BF390A441F01700500555B93 /* MeowAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeowAPI.swift; sourceTree = "<group>"; };
 		BF390A461F01702D00555B93 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		BF390A481F01704B00555B93 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				BF390A4E1F01FCE500555B93 /* Logger.swift */,
 				BF9E75DE1F03AB6C00723541 /* R.generated.swift */,
 				BFF1395E1F02C089006DF489 /* SMSExtention.swift */,
+				BF31E92B1F0BACC5001236D8 /* QiniuProvider.swift */,
 				BF7878431F00F2C9000FB7C6 /* Assets.xcassets */,
 			);
 			path = Meow;
@@ -876,6 +879,7 @@
 				D97B350F1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift in Sources */,
 				BF390A4F1F01FCE500555B93 /* Logger.swift in Sources */,
 				BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */,
+				BF31E92C1F0BACC5001236D8 /* QiniuProvider.swift in Sources */,
 				BF44D3781F05D60900A137E6 /* Media.swift in Sources */,
 				BFF139611F034053006DF489 /* SignupViewController.swift in Sources */,
 				D97B34FC1F05DEF500BCB027 /* Profile.swift in Sources */,

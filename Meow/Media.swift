@@ -11,6 +11,15 @@ import SwiftyJSON
 
 enum MediaType: String {
     case Image = "Image", Video = "Video"
+    
+    func toInt() -> Int {
+        switch self {
+        case .Image:
+            return 0
+        case .Video:
+            return 1
+        }
+    }
 }
 
 struct Media {

@@ -20,6 +20,7 @@ class MomentPostViewController: UIViewController, UINavigationControllerDelegate
     
     let disposeBag = DisposeBag()
     
+    
     var uploadedImages = [UIImage]()
     var uploadedImageUrls = [URL]()
     
@@ -49,6 +50,35 @@ class MomentPostViewController: UIViewController, UINavigationControllerDelegate
         logger.log("按下发布（点滴）按钮")
         
         //TODO: Actual send moment post to server
+        
+        guard let content = momentContentTextView.text else { return }
+        
+        
+        Observable.from(uploadedImages)
+            .concatMap {
+                image in
+                QiniuProvider.shared.upload(data: UIImagePNGRepresentation(image)!)
+            }
+            .map {
+                (key) -> Media in
+                let domain = "http://osg5c99b1.bkt.clouddn.com/" // FIXME
+                return Media(type: .Image, url: URL(string: domain + key))
+            }
+            .reduce([Media]()) {(medias, media) in
+                var mutableMedias = medias!
+                mutableMedias.append(media)
+                return mutableMedias
+            }
+            .flatMap {
+                medias in
+                MeowAPIProvider.shared.request(.postMoment(content: content, medias: medias))
+            }
+            .subscribe(onNext:{
+                [weak self] _ in
+                self?.dismiss(animated: true, completion: nil)
+            })
+            .addDisposableTo(disposeBag)
+        
         /*
  MeowAPIProvider.shared.request(.uploadToken)
             .mapTo(type: UploadToken.self)
@@ -60,7 +90,7 @@ class MomentPostViewController: UIViewController, UINavigationControllerDelegate
             }
  */
   
-        dismiss(animated: true, completion: nil)
+        
         
     }
     
@@ -137,7 +167,7 @@ extension MomentPostViewController: UICollectionViewDelegate {
         // response to tapping at the add button
         if indexPath.row >= uploadedImages.count {
             let imagePickerController = UIImagePickerController()
-            imagePickerController.sourceType = .camera
+            imagePickerController.sourceType = .photoLibrary
             
             // Make sure ViewController is notified when the user picks an image.
             imagePickerController.delegate = self

@@ -16,6 +16,7 @@ enum MeowAPI  {
     case articles
     case questions
     case uploadToken
+    case postMoment(content: String, medias: [Media]?)
 
 }
 
@@ -46,17 +47,18 @@ extension MeowAPI: TargetType {
             return "/articles"
         case .uploadToken:
             return "/upload/token"
-    
+        case .postMoment:
+            return "/moments"
         }
     }
     
     /// The HTTP method used in the request.
     var method: Moya.Method {
         switch self {
-        case .login,.signup:
+        case .login,.signup, .postMoment:
             return .post
         default:
-            return .get 
+            return .get
         }
     }
 
@@ -70,6 +72,13 @@ extension MeowAPI: TargetType {
             return ["phone": phone, "password": password]
         case .signup(let phone, let password, let validationCode):
             return ["phone": phone, "password": password, "code": validationCode]
+        case .postMoment(let content, let medias):
+            let jsonMedias = (medias?.map{[
+                "url": $0.url!.absoluteString,
+                "type": $0.type!.toInt()
+            ]}) ?? []
+            return ["content": content, "medias": jsonMedias]
+        
         default:
             return nil
         }
