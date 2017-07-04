@@ -5,13 +5,14 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="aMX-2I-HhS">
             <objects>
-                <tabBarController id="tng-qH-ueX" sceneMemberID="viewController">
+                <tabBarController id="tng-qH-ueX" customClass="MainViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="h2K-qo-hwU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -22,6 +23,7 @@
                         <segue destination="VnB-Lx-9bs" kind="relationship" relationship="viewControllers" id="MAI-1S-IzE"/>
                         <segue destination="KyE-FT-7Gb" kind="relationship" relationship="viewControllers" id="CeQ-UH-KMz"/>
                         <segue destination="uD4-7S-PQR" kind="relationship" relationship="viewControllers" id="t2I-KV-xah"/>
+                        <segue destination="Ifh-OG-Rav" kind="relationship" relationship="viewControllers" id="T67-1O-b1y"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5vm-a3-aXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -61,6 +63,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CgX-1Y-jW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1444" y="816"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ceF-Sn-Oae">
+            <objects>
+                <viewController id="Ifh-OG-Rav" customClass="PostTypeViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SUt-d9-G4f"/>
+                        <viewControllerLayoutGuide type="bottom" id="qmL-v0-tlk"/>
+                    </layoutGuides>
+                    <view key="view" alpha="0.89999997615814209" contentMode="scaleToFill" id="92b-Uy-gC3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zRH-eJ-jKt" userLabel="文字">
+                                <rect key="frame" x="16" y="461" width="288" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布什么呢" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUV-Yv-Drd">
+                                        <rect key="frame" x="108.5" y="0.0" width="71.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="RPK-gH-g5p" userLabel="选项">
+                                        <rect key="frame" x="22.5" y="25" width="243" height="33"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBO-Bg-yJf">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="点滴">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="aDU-nL-wWN" kind="show" id="2xx-VW-YmQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmD-aF-ZTS">
+                                                <rect key="frame" x="104" y="0.0" width="35" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="文章">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMT-Le-oig">
+                                                <rect key="frame" x="208" y="0.0" width="35" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="问题">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zRH-eJ-jKt" firstAttribute="leading" secondItem="92b-Uy-gC3" secondAttribute="leadingMargin" id="9hT-Pn-aVT"/>
+                            <constraint firstItem="qmL-v0-tlk" firstAttribute="top" secondItem="zRH-eJ-jKt" secondAttribute="bottom" id="ctR-pJ-n5x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zRH-eJ-jKt" secondAttribute="trailing" id="j4o-tO-VFq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="rvn-sa-3HX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NmF-a2-1wp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2141" y="1546"/>
+        </scene>
+        <!--PostMomentNavigationController-->
+        <scene sceneID="yDM-YI-fuP">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6EE-lY-mQ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="PostPages" referencedIdentifier="PostMomentNavigationController" id="aDU-nL-wWN" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="-2593" y="2092"/>
+        </scene>
+        <!--PostPages-->
+        <scene sceneID="7i8-G1-3kW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PostPages" id="sgS-nM-GkL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Egr-p0-Lmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2120" y="2092"/>
         </scene>
         <!--搜索-->
         <scene sceneID="s91-PU-0QG">

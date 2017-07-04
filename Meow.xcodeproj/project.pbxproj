@@ -48,6 +48,7 @@
 		BF31E9241F0B61A7001236D8 /* MediaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */; };
 		BF31E9261F0B6229001236D8 /* MediaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E9251F0B6229001236D8 /* MediaViewCell.swift */; };
 		BF31E9281F0B7347001236D8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E9271F0B7347001236D8 /* SearchViewController.swift */; };
+		BF31E92A1F0B7FCF001236D8 /* PostTypePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E9291F0B7FCF001236D8 /* PostTypePickerViewController.swift */; };
 		BF390A451F01700500555B93 /* MeowAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A441F01700500555B93 /* MeowAPI.swift */; };
 		BF390A471F01702D00555B93 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A461F01702D00555B93 /* Networking.swift */; };
 		BF390A491F01704B00555B93 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A481F01704B00555B93 /* NetworkLogger.swift */; };
@@ -152,6 +153,7 @@
 		BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaViewCell.xib; sourceTree = "<group>"; };
 		BF31E9251F0B6229001236D8 /* MediaViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewCell.swift; sourceTree = "<group>"; };
 		BF31E9271F0B7347001236D8 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BF31E9291F0B7FCF001236D8 /* PostTypePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTypePickerViewController.swift; sourceTree = "<group>"; };
 		BF390A441F01700500555B93 /* MeowAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeowAPI.swift; sourceTree = "<group>"; };
 		BF390A461F01702D00555B93 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		BF390A481F01704B00555B93 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 				BFF139601F034053006DF489 /* SignupViewController.swift */,
 				BF44D37B1F062AEF00A137E6 /* MainViewController.swift */,
 				BF31E9271F0B7347001236D8 /* SearchViewController.swift */,
+				BF31E9291F0B7FCF001236D8 /* PostTypePickerViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -856,6 +859,7 @@
 				BF44D3801F06312600A137E6 /* BannerViewCell.swift in Sources */,
 				BF78786E1F0100D4000FB7C6 /* ArticleViewController.swift in Sources */,
 				BF44D37C1F062AEF00A137E6 /* MainViewController.swift in Sources */,
+				BF31E92A1F0B7FCF001236D8 /* PostTypePickerViewController.swift in Sources */,
 				D97B35041F06245600BCB027 /* Answer.swift in Sources */,
 				BF390A451F01700500555B93 /* MeowAPI.swift in Sources */,
 				BF390A471F01702D00555B93 /* Networking.swift in Sources */,
