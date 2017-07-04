@@ -16,7 +16,11 @@ class HomeViewController: UITableViewController {
     
     var banners = [Banner]()
     
+    var currentPage = 0
+    
     var items = [ItemProtocol]()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,16 +55,7 @@ class HomeViewController: UITableViewController {
             })
             .addDisposableTo(disposeBag)
         
-        MeowAPIProvider.shared.request(.moments) // FIXME: need to support other item types
-            .mapTo(arrayOf: Moment.self)
-            .subscribe(onNext: {
-                [weak self] (items) in
-                self?.items = items
-                self?.tableView.reloadData()
-            })
-            .addDisposableTo(disposeBag)
-        
-        
+      loadMore()
 
         
         
@@ -112,6 +107,18 @@ class HomeViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
         guard section == 1 else { return }
-        // load more
+        loadMore()
+    }
+    
+    func loadMore() {
+        MeowAPIProvider.shared.request(.moments) // FIXME: need to support other item types
+            .mapTo(arrayOf: Moment.self)
+            .subscribe(onNext: {
+                [weak self] (items) in
+                self?.items = items // FIXME
+                self?.tableView.reloadData()
+                self?.currentPage += 1
+            })
+            .addDisposableTo(disposeBag)
     }
 }
