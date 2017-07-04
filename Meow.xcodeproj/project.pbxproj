@@ -45,6 +45,9 @@
 		56B7293EE5F94719A447731F /* Pods_MeowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1186F1CE3D8690900D00F2C5 /* Pods_MeowUITests.framework */; };
 		BF31E9201F0A2CBD001236D8 /* UploadToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E91F1F0A2CBD001236D8 /* UploadToken.swift */; };
 		BF31E9221F0A9BFD001236D8 /* BannerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */; };
+		BF31E9241F0B61A7001236D8 /* MediaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */; };
+		BF31E9261F0B6229001236D8 /* MediaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E9251F0B6229001236D8 /* MediaViewCell.swift */; };
+		BF31E9281F0B7347001236D8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E9271F0B7347001236D8 /* SearchViewController.swift */; };
 		BF390A451F01700500555B93 /* MeowAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A441F01700500555B93 /* MeowAPI.swift */; };
 		BF390A471F01702D00555B93 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A461F01702D00555B93 /* Networking.swift */; };
 		BF390A491F01704B00555B93 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A481F01704B00555B93 /* NetworkLogger.swift */; };
@@ -146,6 +149,9 @@
 		A08DD2E53506F36693AD12C5 /* Pods-MeowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF31E91F1F0A2CBD001236D8 /* UploadToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadToken.swift; sourceTree = "<group>"; };
 		BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerViewCell.xib; sourceTree = "<group>"; };
+		BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaViewCell.xib; sourceTree = "<group>"; };
+		BF31E9251F0B6229001236D8 /* MediaViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewCell.swift; sourceTree = "<group>"; };
+		BF31E9271F0B7347001236D8 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BF390A441F01700500555B93 /* MeowAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeowAPI.swift; sourceTree = "<group>"; };
 		BF390A461F01702D00555B93 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		BF390A481F01704B00555B93 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
@@ -411,6 +417,7 @@
 				BF7878751F010178000FB7C6 /* LoginViewController.swift */,
 				BFF139601F034053006DF489 /* SignupViewController.swift */,
 				BF44D37B1F062AEF00A137E6 /* MainViewController.swift */,
+				BF31E9271F0B7347001236D8 /* SearchViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -424,6 +431,7 @@
 				D97B350B1F0A122E00BCB027 /* Article Cell */,
 				24EFC68C1F05F1560005A52D /* ImagePostCollectionViewCell.swift */,
 				BF44D37F1F06312600A137E6 /* BannerViewCell.swift */,
+				BF31E9251F0B6229001236D8 /* MediaViewCell.swift */,
 			);
 			name = "View Model";
 			sourceTree = "<group>";
@@ -442,6 +450,7 @@
 				24F7F4641F04FAF8001A0FFA /* PostTypePicker.xib */,
 				24F7F4421F0492B3001A0FFA /* ArticleAnswerCommentTableViewCell.xib */,
 				BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */,
+				BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -624,6 +633,7 @@
 				24F7F4391F04864A001A0FFA /* ArticlePageTableViewCell.xib in Resources */,
 				BF7878471F00F2C9000FB7C6 /* LaunchScreen.storyboard in Resources */,
 				2443A6691F02064C0032BEB9 /* MomentHomePageTableViewCell.xib in Resources */,
+				BF31E9241F0B61A7001236D8 /* MediaViewCell.xib in Resources */,
 				24F7F4651F04FAF8001A0FFA /* PostTypePicker.xib in Resources */,
 				2411AD191F05417600910051 /* QuestionAnswerPage.storyboard in Resources */,
 				24F7F4471F049855001A0FFA /* MessageNotificationTableViewCell.xib in Resources */,
@@ -857,6 +867,8 @@
 				BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */,
 				BF78786C1F01007D000FB7C6 /* HomeViewController.swift in Sources */,
 				BF31E9201F0A2CBD001236D8 /* UploadToken.swift in Sources */,
+				BF31E9261F0B6229001236D8 /* MediaViewCell.swift in Sources */,
+				BF31E9281F0B7347001236D8 /* SearchViewController.swift in Sources */,
 				D97B350F1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift in Sources */,
 				BF390A4F1F01FCE500555B93 /* Logger.swift in Sources */,
 				BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */,

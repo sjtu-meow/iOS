@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tng-qH-ueX">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tng-qH-ueX">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -33,7 +33,7 @@
             <objects>
                 <navigationController title="问答" id="uD4-7S-PQR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="GWH-m2-XgJ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Suw-2V-JXI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Suw-2V-JXI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -50,7 +50,7 @@
             <objects>
                 <navigationController title="我" id="KyE-FT-7Gb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="lfh-hB-swk"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="A09-Y1-21J">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A09-Y1-21J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -62,12 +62,41 @@
             </objects>
             <point key="canvasLocation" x="-1444" y="816"/>
         </scene>
+        <!--搜索-->
+        <scene sceneID="s91-PU-0QG">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" title="搜索" id="F0q-Bw-6tc" customClass="SearchViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5ac-1o-vf8"/>
+                        <viewControllerLayoutGuide type="bottom" id="87b-oW-JA0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FFn-5v-OSr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bpL-cN-0AC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bpL-cN-0AC" firstAttribute="leading" secondItem="FFn-5v-OSr" secondAttribute="leading" id="YAV-hy-RL3"/>
+                            <constraint firstAttribute="trailing" secondItem="bpL-cN-0AC" secondAttribute="trailing" id="oHP-gQ-i8d"/>
+                            <constraint firstItem="bpL-cN-0AC" firstAttribute="top" secondItem="FFn-5v-OSr" secondAttribute="top" id="xpQ-ZD-3GG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xjS-iE-oQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1448" y="1549"/>
+        </scene>
         <!--文章-->
         <scene sceneID="EXG-Z8-iqB">
             <objects>
                 <navigationController title="文章" id="VnB-Lx-9bs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="UUx-y7-fx0"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="SSH-fg-p1K">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SSH-fg-p1K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -84,7 +113,7 @@
             <objects>
                 <navigationController title="首页" id="gvw-Hl-tVF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="wNX-fw-NL1"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="mMf-zb-BP3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mMf-zb-BP3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
