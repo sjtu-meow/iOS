@@ -27,10 +27,12 @@ class MomentHomePageTableViewCell: UITableViewCell {
     
     // comment content
     
+    var model: Moment?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        mediaCollectionView.register(R.nib.mediaViewCell)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -40,6 +42,7 @@ class MomentHomePageTableViewCell: UITableViewCell {
     }
     
     func configure(model: Moment) {
+        self.model = model
         let moment = model
         let profile = moment.profile
         
@@ -56,7 +59,10 @@ class MomentHomePageTableViewCell: UITableViewCell {
         commentLabel.text = String(describing: moment.comment)
         
         // comment
-        
+        // TODO
+
+        // media
+        mediaCollectionView.dataSource = self
     }
     
     
@@ -64,9 +70,31 @@ class MomentHomePageTableViewCell: UITableViewCell {
     @IBAction func like(_ sender: UIButton) {
     }
     // comment function
-    
-    
-    
-    
 
+}
+
+
+extension MomentHomePageTableViewCell: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        if let model = model, let _ = model.medias {
+            return 1
+        }
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let model = model, let medias = model.medias {
+            return medias.count
+        }
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let view = collectionView.dequeueReusableCell(withReuseIdentifier: R.nib.mediaViewCell.identifier, for: indexPath) as! MediaViewCell
+        
+        view.configure(model: model!.medias![indexPath.row])
+        
+        return view
+        
+    }
+    
+    
 }

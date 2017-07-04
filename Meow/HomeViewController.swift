@@ -28,10 +28,11 @@ class HomeViewController: UITableViewController {
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         loadData()
         
+         //let vc = R.storyboard.postPages.postMomentNavigationController()!
 
         // let vc = R.storyboard.loginSignupPage.loginViewController()
         
-        // present(vc!, animated: true, completion: nil)
+         //present(vc, animated: true, completion: nil)
         //logger.log("hello world")
         
         tableView.estimatedRowHeight = 80
@@ -55,10 +56,16 @@ class HomeViewController: UITableViewController {
             })
             .addDisposableTo(disposeBag)
         
-      loadMore()
 
-        
-        
+      loadMore()
+        MeowAPIProvider.shared.request(.moments)    // FIXME: need to support other item types
+            .mapTo(arrayOf: Moment.self)
+            .subscribe(onNext: {
+                [weak self] (items) in
+                self?.items = items
+                self?.tableView.reloadData()
+            })
+            .addDisposableTo(disposeBag)        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
