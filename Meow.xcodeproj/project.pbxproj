@@ -44,6 +44,7 @@
 		24F7F4651F04FAF8001A0FFA /* PostTypePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4641F04FAF8001A0FFA /* PostTypePicker.xib */; };
 		56B7293EE5F94719A447731F /* Pods_MeowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1186F1CE3D8690900D00F2C5 /* Pods_MeowUITests.framework */; };
 		BF31E9201F0A2CBD001236D8 /* UploadToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E91F1F0A2CBD001236D8 /* UploadToken.swift */; };
+		BF31E9221F0A9BFD001236D8 /* BannerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */; };
 		BF390A451F01700500555B93 /* MeowAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A441F01700500555B93 /* MeowAPI.swift */; };
 		BF390A471F01702D00555B93 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A461F01702D00555B93 /* Networking.swift */; };
 		BF390A491F01704B00555B93 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A481F01704B00555B93 /* NetworkLogger.swift */; };
@@ -144,6 +145,7 @@
 		8858B54026EC68FEB34336F5 /* Pods-MeowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowUITests/Pods-MeowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A08DD2E53506F36693AD12C5 /* Pods-MeowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF31E91F1F0A2CBD001236D8 /* UploadToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadToken.swift; sourceTree = "<group>"; };
+		BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerViewCell.xib; sourceTree = "<group>"; };
 		BF390A441F01700500555B93 /* MeowAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeowAPI.swift; sourceTree = "<group>"; };
 		BF390A461F01702D00555B93 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		BF390A481F01704B00555B93 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
@@ -439,6 +441,7 @@
 				2411AD071F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib */,
 				24F7F4641F04FAF8001A0FFA /* PostTypePicker.xib */,
 				24F7F4421F0492B3001A0FFA /* ArticleAnswerCommentTableViewCell.xib */,
+				BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				24F7F4541F049F4A001A0FFA /* ArticleProfilePageTableViewCell.xib in Resources */,
 				24A14CF21F03EA6900967F45 /* AnswerHomePageTableViewCell.xib in Resources */,
 				24F7F43D1F048A57001A0FFA /* QuestionTableViewCell.xib in Resources */,
+				BF31E9221F0A9BFD001236D8 /* BannerViewCell.xib in Resources */,
 				2411AD1B1F05423C00910051 /* PostPages.storyboard in Resources */,
 				24F7F4571F04A4BE001A0FFA /* UserPageRecordTableViewCell.xib in Resources */,
 				24F7F43F1F048D14001A0FFA /* QuestionDetailTableViewCell.xib in Resources */,

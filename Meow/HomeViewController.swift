@@ -24,12 +24,16 @@ class HomeViewController: UITableViewController {
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         loadData()
         
+
         // let vc = R.storyboard.loginSignupPage.loginViewController()
         
         // present(vc!, animated: true, completion: nil)
         //logger.log("hello world")
         
-        tableView.register(BannerViewCell.self, forCellReuseIdentifier: bannerViewIdentifier)
+        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableViewAutomaticDimension
+    
+        tableView.register(R.nib.bannerViewCell)
         tableView.register(R.nib.momentHomePageTableViewCell)
         tableView.register(R.nib.answerHomePageTableViewCell)
         tableView.register(R.nib.questionHomePageTableViewCell)
@@ -78,7 +82,7 @@ class HomeViewController: UITableViewController {
         
         /* banners */
         if indexPath.section == 0 {
-            let view = tableView.dequeueReusableCell(withIdentifier: bannerViewIdentifier)!
+            let view = tableView.dequeueReusableCell(withIdentifier: R.nib.bannerViewCell.identifier)!
             (view as! BannerViewCell).configure(banners: self.banners)
             return view
         }
@@ -105,5 +109,9 @@ class HomeViewController: UITableViewController {
             (view as! QuestionHomePageTableViewCell).configure(model: item as! Question)
             return view
         }
+    }
+    override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+        guard section == 1 else { return }
+        // load more
     }
 }
