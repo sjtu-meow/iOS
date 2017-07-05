@@ -126,14 +126,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yM8-15-nbn">
-                                <rect key="frame" x="303" y="657" width="46" height="10"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="10" id="2pI-sT-fAw"/>
-                                    <constraint firstAttribute="width" constant="46" id="jHc-tz-d3E"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i7Z-Q1-H0M">
                                 <rect key="frame" x="0.0" y="64" width="375" height="583"/>
                                 <subviews>
@@ -143,12 +135,23 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QOc-Ps-fa3">
+                                    <webView contentMode="scaleToFill" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOc-Ps-fa3">
                                         <rect key="frame" x="0.0" y="84" width="375" height="499"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yM8-15-nbn">
+                                <rect key="frame" x="303" y="652" width="46" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="2pI-sT-fAw"/>
+                                    <constraint firstAttribute="width" constant="46" id="jHc-tz-d3E"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pickImage:" destination="lN2-DK-cHZ" eventType="touchUpInside" id="P07-10-uwI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -166,8 +169,15 @@
                                 <action selector="cancel:" destination="lN2-DK-cHZ" id="hSQ-ny-lzY"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Xs9-rJ-Chc"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Xs9-rJ-Chc">
+                            <connections>
+                                <action selector="postArticle:" destination="lN2-DK-cHZ" id="B7i-mg-yJp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="richTextEditorWebView" destination="QOc-Ps-fa3" id="Bhb-zw-KT0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WfG-QL-FS1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
