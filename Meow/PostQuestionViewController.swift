@@ -9,4 +9,8 @@ import UIKit
 
 class PostQuestionViewController: UIViewController {
     
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

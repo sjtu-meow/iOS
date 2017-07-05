@@ -141,7 +141,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="发布文章" id="8iI-m6-t88">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fnT-df-1WS"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fnT-df-1WS">
+                            <connections>
+                                <action selector="cancel:" destination="lN2-DK-cHZ" id="hSQ-ny-lzY"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Xs9-rJ-Chc"/>
                     </navigationItem>
                 </viewController>
@@ -177,7 +181,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="发布问题" id="bpT-DT-qQg">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="knX-DP-2Uf"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="knX-DP-2Uf">
+                            <connections>
+                                <action selector="cancel:" destination="Guf-sS-S1W" id="A8J-sR-oEv"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="下一步" id="1ue-FI-dZV">
                             <connections>
                                 <segue destination="3ad-n1-JSM" kind="show" id="q8f-2m-cTh"/>
