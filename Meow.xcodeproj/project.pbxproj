@@ -77,7 +77,6 @@
 		BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395E1F02C089006DF489 /* SMSExtention.swift */; };
 		BFF139611F034053006DF489 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139601F034053006DF489 /* SignupViewController.swift */; };
 		C22E101695374861866E64E5 /* Pods_MeowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3612EC24166F9C122D5CDCC1 /* Pods_MeowTests.framework */; };
-		D93969291F0B406600B95C8B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93969281F0B406600B95C8B /* MainTabBarController.swift */; };
 		D97B34FA1F05DCC300BCB027 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B34F91F05DCC300BCB027 /* Item.swift */; };
 		D97B34FC1F05DEF500BCB027 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B34FB1F05DEF400BCB027 /* Profile.swift */; };
 		D97B34FE1F05E9C300BCB027 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B34FD1F05E9C300BCB027 /* Moment.swift */; };
