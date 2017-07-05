@@ -23,10 +23,7 @@ class SignupViewController: UIViewController {
     
     let disposeBag = DisposeBag()
    
-    // Navigation
-    @IBAction func cancel(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-    }
+ 
 
     
     
@@ -43,6 +40,9 @@ class SignupViewController: UIViewController {
         }
     }
     
+    @IBAction func cancel(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     func updateCounter(){
         if countdown == 0 {
             timer.invalidate()

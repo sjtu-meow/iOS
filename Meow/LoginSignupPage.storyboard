@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -39,17 +39,17 @@
                                         <rect key="frame" x="0.0" y="76" width="335" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvU-ox-UwD" userLabel="登录">
-                                                <rect key="frame" x="0.0" y="0.0" width="163" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="162.5" height="30"/>
                                                 <state key="normal" title="登录"/>
                                                 <connections>
                                                     <action selector="login:" destination="PQj-gL-oWO" eventType="touchUpInside" id="hho-qT-mor"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cd5-db-nwe">
-                                                <rect key="frame" x="173" y="0.0" width="162" height="30"/>
+                                                <rect key="frame" x="172.5" y="0.0" width="162.5" height="30"/>
                                                 <state key="normal" title="注册"/>
                                                 <connections>
-                                                    <segue destination="4vD-zI-NfV" kind="presentation" id="b9L-qZ-chT"/>
+                                                    <segue destination="Blt-hk-XUr" kind="show" id="gJs-sa-cdx"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -162,9 +162,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="注册" id="ZIc-YH-IKd">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="EsG-OV-ufq">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="EsG-OV-ufq" userLabel="取消">
                             <connections>
-                                <action selector="cancel:" destination="Blt-hk-XUr" id="7W0-Vb-Iy1"/>
+                                <action selector="cancel:" destination="Blt-hk-XUr" id="LeF-ge-mjU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -180,24 +180,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSR-EY-WKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2199.1999999999998" y="2153.9730134932533"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Skv-1D-6Ml">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4vD-zI-NfV" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="klN-O3-JsO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Blt-hk-XUr" kind="relationship" relationship="rootViewController" id="Jly-lA-hFZ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mv4-Zb-z6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1260" y="2153.9730134932533"/>
         </scene>
     </scenes>
 </document>
