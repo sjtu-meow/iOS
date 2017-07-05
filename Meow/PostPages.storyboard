@@ -11,7 +11,7 @@
         <!--发布点滴-->
         <scene sceneID="Bse-sq-173">
             <objects>
-                <viewController storyboardIdentifier="PostMoment" id="tFD-JL-dym" userLabel="发布点滴" customClass="MomentPostViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostMoment" id="tFD-JL-dym" userLabel="发布点滴" customClass="PostMomentViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hUt-Jd-SC4"/>
                         <viewControllerLayoutGuide type="bottom" id="Pem-Pz-zQB"/>
@@ -116,7 +116,7 @@
         <!--发布文章-->
         <scene sceneID="hiz-Zb-2UN">
             <objects>
-                <viewController id="lN2-DK-cHZ" sceneMemberID="viewController">
+                <viewController id="lN2-DK-cHZ" customClass="PostArticleViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OYQ-0v-hJv"/>
                         <viewControllerLayoutGuide type="bottom" id="wqJ-eE-3qf"/>
@@ -152,7 +152,7 @@
         <!--发布问题-->
         <scene sceneID="ZRm-tW-3x4">
             <objects>
-                <viewController id="Guf-sS-S1W" sceneMemberID="viewController">
+                <viewController id="Guf-sS-S1W" customClass="PostQuestionViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mxO-us-NCE"/>
                         <viewControllerLayoutGuide type="bottom" id="bzQ-yM-FYy"/>
@@ -192,7 +192,7 @@
         <!--Navigation Controller-->
         <scene sceneID="r2e-ET-2uZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rOe-sh-YlG" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PostQuestionNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="rOe-sh-YlG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1qz-GA-Ksc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -344,7 +344,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Efe-vh-fHQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FD0-gV-AN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="PostMomentNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="SBU-S2-gcL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0YC-PI-to9">
@@ -356,13 +355,14 @@
                         <segue destination="tFD-JL-dym" kind="relationship" relationship="rootViewController" id="uGP-Nf-XnA"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FD0-gV-AN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1444" y="2847.5262368815593"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CZY-kI-Fv2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V7r-Ij-ejI" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PostArticleNavagationController" automaticallyAdjustsScrollViewInsets="NO" id="V7r-Ij-ejI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iCo-4o-9bp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

@@ -28,13 +28,14 @@ class LoginViewController: UIViewController {
         MeowAPIProvider.shared.request(.login(phone: username, password: password))
             .mapTo(type:Token.self)
             .subscribe(onNext: {
+                [weak self]
                 token in
                 token.save()
                 MeowAPIProvider.refresh()
+                self?.dismiss(animated: true, completion: nil )
             })
             .addDisposableTo(disposeBag)
-        //dismiss(animated: true, completion: nil )
-    }
+        }
     
     @IBAction func signup(_ sender: Any) {
         

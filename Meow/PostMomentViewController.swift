@@ -1,5 +1,5 @@
 //
-//  MomentPostViewController.swift
+//  PostMomentViewController.swift
 //  Meow
 //
 //  Created by 唐楚哲 on 2017/6/30.
@@ -10,7 +10,7 @@ import UIKit
 import Qiniu
 import RxSwift
 
-class MomentPostViewController: UIViewController, UINavigationControllerDelegate {
+class PostMomentViewController: UIViewController, UINavigationControllerDelegate {
 
     //MARK: - Properties
     
@@ -111,7 +111,7 @@ class MomentPostViewController: UIViewController, UINavigationControllerDelegate
      }
      */
 }
-extension MomentPostViewController: UICollectionViewDataSource {
+extension PostMomentViewController: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return uploadedImages.count + 1;
     }
@@ -135,7 +135,7 @@ extension MomentPostViewController: UICollectionViewDataSource {
     }
 }
 
-extension MomentPostViewController: UIImagePickerControllerDelegate {
+extension PostMomentViewController: UIImagePickerControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         // Dismiss the picker if the user canceled.
         dismiss(animated: true, completion: nil)
@@ -161,7 +161,7 @@ extension MomentPostViewController: UIImagePickerControllerDelegate {
     }
 }
 
-extension MomentPostViewController: UICollectionViewDelegate {
+extension PostMomentViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         // response to tapping at the add button
@@ -177,7 +177,7 @@ extension MomentPostViewController: UICollectionViewDelegate {
     }
 }
 
-extension MomentPostViewController: UITextViewDelegate {
+extension PostMomentViewController: UITextViewDelegate {
 
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {
