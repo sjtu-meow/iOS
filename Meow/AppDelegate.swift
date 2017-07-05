@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AVOSCloud.setApplicationId(keys.leanCloudAppId, clientKey: keys.leanCloudClientKey)
         
         /* login page */
-        
+      /*
         if Token.load() == nil || true {
             let vc = R.storyboard.loginSignupPage.loginSignupController()!
             vc.modalPresentationStyle = .fullScreen
@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController?.present(vc, animated: true, completion: nil)
         }
         
-        
+        */
         return true
     }
 
