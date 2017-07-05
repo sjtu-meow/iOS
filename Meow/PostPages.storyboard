@@ -12,7 +12,7 @@
         <!--发布点滴-->
         <scene sceneID="Bse-sq-173">
             <objects>
-                <viewController storyboardIdentifier="PostMoment" id="tFD-JL-dym" userLabel="发布点滴" customClass="MomentPostViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostMoment" id="tFD-JL-dym" userLabel="发布点滴" customClass="PostMomentViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hUt-Jd-SC4"/>
                         <viewControllerLayoutGuide type="bottom" id="Pem-Pz-zQB"/>
@@ -117,7 +117,7 @@
         <!--发布文章-->
         <scene sceneID="hiz-Zb-2UN">
             <objects>
-                <viewController id="lN2-DK-cHZ" sceneMemberID="viewController">
+                <viewController id="lN2-DK-cHZ" customClass="PostArticleViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OYQ-0v-hJv"/>
                         <viewControllerLayoutGuide type="bottom" id="wqJ-eE-3qf"/>
@@ -161,7 +161,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="发布文章" id="8iI-m6-t88">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fnT-df-1WS"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fnT-df-1WS">
+                            <connections>
+                                <action selector="cancel:" destination="lN2-DK-cHZ" id="hSQ-ny-lzY"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Xs9-rJ-Chc"/>
                     </navigationItem>
                 </viewController>
@@ -172,7 +176,7 @@
         <!--发布问题-->
         <scene sceneID="ZRm-tW-3x4">
             <objects>
-                <viewController id="Guf-sS-S1W" sceneMemberID="viewController">
+                <viewController id="Guf-sS-S1W" customClass="PostQuestionViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mxO-us-NCE"/>
                         <viewControllerLayoutGuide type="bottom" id="bzQ-yM-FYy"/>
@@ -197,7 +201,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="发布问题" id="bpT-DT-qQg">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="knX-DP-2Uf"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="knX-DP-2Uf">
+                            <connections>
+                                <action selector="cancel:" destination="Guf-sS-S1W" id="A8J-sR-oEv"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="下一步" id="1ue-FI-dZV">
                             <connections>
                                 <segue destination="3ad-n1-JSM" kind="show" id="q8f-2m-cTh"/>
@@ -212,7 +220,7 @@
         <!--Navigation Controller-->
         <scene sceneID="r2e-ET-2uZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rOe-sh-YlG" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PostQuestionNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="rOe-sh-YlG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1qz-GA-Ksc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -382,7 +390,7 @@
         <!--Navigation Controller-->
         <scene sceneID="CZY-kI-Fv2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V7r-Ij-ejI" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PostArticleNavagationController" automaticallyAdjustsScrollViewInsets="NO" id="V7r-Ij-ejI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iCo-4o-9bp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

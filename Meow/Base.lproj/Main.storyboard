@@ -104,6 +104,9 @@
                                                 <state key="normal" title="文章">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="sgS-nM-GkL" kind="show" id="8qn-am-gIu"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMT-Le-oig">
                                                 <rect key="frame" x="208" y="0.0" width="35" height="33"/>
@@ -111,6 +114,9 @@
                                                 <state key="normal" title="问题">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="KGr-nD-Dlf" kind="show" id="V5S-3Z-dFe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -138,13 +144,21 @@
             </objects>
             <point key="canvasLocation" x="-2593" y="2092"/>
         </scene>
-        <!--PostPages-->
+        <!--PostArticleNavagationController-->
         <scene sceneID="7i8-G1-3kW">
             <objects>
-                <viewControllerPlaceholder storyboardName="PostPages" id="sgS-nM-GkL" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PostPages" referencedIdentifier="PostArticleNavagationController" id="sgS-nM-GkL" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Egr-p0-Lmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2120" y="2092"/>
+        </scene>
+        <!--PostQuestionNavigationController-->
+        <scene sceneID="RR5-Z4-rtO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PostPages" referencedIdentifier="PostQuestionNavigationController" id="KGr-nD-Dlf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2so-3x-Jhm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1636" y="2092"/>
         </scene>
         <!--搜索-->
         <scene sceneID="s91-PU-0QG">

@@ -27,11 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AVOSCloud.setApplicationId(keys.leanCloudAppId, clientKey: keys.leanCloudClientKey)
         
         /* login page */
-//        if Token.load() == nil {
-//            let vc = R.storyboard.loginSignupPage.loginSignupController()!
-//            vc.modalPresentationStyle = .fullScreen
-//            self.window?.rootViewController?.present(vc, animated: true, completion: nil)
-//        }
+        /*
+        if Token.load() == nil {
+            let vc = R.storyboard.loginSignupPage.loginSignupController()!
+            vc.modalPresentationStyle = .fullScreen
+            self.window?.makeKeyAndVisible()
+            self.window?.rootViewController?.present(vc, animated: true, completion: nil)
+        }
+        */
         
         return true
     }
