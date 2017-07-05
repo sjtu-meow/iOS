@@ -37,6 +37,7 @@ class PostMomentViewController: UIViewController, UINavigationControllerDelegate
         // Add fake placeholder to text view
         momentContentTextView.text = momentTextPlaceholder
         momentContentTextView.textColor = UIColor.lightGray
+        
     }
 
     override func didReceiveMemoryWarning() {

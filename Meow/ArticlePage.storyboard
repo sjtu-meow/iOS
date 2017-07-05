@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -121,7 +122,7 @@
         <!--文章的题目-->
         <scene sceneID="Jy9-wM-tQr">
             <objects>
-                <viewController storyboardIdentifier="ArticleContent" id="xN7-B4-sls" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticleContent" id="xN7-B4-sls" customClass="ArticleDetailViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bQX-Ue-R3J"/>
                         <viewControllerLayoutGuide type="bottom" id="eqn-Fc-ygH"/>
@@ -130,9 +131,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qbu-H4-WbZ">
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbu-H4-WbZ">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
                                     <tabBarItem title="赞 (3)" id="eWe-sO-5gN"/>
@@ -142,7 +142,7 @@
                                 </items>
                             </tabBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xMK-yK-lja" userLabel="主体">
-                                <rect key="frame" x="16" y="72" width="343" height="437"/>
+                                <rect key="frame" x="16" y="72" width="343" height="40"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lxl-YP-cM8" userLabel="用户">
                                         <rect key="frame" x="0.0" y="0.0" width="172.5" height="40"/>
@@ -161,7 +161,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bX3-F3-PZv" userLabel="个人信息">
                                                         <rect key="frame" x="0.0" y="0.0" width="124.5" height="17"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUE-hT-xJa">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Chp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUE-hT-xJa">
                                                                 <rect key="frame" x="0.0" y="0.0" width="26.5" height="17"/>
                                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -174,7 +174,7 @@
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信息系统专家" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlK-KI-XNG">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="信息系统专家" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlK-KI-XNG">
                                                                 <rect key="frame" x="38.5" y="0.0" width="86" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -193,38 +193,34 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eM-nQ-3uL" userLabel="正文">
-                                        <rect key="frame" x="0.0" y="48" width="343" height="142.5"/>
-                                        <string key="text">美锅干过最不可思议的事……
-
-大概是无师自通，学会了拜托吧(笑)
-
-最先开始呢我发现美哥会躺着做拜托状，有时候正着有时候歪着，我以为他是在捋胡子……</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="7EP-fO-rhM" userLabel="插图">
-                                        <rect key="frame" x="0.0" y="198.5" width="343" height="238.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="7EP-fO-rhM" secondAttribute="height" multiplier="125:87" id="z3O-NC-4Nj"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="7EP-fO-rhM" firstAttribute="leading" secondItem="xMK-yK-lja" secondAttribute="leading" id="LfK-ep-lsO"/>
-                                    <constraint firstItem="7EP-fO-rhM" firstAttribute="trailing" secondItem="xMK-yK-lja" secondAttribute="trailing" id="t1G-gC-mO3"/>
-                                </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8S-e1-2ie">
+                                <rect key="frame" x="16" y="112" width="343" height="506"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xMK-yK-lja" firstAttribute="top" secondItem="bQX-Ue-R3J" secondAttribute="bottom" constant="8" id="1tg-ib-6hP"/>
+                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="centerX" secondItem="w8S-e1-2ie" secondAttribute="centerX" id="2fR-sV-XaA"/>
+                            <constraint firstItem="w8S-e1-2ie" firstAttribute="leading" secondItem="4qz-KX-cHN" secondAttribute="leadingMargin" id="5Vd-Mc-89G"/>
                             <constraint firstItem="xMK-yK-lja" firstAttribute="trailing" secondItem="4qz-KX-cHN" secondAttribute="trailing" constant="-16" id="7ZT-kS-d6A"/>
+                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="leading" secondItem="4qz-KX-cHN" secondAttribute="leading" id="LlG-yU-qRN"/>
                             <constraint firstItem="xMK-yK-lja" firstAttribute="leading" secondItem="4qz-KX-cHN" secondAttribute="leading" constant="16" id="OYS-xG-Mwu"/>
+                            <constraint firstItem="w8S-e1-2ie" firstAttribute="bottom" secondItem="Qbu-H4-WbZ" secondAttribute="top" id="Xi1-Nm-74Z"/>
+                            <constraint firstItem="w8S-e1-2ie" firstAttribute="top" secondItem="xMK-yK-lja" secondAttribute="bottom" id="gng-dm-yeJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w8S-e1-2ie" secondAttribute="trailing" id="sVm-Eh-ziG"/>
+                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="bottom" secondItem="eqn-Fc-ygH" secondAttribute="top" id="zJj-Vr-cxB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="文章的题目" id="nwe-Ub-XHu"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="5L6-74-ch4" id="uni-yh-fW9"/>
+                        <outlet property="bioLabel" destination="MlK-KI-XNG" id="vei-Wj-fae"/>
+                        <outlet property="nicknameLabel" destination="BUE-hT-xJa" id="piU-SG-0ua"/>
+                        <outlet property="webViewContainer" destination="w8S-e1-2ie" id="iQn-GR-TlQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZ1-NG-tEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,3 +7,31 @@
 //
 
 import Foundation
+import UIKit
+import WebKit
+
+class ArticleDetailViewController: UIViewController {
+    
+    /* user profile info */
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var nicknameLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
+    
+    @IBOutlet weak var webViewContainer: UIView!
+    var webview:ArticleWebView!
+    
+    override func viewDidLoad() {
+        webview = ArticleWebView(fromSuperView: webViewContainer)
+        loadArticle()
+    }
+    
+    var content: String?
+    var htmlString: String?
+    
+    func loadArticle() {
+        webview.presentHTMLString("???")
+
+    
+    }
+}
+
