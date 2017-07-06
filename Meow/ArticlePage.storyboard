@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AlW-pk-E3D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AlW-pk-E3D">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -122,7 +121,7 @@
         <!--文章的题目-->
         <scene sceneID="Jy9-wM-tQr">
             <objects>
-                <viewController storyboardIdentifier="ArticleContent" id="xN7-B4-sls" customClass="ArticleDetailViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticleDetailViewController" id="xN7-B4-sls" customClass="ArticleDetailViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bQX-Ue-R3J"/>
                         <viewControllerLayoutGuide type="bottom" id="eqn-Fc-ygH"/>
@@ -142,13 +141,13 @@
                                 </items>
                             </tabBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xMK-yK-lja" userLabel="主体">
-                                <rect key="frame" x="16" y="72" width="343" height="40"/>
+                                <rect key="frame" x="16" y="72" width="343" height="554"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lxl-YP-cM8" userLabel="用户">
-                                        <rect key="frame" x="0.0" y="0.0" width="172.5" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="172.5" height="554"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" image="DefaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="5L6-74-ch4" userLabel="头像">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <rect key="frame" x="0.0" y="257" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="N96-tc-FtO"/>
                                                     <constraint firstAttribute="width" secondItem="5L6-74-ch4" secondAttribute="height" multiplier="1:1" id="iIH-fJ-dzI"/>
@@ -156,7 +155,7 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="UsG-yU-98M" userLabel="文字">
-                                                <rect key="frame" x="48" y="4.5" width="124.5" height="31.5"/>
+                                                <rect key="frame" x="48" y="261.5" width="124.5" height="31.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bX3-F3-PZv" userLabel="个人信息">
                                                         <rect key="frame" x="0.0" y="0.0" width="124.5" height="17"/>
@@ -195,22 +194,20 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8S-e1-2ie">
-                                <rect key="frame" x="16" y="112" width="343" height="506"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w8S-e1-2ie" customClass="ArticleDetailViewController" customModule="Meow" customModuleProvider="target">
+                                <rect key="frame" x="16" y="100" width="343" height="466"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xMK-yK-lja" firstAttribute="top" secondItem="bQX-Ue-R3J" secondAttribute="bottom" constant="8" id="1tg-ib-6hP"/>
-                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="centerX" secondItem="w8S-e1-2ie" secondAttribute="centerX" id="2fR-sV-XaA"/>
-                            <constraint firstItem="w8S-e1-2ie" firstAttribute="leading" secondItem="4qz-KX-cHN" secondAttribute="leadingMargin" id="5Vd-Mc-89G"/>
                             <constraint firstItem="xMK-yK-lja" firstAttribute="trailing" secondItem="4qz-KX-cHN" secondAttribute="trailing" constant="-16" id="7ZT-kS-d6A"/>
+                            <constraint firstItem="xMK-yK-lja" firstAttribute="centerX" secondItem="Qbu-H4-WbZ" secondAttribute="centerX" id="Juo-El-PKw"/>
                             <constraint firstItem="Qbu-H4-WbZ" firstAttribute="leading" secondItem="4qz-KX-cHN" secondAttribute="leading" id="LlG-yU-qRN"/>
                             <constraint firstItem="xMK-yK-lja" firstAttribute="leading" secondItem="4qz-KX-cHN" secondAttribute="leading" constant="16" id="OYS-xG-Mwu"/>
-                            <constraint firstItem="w8S-e1-2ie" firstAttribute="bottom" secondItem="Qbu-H4-WbZ" secondAttribute="top" id="Xi1-Nm-74Z"/>
-                            <constraint firstItem="w8S-e1-2ie" firstAttribute="top" secondItem="xMK-yK-lja" secondAttribute="bottom" id="gng-dm-yeJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="w8S-e1-2ie" secondAttribute="trailing" id="sVm-Eh-ziG"/>
+                            <constraint firstItem="eqn-Fc-ygH" firstAttribute="top" secondItem="xMK-yK-lja" secondAttribute="bottom" constant="41" id="Wy3-AT-tpx"/>
                             <constraint firstItem="Qbu-H4-WbZ" firstAttribute="bottom" secondItem="eqn-Fc-ygH" secondAttribute="top" id="zJj-Vr-cxB"/>
                         </constraints>
                     </view>
