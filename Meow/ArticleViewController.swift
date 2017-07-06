@@ -32,7 +32,6 @@ class ArticleViewController: UITableViewController {
         
         loadArticles()
         
-        tableView.registerHeaderFooterView(R.nib.articlePageTableViewCell)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -43,11 +42,10 @@ class ArticleViewController: UITableViewController {
         return self.articles?.count ?? 0
     }
     
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let view = tableView.dequeueReusableCell(withIdentifier: "articlePageTableViewCell")!
+        let view = tableView.dequeueReusableCell(withIdentifier: "ArticlePageTableViewCell")!
         if let article = self.articles?[indexPath.row]{
-            (view as! ArticlePageTableViewCell).configure(model: article)
+            (view as! ArticleHomePageTableViewCell).configure(model: article)
         }
         return view
     }

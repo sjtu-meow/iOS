@@ -30,8 +30,6 @@ class ArticleDetailViewController: UIViewController {
     
     func loadArticle() {
         webview.presentHTMLString("???")
-
-    
     }
 }
 
