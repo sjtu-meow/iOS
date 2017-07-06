@@ -100,7 +100,7 @@
                                     <outlet property="articleCoverImageView" destination="0IW-fx-RUn" id="IT9-tu-OKh"/>
                                     <outlet property="articleLikeLabel" destination="3vM-NC-vuX" id="oTe-bi-usJ"/>
                                     <outlet property="articleTitleLabel" destination="bua-o1-vyW" id="enw-FO-F1Q"/>
-                                    <segue destination="1nO-JF-Xnn" kind="showDetail" id="8WC-RN-8xv"/>
+                                    <segue destination="xN7-B4-sls" kind="show" id="GjW-iP-mFb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -134,24 +134,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbu-H4-WbZ">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="赞 (3)" id="eWe-sO-5gN"/>
-                                    <tabBarItem title="评论 (3)" id="qQF-uM-daQ"/>
-                                    <tabBarItem title="收藏 (3)" id="b6b-nE-JdA"/>
-                                    <tabBarItem systemItem="more" id="CPV-Td-zV0"/>
-                                </items>
-                            </tabBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xMK-yK-lja" userLabel="主体">
-                                <rect key="frame" x="16" y="72" width="343" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="172.5" height="40"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lxl-YP-cM8" userLabel="用户">
-                                        <rect key="frame" x="0.0" y="0.0" width="172.5" height="554"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="172.5" height="40"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" image="DefaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="5L6-74-ch4" userLabel="头像">
-                                                <rect key="frame" x="0.0" y="257" width="40" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="N96-tc-FtO"/>
                                                     <constraint firstAttribute="width" secondItem="5L6-74-ch4" secondAttribute="height" multiplier="1:1" id="iIH-fJ-dzI"/>
@@ -159,7 +149,7 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="UsG-yU-98M" userLabel="文字">
-                                                <rect key="frame" x="48" y="261.5" width="124.5" height="31.5"/>
+                                                <rect key="frame" x="48" y="4.5" width="124.5" height="31.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bX3-F3-PZv" userLabel="个人信息">
                                                         <rect key="frame" x="0.0" y="0.0" width="124.5" height="17"/>
@@ -197,22 +187,42 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="08y-Kt-gv8"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="WF3-tS-lb0"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="xkv-S6-Bsf"/>
+                                </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w8S-e1-2ie" customClass="ArticleDetailViewController" customModule="Meow" customModuleProvider="target">
-                                <rect key="frame" x="16" y="100" width="343" height="466"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbu-H4-WbZ">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="1Hu-Jn-knx"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="赞 (3)" id="eWe-sO-5gN"/>
+                                    <tabBarItem title="评论 (3)" id="qQF-uM-daQ"/>
+                                    <tabBarItem title="收藏 (3)" id="b6b-nE-JdA"/>
+                                    <tabBarItem systemItem="more" id="CPV-Td-zV0"/>
+                                </items>
+                            </tabBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8S-e1-2ie">
+                                <rect key="frame" x="0.0" y="112" width="375" height="506"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xMK-yK-lja" firstAttribute="top" secondItem="bQX-Ue-R3J" secondAttribute="bottom" constant="8" id="1tg-ib-6hP"/>
-                            <constraint firstItem="xMK-yK-lja" firstAttribute="trailing" secondItem="4qz-KX-cHN" secondAttribute="trailing" constant="-16" id="7ZT-kS-d6A"/>
-                            <constraint firstItem="xMK-yK-lja" firstAttribute="centerX" secondItem="Qbu-H4-WbZ" secondAttribute="centerX" id="Juo-El-PKw"/>
-                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="leading" secondItem="4qz-KX-cHN" secondAttribute="leading" id="LlG-yU-qRN"/>
-                            <constraint firstItem="xMK-yK-lja" firstAttribute="leading" secondItem="4qz-KX-cHN" secondAttribute="leading" constant="16" id="OYS-xG-Mwu"/>
-                            <constraint firstItem="eqn-Fc-ygH" firstAttribute="top" secondItem="xMK-yK-lja" secondAttribute="bottom" constant="41" id="Wy3-AT-tpx"/>
-                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="bottom" secondItem="eqn-Fc-ygH" secondAttribute="top" id="zJj-Vr-cxB"/>
+                            <constraint firstItem="xMK-yK-lja" firstAttribute="top" secondItem="bQX-Ue-R3J" secondAttribute="bottom" constant="44" id="1Ed-o6-WWe"/>
+                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="trailing" secondItem="w8S-e1-2ie" secondAttribute="trailing" id="4f4-3J-W8G"/>
+                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="leading" secondItem="xMK-yK-lja" secondAttribute="leading" id="CSv-pv-mGb"/>
+                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="top" secondItem="w8S-e1-2ie" secondAttribute="bottom" id="PWO-fN-bdM"/>
+                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="leading" secondItem="4qz-KX-cHN" secondAttribute="leading" id="Xxy-DH-ihc"/>
+                            <constraint firstAttribute="trailing" secondItem="Qbu-H4-WbZ" secondAttribute="trailing" id="ob9-PL-fgw"/>
+                            <constraint firstItem="w8S-e1-2ie" firstAttribute="top" secondItem="xMK-yK-lja" secondAttribute="bottom" constant="8" symbolic="YES" id="pfz-8a-5go"/>
+                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="bottom" secondItem="eqn-Fc-ygH" secondAttribute="top" id="vhd-dO-G8f"/>
+                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="top" secondItem="w8S-e1-2ie" secondAttribute="bottom" id="yDP-LZ-2A3"/>
+                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="leading" secondItem="w8S-e1-2ie" secondAttribute="leading" id="zI5-1v-oyM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="文章的题目" id="nwe-Ub-XHu"/>
@@ -225,25 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZ1-NG-tEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1248.8" y="-649.02548725637189"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Ppe-Vx-FF5">
-            <objects>
-                <navigationController storyboardIdentifier="ArticleContentNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="1nO-JF-Xnn" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HPw-ma-h3B">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="xN7-B4-sls" kind="relationship" relationship="rootViewController" id="5MJ-D0-gCE"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lqm-cT-tgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="309.60000000000002" y="-649.02548725637189"/>
+            <point key="canvasLocation" x="591" y="-649"/>
         </scene>
     </scenes>
     <resources>

@@ -90,7 +90,7 @@ class ArticleWebView: WKWebView {
 
 extension ArticleWebView : WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        delegate?.webView?(webView, decidePolicyFor: navigationAction, decisionHandler: decisionHandler)
+        decisionHandler(.cancel)
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
