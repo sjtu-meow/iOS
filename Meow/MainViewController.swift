@@ -9,7 +9,8 @@ import UIKit
 
 
 class MainViewController: UITabBarController {
-    var backImage: UIImage?
+    var backImage: UIImage!
+    var previousIndex: Int?
     
 
     override func viewDidLoad() {
@@ -32,10 +33,10 @@ extension MainViewController: UITabBarControllerDelegate {
     
  
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        if tabBarController.selectedIndex == 4 {
-            backImage = nil
-        }
-        else if tabBarController.viewControllers?.index(of: viewController) == 3 {
+        previousIndex = tabBarController.selectedIndex
+
+        if tabBarController.viewControllers?.index(of: viewController) == 3 {
+            //backImage = blurImage(targetImage: snapView(targetView: tabBarController.view))
             backImage = snapView(targetView: tabBarController.view)
         }
         
@@ -55,12 +56,13 @@ extension MainViewController: UITabBarControllerDelegate {
     
     func tabBarController(_ tabBarController: UITabBarController,
                           didSelect viewController: UIViewController){
+        
         if tabBarController.viewControllers?.index(of: viewController) == 3 {
-            if let backImage = backImage {
-                viewController.view.backgroundColor = UIColor(patternImage: backImage)
-            }
-            else {
+            if previousIndex == 4 {
                 viewController.view.backgroundColor = UIColor.white
+            }
+            else if previousIndex != 3 {
+                viewController.view.backgroundColor = UIColor(patternImage: backImage)
             }
         }
 
@@ -73,6 +75,25 @@ extension MainViewController: UITabBarControllerDelegate {
         UIGraphicsEndImageContext()
         return snapdImage!
     }
+    
+    func blurImage(targetImage: UIImage) -> UIImage {
+        let ciImage = CIImage(image: targetImage)
+        let filter = CIFilter(name: "CIGaussianBlur")!
+        //filter.setDefaults()
+        filter.setValue(ciImage, forKey: kCIInputImageKey)
+        let resultImage = filter.value(forKey: kCIOutputImageKey) as! CIImage
+        let context = CIContext()
+        let cgImage = context.createCGImage(resultImage, from: resultImage.extent)!
+        
+        let blurredImage = UIImage(cgImage:cgImage)
+        //let blurredImage = UIImage(ciImage: resultImage)
+        return blurredImage
+        
+        
+
+    }
+        
+    
     
 //
 //   
