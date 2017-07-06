@@ -28,7 +28,7 @@ class HomeViewController: UITableViewController {
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         loadData()
         
-    let vc = R.storyboard.articlePage.articleDetailViewController()
+        let vc = R.storyboard.articlePage.articleDetailViewController()
 
         // let vc = R.storyboard.loginSignupPage.loginViewController()
         
@@ -59,9 +59,10 @@ class HomeViewController: UITableViewController {
 
       loadMore()
         MeowAPIProvider.shared.request(.moments)    // FIXME: need to support other item types
-            .mapTo(arrayOf: Moment.self)
+            .mapToItems()
             .subscribe(onNext: {
-                [weak self] (items) in
+                [weak self]
+                (items) in
                 self?.items = items
                 self?.tableView.reloadData()
             })

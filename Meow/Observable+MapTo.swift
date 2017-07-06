@@ -15,7 +15,7 @@ enum MeowError: String {
 extension MeowError: Swift.Error { }
 
 extension Observable {
-    func mapTo <T: JSONConvertible>(type: T.Type) -> Observable<T> {
+    func mapTo<T: JSONConvertible>(type: T.Type) -> Observable<T> {
         return map {
             (element) -> T in
             
@@ -42,5 +42,34 @@ extension Observable {
             }
         }
     }
+    
+    func mapToItems() -> Observable<[ItemProtocol]> {
+        return self.map {
+            (element) -> [ItemProtocol] in
+            guard let json = element as? JSON else {
+                throw MeowError.badData
+            }
+            let array = json.arrayValue
+            return array.flatMap {
+                (jsonElement) -> ItemProtocol? in
+                guard let item = Item.fromJSON(jsonElement)
+                    else { return nil }
+                switch item.type! {
+                    case .moment:
+                        return Moment.fromJSON(jsonElement)
+                    case .article:
+                        return Article.fromJSON(jsonElement)
+                    case .question:
+                        return Question.fromJSON(jsonElement)
+                    case .answer:
+                        return Answer.fromJSON(jsonElement)
+                }
+                
+            }
+        }
+        
+    }
+        
+
 
 }

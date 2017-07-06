@@ -13,11 +13,13 @@ enum ItemType: Int {
     case moment = 0, article = 1, question = 2, answer = 3
 }
 
-protocol ItemProtocol {
+protocol ItemProtocol: JSONConvertible {
     var id: Int! {get set}
     var type: ItemType! {get set}
     var profile: Profile! {get set}
+    
 }
+
 
 
 struct Item: ItemProtocol {
@@ -28,9 +30,11 @@ struct Item: ItemProtocol {
 }
 
 
+
 extension Item: JSONConvertible {
+    
+    
     static func fromJSON(_ json: JSON) -> Item? {
-       
         guard let id = json["id"].int,
               let type = json["type"].int,
               let profile = Profile.fromJSON(json["profile"])

@@ -12,10 +12,12 @@ struct Article: ItemProtocol {
     var id: Int!
     var type: ItemType!
     var profile: Profile!
+    
     var title: String!
     var summary: String?
     var readCount: Int!
     var cover: URL?
+    
     var like: Int? // FIXME: not empty
     var comment: Int?
     //content? 

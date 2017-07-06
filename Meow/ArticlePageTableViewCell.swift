@@ -7,17 +7,16 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ArticlePageTableViewCell: UITableViewCell {
 
     
-    //Properties
-    @IBOutlet weak var articleTitleLabel: UILabel!
-    @IBOutlet weak var articleSummaryLabel: UILabel!
     @IBOutlet weak var articleCoverImageView: UIImageView!
+    @IBOutlet weak var articleTitleLabel: UILabel!
     @IBOutlet weak var articleLikeLabel: UILabel!
     @IBOutlet weak var articleCommentLabel: UILabel!
-    
+    // TODO: readCount, createTime
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +29,15 @@ class ArticlePageTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(model: Article){
+    func configure(model: ArticleSummary){
+        let articleSummary = model
+        if let coverURL = articleSummary.cover {
+            articleCoverImageView.af_setImage(withURL: coverURL)}
+        articleTitleLabel.text = articleSummary.title
+        articleLikeLabel.text = String(describing:
+            articleSummary.like)
+        articleCommentLabel.text = String(describing: articleSummary.comment)
+        
     }
 
 }
