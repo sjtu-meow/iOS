@@ -28,11 +28,11 @@ class HomeViewController: UITableViewController {
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         loadData()
         
-         //let vc = R.storyboard.postPages.postMomentNavigationController()!
+    let vc = R.storyboard.articlePage.articleDetailViewController()
 
         // let vc = R.storyboard.loginSignupPage.loginViewController()
         
-         //present(vc, animated: true, completion: nil)
+         present(vc!, animated: true, completion: nil)
         //logger.log("hello world")
         
         tableView.estimatedRowHeight = 80
