@@ -33,7 +33,7 @@ extension MainViewController: UITabBarControllerDelegate {
     
  
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        previousIndex = tabBarController.selectedIndex
+        previousIndex = tabgBarController.selectedIndex
 
         if tabBarController.viewControllers?.index(of: viewController) == 3 {
             //backImage = blurImage(targetImage: snapView(targetView: tabBarController.view))
