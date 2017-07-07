@@ -11,7 +11,7 @@ import UIKit
 import WebKit
 import RxSwift
 
-class ArticleDetailViewController: UIViewController {
+class ArticleDetailViewController: UITableViewController {
     let disposeBag = DisposeBag()
     
     /* user profile info */
@@ -26,8 +26,19 @@ class ArticleDetailViewController: UIViewController {
     var article: Article?
     
     override func viewDidLoad() {
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         webview = ArticleWebView(fromSuperView: webViewContainer)
-        loadData()
+        
+        //loadData()
+        webview.load(URLRequest(url:URL(string:"http://sjtu.edu.cn")!))
+        
+        webview.heightChangingHandler = {
+            [weak self] height in
+            if let that = self {
+                that.tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .none)
+            }
+        }
+        webview.updateHeight()
     }
     
     var content: String?
@@ -68,5 +79,14 @@ class ArticleDetailViewController: UIViewController {
         }
         
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 0
+        }
+        return 100
+        //return UITableViewAutomaticDimension
+    }
+    
 }
 

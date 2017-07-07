@@ -77,6 +77,7 @@
 		BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */; };
 		BF7878741F01010F000FB7C6 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878731F01010F000FB7C6 /* MyViewController.swift */; };
 		BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878751F010178000FB7C6 /* LoginViewController.swift */; };
+		BF9272E51F0F8A6300E601F3 /* ItemDetailButtomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */; };
 		BF9E75DF1F03AB6C00723541 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E75DE1F03AB6C00723541 /* R.generated.swift */; };
 		BFE11D381F010AF200EED963 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
@@ -198,6 +199,7 @@
 		BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		BF7878731F01010F000FB7C6 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		BF7878751F010178000FB7C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailButtomBar.xib; sourceTree = "<group>"; };
 		BF9E75DE1F03AB6C00723541 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
 		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 				BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */,
 				BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */,
 				BF4A242D1F0E1CD30004650E /* RichTextEditor.xib */,
+				BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 				2411AD1B1F05423C00910051 /* PostPages.storyboard in Resources */,
 				24F7F4571F04A4BE001A0FFA /* UserPageRecordTableViewCell.xib in Resources */,
 				24F7F43F1F048D14001A0FFA /* QuestionDetailTableViewCell.xib in Resources */,
+				BF9272E51F0F8A6300E601F3 /* ItemDetailButtomBar.xib in Resources */,
 				BFE11D381F010AF200EED963 /* (null) in Resources */,
 				2411AD061F052CFB00910051 /* UserProfileTableViewCell.xib in Resources */,
 				2443A6751F03530A0032BEB9 /* MomentCommentTableViewCell.xib in Resources */,

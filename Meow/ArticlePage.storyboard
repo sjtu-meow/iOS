@@ -100,7 +100,7 @@
                                     <outlet property="articleCoverImageView" destination="0IW-fx-RUn" id="IT9-tu-OKh"/>
                                     <outlet property="articleLikeLabel" destination="3vM-NC-vuX" id="oTe-bi-usJ"/>
                                     <outlet property="articleTitleLabel" destination="bua-o1-vyW" id="enw-FO-F1Q"/>
-                                    <segue destination="xN7-B4-sls" kind="showDetail" id="kHJ-1n-wVm"/>
+                                    <segue destination="3gm-QO-LJQ" kind="show" id="aXq-Qh-4zU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -122,149 +122,117 @@
             </objects>
             <point key="canvasLocation" x="-484" y="-649.02548725637189"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="f6b-Az-l29">
-            <objects>
-                <navigationController storyboardIdentifier="ArticleDetailNavigationController" id="JWc-Ef-Y5Q" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sbC-Xt-iz2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="xN7-B4-sls" kind="relationship" relationship="rootViewController" id="edL-aU-XJe"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g3Q-cJ-UpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="415" y="-649"/>
-        </scene>
         <!--文章的题目-->
-        <scene sceneID="Jy9-wM-tQr">
+        <scene sceneID="08Q-Sa-iz1">
             <objects>
-                <viewController storyboardIdentifier="ArticleDetailViewController" id="xN7-B4-sls" customClass="ArticleDetailViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bQX-Ue-R3J"/>
-                        <viewControllerLayoutGuide type="bottom" id="eqn-Fc-ygH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4qz-KX-cHN">
+                <tableViewController id="3gm-QO-LJQ" customClass="ArticleDetailViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="WEy-fm-Ja1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xMK-yK-lja" userLabel="主体">
-                                <rect key="frame" x="0.0" y="108" width="172.5" height="40"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lxl-YP-cM8" userLabel="用户">
-                                        <rect key="frame" x="0.0" y="0.0" width="172.5" height="40"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" image="DefaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="5L6-74-ch4" userLabel="头像">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="N96-tc-FtO"/>
-                                                    <constraint firstAttribute="width" secondItem="5L6-74-ch4" secondAttribute="height" multiplier="1:1" id="iIH-fJ-dzI"/>
-                                                    <constraint firstAttribute="height" constant="40" id="yfu-sL-5p0"/>
-                                                </constraints>
-                                            </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="UsG-yU-98M" userLabel="文字">
-                                                <rect key="frame" x="48" y="4.5" width="124.5" height="31.5"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bX3-F3-PZv" userLabel="个人信息">
-                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="17"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Chp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUE-hT-xJa">
-                                                                <rect key="frame" x="0.0" y="0.0" width="26.5" height="17"/>
-                                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" · " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZST-aG-lHv">
-                                                                <rect key="frame" x="26.5" y="0.0" width="12" height="17"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="信息系统专家" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlK-KI-XNG">
-                                                                <rect key="frame" x="38.5" y="0.0" width="86" height="17"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <variation key="heightClass=regular-widthClass=regular" distribution="fill"/>
-                                                    </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3小时前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfX-nz-knY" userLabel="时间">
-                                                        <rect key="frame" x="0.0" y="17" width="44.5" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="08y-Kt-gv8"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="WF3-tS-lb0"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="xkv-S6-Bsf"/>
-                                </constraints>
-                            </stackView>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbu-H4-WbZ">
-                                <rect key="frame" x="0.0" y="569" width="375" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="1Hu-Jn-knx"/>
-                                </constraints>
-                                <items>
-                                    <tabBarItem title="赞 (3)" id="eWe-sO-5gN"/>
-                                    <tabBarItem title="评论 (3)" id="qQF-uM-daQ"/>
-                                    <tabBarItem title="收藏 (3)" id="b6b-nE-JdA"/>
-                                    <tabBarItem systemItem="more" id="CPV-Td-zV0"/>
-                                </items>
-                            </tabBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8S-e1-2ie">
-                                <rect key="frame" x="0.0" y="156" width="375" height="413"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="xMK-yK-lja" firstAttribute="top" secondItem="bQX-Ue-R3J" secondAttribute="bottom" constant="44" id="1Ed-o6-WWe"/>
-                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="trailing" secondItem="w8S-e1-2ie" secondAttribute="trailing" id="4f4-3J-W8G"/>
-                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="leading" secondItem="xMK-yK-lja" secondAttribute="leading" id="CSv-pv-mGb"/>
-                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="top" secondItem="w8S-e1-2ie" secondAttribute="bottom" id="PWO-fN-bdM"/>
-                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="leading" secondItem="4qz-KX-cHN" secondAttribute="leading" id="Xxy-DH-ihc"/>
-                            <constraint firstAttribute="trailing" secondItem="Qbu-H4-WbZ" secondAttribute="trailing" id="ob9-PL-fgw"/>
-                            <constraint firstItem="w8S-e1-2ie" firstAttribute="top" secondItem="xMK-yK-lja" secondAttribute="bottom" constant="8" symbolic="YES" id="pfz-8a-5go"/>
-                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="bottom" secondItem="eqn-Fc-ygH" secondAttribute="top" id="vhd-dO-G8f"/>
-                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="top" secondItem="w8S-e1-2ie" secondAttribute="bottom" id="yDP-LZ-2A3"/>
-                            <constraint firstItem="Qbu-H4-WbZ" firstAttribute="leading" secondItem="w8S-e1-2ie" secondAttribute="leading" id="zI5-1v-oyM"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="文章的题目" id="nwe-Ub-XHu">
-                        <barButtonItem key="leftBarButtonItem" title="文章" id="AeX-75-coW" userLabel="文章">
-                            <connections>
-                                <action selector="goBack:" destination="xN7-B4-sls" id="exr-ml-Yfz"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                        <sections>
+                            <tableViewSection id="xZ1-YJ-plM">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="KW8-Sd-8qC">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KW8-Sd-8qC" id="FY3-jw-lNN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lxl-YP-cM8" userLabel="用户">
+                                                    <rect key="frame" x="0.0" y="1" width="172.5" height="40"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" image="DefaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="5L6-74-ch4" userLabel="头像">
+                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="N96-tc-FtO"/>
+                                                                <constraint firstAttribute="width" secondItem="5L6-74-ch4" secondAttribute="height" multiplier="1:1" id="iIH-fJ-dzI"/>
+                                                                <constraint firstAttribute="height" constant="40" id="yfu-sL-5p0"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="UsG-yU-98M" userLabel="文字">
+                                                            <rect key="frame" x="48" y="4.5" width="124.5" height="31.5"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bX3-F3-PZv" userLabel="个人信息">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="124.5" height="17"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" ambiguous="YES" text="Chp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUE-hT-xJa">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="26.5" height="17"/>
+                                                                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=" · " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZST-aG-lHv">
+                                                                            <rect key="frame" x="26.5" y="0.0" width="12" height="17"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" ambiguous="YES" text="信息系统专家" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlK-KI-XNG">
+                                                                            <rect key="frame" x="38.5" y="0.0" width="86" height="17"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <variation key="heightClass=regular-widthClass=regular" distribution="fill"/>
+                                                                </stackView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="3小时前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfX-nz-knY" userLabel="时间">
+                                                                    <rect key="frame" x="0.0" y="17" width="44.5" height="14.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="sHM-Ca-1Zf"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="300" id="6SS-pS-sZR">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6SS-pS-sZR" id="PVS-6k-DGr">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w8S-e1-2ie">
+                                                    <rect key="frame" x="0.0" y="8" width="240" height="267"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="3gm-QO-LJQ" id="dgs-XO-MBj"/>
+                            <outlet property="delegate" destination="3gm-QO-LJQ" id="Mgm-ZT-paL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="文章的题目" id="tzM-eW-6Nc"/>
                     <connections>
-                        <outlet property="avatarImageView" destination="5L6-74-ch4" id="uni-yh-fW9"/>
-                        <outlet property="bioLabel" destination="MlK-KI-XNG" id="vei-Wj-fae"/>
-                        <outlet property="nicknameLabel" destination="BUE-hT-xJa" id="piU-SG-0ua"/>
-                        <outlet property="webViewContainer" destination="w8S-e1-2ie" id="iQn-GR-TlQ"/>
+                        <outlet property="avatarImageView" destination="5L6-74-ch4" id="HQr-7f-wHT"/>
+                        <outlet property="bioLabel" destination="MlK-KI-XNG" id="70C-Zs-NOX"/>
+                        <outlet property="nicknameLabel" destination="BUE-hT-xJa" id="msI-mW-AoS"/>
+                        <outlet property="webViewContainer" destination="PVS-6k-DGr" id="SRE-lF-qJN"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hZ1-NG-tEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZeI-ek-Led" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375" y="-649"/>
+            <point key="canvasLocation" x="422.5" y="-649.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="DefaultAvatar" width="300" height="300"/>
         <image name="DefaultImage" width="250" height="174"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="kHJ-1n-wVm"/>
-    </inferredMetricsTieBreakers>
 </document>

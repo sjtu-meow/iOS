@@ -23,14 +23,17 @@ class ArticleWebView: WKWebView {
         self.scrollView.isScrollEnabled = false
         self.translatesAutoresizingMaskIntoConstraints = false
         superView.addSubview(self)
+        
+    
         self.topAnchor.constraint(equalTo: superView.topAnchor).isActive = true
         self.bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
         self.leftAnchor.constraint(equalTo: superView.leftAnchor).isActive = true
         self.rightAnchor.constraint(equalTo: superView.rightAnchor).isActive = true
-    }
+ 
+ }
     
     init() {
-        super.init(frame: CGRect.zero, configuration: WKWebViewConfiguration())
+        super.init(frame: CGRect(x:0,y:0,width:100,height:200), configuration: WKWebViewConfiguration())
         self.navigationDelegate = self
         self.uiDelegate = delegate
     }
@@ -44,9 +47,10 @@ class ArticleWebView: WKWebView {
     func getContentHeight(cont:@escaping ((CGFloat) -> ())) {
         self.evaluateJavaScript("document.body.scrollHeight") { (val, err) in
             let height:CGFloat = val as? CGFloat ?? 1.0
-            cont(height)
+            cont(100.0)
         }
     }
+    
     
     func updateHeight() {
         getContentHeight { [weak self] (height) in
@@ -55,6 +59,7 @@ class ArticleWebView: WKWebView {
                 self?.heightChangingHandler?(height)
             }
         }
+ 
     }
     
     func presentHTMLString(_ body:String) {
