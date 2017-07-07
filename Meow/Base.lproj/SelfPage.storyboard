@@ -358,10 +358,10 @@
             </objects>
             <point key="canvasLocation" x="4000.8000000000002" y="2359.9700149925038"/>
         </scene>
-        <!--ArticleContentNavigationController-->
+        <!--ArticlePage-->
         <scene sceneID="P2L-FV-k2U">
             <objects>
-                <viewControllerPlaceholder storyboardName="ArticlePage" referencedIdentifier="ArticleContentNavigationController" id="qwC-F0-SLL" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ArticlePage" id="qwC-F0-SLL" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4q-A3-7Qu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5238" y="3611"/>

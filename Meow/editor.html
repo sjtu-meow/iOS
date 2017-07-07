@@ -92,6 +92,11 @@
             editableContent.appendChild(breakElement);
         }
         
+        function setImagePath(imageName, imagePath)
+        {
+            var imageElement = window.getElementById(imageName);
+            imageElement.setAttribute('src', imagePath)
+        }
         
         function updateImageURL(imageName, imageURL)
         {

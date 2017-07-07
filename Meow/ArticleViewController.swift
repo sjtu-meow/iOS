@@ -17,7 +17,7 @@ class ArticleViewController: UITableViewController {
     let disposeBag = DisposeBag()
     
     private func loadArticles(){
-        MeowAPIProvider.shared.request(.articles).mapTo(arrayOf: Article.self)
+        MeowAPIProvider.shared.request(.articles).mapTo(arrayOf: ArticleSummary.self)
             .subscribe(onNext:{
                 [weak self]
                 (articles) in
@@ -43,7 +43,7 @@ class ArticleViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let view = tableView.dequeueReusableCell(withIdentifier: "ArticlePageTableViewCell")!
+        let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.articlePageTableViewCell.identifier)!
         if let article = self.articles?[indexPath.row]{
             (view as! ArticleHomePageTableViewCell).configure(model: article)
         }
