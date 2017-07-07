@@ -39,7 +39,7 @@ class ArticleHomePageTableViewCell: UITableViewCell {
         articleTitleLabel.text = article.title
         articleSummaryLabel.text = article.summary
         
-        likeLabel.text = String(describing: article.like)
-        commentLabel.text = String(describing: article.comment)
+        likeLabel.text = "\(article.likeCount!)"
+        commentLabel.text = "\(article.commentCount!)"
     }
 }

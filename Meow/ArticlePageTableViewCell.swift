@@ -32,12 +32,14 @@ class ArticlePageTableViewCell: UITableViewCell {
     func configure(model: ArticleSummary){
         let articleSummary = model
         if let coverURL = articleSummary.cover {
-            articleCoverImageView.af_setImage(withURL: coverURL)}
+            articleCoverImageView.af_setImage(withURL: coverURL)
+        }
         articleTitleLabel.text = articleSummary.title
-        articleLikeLabel.text = String(describing:
-            articleSummary.like)
-        articleCommentLabel.text = String(describing: articleSummary.comment)
+        articleLikeLabel.text = "\(articleSummary.like!)"
+        articleCommentLabel.text="\(articleSummary.comment!)"
+        
         
     }
+
 
 }

@@ -40,7 +40,7 @@ extension MeowAPI: TargetType {
         case .questions:
             return "/questions" //which one? question for homepage or ?
         case .question(let id):
-            return "/questions\(id)"
+            return "/questions/\(id)"
         case .login:
             return "/auth"
         case .signup:
@@ -50,7 +50,7 @@ extension MeowAPI: TargetType {
         case .articles, .postArticle:
             return "/articles"
         case .article(let id):
-            return "/articles\(id)"
+            return "/articles/\(id)"
         case .uploadToken:
             return "/upload/token"
         }
