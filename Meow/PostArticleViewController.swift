@@ -29,6 +29,7 @@ class PostArticleViewController:UIViewController {
         super.viewDidLoad()
         editor = R.nib.richTextEditor.firstView(owner: self)
         editorContainer.addSubview(editor)
+//        editor.addConstraint()
     }
     
     func addImage() {

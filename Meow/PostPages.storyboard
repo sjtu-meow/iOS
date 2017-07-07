@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -125,28 +125,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IHn-b7-sC8">
-                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="fXu-fi-t2D"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ktz-2b-9uD">
-                                <rect key="frame" x="0.0" y="104" width="375" height="463"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EgK-2i-gI3">
+                                <rect key="frame" x="16" y="74" width="343" height="583"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IHn-b7-sC8">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="fXu-fi-t2D"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ktz-2b-9uD">
+                                        <rect key="frame" x="0.0" y="48" width="343" height="535"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IHn-b7-sC8" firstAttribute="top" secondItem="OYQ-0v-hJv" secondAttribute="bottom" id="1fc-De-Abo"/>
-                            <constraint firstItem="Ktz-2b-9uD" firstAttribute="leading" secondItem="nhf-bd-deY" secondAttribute="leading" id="1wv-Nb-eYF"/>
-                            <constraint firstItem="wqJ-eE-3qf" firstAttribute="top" secondItem="Ktz-2b-9uD" secondAttribute="bottom" constant="100" id="AGR-Jj-gmT"/>
-                            <constraint firstItem="IHn-b7-sC8" firstAttribute="leading" secondItem="nhf-bd-deY" secondAttribute="leading" id="CNv-YS-PiF"/>
-                            <constraint firstAttribute="trailing" secondItem="IHn-b7-sC8" secondAttribute="trailing" id="VlF-Y3-wry"/>
-                            <constraint firstAttribute="trailing" secondItem="Ktz-2b-9uD" secondAttribute="trailing" id="Vy3-oa-ufu"/>
-                            <constraint firstItem="Ktz-2b-9uD" firstAttribute="top" secondItem="IHn-b7-sC8" secondAttribute="bottom" id="mKK-sT-2PM"/>
+                            <constraint firstAttribute="trailing" secondItem="EgK-2i-gI3" secondAttribute="trailing" constant="16" id="8Ck-Ai-SKc"/>
+                            <constraint firstItem="wqJ-eE-3qf" firstAttribute="top" secondItem="EgK-2i-gI3" secondAttribute="bottom" constant="10" id="XqS-5p-1bT"/>
+                            <constraint firstItem="EgK-2i-gI3" firstAttribute="top" secondItem="OYQ-0v-hJv" secondAttribute="bottom" constant="10" id="YgJ-Oq-4Ma"/>
+                            <constraint firstItem="EgK-2i-gI3" firstAttribute="leading" secondItem="nhf-bd-deY" secondAttribute="leading" constant="16" id="qg7-Fg-bMf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="发布文章" id="8iI-m6-t88">
