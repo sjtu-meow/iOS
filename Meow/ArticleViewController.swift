@@ -12,7 +12,7 @@ import Rswift
 
 class ArticleViewController: UITableViewController {
     
-    var articles: [Article]?
+    var articles: [ArticleSummary]?
     
     let disposeBag = DisposeBag()
     
@@ -21,7 +21,9 @@ class ArticleViewController: UITableViewController {
             .subscribe(onNext:{
                 [weak self]
                 (articles) in
+        
                 self?.articles = articles
+                self?.tableView.reloadData()
             })
         .addDisposableTo(disposeBag)
     }
@@ -45,7 +47,7 @@ class ArticleViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.articlePageTableViewCell.identifier)!
         if let article = self.articles?[indexPath.row]{
-            (view as! ArticleHomePageTableViewCell).configure(model: article)
+            (view as! ArticlePageTableViewCell).configure(model: article)
         }
         return view
     }
