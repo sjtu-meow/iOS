@@ -16,6 +16,7 @@ struct ArticleSummary {
 //    var profile: Profile!
     
     /* article info */
+    var id: Int!
     var title: String!
     var cover: URL?
     var readCount: Int?
@@ -34,6 +35,7 @@ extension ArticleSummary: JSONConvertible {
 
         var articleSummary = self.init()
         
+        articleSummary.id <- json["id"]
         articleSummary.title = title
         articleSummary.cover <- json["cover"]
         articleSummary.readCount <- json["readCount"]

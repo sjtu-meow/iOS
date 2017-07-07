@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AlW-pk-E3D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AlW-pk-E3D">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -100,7 +100,7 @@
                                     <outlet property="articleCoverImageView" destination="0IW-fx-RUn" id="IT9-tu-OKh"/>
                                     <outlet property="articleLikeLabel" destination="3vM-NC-vuX" id="oTe-bi-usJ"/>
                                     <outlet property="articleTitleLabel" destination="bua-o1-vyW" id="enw-FO-F1Q"/>
-                                    <segue destination="xN7-B4-sls" kind="show" id="GjW-iP-mFb"/>
+                                    <segue destination="xN7-B4-sls" kind="showDetail" id="kHJ-1n-wVm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -122,6 +122,22 @@
             </objects>
             <point key="canvasLocation" x="-484" y="-649.02548725637189"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f6b-Az-l29">
+            <objects>
+                <navigationController storyboardIdentifier="ArticleDetailNavigationController" id="JWc-Ef-Y5Q" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sbC-Xt-iz2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xN7-B4-sls" kind="relationship" relationship="rootViewController" id="edL-aU-XJe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g3Q-cJ-UpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="415" y="-649"/>
+        </scene>
         <!--文章的题目-->
         <scene sceneID="Jy9-wM-tQr">
             <objects>
@@ -135,7 +151,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xMK-yK-lja" userLabel="主体">
-                                <rect key="frame" x="0.0" y="64" width="172.5" height="40"/>
+                                <rect key="frame" x="0.0" y="108" width="172.5" height="40"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lxl-YP-cM8" userLabel="用户">
                                         <rect key="frame" x="0.0" y="0.0" width="172.5" height="40"/>
@@ -194,7 +210,7 @@
                                 </constraints>
                             </stackView>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbu-H4-WbZ">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <rect key="frame" x="0.0" y="569" width="375" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="1Hu-Jn-knx"/>
@@ -207,7 +223,7 @@
                                 </items>
                             </tabBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8S-e1-2ie">
-                                <rect key="frame" x="0.0" y="112" width="375" height="506"/>
+                                <rect key="frame" x="0.0" y="156" width="375" height="413"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -225,7 +241,13 @@
                             <constraint firstItem="Qbu-H4-WbZ" firstAttribute="leading" secondItem="w8S-e1-2ie" secondAttribute="leading" id="zI5-1v-oyM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="文章的题目" id="nwe-Ub-XHu"/>
+                    <navigationItem key="navigationItem" title="文章的题目" id="nwe-Ub-XHu">
+                        <barButtonItem key="leftBarButtonItem" title="文章" id="AeX-75-coW" userLabel="文章">
+                            <connections>
+                                <action selector="goBack:" destination="xN7-B4-sls" id="exr-ml-Yfz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="avatarImageView" destination="5L6-74-ch4" id="uni-yh-fW9"/>
                         <outlet property="bioLabel" destination="MlK-KI-XNG" id="vei-Wj-fae"/>
@@ -235,11 +257,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZ1-NG-tEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="591" y="-649"/>
+            <point key="canvasLocation" x="1375" y="-649"/>
         </scene>
     </scenes>
     <resources>
         <image name="DefaultAvatar" width="300" height="300"/>
         <image name="DefaultImage" width="250" height="174"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kHJ-1n-wVm"/>
+    </inferredMetricsTieBreakers>
 </document>

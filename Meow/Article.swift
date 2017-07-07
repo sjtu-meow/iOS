@@ -15,12 +15,13 @@ struct Article: ItemProtocol {
     
     var title: String!
     var summary: String?
-    var readCount: Int!
-    var cover: URL?
+    var content: String?
     
-    var like: Int? // FIXME: not empty
-    var comment: Int?
-    //content? 
+    var cover: URL?
+    var comments: [Comment]?
+    // var readCount: Int?
+    var commentCount: Int?
+    var likeCount: Int?
     
 }
 
@@ -28,8 +29,7 @@ extension Article: JSONConvertible {
     static func fromJSON(_ json: JSON) -> Article? {
         
         guard let item = Item.fromJSON(json),
-            let title = json["title"].string,
-            let readCount = json["readCount"].int
+            let title = json["title"].string
             else { return nil }
         
         var article = self.init()
@@ -38,10 +38,12 @@ extension Article: JSONConvertible {
         article.profile = item.profile
         article.title = title
         article.summary <- json["summary"]
-        article.readCount = readCount
         article.cover <- json["cover"]
-        article.like <- json["like"]
-        article.comment <- json["comment"]
+        article.content <- json["content"]
+        article.likeCount <- json["likeCount"]
+        article.commentCount <- json["commentCount"]
+        article.comments <- json["comments"]
+        
         
         return article
     }
