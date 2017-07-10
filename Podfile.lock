@@ -43,6 +43,7 @@ PODS:
   - Result (3.2.3)
   - RxSwift (3.5.0)
   - SwiftyJSON (3.1.4)
+  - TagListView (1.2.0)
 
 DEPENDENCIES:
   - AlamofireImage
@@ -52,10 +53,11 @@ DEPENDENCIES:
   - ImageSlideshow/Alamofire
   - Keys (from `Pods/CocoaPodsKeys`)
   - Moya/RxSwift
-  - PKHUD (~> 4.0)
+  - PKHUD
   - Qiniu
   - R.swift
   - SwiftyJSON
+  - TagListView
 
 EXTERNAL SOURCES:
   Keys:
@@ -78,7 +80,8 @@ SPEC CHECKSUMS:
   Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
   RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  TagListView: 999e1df50c0f6b9ca927fae705c86a7e3b6ee9ba
 
-PODFILE CHECKSUM: ac32da7c0f6ba99a4503285a3ffc652380917d75
+PODFILE CHECKSUM: 7f659fb37e2816788fa7ecf89e5e8793dfa5d779
 
 COCOAPODS: 1.2.1

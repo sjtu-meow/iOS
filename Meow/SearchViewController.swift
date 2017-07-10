@@ -7,7 +7,47 @@
 //
 
 import UIKit
+import TagListView
 
-class SearchViewController: UIViewController {
-    
+
+class NoCancelButtonSearchController: UISearchController {
+    let noCancelButtonSearchBar = NoCancelButtonSearchBar()
+    override var searchBar: UISearchBar {
+        return noCancelButtonSearchBar
+    }
 }
+
+class NoCancelButtonSearchBar: UISearchBar {
+    override func setShowsCancelButton(_ showsCancelButton: Bool, animated: Bool) {
+        super.setShowsCancelButton(false, animated: false);
+    }
+}
+class SearchViewController: UIViewController {
+    var searchController: NoCancelButtonSearchController!
+    @IBOutlet weak var historyTagListView: TagListView!
+    
+    @IBAction func clearHistory(_ sender: Any) {
+        SearchHistorySource.clearHistory()
+        //TODO: update view
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        searchController = NoCancelButtonSearchController()
+        
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "搜索.."
+        searchController.searchBar.showsCancelButton = false
+        
+        self.navigationItem.titleView = searchController.searchBar
+        
+        self.definesPresentationContext = true
+        searchController.definesPresentationContext = true
+        
+        //historyTagListView.delegate = self
+    }
+}
+
+
