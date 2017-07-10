@@ -27,6 +27,12 @@ class PostArticleViewController:UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Add observer for keyboard apperance
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    
+        // Add editor
         editor = R.nib.richTextEditor.firstView(owner: self)
         editorContainer.addSubview(editor)
         
@@ -38,6 +44,20 @@ class PostArticleViewController:UIViewController {
         let trailingConstraint = NSLayoutConstraint(item: editor, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.equal, toItem: editorContainer, attribute: NSLayoutAttribute.trailing, multiplier: 1, constant: 0)
         
         editorContainer.addConstraints([topConstraint, buttomConstraint, leadingConstraint, trailingConstraint])
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        //FIXME: change add image button's position according to keyboard apperance
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+//            editorContainer.frame.size.height -= keyboardSize.height
+//        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        //FIXME: change add image button's position according to keyboard apperance
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+//            editorContainer.frame.size.height += keyboardSize.height
+//        }
     }
     
     func addImage() {
