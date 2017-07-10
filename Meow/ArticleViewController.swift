@@ -56,14 +56,14 @@ class ArticleViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let path = tableView.indexPathForSelectedRow!,
         article = articles![path.row]
-        /*
-        if segue.identifier == R.segue.articleViewController.articleToArticleDetailSegue.identifier {
-            let navController = segue.destination as! UINavigationController,
-            target = navController.topViewController as! ArticleDetailViewController
-            target.configure(article: article)
+        
+        if segue.identifier == R.segue.articleViewController.articleToDetailSegue.identifier {
+            //let navController = segue.destination as! UINavigationController,
+            //target = navController.topViewController as! ArticleDetailViewController
+            (segue.destination as! ArticleDetailViewController).configure(article: article)
             
         }
- */
+ 
         
     }
 }

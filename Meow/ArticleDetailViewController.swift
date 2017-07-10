@@ -15,7 +15,7 @@ class ArticleDetailViewController: UIViewController {
     let disposeBag = DisposeBag()
     
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var webviewCell: UITableViewCell!
+    //@IBOutlet weak var webviewCell: UITableViewCell!
     /* user profile info */
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nicknameLabel: UILabel!
@@ -31,19 +31,16 @@ class ArticleDetailViewController: UIViewController {
         
         webview = ArticleWebView(fromSuperView: webViewContainer)
         
-        automaticallyAdjustsScrollViewInsets = false
-        
-        //loadData()
+        //automaticallyAdjustsScrollViewInsets = false
         
         
         webview.heightChangingHandler = {
             [weak self] height in
             self?.scrollView.contentSize.height = height
-            //self?.view.setNeedsLayout()
-            self?.webview.heightConstraint.constant = height
         }
-        webview.load(URLRequest(url:URL(string:"https://tongqu.me")!))
-        //webview.updateHeight()
+        
+        loadData()
+
     }
     
     var content: String?
@@ -83,6 +80,7 @@ class ArticleDetailViewController: UIViewController {
         if let avatar = profile.avatar {
             avatarImageView.af_setImage(withURL: avatar)
         }
+        webview.presentHTMLString(article.content!)
         
     }
     

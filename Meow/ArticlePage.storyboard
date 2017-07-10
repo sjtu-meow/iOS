@@ -100,7 +100,7 @@
                                     <outlet property="articleCoverImageView" destination="0IW-fx-RUn" id="IT9-tu-OKh"/>
                                     <outlet property="articleLikeLabel" destination="3vM-NC-vuX" id="oTe-bi-usJ"/>
                                     <outlet property="articleTitleLabel" destination="bua-o1-vyW" id="enw-FO-F1Q"/>
-                                    <segue destination="Iia-vG-HaK" kind="show" id="aQo-XD-B23"/>
+                                    <segue destination="Iia-vG-HaK" kind="show" identifier="articleToDetailSegue" id="aQo-XD-B23"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -138,7 +138,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="539"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O01-E4-6jt">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="90"/>
+                                        <rect key="frame" x="8" y="0.0" width="343" height="90"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lxl-YP-cM8" userLabel="用户">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
@@ -201,7 +201,6 @@
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="343" id="54e-SE-8uW"/>
                                             <constraint firstItem="4q1-5e-KYI" firstAttribute="top" secondItem="lxl-YP-cM8" secondAttribute="bottom" id="7Tk-X6-nsr"/>
                                             <constraint firstItem="lxl-YP-cM8" firstAttribute="top" secondItem="O01-E4-6jt" secondAttribute="top" id="90M-NE-SB4"/>
                                             <constraint firstAttribute="height" constant="90" id="CUW-4b-ihR"/>
@@ -215,8 +214,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="O01-E4-6jt" firstAttribute="top" secondItem="6YV-ms-EBR" secondAttribute="top" id="I1c-p2-XCp"/>
-                                    <constraint firstAttribute="trailing" secondItem="O01-E4-6jt" secondAttribute="trailing" id="SGr-48-UJx"/>
-                                    <constraint firstItem="O01-E4-6jt" firstAttribute="leading" secondItem="6YV-ms-EBR" secondAttribute="leading" id="no7-aX-fY8"/>
+                                    <constraint firstAttribute="trailing" secondItem="O01-E4-6jt" secondAttribute="trailing" constant="8" id="SGr-48-UJx"/>
+                                    <constraint firstItem="O01-E4-6jt" firstAttribute="leading" secondItem="6YV-ms-EBR" secondAttribute="leading" constant="8" id="no7-aX-fY8"/>
                                     <constraint firstAttribute="bottom" secondItem="O01-E4-6jt" secondAttribute="bottom" id="pV8-0k-lC7"/>
                                 </constraints>
                             </scrollView>
@@ -231,13 +230,16 @@
                     </view>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="avatarImageView" destination="5L6-74-ch4" id="a1Y-ub-Xsm"/>
+                        <outlet property="bioLabel" destination="MlK-KI-XNG" id="lyx-dO-nlI"/>
+                        <outlet property="nicknameLabel" destination="BUE-hT-xJa" id="VUt-Yh-wfO"/>
                         <outlet property="scrollView" destination="6YV-ms-EBR" id="QrJ-uz-mzl"/>
                         <outlet property="webViewContainer" destination="4q1-5e-KYI" id="aZb-0J-TCd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ru-Ah-Hg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="-649.02548725637189"/>
+            <point key="canvasLocation" x="356" y="-636"/>
         </scene>
     </scenes>
     <resources>
