@@ -23,7 +23,6 @@
 		24EFC6861F05DE110005A52D /* PostMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EFC6851F05DE110005A52D /* PostMomentViewController.swift */; };
 		24EFC68D1F05F1560005A52D /* ImagePostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EFC68C1F05F1560005A52D /* ImagePostCollectionViewCell.swift */; };
 		24EFC6931F0677BC0005A52D /* MomentHomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EFC6921F0677BC0005A52D /* MomentHomePageTableViewCell.swift */; };
-		24F7F4391F04864A001A0FFA /* ArticlePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4381F04864A001A0FFA /* ArticlePageTableViewCell.xib */; };
 		24F7F43B1F04894E001A0FFA /* AnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F43A1F04894E001A0FFA /* AnswerTableViewCell.xib */; };
 		24F7F43D1F048A57001A0FFA /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F43C1F048A57001A0FFA /* QuestionTableViewCell.xib */; };
 		24F7F43F1F048D14001A0FFA /* QuestionDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F43E1F048D14001A0FFA /* QuestionDetailTableViewCell.xib */; };
@@ -65,6 +64,9 @@
 		BF4A24261F0C7C650004650E /* PostArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A24251F0C7C650004650E /* PostArticleViewController.swift */; };
 		BF4A24281F0C7CF90004650E /* PostAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A24271F0C7CF90004650E /* PostAnswerViewController.swift */; };
 		BF4A242A1F0CDBA20004650E /* ArticleSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A24291F0CDBA20004650E /* ArticleSummary.swift */; };
+		BF4A242C1F0E19840004650E /* RichTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A242B1F0E19840004650E /* RichTextEditor.swift */; };
+		BF4A242E1F0E1CD30004650E /* RichTextEditor.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4A242D1F0E1CD30004650E /* RichTextEditor.xib */; };
+		BF4A24301F0F62310004650E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A242F1F0F62310004650E /* Comment.swift */; };
 		BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */; };
 		BF7878421F00F2C9000FB7C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7878401F00F2C9000FB7C6 /* Main.storyboard */; };
 		BF7878441F00F2C9000FB7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7878431F00F2C9000FB7C6 /* Assets.xcassets */; };
@@ -75,6 +77,7 @@
 		BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */; };
 		BF7878741F01010F000FB7C6 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878731F01010F000FB7C6 /* MyViewController.swift */; };
 		BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878751F010178000FB7C6 /* LoginViewController.swift */; };
+		BF9272E51F0F8A6300E601F3 /* ItemDetailButtomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */; };
 		BF9E75DF1F03AB6C00723541 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E75DE1F03AB6C00723541 /* R.generated.swift */; };
 		BFE11D381F010AF200EED963 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
@@ -134,7 +137,6 @@
 		24EFC6851F05DE110005A52D /* PostMomentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostMomentViewController.swift; sourceTree = "<group>"; };
 		24EFC68C1F05F1560005A52D /* ImagePostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePostCollectionViewCell.swift; sourceTree = "<group>"; };
 		24EFC6921F0677BC0005A52D /* MomentHomePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentHomePageTableViewCell.swift; sourceTree = "<group>"; };
-		24F7F4381F04864A001A0FFA /* ArticlePageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticlePageTableViewCell.xib; sourceTree = "<group>"; };
 		24F7F43A1F04894E001A0FFA /* AnswerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerTableViewCell.xib; sourceTree = "<group>"; };
 		24F7F43C1F048A57001A0FFA /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
 		24F7F43E1F048D14001A0FFA /* QuestionDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionDetailTableViewCell.xib; sourceTree = "<group>"; };
@@ -178,6 +180,9 @@
 		BF4A24251F0C7C650004650E /* PostArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostArticleViewController.swift; sourceTree = "<group>"; };
 		BF4A24271F0C7CF90004650E /* PostAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostAnswerViewController.swift; sourceTree = "<group>"; };
 		BF4A24291F0CDBA20004650E /* ArticleSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleSummary.swift; sourceTree = "<group>"; };
+		BF4A242B1F0E19840004650E /* RichTextEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RichTextEditor.swift; sourceTree = "<group>"; };
+		BF4A242D1F0E1CD30004650E /* RichTextEditor.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RichTextEditor.xib; sourceTree = "<group>"; };
+		BF4A242F1F0F62310004650E /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		BF7878391F00F2C9000FB7C6 /* Meow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF7878411F00F2C9000FB7C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -194,6 +199,7 @@
 		BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		BF7878731F01010F000FB7C6 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		BF7878751F010178000FB7C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailButtomBar.xib; sourceTree = "<group>"; };
 		BF9E75DE1F03AB6C00723541 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
 		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
@@ -298,7 +304,6 @@
 			isa = PBXGroup;
 			children = (
 				24A14CED1F03599100967F45 /* ArticleHomePageTableViewCell.xib */,
-				24F7F4381F04864A001A0FFA /* ArticlePageTableViewCell.xib */,
 				24F7F4511F049EC7001A0FFA /* ArticleUserPageTableViewCell.xib */,
 				24F7F4531F049F4A001A0FFA /* ArticleProfilePageTableViewCell.xib */,
 			);
@@ -353,6 +358,7 @@
 				BF390A4A1F01F58500555B93 /* JSONConvertible.swift */,
 				BFF139581F025163006DF489 /* Observable+MapTo.swift */,
 				D97B34FF1F061A9100BCB027 /* Article.swift */,
+				BF4A242F1F0F62310004650E /* Comment.swift */,
 				BF390A501F02053A00555B93 /* Token.swift */,
 				BF31E91F1F0A2CBD001236D8 /* UploadToken.swift */,
 				BF44D3771F05D60900A137E6 /* Media.swift */,
@@ -459,6 +465,7 @@
 				BF44D37F1F06312600A137E6 /* BannerViewCell.swift */,
 				BF31E9251F0B6229001236D8 /* MediaViewCell.swift */,
 				D9B96FDE1F0CC42B00858360 /* ArticleWebView.swift */,
+				BF4A242B1F0E19840004650E /* RichTextEditor.swift */,
 			);
 			name = "View Model";
 			sourceTree = "<group>";
@@ -478,6 +485,8 @@
 				24F7F4421F0492B3001A0FFA /* ArticleAnswerCommentTableViewCell.xib */,
 				BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */,
 				BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */,
+				BF4A242D1F0E1CD30004650E /* RichTextEditor.xib */,
+				BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -657,7 +666,6 @@
 			files = (
 				24F7F44C1F049C47001A0FFA /* AnswerNotificationTableViewCell.xib in Resources */,
 				24F7F4521F049EC7001A0FFA /* ArticleUserPageTableViewCell.xib in Resources */,
-				24F7F4391F04864A001A0FFA /* ArticlePageTableViewCell.xib in Resources */,
 				BF7878471F00F2C9000FB7C6 /* LaunchScreen.storyboard in Resources */,
 				2443A6691F02064C0032BEB9 /* MomentHomePageTableViewCell.xib in Resources */,
 				BF31E9241F0B61A7001236D8 /* MediaViewCell.xib in Resources */,
@@ -684,11 +692,13 @@
 				24F7F43B1F04894E001A0FFA /* AnswerTableViewCell.xib in Resources */,
 				24F7F4541F049F4A001A0FFA /* ArticleProfilePageTableViewCell.xib in Resources */,
 				24A14CF21F03EA6900967F45 /* AnswerHomePageTableViewCell.xib in Resources */,
+				BF4A242E1F0E1CD30004650E /* RichTextEditor.xib in Resources */,
 				24F7F43D1F048A57001A0FFA /* QuestionTableViewCell.xib in Resources */,
 				BF31E9221F0A9BFD001236D8 /* BannerViewCell.xib in Resources */,
 				2411AD1B1F05423C00910051 /* PostPages.storyboard in Resources */,
 				24F7F4571F04A4BE001A0FFA /* UserPageRecordTableViewCell.xib in Resources */,
 				24F7F43F1F048D14001A0FFA /* QuestionDetailTableViewCell.xib in Resources */,
+				BF9272E51F0F8A6300E601F3 /* ItemDetailButtomBar.xib in Resources */,
 				BFE11D381F010AF200EED963 /* (null) in Resources */,
 				2411AD061F052CFB00910051 /* UserProfileTableViewCell.xib in Resources */,
 				2443A6751F03530A0032BEB9 /* MomentCommentTableViewCell.xib in Resources */,
@@ -871,10 +881,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9B96FDF1F0CC42B00858360 /* ArticleWebView.swift in Sources */,
+				BF4A24301F0F62310004650E /* Comment.swift in Sources */,
 				BF390A491F01704B00555B93 /* NetworkLogger.swift in Sources */,
 				D97B35081F067E7D00BCB027 /* ArticlePageTableViewCell.swift in Sources */,
 				24EFC68D1F05F1560005A52D /* ImagePostCollectionViewCell.swift in Sources */,
 				D98EF6E01F0A1BA300A524AF /* Question.swift in Sources */,
+				BF4A242C1F0E19840004650E /* RichTextEditor.swift in Sources */,
 				BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */,
 				D97B34FE1F05E9C300BCB027 /* Moment.swift in Sources */,
 				BF4A24261F0C7C650004650E /* PostArticleViewController.swift in Sources */,

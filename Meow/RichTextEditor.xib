@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RichTextEditor" customModule="Meow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acR-fK-XNa">
+                    <rect key="frame" x="297" y="617" width="62" height="30"/>
+                    <state key="normal" title="添加图片"/>
+                    <connections>
+                        <action selector="addImage:" destination="iN0-l3-epB" eventType="touchUpOutside" id="jiI-K0-vKS"/>
+                    </connections>
+                </button>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SR4-tg-i2N">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="SR4-tg-i2N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9Eu-qu-Qxd"/>
+                <constraint firstAttribute="bottom" secondItem="acR-fK-XNa" secondAttribute="bottom" constant="20" id="ALV-5o-HW6"/>
+                <constraint firstAttribute="trailing" secondItem="SR4-tg-i2N" secondAttribute="trailing" id="D4Z-SE-YwR"/>
+                <constraint firstItem="acR-fK-XNa" firstAttribute="top" secondItem="SR4-tg-i2N" secondAttribute="bottom" constant="20" id="k5R-Ur-GUc"/>
+                <constraint firstAttribute="trailing" secondItem="acR-fK-XNa" secondAttribute="trailing" constant="16" id="rQx-1t-deW"/>
+                <constraint firstItem="SR4-tg-i2N" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wu6-pY-upp"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="webview" destination="SR4-tg-i2N" id="tOz-pn-D4m"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="83.5"/>
+        </view>
+    </objects>
+</document>

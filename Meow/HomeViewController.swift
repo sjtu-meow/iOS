@@ -35,6 +35,11 @@ class HomeViewController: UITableViewController {
         // let vc = R.storyboard.loginSignupPage.loginViewController()
         
         //present(vc!, animated: true, completion: nil)
+        // let vc = R.storyboard.articlePage.articleDetailViewController()
+
+        // let vc = R.storyboard.loginSignupPage.loginViewController()
+        
+         // present(vc!, animated: true, completion: nil)
         //logger.log("hello world")
         
         tableView.estimatedRowHeight = 80

@@ -8,23 +8,16 @@
 import UIKit
 
 
-class PostArticleViewController: UIViewController {
-    var htmlString: String {
-        get {
-            return richTextEditorWebView.stringByEvaluatingJavaScript(from: "document.getElementById('content').innerHTML")!
-        }
-    }
-    var images: [(URL,UIImage,String)]?
-    
-    @IBOutlet weak var richTextEditorWebView: UIWebView!
+class PostArticleViewController:UIViewController {
+   
 
-    @IBAction func pickImage(_ sender: Any) {
-        addImage()
-    }
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var editorContainer: UIView!
+    var editor: RichTextEditor!
+    
     @IBAction func postArticle(_ sender: Any) {
         checkHTML()
-        
-        
     }
     
     
@@ -34,34 +27,25 @@ class PostArticleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        richTextEditorWebView.delegate = self
-        
-        let editorURL = Bundle.main.url(forResource: "editor", withExtension: "html")!
-        richTextEditorWebView.loadRequest(URLRequest(url: editorURL))
-        
-
+        editor = R.nib.richTextEditor.firstView(owner: self)
+        editorContainer.addSubview(editor)
     }
     
     func addImage() {
-        var imagePickerController = UIImagePickerController()
+        let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = .photoLibrary
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
     }
     
     func checkHTML() -> Bool{
-        return htmlString.isEmpty
+        return editor.htmlString.isEmpty
     }
     
 }
 
-extension PostArticleViewController: UIWebViewDelegate, UINavigationControllerDelegate {
-}
-
-extension PostArticleViewController: UIImagePickerControllerDelegate {
+extension PostArticleViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let script = "window.insertImage('1', 'http://lorempixel.com/200/200')"
-        richTextEditorWebView.stringByEvaluatingJavaScript(from: script)
         dismiss(animated: true, completion: nil)
         
     }
