@@ -73,11 +73,8 @@
                                         <constraint firstItem="zKW-kJ-Lnj" firstAttribute="top" secondItem="Sog-ZP-uyA" secondAttribute="top" constant="10" id="nSS-Ew-kSH"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="vT0-70-cDp" kind="show" id="DRc-NH-Q6k"/>
-                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="118" id="rm2-YH-x9I" userLabel="AnswerCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionAnswerPageAnswerCell" rowHeight="118" id="rm2-YH-x9I" userLabel="AnswerCell" customClass="QuestionAnswerPageAnswerCell" customModule="Meow" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="118"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rm2-YH-x9I" id="LYK-92-ajW">
@@ -150,7 +147,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="vXS-rs-caP" kind="showDetail" action="showViewController:sender:" id="Ee7-lC-lJ1"/>
+                                    <outlet property="commentCountLabel" destination="V6e-Y3-ZBA" id="9Lf-lJ-Auq"/>
+                                    <outlet property="contentLabel" destination="YMy-HH-dc7" id="DFE-2l-9qB"/>
+                                    <outlet property="likeCountLabel" destination="OHU-PA-qXz" id="F5z-kZ-ieD"/>
+                                    <outlet property="titleLabel" destination="e2f-uu-x8l" id="Zqn-BQ-Amk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -545,7 +545,4 @@
         <image name="DefaultAvatar" width="300" height="300"/>
         <image name="DefaultImage" width="250" height="174"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Ee7-lC-lJ1"/>
-    </inferredMetricsTieBreakers>
 </document>

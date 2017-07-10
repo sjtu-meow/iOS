@@ -59,6 +59,8 @@ class ArticleWebView: WKWebView {
     func updateHeight() {
         getContentHeight { [weak self] (height) in
             if self?.contentHeight != height {
+            
+                self?.heightConstraint.constant = height
                 self?.contentHeight = height
                 self?.heightChangingHandler?(height)
             }

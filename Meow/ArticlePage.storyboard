@@ -100,7 +100,7 @@
                                     <outlet property="articleCoverImageView" destination="0IW-fx-RUn" id="IT9-tu-OKh"/>
                                     <outlet property="articleLikeLabel" destination="3vM-NC-vuX" id="oTe-bi-usJ"/>
                                     <outlet property="articleTitleLabel" destination="bua-o1-vyW" id="enw-FO-F1Q"/>
-                                    <segue destination="Iia-vG-HaK" kind="show" id="aQo-XD-B23"/>
+                                    <segue destination="Iia-vG-HaK" kind="show" identifier="articleToDetailSegue" id="aQo-XD-B23"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -227,13 +227,16 @@
                     </view>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="avatarImageView" destination="5L6-74-ch4" id="a1Y-ub-Xsm"/>
+                        <outlet property="bioLabel" destination="MlK-KI-XNG" id="lyx-dO-nlI"/>
+                        <outlet property="nicknameLabel" destination="BUE-hT-xJa" id="VUt-Yh-wfO"/>
                         <outlet property="scrollView" destination="6YV-ms-EBR" id="QrJ-uz-mzl"/>
                         <outlet property="webViewContainer" destination="4q1-5e-KYI" id="aZb-0J-TCd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ru-Ah-Hg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="-649.02548725637189"/>
+            <point key="canvasLocation" x="356" y="-636"/>
         </scene>
     </scenes>
     <resources>

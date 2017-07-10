@@ -42,6 +42,8 @@
 		24F7F4611F04A996001A0FFA /* UserRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4601F04A996001A0FFA /* UserRecordTableViewCell.xib */; };
 		24F7F4651F04FAF8001A0FFA /* PostTypePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4641F04FAF8001A0FFA /* PostTypePicker.xib */; };
 		56B7293EE5F94719A447731F /* Pods_MeowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1186F1CE3D8690900D00F2C5 /* Pods_MeowUITests.framework */; };
+		BF2A1A261F13500D00220853 /* QuestionAnswerPageAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2A1A251F13500D00220853 /* QuestionAnswerPageAnswerCell.swift */; };
+		BF2A1A281F1367A000220853 /* QuestionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2A1A271F1367A000220853 /* QuestionDetailViewController.swift */; };
 		BF31E9201F0A2CBD001236D8 /* UploadToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E91F1F0A2CBD001236D8 /* UploadToken.swift */; };
 		BF31E9221F0A9BFD001236D8 /* BannerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */; };
 		BF31E9241F0B61A7001236D8 /* MediaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */; };
@@ -158,6 +160,8 @@
 		3612EC24166F9C122D5CDCC1 /* Pods_MeowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8858B54026EC68FEB34336F5 /* Pods-MeowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowUITests/Pods-MeowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A08DD2E53506F36693AD12C5 /* Pods-MeowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF2A1A251F13500D00220853 /* QuestionAnswerPageAnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerPageAnswerCell.swift; sourceTree = "<group>"; };
+		BF2A1A271F1367A000220853 /* QuestionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewController.swift; sourceTree = "<group>"; };
 		BF31E91F1F0A2CBD001236D8 /* UploadToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadToken.swift; sourceTree = "<group>"; };
 		BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerViewCell.xib; sourceTree = "<group>"; };
 		BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaViewCell.xib; sourceTree = "<group>"; };
@@ -450,6 +454,7 @@
 				BF44D37B1F062AEF00A137E6 /* MainViewController.swift */,
 				BF31E9271F0B7347001236D8 /* SearchViewController.swift */,
 				BF31E9291F0B7FCF001236D8 /* PostTypePickerViewController.swift */,
+				BF2A1A271F1367A000220853 /* QuestionDetailViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -522,6 +527,7 @@
 			isa = PBXGroup;
 			children = (
 				D97B350E1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift */,
+				BF2A1A251F13500D00220853 /* QuestionAnswerPageAnswerCell.swift */,
 			);
 			name = "Question Cell";
 			sourceTree = "<group>";
@@ -890,6 +896,7 @@
 				BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */,
 				D97B34FE1F05E9C300BCB027 /* Moment.swift in Sources */,
 				BF4A24261F0C7C650004650E /* PostArticleViewController.swift in Sources */,
+				BF2A1A261F13500D00220853 /* QuestionAnswerPageAnswerCell.swift in Sources */,
 				D97B34FA1F05DCC300BCB027 /* Item.swift in Sources */,
 				BF4A24281F0C7CF90004650E /* PostAnswerViewController.swift in Sources */,
 				24EFC6931F0677BC0005A52D /* MomentHomePageTableViewCell.swift in Sources */,
@@ -917,6 +924,7 @@
 				BF31E9281F0B7347001236D8 /* SearchViewController.swift in Sources */,
 				D97B350F1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift in Sources */,
 				BF390A4F1F01FCE500555B93 /* Logger.swift in Sources */,
+				BF2A1A281F1367A000220853 /* QuestionDetailViewController.swift in Sources */,
 				BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */,
 				BF31E92C1F0BACC5001236D8 /* QiniuProvider.swift in Sources */,
 				BF44D3781F05D60900A137E6 /* Media.swift in Sources */,
