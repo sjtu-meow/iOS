@@ -12,12 +12,12 @@ import Rswift
 
 class ArticleViewController: UITableViewController {
     
-    var articles: [Article]?
+    var articles: [ArticleSummary]?
     
     let disposeBag = DisposeBag()
     
     private func loadArticles(){
-        MeowAPIProvider.shared.request(.articles).mapTo(arrayOf: Article.self)
+        MeowAPIProvider.shared.request(.articles).mapTo(arrayOf: ArticleSummary.self)
             .subscribe(onNext:{
                 [weak self]
                 (articles) in

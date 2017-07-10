@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zxy-39-uqL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zxy-39-uqL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -358,10 +358,10 @@
             </objects>
             <point key="canvasLocation" x="4000.8000000000002" y="2359.9700149925038"/>
         </scene>
-        <!--ArticleContentNavigationController-->
+        <!--ArticlePage-->
         <scene sceneID="P2L-FV-k2U">
             <objects>
-                <viewControllerPlaceholder storyboardName="ArticlePage" referencedIdentifier="ArticleContentNavigationController" id="qwC-F0-SLL" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ArticlePage" id="qwC-F0-SLL" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4q-A3-7Qu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5238" y="3611"/>
@@ -837,8 +837,8 @@
         <image name="CellArrow" width="8" height="13"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MJG-9h-boW"/>
+        <segue reference="WpN-pF-xBK"/>
         <segue reference="94K-SA-SGd"/>
-        <segue reference="xnH-84-aA4"/>
+        <segue reference="MJG-9h-boW"/>
     </inferredMetricsTieBreakers>
 </document>
