@@ -11,9 +11,11 @@ import UIKit
 import WebKit
 import RxSwift
 
-class ArticleDetailViewController: UITableViewController {
+class ArticleDetailViewController: UIViewController {
     let disposeBag = DisposeBag()
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    //@IBOutlet weak var webviewCell: UITableViewCell!
     /* user profile info */
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nicknameLabel: UILabel!
@@ -26,19 +28,19 @@ class ArticleDetailViewController: UITableViewController {
     var article: Article?
     
     override func viewDidLoad() {
-        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        
         webview = ArticleWebView(fromSuperView: webViewContainer)
         
-        //loadData()
-        webview.load(URLRequest(url:URL(string:"http://sjtu.edu.cn")!))
+        //automaticallyAdjustsScrollViewInsets = false
+        
         
         webview.heightChangingHandler = {
             [weak self] height in
-            if let that = self {
-                that.tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .none)
-            }
+            self?.scrollView.contentSize.height = height
         }
-        webview.updateHeight()
+        
+        loadData()
+
     }
     
     var content: String?
@@ -66,6 +68,7 @@ class ArticleDetailViewController: UITableViewController {
     @IBAction func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
     func updateView() {
         guard let article = self.article else { return }
         if let content = article.content {
@@ -77,16 +80,10 @@ class ArticleDetailViewController: UITableViewController {
         if let avatar = profile.avatar {
             avatarImageView.af_setImage(withURL: avatar)
         }
+        webview.presentHTMLString(article.content!)
         
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return 0
-        }
-        return 100
-        //return UITableViewAutomaticDimension
-    }
-    
+   
 }
 

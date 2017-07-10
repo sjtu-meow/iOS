@@ -17,13 +17,15 @@ enum MeowAPI  {
     case article(id: Int)
     case questions
     case question(id: Int)
+    case answers
+    case answer(id: Int)
     case uploadToken
     case postMoment(content: String, medias: [Media]?)
     case postArticle(title: String, content: String)
 }
 
 extension MeowAPI: TargetType {
-    var base: String { return "http://localhost:8080/api" }
+    var base: String { return "http://106.14.156.19/api" }
     
     var baseURL: URL { return URL(string: base)! }
     
@@ -41,6 +43,10 @@ extension MeowAPI: TargetType {
             return "/questions" //which one? question for homepage or ?
         case .question(let id):
             return "/questions/\(id)"
+        case .answers:
+            return "/answers"
+        case .answer(let id):
+            return "/answers/\(id)"
         case .login:
             return "/auth"
         case .signup:

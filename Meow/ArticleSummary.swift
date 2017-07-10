@@ -23,8 +23,8 @@ struct ArticleSummary {
     var createTime: Date?
     
     /* like & comment */
-    var like: Int?
-    var comment: Int?   //FIXME: not null?
+    var likeCount: Int?
+    var commentCount: Int?   //FIXME: not null?
 }
 
 
@@ -42,8 +42,8 @@ extension ArticleSummary: JSONConvertible {
          // TODO: format of date ??
         articleSummary.readCount <- json["createTime"]
         
-        articleSummary.like <- json["likeCount"]
-        articleSummary.comment <- json["commentCount"]
+        articleSummary.likeCount <- json["likeCount"]
+        articleSummary.commentCount <- json["commentCount"]
         
        
         return articleSummary

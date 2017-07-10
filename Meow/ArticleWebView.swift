@@ -17,6 +17,7 @@ class ArticleWebView: WKWebView {
     var heightChangingHandler:((CGFloat)->Void)?
     var contentHeight:CGFloat = 40 //default as 40, will change as content change
     weak var delegate: ArticleWebViewDelegate?
+    var heightConstraint: NSLayoutConstraint!
     
     convenience init(fromSuperView superView: UIView) {
         self.init()
@@ -26,14 +27,17 @@ class ArticleWebView: WKWebView {
         
     
         self.topAnchor.constraint(equalTo: superView.topAnchor).isActive = true
-        self.bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
+        //self.bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
         self.leftAnchor.constraint(equalTo: superView.leftAnchor).isActive = true
         self.rightAnchor.constraint(equalTo: superView.rightAnchor).isActive = true
+        
+        self.heightConstraint = self.heightAnchor.constraint(equalToConstant: 1)
+        heightConstraint.isActive = true
  
  }
     
     init() {
-        super.init(frame: CGRect(x:0,y:0,width:100,height:200), configuration: WKWebViewConfiguration())
+        super.init(frame: CGRect.zero, configuration: WKWebViewConfiguration())
         self.navigationDelegate = self
         self.uiDelegate = delegate
     }
@@ -47,7 +51,7 @@ class ArticleWebView: WKWebView {
     func getContentHeight(cont:@escaping ((CGFloat) -> ())) {
         self.evaluateJavaScript("document.body.scrollHeight") { (val, err) in
             let height:CGFloat = val as? CGFloat ?? 1.0
-            cont(100.0)
+            cont(height)
         }
     }
     
@@ -55,6 +59,8 @@ class ArticleWebView: WKWebView {
     func updateHeight() {
         getContentHeight { [weak self] (height) in
             if self?.contentHeight != height {
+            
+                self?.heightConstraint.constant = height
                 self?.contentHeight = height
                 self?.heightChangingHandler?(height)
             }
@@ -95,7 +101,7 @@ class ArticleWebView: WKWebView {
 
 extension ArticleWebView : WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        decisionHandler(.cancel)
+        decisionHandler(.allow)
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
