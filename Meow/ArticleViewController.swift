@@ -12,6 +12,8 @@ import Rswift
 
 class ArticleViewController: UITableViewController {
     
+    @IBOutlet var articleTableView: UITableView!
+    
     var articles: [ArticleSummary]?
     
     let disposeBag = DisposeBag()
@@ -31,6 +33,9 @@ class ArticleViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        articleTableView.separatorStyle = .singleLine
+//        articleTableView.separatorColor = UIColor(patternImage: UIImage(named: "AddImagePlaceholder")!)
         
         loadArticles()
         
