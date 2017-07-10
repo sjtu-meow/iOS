@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rdg-dy-bs8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rdg-dy-bs8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -64,10 +64,11 @@
         <scene sceneID="eMu-ci-ElE">
             <objects>
                 <tableViewController storyboardIdentifier="MomentDetail" id="f77-Ti-Tkx" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bZB-7w-GK4">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bZB-7w-GK4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                         <sections>
                             <tableViewSection id="xZ6-ZA-VVD">
                                 <cells>
@@ -84,13 +85,19 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mve-no-6oN" userLabel="用户">
                                                             <rect key="frame" x="0.0" y="0.0" width="172.5" height="40"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" image="DefaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="hHH-EJ-evo" userLabel="头像">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" image="DefaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="hHH-EJ-evo" userLabel="头像">
                                                                     <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="hHH-EJ-evo" secondAttribute="height" multiplier="1:1" id="5Uk-uX-M7B"/>
                                                                         <constraint firstAttribute="height" constant="40" id="FDA-4M-7jx"/>
                                                                         <constraint firstAttribute="width" constant="40" id="mTh-fl-ycB"/>
                                                                     </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="20"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="6Bs-XI-xWA" userLabel="文字">
                                                                     <rect key="frame" x="48" y="4.5" width="124.5" height="31.5"/>
@@ -145,8 +152,8 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="100" id="IAY-23-quf"/>
                                                             </constraints>
-                                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="D8G-lR-aN8">
-                                                                <size key="itemSize" width="50" height="50"/>
+                                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="D8G-lR-aN8">
+                                                                <size key="itemSize" width="111" height="111"/>
                                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
