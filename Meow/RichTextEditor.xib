@@ -14,6 +14,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SR4-tg-i2N">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="257"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acR-fK-XNa">
                     <rect key="frame" x="297" y="277" width="62" height="30"/>
                     <state key="normal" title="添加图片"/>
@@ -21,10 +25,6 @@
                         <action selector="addImage:" destination="iN0-l3-epB" eventType="touchUpOutside" id="jiI-K0-vKS"/>
                     </connections>
                 </button>
-                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SR4-tg-i2N">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="257"/>
-                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </webView>
             </subviews>
             <constraints>
                 <constraint firstItem="SR4-tg-i2N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9Eu-qu-Qxd"/>

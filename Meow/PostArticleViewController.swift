@@ -29,7 +29,15 @@ class PostArticleViewController:UIViewController {
         super.viewDidLoad()
         editor = R.nib.richTextEditor.firstView(owner: self)
         editorContainer.addSubview(editor)
-//        editor.addConstraint()
+        
+        // Add constraint to editor subview
+        editor.translatesAutoresizingMaskIntoConstraints = false;
+        let topConstraint = NSLayoutConstraint(item: editor, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: editorContainer, attribute: NSLayoutAttribute.top, multiplier: 1, constant: 0)
+        let buttomConstraint = NSLayoutConstraint(item: editor, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: editorContainer, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 0)
+        let leadingConstraint = NSLayoutConstraint(item: editor, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: editorContainer, attribute: NSLayoutAttribute.leading, multiplier: 1, constant: 0)
+        let trailingConstraint = NSLayoutConstraint(item: editor, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.equal, toItem: editorContainer, attribute: NSLayoutAttribute.trailing, multiplier: 1, constant: 0)
+        
+        editorContainer.addConstraints([topConstraint, buttomConstraint, leadingConstraint, trailingConstraint])
     }
     
     func addImage() {
