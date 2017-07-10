@@ -96,6 +96,8 @@
 		D97B350F1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B350E1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift */; };
 		D97B35121F0A133300BCB027 /* AnswerHomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B35111F0A133300BCB027 /* AnswerHomePageTableViewCell.swift */; };
 		D98EF6E01F0A1BA300A524AF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98EF6DF1F0A1BA300A524AF /* Question.swift */; };
+		D9AF48491F13537C00381F67 /* SearchHistorySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AF48481F13537C00381F67 /* SearchHistorySource.swift */; };
+		D9AF484B1F135D3700381F67 /* UserDefaults+NSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AF484A1F135D3700381F67 /* UserDefaults+NSCoding.swift */; };
 		D9B96FDD1F0CBB9D00858360 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B96FDC1F0CBB9D00858360 /* ArticleDetailViewController.swift */; };
 		D9B96FDF1F0CC42B00858360 /* ArticleWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B96FDE1F0CC42B00858360 /* ArticleWebView.swift */; };
 		F766C86074602285186EC72F /* Pods_Meow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6E60B8501B878CBD0FCF4C /* Pods_Meow.framework */; };
@@ -219,6 +221,8 @@
 		D97B350E1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionHomePageTableViewCell.swift; sourceTree = "<group>"; };
 		D97B35111F0A133300BCB027 /* AnswerHomePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerHomePageTableViewCell.swift; sourceTree = "<group>"; };
 		D98EF6DF1F0A1BA300A524AF /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		D9AF48481F13537C00381F67 /* SearchHistorySource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHistorySource.swift; sourceTree = "<group>"; };
+		D9AF484A1F135D3700381F67 /* UserDefaults+NSCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+NSCoding.swift"; sourceTree = "<group>"; };
 		D9B96FDC1F0CBB9D00858360 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		D9B96FDE1F0CC42B00858360 /* ArticleWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleWebView.swift; sourceTree = "<group>"; };
 		F4EAF4C51299AB8CB42357F2 /* Pods-Meow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meow/Pods-Meow.release.xcconfig"; sourceTree = "<group>"; };
@@ -414,6 +418,8 @@
 				BF31E92B1F0BACC5001236D8 /* QiniuProvider.swift */,
 				BF7878431F00F2C9000FB7C6 /* Assets.xcassets */,
 				D939723F1F0C83DD000A02CF /* editor.html */,
+				D9AF48481F13537C00381F67 /* SearchHistorySource.swift */,
+				D9AF484A1F135D3700381F67 /* UserDefaults+NSCoding.swift */,
 			);
 			path = Meow;
 			sourceTree = "<group>";
@@ -909,6 +915,7 @@
 				BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */,
 				BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */,
 				BF7878741F01010F000FB7C6 /* MyViewController.swift in Sources */,
+				D9AF48491F13537C00381F67 /* SearchHistorySource.swift in Sources */,
 				BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */,
 				BF78786C1F01007D000FB7C6 /* HomeViewController.swift in Sources */,
 				BF31E9201F0A2CBD001236D8 /* UploadToken.swift in Sources */,
@@ -923,6 +930,7 @@
 				BFF139611F034053006DF489 /* SignupViewController.swift in Sources */,
 				BF4A242A1F0CDBA20004650E /* ArticleSummary.swift in Sources */,
 				D97B34FC1F05DEF500BCB027 /* Profile.swift in Sources */,
+				D9AF484B1F135D3700381F67 /* UserDefaults+NSCoding.swift in Sources */,
 				D97B35021F061C7200BCB027 /* Banner.swift in Sources */,
 				BF390A4B1F01F58500555B93 /* JSONConvertible.swift in Sources */,
 				D97B35121F0A133300BCB027 /* AnswerHomePageTableViewCell.swift in Sources */,
