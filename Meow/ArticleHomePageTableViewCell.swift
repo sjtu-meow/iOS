@@ -27,17 +27,17 @@ class ArticleHomePageTableViewCell: UITableViewCell {
     @IBOutlet weak var commentLabel: UILabel!
         // readcount?
     
-    func configure(model: Article){
+    func configure(model: ArticleSummary){
         let article = model
-        let profile = article.profile
+        //let profile = article.profile
         
-        if let avatar = profile?.avatar {
-            avatarImageView.af_setImage(withURL: avatar)
-        }
-        nicknameLabel.text = profile?.nickname
+        //if let avatar = profile?.avatar {
+        //    avatarImageView.af_setImage(withURL: avatar)
+        //}
+        //nicknameLabel.text = profile?.nickname
         
         articleTitleLabel.text = article.title
-        articleSummaryLabel.text = article.summary
+        //articleSummaryLabel.text = article.summary
         
         likeLabel.text = "\(article.likeCount!)"
         commentLabel.text = "\(article.commentCount!)"

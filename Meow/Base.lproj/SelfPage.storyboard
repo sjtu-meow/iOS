@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zxy-39-uqL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zxy-39-uqL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -837,8 +837,8 @@
         <image name="CellArrow" width="8" height="13"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MJG-9h-boW"/>
+        <segue reference="WpN-pF-xBK"/>
         <segue reference="94K-SA-SGd"/>
-        <segue reference="xnH-84-aA4"/>
+        <segue reference="MJG-9h-boW"/>
     </inferredMetricsTieBreakers>
 </document>

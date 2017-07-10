@@ -21,7 +21,7 @@ class ArticleViewController: UITableViewController {
             .subscribe(onNext:{
                 [weak self]
                 (articles) in
-        
+                
                 self?.articles = articles
                 self?.tableView.reloadData()
             })
@@ -33,6 +33,7 @@ class ArticleViewController: UITableViewController {
         super.viewDidLoad()
         
         loadArticles()
+        
         
     }
     

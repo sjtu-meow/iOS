@@ -28,6 +28,13 @@ class HomeViewController: UITableViewController {
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         loadData()
         
+        
+        
+        //let vc = R.storyboard.articlePage.articleDetailViewController()
+
+        // let vc = R.storyboard.loginSignupPage.loginViewController()
+        
+        //present(vc!, animated: true, completion: nil)
         // let vc = R.storyboard.articlePage.articleDetailViewController()
 
         // let vc = R.storyboard.loginSignupPage.loginViewController()
@@ -57,7 +64,7 @@ class HomeViewController: UITableViewController {
             .addDisposableTo(disposeBag)
         
 
-      loadMore()
+        loadMore()
         MeowAPIProvider.shared.request(.moments)    // FIXME: need to support other item types
             .mapToItems()
             .subscribe(onNext: {
@@ -105,7 +112,7 @@ class HomeViewController: UITableViewController {
             return view
         case .article:
             let view = tableView.dequeueReusableCell(withIdentifier: R.nib.articleHomePageTableViewCell.identifier)!
-            (view as! ArticleHomePageTableViewCell).configure(model: item as! Article)
+            (view as! ArticleHomePageTableViewCell).configure(model: item as! ArticleSummary)
             return view
         case .question:
             let view = tableView.dequeueReusableCell(withIdentifier: R.nib.questionHomePageTableViewCell.identifier)!

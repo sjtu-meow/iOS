@@ -14,6 +14,8 @@ import RxSwift
 class ArticleDetailViewController: UIViewController {
     let disposeBag = DisposeBag()
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var webviewCell: UITableViewCell!
     /* user profile info */
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nicknameLabel: UILabel!
@@ -26,8 +28,22 @@ class ArticleDetailViewController: UIViewController {
     var article: Article?
     
     override func viewDidLoad() {
+        
         webview = ArticleWebView(fromSuperView: webViewContainer)
-        loadData()
+        
+        automaticallyAdjustsScrollViewInsets = false
+        
+        //loadData()
+        
+        
+        webview.heightChangingHandler = {
+            [weak self] height in
+            self?.scrollView.contentSize.height = height
+            //self?.view.setNeedsLayout()
+            self?.webview.heightConstraint.constant = height
+        }
+        webview.load(URLRequest(url:URL(string:"https://tongqu.me")!))
+        //webview.updateHeight()
     }
     
     var content: String?
@@ -55,6 +71,7 @@ class ArticleDetailViewController: UIViewController {
     @IBAction func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
     func updateView() {
         guard let article = self.article else { return }
         if let content = article.content {
@@ -68,5 +85,7 @@ class ArticleDetailViewController: UIViewController {
         }
         
     }
+    
+   
 }
 

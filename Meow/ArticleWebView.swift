@@ -17,17 +17,24 @@ class ArticleWebView: WKWebView {
     var heightChangingHandler:((CGFloat)->Void)?
     var contentHeight:CGFloat = 40 //default as 40, will change as content change
     weak var delegate: ArticleWebViewDelegate?
+    var heightConstraint: NSLayoutConstraint!
     
     convenience init(fromSuperView superView: UIView) {
         self.init()
         self.scrollView.isScrollEnabled = false
         self.translatesAutoresizingMaskIntoConstraints = false
         superView.addSubview(self)
+        
+    
         self.topAnchor.constraint(equalTo: superView.topAnchor).isActive = true
-        self.bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
+        //self.bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
         self.leftAnchor.constraint(equalTo: superView.leftAnchor).isActive = true
         self.rightAnchor.constraint(equalTo: superView.rightAnchor).isActive = true
-    }
+        
+        self.heightConstraint = self.heightAnchor.constraint(equalToConstant: 1)
+        heightConstraint.isActive = true
+ 
+ }
     
     init() {
         super.init(frame: CGRect.zero, configuration: WKWebViewConfiguration())
@@ -48,6 +55,7 @@ class ArticleWebView: WKWebView {
         }
     }
     
+    
     func updateHeight() {
         getContentHeight { [weak self] (height) in
             if self?.contentHeight != height {
@@ -55,6 +63,7 @@ class ArticleWebView: WKWebView {
                 self?.heightChangingHandler?(height)
             }
         }
+ 
     }
     
     func presentHTMLString(_ body:String) {
@@ -90,7 +99,7 @@ class ArticleWebView: WKWebView {
 
 extension ArticleWebView : WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        decisionHandler(.cancel)
+        decisionHandler(.allow)
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
