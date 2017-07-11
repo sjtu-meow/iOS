@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -185,8 +186,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="问题的题目噢～" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Wh-ch-4Uq">
+                                <rect key="frame" x="32" y="72" width="311" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="bvy-3w-lwS"/>
+                                    <constraint firstAttribute="height" constant="30" id="hDa-Cb-chJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="96S-Mk-DTb">
-                                <rect key="frame" x="16" y="72" width="343" height="587"/>
+                                <rect key="frame" x="32" y="110" width="343" height="549"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -194,24 +205,31 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="96S-Mk-DTb" firstAttribute="top" secondItem="mxO-us-NCE" secondAttribute="bottom" constant="8" id="70m-yU-1wg"/>
-                            <constraint firstItem="bzQ-yM-FYy" firstAttribute="top" secondItem="96S-Mk-DTb" secondAttribute="bottom" constant="8" id="a7r-ze-vp9"/>
-                            <constraint firstItem="96S-Mk-DTb" firstAttribute="leading" secondItem="ico-MZ-w6n" secondAttribute="leading" constant="16" id="vow-CS-2e8"/>
-                            <constraint firstAttribute="trailing" secondItem="96S-Mk-DTb" secondAttribute="trailing" constant="16" id="wG3-Ye-J7S"/>
+                            <constraint firstItem="1Wh-ch-4Uq" firstAttribute="leading" secondItem="ico-MZ-w6n" secondAttribute="leadingMargin" constant="16" id="10I-Fg-fFs"/>
+                            <constraint firstItem="96S-Mk-DTb" firstAttribute="top" secondItem="1Wh-ch-4Uq" secondAttribute="bottom" constant="8" symbolic="YES" id="60B-SB-9fm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Wh-ch-4Uq" secondAttribute="trailing" constant="16" id="7UP-ng-4w5"/>
+                            <constraint firstItem="96S-Mk-DTb" firstAttribute="leading" secondItem="1Wh-ch-4Uq" secondAttribute="leading" id="LxZ-VG-JrD"/>
+                            <constraint firstItem="bzQ-yM-FYy" firstAttribute="top" secondItem="96S-Mk-DTb" secondAttribute="bottom" constant="8" symbolic="YES" id="hKz-Cb-gj0"/>
+                            <constraint firstAttribute="trailing" secondItem="96S-Mk-DTb" secondAttribute="trailing" id="hVj-xQ-ZXH"/>
+                            <constraint firstItem="1Wh-ch-4Uq" firstAttribute="top" secondItem="ico-MZ-w6n" secondAttribute="topMargin" constant="72" id="mcc-ZE-3MP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="发布问题" id="bpT-DT-qQg">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="knX-DP-2Uf">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="knX-DP-2Uf">
                             <connections>
                                 <action selector="cancel:" destination="Guf-sS-S1W" id="A8J-sR-oEv"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="下一步" id="1ue-FI-dZV">
+                        <barButtonItem key="rightBarButtonItem" title="发布" id="1ue-FI-dZV">
                             <connections>
-                                <segue destination="3ad-n1-JSM" kind="show" id="q8f-2m-cTh"/>
+                                <action selector="postQuestion:" destination="Guf-sS-S1W" id="Ti4-9P-XMc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contentTextField" destination="96S-Mk-DTb" id="A9G-04-GFm"/>
+                        <outlet property="titleTextField" destination="1Wh-ch-4Uq" id="Krx-bg-6IA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t5f-gW-gTG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -234,41 +252,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHv-oz-CxJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1444" y="3528.4857571214397"/>
-        </scene>
-        <!--发布问题-->
-        <scene sceneID="t76-g2-Xm9">
-            <objects>
-                <viewController id="3ad-n1-JSM" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EYy-EP-G0U"/>
-                        <viewControllerLayoutGuide type="bottom" id="Xg8-j8-VIx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="egc-gW-PSg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4RI-Fp-ktg">
-                                <rect key="frame" x="16" y="72" width="343" height="587"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Xg8-j8-VIx" firstAttribute="top" secondItem="4RI-Fp-ktg" secondAttribute="bottom" constant="8" id="1pj-c3-mD1"/>
-                            <constraint firstAttribute="trailing" secondItem="4RI-Fp-ktg" secondAttribute="trailing" constant="16" id="KQN-vi-d93"/>
-                            <constraint firstItem="4RI-Fp-ktg" firstAttribute="leading" secondItem="egc-gW-PSg" secondAttribute="leading" constant="16" id="N19-c0-LuR"/>
-                            <constraint firstItem="4RI-Fp-ktg" firstAttribute="top" secondItem="EYy-EP-G0U" secondAttribute="bottom" constant="8" id="kOE-4f-e6n"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="发布问题" id="h0B-HU-8Y3">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="yxf-Uw-RsO"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DBT-Gq-UFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="313" y="3529"/>
         </scene>
         <!--回答「四川的猫吃辣吗？」-->
         <scene sceneID="yPj-ft-4To">
