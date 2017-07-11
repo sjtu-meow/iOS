@@ -73,7 +73,6 @@
 		BF7878421F00F2C9000FB7C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7878401F00F2C9000FB7C6 /* Main.storyboard */; };
 		BF7878441F00F2C9000FB7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7878431F00F2C9000FB7C6 /* Assets.xcassets */; };
 		BF7878471F00F2C9000FB7C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7878451F00F2C9000FB7C6 /* LaunchScreen.storyboard */; };
-		BF78785D1F00F2C9000FB7C6 /* MeowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78785C1F00F2C9000FB7C6 /* MeowUITests.swift */; };
 		BF78786C1F01007D000FB7C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78786B1F01007D000FB7C6 /* HomeViewController.swift */; };
 		BF78786E1F0100D4000FB7C6 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78786D1F0100D4000FB7C6 /* ArticleViewController.swift */; };
 		BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */; };
@@ -199,7 +198,6 @@
 		BF78784D1F00F2C9000FB7C6 /* MeowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7878531F00F2C9000FB7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF7878581F00F2C9000FB7C6 /* MeowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF78785C1F00F2C9000FB7C6 /* MeowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowUITests.swift; sourceTree = "<group>"; };
 		BF78785E1F00F2C9000FB7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF78786B1F01007D000FB7C6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BF78786D1F0100D4000FB7C6 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
@@ -443,7 +441,6 @@
 		BF78785B1F00F2C9000FB7C6 /* MeowUITests */ = {
 			isa = PBXGroup;
 			children = (
-				BF78785C1F00F2C9000FB7C6 /* MeowUITests.swift */,
 				BF78785E1F00F2C9000FB7C6 /* Info.plist */,
 			);
 			path = MeowUITests;
@@ -962,7 +959,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF78785D1F00F2C9000FB7C6 /* MeowUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
