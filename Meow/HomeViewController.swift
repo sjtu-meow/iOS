@@ -28,8 +28,10 @@ class HomeViewController: UITableViewController {
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         loadData()
         
+        let vc = R.storyboard.main.searchViewController()
         
-        
+        present(vc!, animated: true, completion: nil)
+        //self.navigationController?.pushViewController(vc!, animated: true)
         //let vc = R.storyboard.articlePage.articleDetailViewController()
 
         // let vc = R.storyboard.loginSignupPage.loginViewController()

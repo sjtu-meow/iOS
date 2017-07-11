@@ -80,13 +80,13 @@
                                 <rect key="frame" x="16" y="461" width="288" height="58"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布什么呢" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUV-Yv-Drd">
-                                        <rect key="frame" x="108" y="0.0" width="72" height="17"/>
+                                        <rect key="frame" x="108.5" y="0.0" width="71.5" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="RPK-gH-g5p" userLabel="选项">
-                                        <rect key="frame" x="23" y="25" width="243" height="33"/>
+                                        <rect key="frame" x="22.5" y="25" width="243" height="33"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBO-Bg-yJf">
                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="33"/>

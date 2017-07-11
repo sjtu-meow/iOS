@@ -14,7 +14,7 @@ struct SearchHistorySource {
     static private let searchHistoryDefaultsKey = "searchHistoryDefaultsKey"
     
     static func setHistory(set: StringSet) {
-        UserDefaults.standard.setCustomObject(set as NSSet, forKey: "")
+        UserDefaults.standard.setCustomObject(set as NSSet, forKey: searchHistoryDefaultsKey)
     }
     
     static func getHistory() -> StringSet {
