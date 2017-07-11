@@ -96,4 +96,14 @@ extension SearchViewController: TagListViewDelegate {
 
 }
 
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarResultsListButtonClicked(_ searchBar: UISearchBar) {
+        let queryKeyword = searchController.searchBar.text
+        SearchHistorySource.addHistory(historyEntry: queryKeyword)
+        
+        // TODO
+        // self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
 

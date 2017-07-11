@@ -20,6 +20,8 @@ class HomeViewController: UITableViewController {
     
     var items = [ItemProtocol]()
     
+    let searchBar =  NoCancelButtonSearchBar()
+
     
     
     override func viewDidLoad() {
@@ -28,9 +30,11 @@ class HomeViewController: UITableViewController {
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         loadData()
         
-        let vc = R.storyboard.main.searchViewController()
+        searchBar.delegate = self
+        self.navigationItem.titleView = searchBar
+        //let vc = R.storyboard.main.searchViewController()
         
-        present(vc!, animated: true, completion: nil)
+        //present(vc!, animated: true, completion: nil)
         //self.navigationController?.pushViewController(vc!, animated: true)
         //let vc = R.storyboard.articlePage.articleDetailViewController()
 
@@ -137,5 +141,17 @@ class HomeViewController: UITableViewController {
                 self?.currentPage += 1
             })
             .addDisposableTo(disposeBag)
+    }
+}
+
+
+extension HomeViewController: UISearchBarDelegate {
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        DispatchQueue.main.async {
+            let vc = R.storyboard.main.searchViewController()
+            self.navigationController?.pushViewController(vc!, animated: true)
+            
+        }
+        return false
     }
 }
