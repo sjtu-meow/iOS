@@ -36,9 +36,10 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         searchController = NoCancelButtonSearchController()
         
-//        searchController.delegate = self
+        searchController.searchBar.delegate = self
         
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.dimsBackgroundDuringPresentation = false
@@ -97,9 +98,11 @@ extension SearchViewController: TagListViewDelegate {
 }
 
 extension SearchViewController: UISearchBarDelegate {
-    func searchBarResultsListButtonClicked(_ searchBar: UISearchBar) {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let queryKeyword = searchController.searchBar.text else { return }
         SearchHistorySource.addHistory(historyEntry: queryKeyword)
+        
         
         // TODO
         // self.navigationController?.pushViewController(vc, animated: true)
