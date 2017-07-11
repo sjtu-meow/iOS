@@ -80,8 +80,8 @@ class ArticleDetailViewController: UIViewController {
         if let avatar = profile.avatar {
             avatarImageView.af_setImage(withURL: avatar)
         }
-        //webview.presentHTMLString(article.content!)
-        webview.load(URLRequest(url:(URL(string:"https://tongqu.me"))!))
+        webview.presentHTMLString(article.content!)
+        //webview.load(URLRequest(url:(URL(string:"https://tongqu.me"))!))
     }
     
    
