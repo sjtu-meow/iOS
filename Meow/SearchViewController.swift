@@ -98,7 +98,7 @@ extension SearchViewController: TagListViewDelegate {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBarResultsListButtonClicked(_ searchBar: UISearchBar) {
-        let queryKeyword = searchController.searchBar.text
+        guard let queryKeyword = searchController.searchBar.text else { return }
         SearchHistorySource.addHistory(historyEntry: queryKeyword)
         
         // TODO
