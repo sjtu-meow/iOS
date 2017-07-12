@@ -14,9 +14,9 @@ struct Question: ItemProtocol {
     var profile: Profile!
     var title: String!
     var content: String!
-    var answersId: [Int]?
-    var like: Int? // FIXME: not empty
-    var comment: Int?
+    var likeCount: Int?
+    var commentCount: Int?
+    var answers: [Answer]?
     
 }
 
@@ -33,9 +33,9 @@ extension Question: JSONConvertible {
         question.profile = item.profile
         question.title = title
         question.content = content
-        question.answersId <- json["answersId"]
-        question.like <- json["like"]
-        question.comment <- json["comment"]
+        question.likeCount <- json["likeCount"]
+        question.commentCount <- json["commentCount"]
+        question.answers <- json["answers"]
         
         return question
     }

@@ -15,7 +15,7 @@ class QuestionAnswerPageAnswerCell: UITableViewCell {
     @IBOutlet weak var likeCountLabel: UILabel!
     @IBOutlet weak var commentCountLabel: UILabel!
     
-    func configure(model: Answer) {
+    func configure(model: AnswerSummary) {
         titleLabel.text = model.questionTitle
         contentLabel.text = model.content
         likeCountLabel.text = "\(model.likeCount!)"

@@ -62,7 +62,7 @@ extension Observable {
                     case .question:
                         return Question.fromJSON(jsonElement)
                     case .answer:
-                        return Answer.fromJSON(jsonElement)
+                        return AnswerSummary.fromJSON(jsonElement)
                 }
                 
             }

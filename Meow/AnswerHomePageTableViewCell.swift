@@ -25,7 +25,7 @@ class AnswerHomePageTableViewCell: UITableViewCell {
     @IBOutlet weak var commentLabel: UILabel!
     
     
-    func configure(model: Answer) {
+    func configure(model: AnswerSummary) {
         let answer = model
         let profile = answer.profile
         

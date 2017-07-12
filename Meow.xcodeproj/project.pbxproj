@@ -45,6 +45,7 @@
 		BF2A1A261F13500D00220853 /* QuestionAnswerPageAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2A1A251F13500D00220853 /* QuestionAnswerPageAnswerCell.swift */; };
 		BF2A1A281F1367A000220853 /* QuestionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2A1A271F1367A000220853 /* QuestionDetailViewController.swift */; };
 		BF31815F1F15ACB600ACB9DD /* SearchResultTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31815E1F15ACB600ACB9DD /* SearchResultTableView.swift */; };
+		BF3181611F15B14500ACB9DD /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3181601F15B14500ACB9DD /* Answer.swift */; };
 		BF31E9201F0A2CBD001236D8 /* UploadToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E91F1F0A2CBD001236D8 /* UploadToken.swift */; };
 		BF31E9221F0A9BFD001236D8 /* BannerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */; };
 		BF31E9241F0B61A7001236D8 /* MediaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */; };
@@ -93,7 +94,7 @@
 		D97B34FE1F05E9C300BCB027 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B34FD1F05E9C300BCB027 /* Moment.swift */; };
 		D97B35001F061A9100BCB027 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B34FF1F061A9100BCB027 /* Article.swift */; };
 		D97B35021F061C7200BCB027 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B35011F061C7200BCB027 /* Banner.swift */; };
-		D97B35041F06245600BCB027 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B35031F06245600BCB027 /* Answer.swift */; };
+		D97B35041F06245600BCB027 /* AnswerSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B35031F06245600BCB027 /* AnswerSummary.swift */; };
 		D97B35081F067E7D00BCB027 /* ArticlePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B35071F067E7D00BCB027 /* ArticlePageTableViewCell.swift */; };
 		D97B350A1F0A11C900BCB027 /* ArticleHomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B35091F0A11C900BCB027 /* ArticleHomePageTableViewCell.swift */; };
 		D97B350F1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B350E1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift */; };
@@ -167,6 +168,7 @@
 		BF2A1A251F13500D00220853 /* QuestionAnswerPageAnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerPageAnswerCell.swift; sourceTree = "<group>"; };
 		BF2A1A271F1367A000220853 /* QuestionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewController.swift; sourceTree = "<group>"; };
 		BF31815E1F15ACB600ACB9DD /* SearchResultTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableView.swift; sourceTree = "<group>"; };
+		BF3181601F15B14500ACB9DD /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		BF31E91F1F0A2CBD001236D8 /* UploadToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadToken.swift; sourceTree = "<group>"; };
 		BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerViewCell.xib; sourceTree = "<group>"; };
 		BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaViewCell.xib; sourceTree = "<group>"; };
@@ -222,7 +224,7 @@
 		D97B34FD1F05E9C300BCB027 /* Moment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
 		D97B34FF1F061A9100BCB027 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		D97B35011F061C7200BCB027 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
-		D97B35031F06245600BCB027 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		D97B35031F06245600BCB027 /* AnswerSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerSummary.swift; sourceTree = "<group>"; };
 		D97B35071F067E7D00BCB027 /* ArticlePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlePageTableViewCell.swift; sourceTree = "<group>"; };
 		D97B35091F0A11C900BCB027 /* ArticleHomePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleHomePageTableViewCell.swift; sourceTree = "<group>"; };
 		D97B350E1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionHomePageTableViewCell.swift; sourceTree = "<group>"; };
@@ -378,9 +380,10 @@
 				D97B34FB1F05DEF400BCB027 /* Profile.swift */,
 				D97B34FD1F05E9C300BCB027 /* Moment.swift */,
 				D97B35011F061C7200BCB027 /* Banner.swift */,
-				D97B35031F06245600BCB027 /* Answer.swift */,
+				D97B35031F06245600BCB027 /* AnswerSummary.swift */,
 				D98EF6DF1F0A1BA300A524AF /* Question.swift */,
 				BF4A24291F0CDBA20004650E /* ArticleSummary.swift */,
+				BF3181601F15B14500ACB9DD /* Answer.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -901,6 +904,7 @@
 				D9B96FDF1F0CC42B00858360 /* ArticleWebView.swift in Sources */,
 				BF4A24301F0F62310004650E /* Comment.swift in Sources */,
 				BF390A491F01704B00555B93 /* NetworkLogger.swift in Sources */,
+				BF3181611F15B14500ACB9DD /* Answer.swift in Sources */,
 				D97B35081F067E7D00BCB027 /* ArticlePageTableViewCell.swift in Sources */,
 				24EFC68D1F05F1560005A52D /* ImagePostCollectionViewCell.swift in Sources */,
 				D98EF6E01F0A1BA300A524AF /* Question.swift in Sources */,
@@ -920,7 +924,7 @@
 				BF78786E1F0100D4000FB7C6 /* ArticleViewController.swift in Sources */,
 				BF44D37C1F062AEF00A137E6 /* MainViewController.swift in Sources */,
 				BF31E92A1F0B7FCF001236D8 /* PostTypePickerViewController.swift in Sources */,
-				D97B35041F06245600BCB027 /* Answer.swift in Sources */,
+				D97B35041F06245600BCB027 /* AnswerSummary.swift in Sources */,
 				BF390A451F01700500555B93 /* MeowAPI.swift in Sources */,
 				BF390A471F01702D00555B93 /* Networking.swift in Sources */,
 				24EFC6861F05DE110005A52D /* PostMomentViewController.swift in Sources */,

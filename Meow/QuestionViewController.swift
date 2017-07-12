@@ -11,12 +11,12 @@ import RxSwift
 
 class QuestionViewController: UITableViewController {
 
-    var answers: [Answer]?
+    var answers: [AnswerSummary]?
     
     let disposeBag = DisposeBag()
     
     private func loadData(){
-        MeowAPIProvider.shared.request(.answers).mapTo(arrayOf: Answer.self)
+        MeowAPIProvider.shared.request(.answers).mapTo(arrayOf: AnswerSummary.self)
             .subscribe(onNext:{
                 [weak self]
                 (answers) in

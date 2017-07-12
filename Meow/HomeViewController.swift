@@ -114,7 +114,7 @@ class HomeViewController: UITableViewController {
             return view
         case .answer:
             let view = tableView.dequeueReusableCell(withIdentifier: R.nib.answerHomePageTableViewCell.identifier)!
-            (view as! AnswerHomePageTableViewCell).configure(model: item as! Answer)
+            (view as! AnswerHomePageTableViewCell).configure(model: item as! AnswerSummary)
             return view
         case .article:
             let view = tableView.dequeueReusableCell(withIdentifier: R.nib.articleHomePageTableViewCell.identifier)!

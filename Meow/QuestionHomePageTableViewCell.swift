@@ -34,8 +34,8 @@ class QuestionHomePageTableViewCell: UITableViewCell {
         
         questionTitleLabel.text = question.title
         
-        likeLabel.text = String(describing: question.like)
-        commentLabel.text = String(describing: question.comment)
+        likeLabel.text = String(describing: question.likeCount )
+        commentLabel.text = String(describing: question.commentCount)
         
     }
 
