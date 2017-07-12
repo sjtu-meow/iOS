@@ -31,8 +31,8 @@ extension AnswerSummary: JSONConvertible {
         answer.type = item.type
         answer.profile = item.profile
         
-        answer.questionTitle <- json["title"]
-        answer.questionId <- json["id"]
+        answer.questionTitle <- json["questionTitle"]
+        answer.questionId <- json["questionId"]
         
         answer.content <- answerJson["content"]
         
