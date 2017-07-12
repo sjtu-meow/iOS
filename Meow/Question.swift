@@ -22,17 +22,13 @@ struct Question: ItemProtocol {
 
 extension Question: JSONConvertible {
     static func fromJSON(_ json: JSON) -> Question? {
-        guard let item = Item.fromJSON(json),
-            let title = json["title"].string,
-            let content = json["content"].string
-            else { return nil }
         
         var question = self.init()
-        question.id = item.id
-        question.type = item.type
-        question.profile = item.profile
-        question.title = title
-        question.content = content
+        question.id <- json["id"]
+        question.type = .question
+        question.profile = Profile.fromJSON(json["profile"])
+        question.title <- json["title"]
+        question.content <- json["content"]
         question.likeCount <- json["likeCount"]
         question.commentCount <- json["commentCount"]
         question.answers <- json["answers"]

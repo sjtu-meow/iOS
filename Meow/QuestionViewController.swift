@@ -43,9 +43,10 @@ class QuestionViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionAnswerPageAnswerCell.identifier)!
+        let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionAnswerPageAnswerCell.identifier)! as! QuestionAnswerPageAnswerCell
         if let answer = self.answers?[indexPath.row]{
-            (view as! QuestionAnswerPageAnswerCell).configure(model: answer)
+            view.configure(model: answer)
+            view.delegate = self
         }
         return view
     }
@@ -54,4 +55,12 @@ class QuestionViewController: UITableViewController {
         //return UITableViewAutomaticDimension
     }
     
+}
+
+extension QuestionViewController: AnswerCellDelegate {
+    func onTitleTapped(model: AnswerSummary) {
+        let vc = R.storyboard.questionAnswerPage.questionDetailViewController()!
+        vc.configure(questionId: model.questionId)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

@@ -87,7 +87,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pg6-PU-LbG" userLabel="内容">
                                                     <rect key="frame" x="0.0" y="0.0" width="343" height="75"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="问题的题目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2f-uu-x8l" userLabel="题目">
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="问题的题目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2f-uu-x8l" userLabel="题目">
                                                             <rect key="frame" x="0.0" y="0.0" width="87" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -149,8 +149,8 @@
                                 <connections>
                                     <outlet property="commentCountLabel" destination="V6e-Y3-ZBA" id="9Lf-lJ-Auq"/>
                                     <outlet property="contentLabel" destination="YMy-HH-dc7" id="DFE-2l-9qB"/>
-                                    <outlet property="likeCountLabel" destination="OHU-PA-qXz" id="F5z-kZ-ieD"/>
-                                    <outlet property="titleLabel" destination="e2f-uu-x8l" id="Zqn-BQ-Amk"/>
+                                    <outlet property="likeCountLabel" destination="OHU-PA-qXz" id="d4U-Mi-8Al"/>
+                                    <outlet property="titleLabel" destination="e2f-uu-x8l" id="KfK-Dq-Beq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -169,18 +169,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8KH-W5-3Fd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-484" y="504"/>
+            <point key="canvasLocation" x="-482" y="501"/>
         </scene>
         <!--问题详情-->
         <scene sceneID="yrf-fI-GsO">
             <objects>
-                <viewController storyboardIdentifier="QuestionContent" id="vT0-70-cDp" customClass="UITableViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionDetailViewController" id="vT0-70-cDp" customClass="QuestionDetailViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="drU-KE-cSi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="211" id="DJD-aD-naG" userLabel="QuestionCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionDetailQuestionCell" rowHeight="211" id="DJD-aD-naG" userLabel="QuestionCell" customClass="QuestionDetailQuestionCell" customModule="Meow" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="211"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DJD-aD-naG" id="oIH-Nu-ay0">
@@ -255,6 +255,9 @@
                                                                     <state key="normal" title="回答" backgroundImage="ButtonBigOutline">
                                                                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </state>
+                                                                    <connections>
+                                                                        <action selector="addAnswer:" destination="DJD-aD-naG" eventType="touchUpOutside" id="9l7-8V-4xD"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sC7-NP-yMm">
                                                                     <rect key="frame" x="52" y="0.0" width="47" height="31"/>
@@ -262,6 +265,9 @@
                                                                     <state key="normal" title="关注" backgroundImage="ButtonBigOutline">
                                                                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </state>
+                                                                    <connections>
+                                                                        <action selector="follow:" destination="DJD-aD-naG" eventType="touchUpOutside" id="ha1-7Q-mfr"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -281,8 +287,14 @@
                                         <constraint firstItem="leU-Ae-W0S" firstAttribute="bottom" secondItem="oIH-Nu-ay0" secondAttribute="bottom" constant="-10" id="ah7-7l-UVx"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="answerCountLabel" destination="ir7-nE-PQR" id="hQA-mE-3bx"/>
+                                    <outlet property="contentLabel" destination="1pS-T1-ie5" id="E99-6q-7dY"/>
+                                    <outlet property="followingCountLabel" destination="QLA-0M-LWD" id="mxa-Kc-hrj"/>
+                                    <outlet property="titleLabel" destination="LZ8-Wi-68J" id="eKU-KR-t5b"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="122" id="Meq-8m-7b1" userLabel="AnswerCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionDetailAnswerCell" rowHeight="122" id="Meq-8m-7b1" userLabel="AnswerCell" customClass="QuestionDetailAnswerCell" customModule="Meow" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="239" width="375" height="122"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Meq-8m-7b1" id="RKG-fX-rFE">
@@ -393,6 +405,13 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="avatarImageView" destination="taF-lR-Zhk" id="HmR-ia-d8y"/>
+                                    <outlet property="bioLabel" destination="cC2-zr-eKy" id="Lya-q7-fVh"/>
+                                    <outlet property="commentCountLabel" destination="hcI-L6-ncd" id="rx1-x1-ibC"/>
+                                    <outlet property="dateLabel" destination="C5V-C0-KkH" id="rTk-pL-4b1"/>
+                                    <outlet property="likeCountLabel" destination="pBp-8a-qAA" id="mZI-0o-JqY"/>
+                                    <outlet property="nicknameLabel" destination="oe0-y4-p4i" id="Ymn-OV-GHR"/>
+                                    <outlet property="summaryLabel" destination="gz9-lr-2iH" id="ebf-YW-mKZ"/>
                                     <segue destination="vXS-rs-caP" kind="showDetail" id="8sP-TX-e3S"/>
                                 </connections>
                             </tableViewCell>

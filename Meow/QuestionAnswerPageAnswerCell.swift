@@ -8,17 +8,37 @@
 
 import UIKit
 
+protocol AnswerCellDelegate {
+    func onTitleTapped(model: AnswerSummary)
+}
+ 
 class QuestionAnswerPageAnswerCell: UITableViewCell {
+    var model: AnswerSummary?
+    var delegate: AnswerCellDelegate?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var likeCountLabel: UILabel!
     @IBOutlet weak var commentCountLabel: UILabel!
     
+    override func awakeFromNib() {
+        let tapAction = UITapGestureRecognizer(target: self, action: #selector(self.onTitleTapped(_:)))
+        titleLabel.addGestureRecognizer(tapAction)
+        
+    }
     func configure(model: AnswerSummary) {
+        self.model = model
         titleLabel.text = model.questionTitle
         contentLabel.text = model.content
-        likeCountLabel.text = "\(model.likeCount!)"
-        commentCountLabel.text = "\(model.commentCount!)"
+        likeCountLabel.text = "\(model.likeCount)"
+        commentCountLabel.text = "\(model.commentCount)"
+
     }
+    
+    func onTitleTapped(_ sender: UITapGestureRecognizer) {
+        guard let model = model else { return }
+        delegate?.onTitleTapped(model: model)
+    }
+    
+    
 }
