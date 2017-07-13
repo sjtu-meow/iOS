@@ -38,6 +38,7 @@ class QuestionDetailViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let question = question else { return 0 }
         if section == 0 {
@@ -46,6 +47,7 @@ class QuestionDetailViewController: UITableViewController {
             return question.answers!.count
         }
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let question = question else { return UITableViewCell() }
         if indexPath.section == 0 {
@@ -58,6 +60,7 @@ class QuestionDetailViewController: UITableViewController {
             return view
         }
     }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
         // return UITableViewAutomaticDimension

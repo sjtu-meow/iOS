@@ -19,6 +19,10 @@ class QuestionDetailQuestionCell: UITableViewCell {
     
     @IBOutlet weak var followingCountLabel: UILabel!
     
+    @IBOutlet weak var addAnswerButton: UIButton!
+    
+    @IBOutlet weak var followButton: UIButton!
+    
     func configure(model: Question) {
         self.model = model
         titleLabel.text = model.title
@@ -27,11 +31,4 @@ class QuestionDetailQuestionCell: UITableViewCell {
         
     }
 
-    @IBAction func addAnswer(_ sender: Any) {
-        
-    }
-    
-    @IBAction func follow(_ sender: Any) {
-        
-    }
 }

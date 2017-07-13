@@ -255,9 +255,6 @@
                                                                     <state key="normal" title="回答" backgroundImage="ButtonBigOutline">
                                                                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </state>
-                                                                    <connections>
-                                                                        <action selector="addAnswer:" destination="DJD-aD-naG" eventType="touchUpOutside" id="9l7-8V-4xD"/>
-                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sC7-NP-yMm">
                                                                     <rect key="frame" x="52" y="0.0" width="47" height="31"/>
@@ -265,9 +262,6 @@
                                                                     <state key="normal" title="关注" backgroundImage="ButtonBigOutline">
                                                                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </state>
-                                                                    <connections>
-                                                                        <action selector="follow:" destination="DJD-aD-naG" eventType="touchUpOutside" id="ha1-7Q-mfr"/>
-                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -288,8 +282,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="addAnswerButton" destination="cpO-PQ-2BL" id="cBR-lm-ZBn"/>
                                     <outlet property="answerCountLabel" destination="ir7-nE-PQR" id="hQA-mE-3bx"/>
                                     <outlet property="contentLabel" destination="1pS-T1-ie5" id="E99-6q-7dY"/>
+                                    <outlet property="followButton" destination="sC7-NP-yMm" id="qfd-lu-4au"/>
                                     <outlet property="followingCountLabel" destination="QLA-0M-LWD" id="mxa-Kc-hrj"/>
                                     <outlet property="titleLabel" destination="LZ8-Wi-68J" id="eKU-KR-t5b"/>
                                 </connections>
