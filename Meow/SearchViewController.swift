@@ -103,9 +103,10 @@ extension SearchViewController: UISearchBarDelegate {
         guard let queryKeyword = searchController.searchBar.text else { return }
         SearchHistorySource.addHistory(historyEntry: queryKeyword)
         
-        
+        let vc = R.storyboard.main.searchResultViewController()!
+        vc.configure(keyword: queryKeyword)
         // TODO
-        // self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

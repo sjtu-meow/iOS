@@ -8,15 +8,26 @@
 
 import UIKit
 
-class SearchResultTableView: UITableView {
-    class func addTo(superview: UIView, source: UITableViewDataSource) -> Self {
+class SearchResultTableView: UITableView, UITableViewDelegate {
+    
+    class func addTo(superview: UIView) -> Self {
         let view = self.init()
-        view.dataSource = source
-        view.leftAnchor.constraint(equalTo: superview.leftAnchor).isActive=true
-        view.rightAnchor.constraint(equalTo: superview.rightAnchor).isActive=true
-        view.topAnchor.constraint(equalTo: superview.topAnchor).isActive=true
-        view.bottomAnchor.constraint(equalTo: superview.bottomAnchor).isActive=true
+        
+        
+        view.translatesAutoresizingMaskIntoConstraints=false
+        superview.addSubview(view)
+
+        view.leftAnchor.constraint(equalTo: superview.leftAnchor).isActive = true
+        view.rightAnchor.constraint(equalTo: superview.rightAnchor).isActive = true
+        view.topAnchor.constraint(equalTo: superview.topAnchor).isActive = true
+        view.bottomAnchor.constraint(equalTo: superview.bottomAnchor).isActive = true
+
+        view.rowHeight = UITableViewAutomaticDimension
+        view.estimatedRowHeight = 100
+        
         return view
     }
+
+    
 }
 

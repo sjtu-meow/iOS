@@ -23,6 +23,7 @@ enum MeowAPI  {
     case postMoment(content: String, medias: [Media]?)
     case postArticle(title: String, content: String)
     case postQuestion(title: String, content: String)
+    case search(keyword: String)
 }
 
 extension MeowAPI: TargetType {
@@ -60,6 +61,8 @@ extension MeowAPI: TargetType {
             return "/articles/\(id)"
         case .uploadToken:
             return "/upload/token"
+        case .search:
+            return "/search"
         }
     }
     
@@ -74,7 +77,12 @@ extension MeowAPI: TargetType {
     }
 
     public var parameterEncoding: ParameterEncoding {
-        return JSONEncoding.default
+        switch self {
+        case .search:
+            return URLEncoding.default
+        default:
+            return JSONEncoding.default
+        }
     }
     
     
@@ -94,6 +102,8 @@ extension MeowAPI: TargetType {
             return ["title": title, "content": content]
         case .postQuestion(let title, let content):
             return ["title": title, "content": content]
+        case .search(let keyword):
+            return ["keyword": keyword]
         default:
             return nil
         }

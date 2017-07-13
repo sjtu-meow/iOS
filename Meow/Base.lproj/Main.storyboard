@@ -229,7 +229,7 @@
         <!--搜索结果-->
         <scene sceneID="Ozy-w4-mBn">
             <objects>
-                <viewController id="uTl-69-d2w" userLabel="搜索结果" customClass="SearchResultViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchResultViewController" id="uTl-69-d2w" userLabel="搜索结果" customClass="SearchResultViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9N8-Ju-f3D"/>
                         <viewControllerLayoutGuide type="bottom" id="Xso-db-PTe"/>

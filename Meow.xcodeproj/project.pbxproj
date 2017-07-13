@@ -63,6 +63,11 @@
 		BF390A4F1F01FCE500555B93 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A4E1F01FCE500555B93 /* Logger.swift */; };
 		BF390A511F02053A00555B93 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A501F02053A00555B93 /* Token.swift */; };
 		BF390A551F021A5C00555B93 /* TokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF390A541F021A5C00555B93 /* TokenTests.swift */; };
+		BF4379621F1755BB0008EA66 /* UserPageRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4379611F1755BB0008EA66 /* UserPageRecordTableViewCell.swift */; };
+		BF4379641F1755CD0008EA66 /* QuestionRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4379631F1755CD0008EA66 /* QuestionRecordTableViewCell.swift */; };
+		BF4379661F1755DA0008EA66 /* AnswerRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4379651F1755DA0008EA66 /* AnswerRecordTableViewCell.swift */; };
+		BF4379681F1755F40008EA66 /* MomentRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4379671F1755F40008EA66 /* MomentRecordTableViewCell.swift */; };
+		BF43796A1F1756580008EA66 /* ArticleRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4379691F1756580008EA66 /* ArticleRecordTableViewCell.swift */; };
 		BF44D3781F05D60900A137E6 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44D3771F05D60900A137E6 /* Media.swift */; };
 		BF44D37C1F062AEF00A137E6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44D37B1F062AEF00A137E6 /* MainViewController.swift */; };
 		BF44D3801F06312600A137E6 /* BannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44D37F1F06312600A137E6 /* BannerViewCell.swift */; };
@@ -188,6 +193,11 @@
 		BF390A4E1F01FCE500555B93 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		BF390A501F02053A00555B93 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		BF390A541F021A5C00555B93 /* TokenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenTests.swift; sourceTree = "<group>"; };
+		BF4379611F1755BB0008EA66 /* UserPageRecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPageRecordTableViewCell.swift; sourceTree = "<group>"; };
+		BF4379631F1755CD0008EA66 /* QuestionRecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionRecordTableViewCell.swift; sourceTree = "<group>"; };
+		BF4379651F1755DA0008EA66 /* AnswerRecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerRecordTableViewCell.swift; sourceTree = "<group>"; };
+		BF4379671F1755F40008EA66 /* MomentRecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentRecordTableViewCell.swift; sourceTree = "<group>"; };
+		BF4379691F1756580008EA66 /* ArticleRecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleRecordTableViewCell.swift; sourceTree = "<group>"; };
 		BF44D3771F05D60900A137E6 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		BF44D37B1F062AEF00A137E6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF44D37F1F06312600A137E6 /* BannerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerViewCell.swift; sourceTree = "<group>"; };
@@ -392,6 +402,18 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		BF43795E1F17557C0008EA66 /* Record/Search Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BF4379611F1755BB0008EA66 /* UserPageRecordTableViewCell.swift */,
+				BF4379631F1755CD0008EA66 /* QuestionRecordTableViewCell.swift */,
+				BF4379651F1755DA0008EA66 /* AnswerRecordTableViewCell.swift */,
+				BF4379671F1755F40008EA66 /* MomentRecordTableViewCell.swift */,
+				BF4379691F1756580008EA66 /* ArticleRecordTableViewCell.swift */,
+			);
+			name = "Record/Search Cell";
+			sourceTree = "<group>";
+		};
 		BF7878301F00F2C9000FB7C6 = {
 			isa = PBXGroup;
 			children = (
@@ -471,8 +493,8 @@
 				BFF139601F034053006DF489 /* SignupViewController.swift */,
 				BF44D37B1F062AEF00A137E6 /* MainViewController.swift */,
 				BF31E9271F0B7347001236D8 /* SearchViewController.swift */,
-				BF31E9291F0B7FCF001236D8 /* PostTypePickerViewController.swift */,
 				BFBB16191F14C9A900405E92 /* SearchResultViewController.swift */,
+				BF31E9291F0B7FCF001236D8 /* PostTypePickerViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -480,6 +502,7 @@
 		BFE11D341F010A8D00EED963 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF43795E1F17557C0008EA66 /* Record/Search Cell */,
 				D97B35101F0A12FB00BCB027 /* Answer Cell */,
 				D97B350D1F0A129C00BCB027 /* Question Cell */,
 				D97B350C1F0A124200BCB027 /* Moment Cell */,
@@ -915,8 +938,10 @@
 				24EFC68D1F05F1560005A52D /* ImagePostCollectionViewCell.swift in Sources */,
 				D98EF6E01F0A1BA300A524AF /* Question.swift in Sources */,
 				BF4A242C1F0E19840004650E /* RichTextEditor.swift in Sources */,
+				BF4379681F1755F40008EA66 /* MomentRecordTableViewCell.swift in Sources */,
 				BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */,
 				D97B34FE1F05E9C300BCB027 /* Moment.swift in Sources */,
+				BF4379641F1755CD0008EA66 /* QuestionRecordTableViewCell.swift in Sources */,
 				BF4A24261F0C7C650004650E /* PostArticleViewController.swift in Sources */,
 				BF3181631F15F27100ACB9DD /* QuestionDetailAnswerCell.swift in Sources */,
 				BF2A1A261F13500D00220853 /* QuestionAnswerPageAnswerCell.swift in Sources */,
@@ -936,13 +961,16 @@
 				BF390A471F01702D00555B93 /* Networking.swift in Sources */,
 				24EFC6861F05DE110005A52D /* PostMomentViewController.swift in Sources */,
 				BF9E75DF1F03AB6C00723541 /* R.generated.swift in Sources */,
+				BF4379621F1755BB0008EA66 /* UserPageRecordTableViewCell.swift in Sources */,
 				BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */,
 				BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */,
+				BF43796A1F1756580008EA66 /* ArticleRecordTableViewCell.swift in Sources */,
 				BF7878741F01010F000FB7C6 /* MyViewController.swift in Sources */,
 				D9AF48491F13537C00381F67 /* SearchHistorySource.swift in Sources */,
 				BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */,
 				BF78786C1F01007D000FB7C6 /* HomeViewController.swift in Sources */,
 				BF31E9201F0A2CBD001236D8 /* UploadToken.swift in Sources */,
+				BF4379661F1755DA0008EA66 /* AnswerRecordTableViewCell.swift in Sources */,
 				BF3181651F1606A400ACB9DD /* QuestionDetailQuestionCell.swift in Sources */,
 				D9B96FDD1F0CBB9D00858360 /* ArticleDetailViewController.swift in Sources */,
 				BF31E9261F0B6229001236D8 /* MediaViewCell.swift in Sources */,
