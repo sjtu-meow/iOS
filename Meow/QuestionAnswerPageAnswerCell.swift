@@ -30,8 +30,8 @@ class QuestionAnswerPageAnswerCell: UITableViewCell {
         self.model = model
         titleLabel.text = model.questionTitle
         contentLabel.text = model.content
-        likeCountLabel.text = "\(model.likeCount)"
-        commentCountLabel.text = "\(model.commentCount)"
+        likeCountLabel.text = "\(model.likeCount ?? 0)"
+        commentCountLabel.text = "\(model.commentCount ?? 0)"
 
     }
     

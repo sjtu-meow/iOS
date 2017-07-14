@@ -32,6 +32,8 @@ class QuestionViewController: UITableViewController {
         super.viewDidLoad()
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         loadData()
+        tableView.estimatedRowHeight = 44
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -50,10 +52,7 @@ class QuestionViewController: UITableViewController {
         }
         return view
     }
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-        //return UITableViewAutomaticDimension
-    }
+    
     
 }
 
