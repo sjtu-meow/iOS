@@ -21,7 +21,7 @@
                         <rect key="frame" x="16" y="10" width="343" height="31.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ozf-7c-dhk" userLabel="行">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="31.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="215" height="31.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B8l-aJ-S6N" userLabel="图标">
                                         <rect key="frame" x="0.0" y="4.5" width="23" height="23"/>
@@ -32,7 +32,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2y2-Wa-0qK" userLabel="文字">
-                                        <rect key="frame" x="31" y="0.0" width="312" height="31.5"/>
+                                        <rect key="frame" x="31" y="0.0" width="184" height="31.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uz9-MF-o9Z">
                                                 <rect key="frame" x="0.0" y="0.0" width="184" height="17"/>
@@ -57,8 +57,11 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chp的回答呀Chp的回答呀Chp的回答呀Chp的回答呀Chp的回答呀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0I-AS-JaU">
-                                                <rect key="frame" x="0.0" y="17" width="312" height="14.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chp的回答呀Chp的回答呀Chp的回答呀Chp的回答呀Chp的回答呀" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0I-AS-JaU">
+                                                <rect key="frame" x="0.0" y="17" width="0.0" height="14.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="Nrt-u6-kJs"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -66,9 +69,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="2y2-Wa-0qK" secondAttribute="trailing" id="n3Q-LZ-50S"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                     </stackView>

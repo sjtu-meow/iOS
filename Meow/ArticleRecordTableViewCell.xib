@@ -18,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-7J-baq" userLabel="主体">
-                        <rect key="frame" x="16" y="10" width="343" height="31.5"/>
+                        <rect key="frame" x="16" y="10.5" width="343" height="31"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ubw-EQ-pa7" userLabel="行">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="31.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="131" height="31"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L1X-gK-AqN" userLabel="图标">
-                                        <rect key="frame" x="0.0" y="4.5" width="23" height="23"/>
+                                        <rect key="frame" x="0.0" y="4" width="23" height="23"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="3M1-l2-m5p"/>
@@ -32,26 +32,32 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="sdd-D2-zES" userLabel="文字">
-                                        <rect key="frame" x="31" y="0.0" width="312" height="31.5"/>
+                                        <rect key="frame" x="31" y="0.0" width="100" height="31"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOX-Ha-yjJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="8"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一个文章的标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nb-ET-a4L">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="8"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文章的预览呀文章的预览呀文章的预览呀文章的预览呀文章的预览呀文章的预览呀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtS-XX-J6u">
-                                                <rect key="frame" x="0.0" y="17" width="312" height="14.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文章的预览呀文章的预览呀文章的预览呀文章的预览呀文章的预览呀文章的预览呀" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtS-XX-J6u">
+                                                <rect key="frame" x="0.0" y="8" width="0.0" height="23"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="M0G-4N-GGK"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="RtS-XX-J6u" firstAttribute="top" secondItem="sdd-D2-zES" secondAttribute="top" constant="8" id="H9j-uo-Kig"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
