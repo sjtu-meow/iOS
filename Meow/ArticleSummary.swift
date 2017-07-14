@@ -17,9 +17,9 @@ struct ArticleSummary: ItemProtocol {
     var createTime: Date!
     
     /* article info */
+    var cover: URL?
     var title: String!
     var summary: String?
-    var cover: URL?
     
     /* like & comment */
     var likeCount: Int?
@@ -38,10 +38,10 @@ extension ArticleSummary: JSONConvertible {
 //        articleSummary.profile = item.profile
         articleSummary.createTime = item.createTime
         
+        articleSummary.cover <- json["cover"]
         articleSummary.title <- json["title"]
         articleSummary.summary <- json["summary"]
-        articleSummary.cover <- json["cover"]
-
+        
         articleSummary.likeCount <- json["likeCount"]
         articleSummary.commentCount <- json["commentCount"]
         

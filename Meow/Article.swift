@@ -8,44 +8,42 @@
 
 import SwiftyJSON
 
-struct Article: ItemProtocol {
-    var createTime: Date!
 
+struct Article: ItemProtocol {
     var id: Int!
     var type: ItemType!
     var profile: Profile!
+    var createTime: Date!
     
+    var cover: URL?
     var title: String!
     var summary: String?
     var content: String?
     
-    var cover: URL?
-    var comments: [Comment]?
-    // var readCount: Int?
-    var commentCount: Int?
     var likeCount: Int?
-    
+    var commentCount: Int?
+    var comments: [Comment]?
 }
 
 extension Article: JSONConvertible {
     static func fromJSON(_ json: JSON) -> Article? {
-        
-        guard let item = Item.fromJSON(json),
-            let title = json["title"].string
-            else { return nil }
+        let item = Item.fromJSON(json)!
         
         var article = self.init()
+        
         article.id = item.id
         article.type = item.type
         article.profile = item.profile
-        article.title = title
-        article.summary <- json["summary"]
+        article.createTime = item.createTime
+        
         article.cover <- json["cover"]
+        article.title <- json["title"]
+        article.summary <- json["summary"]
         article.content <- json["content"]
+
         article.likeCount <- json["likeCount"]
         article.commentCount <- json["commentCount"]
         article.comments <- json["comments"]
-        
         
         return article
     }

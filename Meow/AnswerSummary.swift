@@ -26,22 +26,24 @@ struct AnswerSummary: ItemProtocol {
 
 extension AnswerSummary: JSONConvertible {
     static func fromJSON(_ json: JSON) -> AnswerSummary? {
-        var answer = self.init()
-        let answerJson = json["answer"]
-        guard let item = Item.fromJSON(answerJson) else { return nil }
+        var answerJson = json["answer"]
+        let item = Item.fromJSON(answerJson)!
         
-        answer.id = item.id
-        answer.type = item.type
-        answer.profile = item.profile
+        var answerSummary = self.init()
         
-        answer.questionTitle <- json["questionTitle"]
-        answer.questionId <- json["questionId"]
+        answerSummary.id = item.id
+        answerSummary.type = item.type
+        answerSummary.profile = item.profile
+        answerSummary.createTime = item.createTime
         
-        answer.content <- answerJson["content"]
+        answerSummary.questionId <- json["questionId"]
+        answerSummary.questionTitle <- json["questionTitle"]
         
-        answer.likeCount <- answerJson["likeCount"]
-        answer.commentCount <- answerJson["commentCount"]
+        answerSummary.content <- answerJson["content"]
+        
+        answerSummary.likeCount <- answerJson["likeCount"]
+        answerSummary.commentCount <- answerJson["commentCount"]
        
-        return answer
+        return answerSummary
     }
 }
