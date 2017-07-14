@@ -24,6 +24,7 @@ class PostArticleViewController:UIViewController {
     
     
     @IBAction func cancel(_ sender: Any) {
+        // self.navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
     

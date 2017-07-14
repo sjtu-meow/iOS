@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rdg-dy-bs8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rdg-dy-bs8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,7 +25,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="首页" id="d1z-wg-bsH"/>
                     <navigationItem key="navigationItem" title="首页" id="Nqz-FK-Q2c">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="HN4-kU-rth">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HN4-kU-rth">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>

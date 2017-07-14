@@ -22,7 +22,6 @@
                         <segue destination="VnB-Lx-9bs" kind="relationship" relationship="viewControllers" id="MAI-1S-IzE"/>
                         <segue destination="gvw-Hl-tVF" kind="relationship" relationship="viewControllers" id="hjh-xB-BRt"/>
                         <segue destination="uD4-7S-PQR" kind="relationship" relationship="viewControllers" id="t2I-KV-xah"/>
-                        <segue destination="Ifh-OG-Rav" kind="relationship" relationship="viewControllers" id="T67-1O-b1y"/>
                         <segue destination="KyE-FT-7Gb" kind="relationship" relationship="viewControllers" id="F6d-AI-BrE"/>
                     </connections>
                 </tabBarController>
@@ -67,7 +66,7 @@
         <!--Item-->
         <scene sceneID="ceF-Sn-Oae">
             <objects>
-                <viewController id="Ifh-OG-Rav" customClass="PostTypeViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostTypeViewController" id="Ifh-OG-Rav" customClass="PostTypeViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SUt-d9-G4f"/>
                         <viewControllerLayoutGuide type="bottom" id="qmL-v0-tlk"/>
