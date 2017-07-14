@@ -10,12 +10,15 @@ import SwiftyJSON
 
 struct AnswerSummary: ItemProtocol {
     var id: Int!
-    var questionId: Int!
     var type: ItemType!
     var profile: Profile!
+    var createTime: Date!
     
+    var questionId: Int!
     var questionTitle: String?
+    
     var content: String!
+    
     var likeCount: Int!
     var commentCount: Int!
     

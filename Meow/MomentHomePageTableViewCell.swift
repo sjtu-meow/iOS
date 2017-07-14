@@ -55,8 +55,8 @@ class MomentHomePageTableViewCell: UITableViewCell {
         momentContentLabel.text = moment.content
         // collection?
         
-        likeLabel.text = String(describing: moment.like) 
-        commentLabel.text = String(describing: moment.comment)
+//        likeLabel.text = String(describing: moment.like) 
+//        commentLabel.text = String(describing: moment.comments)
         
         // comment
         // TODO

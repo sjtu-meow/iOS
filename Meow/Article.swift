@@ -9,6 +9,8 @@
 import SwiftyJSON
 
 struct Article: ItemProtocol {
+    var createTime: Date!
+
     var id: Int!
     var type: ItemType!
     var profile: Profile!

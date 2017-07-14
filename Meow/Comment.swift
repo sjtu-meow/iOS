@@ -8,7 +8,9 @@
 
 import SwiftyJSON
 
+
 struct Comment {
+    
     
 }
 

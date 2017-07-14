@@ -17,33 +17,25 @@ protocol ItemProtocol: JSONConvertible {
     var id: Int! {get set}
     var type: ItemType! {get set}
     var profile: Profile! {get set}
-    
+    var createTime: Date! {get set}
 }
-
-
 
 struct Item: ItemProtocol {
     var id: Int!
     var type: ItemType!
     var profile: Profile!
-    
+    var createTime: Date!
+
 }
 
-
-
 extension Item: JSONConvertible {
-    
-    
     static func fromJSON(_ json: JSON) -> Item? {
-        guard let id = json["id"].int,
-              let type = json["type"].int,
-              let profile = Profile.fromJSON(json["profile"])
-            else { return nil }
         
         var item = self.init()
-        item.id = id
-        item.type = ItemType.init(rawValue: type)
-        item.profile = profile
+        item.id <- json["id"]
+        item.type = ItemType.init(rawValue: json["type"].int!)
+        item.profile <- json["profile"]
+        item.createTime <- json["createTime"]
         return item
     }
 }

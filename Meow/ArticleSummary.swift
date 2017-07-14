@@ -9,18 +9,17 @@
 import DateToolsSwift
 import SwiftyJSON
 
-struct ArticleSummary {
-//    /* user profile info */
-//    var id: Int!
-//    var type: ItemType!
-//    var profile: Profile!
+
+struct ArticleSummary: ItemProtocol {
+    var id: Int!
+    var type: ItemType!
+    var profile: Profile!
+    var createTime: Date!
     
     /* article info */
-    var id: Int!
     var title: String!
+    var summary: String?
     var cover: URL?
-    var readCount: Int?
-    var createTime: Date?
     
     /* like & comment */
     var likeCount: Int?
@@ -30,22 +29,22 @@ struct ArticleSummary {
 
 extension ArticleSummary: JSONConvertible {
     static func fromJSON(_ json: JSON) -> ArticleSummary? {
-        guard let title = json["title"].string
-            else { return nil }
-
+        let item = Item.fromJSON(json)!
+        
         var articleSummary = self.init()
         
-        articleSummary.id <- json["id"]
-        articleSummary.title = title
-        articleSummary.cover <- json["cover"]
-        articleSummary.readCount <- json["readCount"]
-         // TODO: format of date ??
-        articleSummary.readCount <- json["createTime"]
+        articleSummary.id = item.id
+        articleSummary.type = item.type
+//        articleSummary.profile = item.profile
+        articleSummary.createTime = item.createTime
         
+        articleSummary.title <- json["title"]
+        articleSummary.summary <- json["summary"]
+        articleSummary.cover <- json["cover"]
+
         articleSummary.likeCount <- json["likeCount"]
         articleSummary.commentCount <- json["commentCount"]
         
-       
         return articleSummary
     }
 }

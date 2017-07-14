@@ -13,25 +13,32 @@ struct Moment: ItemProtocol {
     var id: Int!
     var type: ItemType!
     var profile: Profile!
+    var createTime: Date!
+    
     var content: String?
     var medias: [Media]?
-    var like: Int? // FIXME: not empty
-    var comment: Int?
+    var comments: [Comment]?
+    
+    var likeCount: Int? // FIXME: not empty
+    var commentCount: Int?
 }
 
 extension Moment: JSONConvertible {
     static func fromJSON(_ json: JSON) -> Moment? {
-        guard let item = Item.fromJSON(json)
-            else { return nil }
+        let item = Item.fromJSON(json)!
         
         var moment = self.init()
         moment.id = item.id
         moment.type = item.type
         moment.profile = item.profile
+        moment.createTime = item.createTime
+        
         moment.content <- json["content"]
         moment.medias <- json["medias"]
-        moment.like <- json["like"]
-        moment.comment <- json["comment"]
+        moment.comments <- json["comments"]
+        
+        moment.likeCount <- json["likeCount"]
+        moment.commentCount <- json["commentCount"]
         return moment
     }
 }

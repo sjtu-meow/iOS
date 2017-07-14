@@ -9,9 +9,12 @@
 import SwiftyJSON
 
 struct Answer: ItemProtocol {
+    var createTime: Date!
+
     var id: Int!
     var type: ItemType!
     var profile: Profile!
+    
     var likeCount: Int?
     var commentCount: Int?
     var content: String!
