@@ -20,6 +20,10 @@ class QuestionDetailViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
+    
+        tableView.estimatedRowHeight  = 44
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         loadData()
     }
     
@@ -61,11 +65,6 @@ class QuestionDetailViewController: UITableViewController {
             view.configure(model: question.answers![indexPath.row])
             return view
         }
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-        // return UITableViewAutomaticDimension
     }
     
     func addAnswer(_ sender: UIButton) {

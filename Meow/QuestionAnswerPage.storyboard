@@ -198,34 +198,26 @@
                                             <rect key="frame" x="16" y="10" width="343" height="190.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="问题的题目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZ8-Wi-68J" userLabel="题目">
-                                                    <rect key="frame" x="0.0" y="0.0" width="87" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GGH-a9-4PD" userLabel="描述">
-                                                    <rect key="frame" x="0.0" y="28.5" width="343" height="119.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pS-T1-ie5" userLabel="描述">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="100.5"/>
-                                                            <string key="text">问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀</string>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKo-y7-gV6">
-                                                            <rect key="frame" x="0.0" y="104.5" width="51" height="15"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="1" maxY="0.0"/>
-                                                            <state key="normal" title="展开描述"/>
-                                                        </button>
-                                                    </subviews>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pS-T1-ie5" userLabel="描述">
+                                                    <rect key="frame" x="0.0" y="28.5" width="343" height="123"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="5BG-Pe-tw0"/>
+                                                    </constraints>
+                                                    <string key="text">问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀问题的描述呀</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="l4a-5w-wDc" userLabel="回答/关注">
-                                                    <rect key="frame" x="0.0" y="156" width="343" height="34.5"/>
+                                                    <rect key="frame" x="0.0" y="159.5" width="343" height="31"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMx-k2-afn" userLabel="回答/关注统计">
-                                                            <rect key="frame" x="0.0" y="20" width="107.5" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="16.5" width="107.5" height="14.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ir7-nE-PQR">
                                                                     <rect key="frame" x="0.0" y="0.0" width="8" height="14.5"/>
@@ -254,7 +246,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aNp-lG-xJc" userLabel="回答/关注按钮">
-                                                            <rect key="frame" x="244" y="3.5" width="99" height="31"/>
+                                                            <rect key="frame" x="244" y="0.0" width="99" height="31"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpO-PQ-2BL">
                                                                     <rect key="frame" x="0.0" y="0.0" width="47" height="31"/>
@@ -278,6 +270,9 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="l4a-5w-wDc" secondAttribute="trailing" id="W2c-CB-x2l"/>
                                                 <constraint firstItem="l4a-5w-wDc" firstAttribute="leading" secondItem="leU-Ae-W0S" secondAttribute="leading" id="jMY-49-sZF"/>
+                                                <constraint firstAttribute="trailing" secondItem="LZ8-Wi-68J" secondAttribute="trailing" id="lMx-0f-btu"/>
+                                                <constraint firstItem="LZ8-Wi-68J" firstAttribute="leading" secondItem="leU-Ae-W0S" secondAttribute="leading" id="pHK-in-qqa"/>
+                                                <constraint firstItem="LZ8-Wi-68J" firstAttribute="top" secondItem="leU-Ae-W0S" secondAttribute="top" id="v99-uL-Sr6"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>
@@ -297,30 +292,30 @@
                                     <outlet property="titleLabel" destination="LZ8-Wi-68J" id="eKU-KR-t5b"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionDetailAnswerCell" rowHeight="122" id="Meq-8m-7b1" userLabel="AnswerCell" customClass="QuestionDetailAnswerCell" customModule="Meow" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="239" width="375" height="122"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionDetailAnswerCell" id="Meq-8m-7b1" userLabel="AnswerCell" customClass="QuestionDetailAnswerCell" customModule="Meow" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="239" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Meq-8m-7b1" id="RKG-fX-rFE">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="121.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7A9-GG-0NQ" userLabel="主体">
-                                            <rect key="frame" x="16" y="10" width="343" height="101.5"/>
+                                            <rect key="frame" x="16" y="10" width="343" height="381.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="V7e-UK-RSO" userLabel="用户">
-                                                    <rect key="frame" x="0.0" y="0.0" width="152.5" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="152.5" height="300.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="taF-lR-Zhk">
-                                                            <rect key="frame" x="0.0" y="0.5" width="20" height="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="300.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="2vJ-kK-f61"/>
                                                                 <constraint firstAttribute="width" constant="20" id="z93-S3-p1x"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFQ-u0-khN" userLabel="个人信息">
-                                                            <rect key="frame" x="28" y="2" width="124.5" height="17"/>
+                                                        <stackView opaque="NO" contentMode="TopLeft" translatesAutoresizingMaskIntoConstraints="NO" id="SFQ-u0-khN" userLabel="个人信息">
+                                                            <rect key="frame" x="28" y="141.5" width="124.5" height="17"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oe0-y4-p4i">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Chp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oe0-y4-p4i">
                                                                     <rect key="frame" x="0.0" y="0.0" width="26.5" height="17"/>
                                                                     <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -344,14 +339,14 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="回答的预览呀回答的预览呀回答的预览呀回答的预览呀回答的预览呀回答的预览呀回答的预览呀回答的预览呀回答的预览呀回答的预览呀" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gz9-lr-2iH" userLabel="回答">
-                                                    <rect key="frame" x="0.0" y="28.5" width="343" height="50.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="回答的预览呀回答的预览呀回答的预览呀回答的预览呀回答的预览呀回答的预览呀回答的预览呀回答的预览呀回答的预览呀回答的预览呀" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gz9-lr-2iH" userLabel="回答">
+                                                    <rect key="frame" x="0.0" y="308.5" width="343" height="50.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1km-e7-5NI" userLabel="赞/评论">
-                                                    <rect key="frame" x="0.0" y="87" width="153.5" height="14.5"/>
+                                                    <rect key="frame" x="0.0" y="367" width="153.5" height="14.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBp-8a-qAA">
                                                             <rect key="frame" x="0.0" y="0.0" width="8" height="14.5"/>
@@ -398,6 +393,15 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gz9-lr-2iH" firstAttribute="top" secondItem="V7e-UK-RSO" secondAttribute="bottom" constant="8" id="43z-C6-5j1"/>
+                                                <constraint firstItem="1km-e7-5NI" firstAttribute="top" secondItem="gz9-lr-2iH" secondAttribute="bottom" constant="8" id="Jbh-cY-ahK"/>
+                                                <constraint firstItem="V7e-UK-RSO" firstAttribute="leading" secondItem="7A9-GG-0NQ" secondAttribute="leading" id="Pfg-rj-hsl"/>
+                                                <constraint firstItem="gz9-lr-2iH" firstAttribute="leading" secondItem="7A9-GG-0NQ" secondAttribute="leading" id="cma-TN-brW"/>
+                                                <constraint firstItem="gz9-lr-2iH" firstAttribute="top" secondItem="V7e-UK-RSO" secondAttribute="bottom" constant="8" id="eeT-tx-70f"/>
+                                                <constraint firstItem="V7e-UK-RSO" firstAttribute="top" secondItem="7A9-GG-0NQ" secondAttribute="top" id="raQ-Iz-ECh"/>
+                                                <constraint firstAttribute="trailing" secondItem="gz9-lr-2iH" secondAttribute="trailing" id="vD5-aF-gS1"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
@@ -415,7 +419,6 @@
                                     <outlet property="likeCountLabel" destination="pBp-8a-qAA" id="mZI-0o-JqY"/>
                                     <outlet property="nicknameLabel" destination="oe0-y4-p4i" id="Ymn-OV-GHR"/>
                                     <outlet property="summaryLabel" destination="gz9-lr-2iH" id="ebf-YW-mKZ"/>
-                                    <segue destination="vXS-rs-caP" kind="showDetail" id="8sP-TX-e3S"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -542,24 +545,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tU-nm-bvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2487.1999999999998" y="501.49925037481262"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Ule-iX-EP6">
-            <objects>
-                <navigationController storyboardIdentifier="AnswerContentNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="vXS-rs-caP" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D56-6c-5yW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="w07-mQ-Aug" kind="relationship" relationship="rootViewController" id="yIH-A7-2RB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g0C-z1-e2l" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1548" y="501.49925037481262"/>
         </scene>
     </scenes>
     <resources>
