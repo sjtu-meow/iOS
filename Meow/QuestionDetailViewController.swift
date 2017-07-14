@@ -52,6 +52,8 @@ class QuestionDetailViewController: UITableViewController {
         guard let question = question else { return UITableViewCell() }
         if indexPath.section == 0 {
             let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionDetailQuestionCell)!
+            view.addAnswerButton.addTarget(self, action: #selector(addAnswer(_:)), for: .touchUpInside)
+            
             view.configure(model: question)
             return view
         } else {
@@ -64,6 +66,12 @@ class QuestionDetailViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
         // return UITableViewAutomaticDimension
+    }
+    
+    func addAnswer(_ sender: UIButton) {
+        let vc = R.storyboard.postPages.postArticleController()!
+        vc.configure(question: question!)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

@@ -12,7 +12,7 @@
         <!--发布点滴-->
         <scene sceneID="Bse-sq-173">
             <objects>
-                <viewController storyboardIdentifier="PostMoment" id="tFD-JL-dym" userLabel="发布点滴" customClass="PostMomentViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostMomentController" id="tFD-JL-dym" userLabel="发布点滴" customClass="PostMomentViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hUt-Jd-SC4"/>
                         <viewControllerLayoutGuide type="bottom" id="Pem-Pz-zQB"/>
@@ -114,10 +114,26 @@
             </objects>
             <point key="canvasLocation" x="-504.80000000000001" y="2847.5262368815593"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rP3-yh-KhC">
+            <objects>
+                <navigationController storyboardIdentifier="PostArticleNavigationController" id="WT9-jc-V1P" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iik-cS-mqi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lN2-DK-cHZ" kind="relationship" relationship="rootViewController" id="lhJ-Tt-rxM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IwY-vN-GJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="2848"/>
+        </scene>
         <!--发布文章-->
         <scene sceneID="hiz-Zb-2UN">
             <objects>
-                <viewController id="lN2-DK-cHZ" customClass="PostArticleViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostArticleController" hidesBottomBarWhenPushed="YES" id="lN2-DK-cHZ" customClass="PostArticleViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OYQ-0v-hJv"/>
                         <viewControllerLayoutGuide type="bottom" id="wqJ-eE-3qf"/>
@@ -127,7 +143,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EgK-2i-gI3">
-                                <rect key="frame" x="16" y="74" width="343" height="583"/>
+                                <rect key="frame" x="16" y="30" width="343" height="627"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="文章标题" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IHn-b7-sC8">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
@@ -139,7 +155,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ktz-2b-9uD">
-                                        <rect key="frame" x="0.0" y="48" width="343" height="535"/>
+                                        <rect key="frame" x="0.0" y="48" width="343" height="579"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
@@ -177,7 +193,7 @@
         <!--发布问题-->
         <scene sceneID="ZRm-tW-3x4">
             <objects>
-                <viewController id="Guf-sS-S1W" customClass="PostQuestionViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostQuestionController" id="Guf-sS-S1W" customClass="PostQuestionViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mxO-us-NCE"/>
                         <viewControllerLayoutGuide type="bottom" id="bzQ-yM-FYy"/>
@@ -369,24 +385,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FD0-gV-AN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1444" y="2847.5262368815593"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="CZY-kI-Fv2">
-            <objects>
-                <navigationController storyboardIdentifier="PostArticleNavagationController" automaticallyAdjustsScrollViewInsets="NO" id="V7r-Ij-ejI" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iCo-4o-9bp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="lN2-DK-cHZ" kind="relationship" relationship="rootViewController" id="0Ms-hh-naV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2vI-w4-Yci" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="312.80000000000001" y="2847.5262368815593"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cqH-uZ-kXX">

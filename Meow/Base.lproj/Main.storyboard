@@ -144,10 +144,12 @@
             </objects>
             <point key="canvasLocation" x="-2593" y="2092"/>
         </scene>
-        <!--PostArticleNavagationController-->
+        <!--PostArticleNavigationController-->
         <scene sceneID="7i8-G1-3kW">
             <objects>
-                <viewControllerPlaceholder storyboardName="PostPages" referencedIdentifier="PostArticleNavagationController" id="sgS-nM-GkL" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="PostArticleNavigationController" storyboardName="PostPages" referencedIdentifier="PostArticleNavigationController" id="sgS-nM-GkL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="c1Q-Vl-oAY"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Egr-p0-Lmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2120" y="2092"/>
@@ -155,7 +157,9 @@
         <!--PostQuestionNavigationController-->
         <scene sceneID="RR5-Z4-rtO">
             <objects>
-                <viewControllerPlaceholder storyboardName="PostPages" referencedIdentifier="PostQuestionNavigationController" id="KGr-nD-Dlf" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PostPages" referencedIdentifier="PostQuestionNavigationController" id="KGr-nD-Dlf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NJO-NE-LOv"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2so-3x-Jhm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1636" y="2092"/>

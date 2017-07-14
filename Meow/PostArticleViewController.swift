@@ -15,9 +15,11 @@ class PostArticleViewController:UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var editorContainer: UIView!
     var editor: RichTextEditor!
+    var question: Question?
     
     @IBAction func postArticle(_ sender: Any) {
         checkHTML()
+        
     }
     
     
@@ -27,6 +29,11 @@ class PostArticleViewController:UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let question = self.question {
+            self.navigationItem.title = "添加回答"
+            self.titleTextField.text = question.title
+        }
         
         // Add observer for keyboard apperance
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
@@ -44,6 +51,11 @@ class PostArticleViewController:UIViewController {
         let trailingConstraint = NSLayoutConstraint(item: editor, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.equal, toItem: editorContainer, attribute: NSLayoutAttribute.trailing, multiplier: 1, constant: 0)
         
         editorContainer.addConstraints([topConstraint, buttomConstraint, leadingConstraint, trailingConstraint])
+    }
+    
+    func configure(question: Question) {
+        self.question = question
+        
     }
     
     func keyboardWillShow(notification: NSNotification) {
