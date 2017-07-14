@@ -28,7 +28,7 @@ extension Observable {
             return model
         }
     }
-    
+
     func mapTo<T: JSONConvertible>(arrayOf type: T.Type) -> Observable<[T]> {
         return self.map {
             (element) -> [T] in
@@ -58,11 +58,12 @@ extension Observable {
                     case .moment:
                         return Moment.fromJSON(jsonElement)
                     case .article:
-                        return Article.fromJSON(jsonElement)
+                        return ArticleSummary.fromJSON(jsonElement)
                     case .question:
                         return Question.fromJSON(jsonElement)
                     case .answer:
                         return AnswerSummary.fromJSON(jsonElement)
+                
                 }
                 
             }
