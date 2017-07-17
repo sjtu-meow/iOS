@@ -53,7 +53,9 @@ class QuestionViewController: UITableViewController {
         return view
     }
     
-    
+    @IBAction func showPostTypePicker(_ sender: Any) {
+        PostTypeViewController.show(from: self)
+    }
 }
 
 extension QuestionViewController: AnswerCellDelegate {

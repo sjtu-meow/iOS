@@ -66,7 +66,7 @@
         <!--Item-->
         <scene sceneID="ceF-Sn-Oae">
             <objects>
-                <viewController storyboardIdentifier="PostTypeViewController" id="Ifh-OG-Rav" customClass="PostTypeViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostTypePickerViewController" id="Ifh-OG-Rav" customClass="PostTypeViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SUt-d9-G4f"/>
                         <viewControllerLayoutGuide type="bottom" id="qmL-v0-tlk"/>
