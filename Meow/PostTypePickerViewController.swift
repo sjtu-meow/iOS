@@ -10,7 +10,7 @@ import UIKit
 
 class PostTypeViewController: UIViewController {
     class func show(from viewController: UIViewController) {
-        let vc = R.storyboard.main.postTypePickerViewController()!
+        let vc = R.storyboard.main.postTypeViewController()!
         viewController.navigationController?.pushViewController(viewController, animated: true)
     }
 }

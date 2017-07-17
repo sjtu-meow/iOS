@@ -19,6 +19,7 @@ struct Question: ItemProtocol {
     var answers: [Answer]?
     
     var likeCount: Int?
+    var commentCount: Int?
 }
 
 extension Question: JSONConvertible {
@@ -36,6 +37,7 @@ extension Question: JSONConvertible {
         question.answers <- json["answers"]
         
         question.likeCount <- json["likeCount"]
+        question.commentCount <- json["commentCount"]
         
         return question
     }

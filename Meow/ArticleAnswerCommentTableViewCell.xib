@@ -26,6 +26,12 @@
                                     <constraint firstAttribute="width" constant="30" id="35Z-Qi-mR8"/>
                                     <constraint firstAttribute="height" constant="30" id="h7o-IJ-X0T"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7Uh-p1-hU4" userLabel="文字">
                                 <rect key="frame" x="38" y="0.0" width="305" height="102"/>
