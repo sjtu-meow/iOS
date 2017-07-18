@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240B31001F1DA66400B2498B /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B30FF1F1DA66400B2498B /* NotificationTableViewController.swift */; };
+		240B31021F1DAE8B00B2498B /* ViewHistorySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B31011F1DAE8B00B2498B /* ViewHistorySource.swift */; };
 		2411AD061F052CFB00910051 /* UserProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2411AD051F052CFB00910051 /* UserProfileTableViewCell.xib */; };
 		2411AD081F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2411AD071F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib */; };
 		2411AD111F053CA600910051 /* SelfPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2411AD0F1F053CA600910051 /* SelfPage.storyboard */; };
@@ -85,7 +87,6 @@
 		BF78786C1F01007D000FB7C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78786B1F01007D000FB7C6 /* HomeViewController.swift */; };
 		BF78786E1F0100D4000FB7C6 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78786D1F0100D4000FB7C6 /* ArticleViewController.swift */; };
 		BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */; };
-		BF7878741F01010F000FB7C6 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878731F01010F000FB7C6 /* MyViewController.swift */; };
 		BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878751F010178000FB7C6 /* LoginViewController.swift */; };
 		BF9272E51F0F8A6300E601F3 /* ItemDetailButtomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */; };
 		BF9E75DF1F03AB6C00723541 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E75DE1F03AB6C00723541 /* R.generated.swift */; };
@@ -135,6 +136,8 @@
 /* Begin PBXFileReference section */
 		1186F1CE3D8690900D00F2C5 /* Pods_MeowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6E60B8501B878CBD0FCF4C /* Pods_Meow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		240B30FF1F1DA66400B2498B /* NotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
+		240B31011F1DAE8B00B2498B /* ViewHistorySource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHistorySource.swift; sourceTree = "<group>"; };
 		2411AD051F052CFB00910051 /* UserProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProfileTableViewCell.xib; sourceTree = "<group>"; };
 		2411AD071F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProfileWithButtonsTableViewCell.xib; sourceTree = "<group>"; };
 		2411AD101F053CA600910051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SelfPage.storyboard; sourceTree = "<group>"; };
@@ -221,7 +224,6 @@
 		BF78786B1F01007D000FB7C6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BF78786D1F0100D4000FB7C6 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
-		BF7878731F01010F000FB7C6 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		BF7878751F010178000FB7C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailButtomBar.xib; sourceTree = "<group>"; };
 		BF9E75DE1F03AB6C00723541 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -284,14 +286,14 @@
 		24EFC6841F05D9940005A52D /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				BF7878451F00F2C9000FB7C6 /* LaunchScreen.storyboard */,
-				BF7878401F00F2C9000FB7C6 /* Main.storyboard */,
-				2411AD121F053F0900910051 /* HomePage.storyboard */,
 				2411AD141F05406000910051 /* ArticlePage.storyboard */,
+				2411AD121F053F0900910051 /* HomePage.storyboard */,
+				BF7878451F00F2C9000FB7C6 /* LaunchScreen.storyboard */,
+				2411AD1C1F05432900910051 /* LoginSignupPage.storyboard */,
+				BF7878401F00F2C9000FB7C6 /* Main.storyboard */,
+				2411AD1A1F05423C00910051 /* PostPages.storyboard */,
 				2411AD181F05417600910051 /* QuestionAnswerPage.storyboard */,
 				2411AD0F1F053CA600910051 /* SelfPage.storyboard */,
-				2411AD1A1F05423C00910051 /* PostPages.storyboard */,
-				2411AD1C1F05432900910051 /* LoginSignupPage.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -456,6 +458,7 @@
 				BF7878431F00F2C9000FB7C6 /* Assets.xcassets */,
 				D939723F1F0C83DD000A02CF /* editor.html */,
 				D9AF48481F13537C00381F67 /* SearchHistorySource.swift */,
+				240B31011F1DAE8B00B2498B /* ViewHistorySource.swift */,
 				D9AF484A1F135D3700381F67 /* UserDefaults+NSCoding.swift */,
 			);
 			path = Meow;
@@ -483,18 +486,18 @@
 			isa = PBXGroup;
 			children = (
 				24EFC6871F05DEA70005A52D /* Post Controller */,
-				BF78786D1F0100D4000FB7C6 /* ArticleViewController.swift */,
 				D9B96FDC1F0CBB9D00858360 /* ArticleDetailViewController.swift */,
+				BF78786D1F0100D4000FB7C6 /* ArticleViewController.swift */,
 				BF78786B1F01007D000FB7C6 /* HomeViewController.swift */,
-				BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */,
-				BF2A1A271F1367A000220853 /* QuestionDetailViewController.swift */,
-				BF7878731F01010F000FB7C6 /* MyViewController.swift */,
 				BF7878751F010178000FB7C6 /* LoginViewController.swift */,
-				BFF139601F034053006DF489 /* SignupViewController.swift */,
 				BF44D37B1F062AEF00A137E6 /* MainViewController.swift */,
-				BF31E9271F0B7347001236D8 /* SearchViewController.swift */,
-				BFBB16191F14C9A900405E92 /* SearchResultViewController.swift */,
+				240B30FF1F1DA66400B2498B /* NotificationTableViewController.swift */,
 				BF31E9291F0B7FCF001236D8 /* PostTypePickerViewController.swift */,
+				BF2A1A271F1367A000220853 /* QuestionDetailViewController.swift */,
+				BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */,
+				BFBB16191F14C9A900405E92 /* SearchResultViewController.swift */,
+				BF31E9271F0B7347001236D8 /* SearchViewController.swift */,
+				BFF139601F034053006DF489 /* SignupViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -965,17 +968,18 @@
 				BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */,
 				BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */,
 				BF43796A1F1756580008EA66 /* ArticleRecordTableViewCell.swift in Sources */,
-				BF7878741F01010F000FB7C6 /* MyViewController.swift in Sources */,
 				D9AF48491F13537C00381F67 /* SearchHistorySource.swift in Sources */,
 				BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */,
 				BF78786C1F01007D000FB7C6 /* HomeViewController.swift in Sources */,
 				BF31E9201F0A2CBD001236D8 /* UploadToken.swift in Sources */,
 				BF4379661F1755DA0008EA66 /* AnswerRecordTableViewCell.swift in Sources */,
+				240B31001F1DA66400B2498B /* NotificationTableViewController.swift in Sources */,
 				BF3181651F1606A400ACB9DD /* QuestionDetailQuestionCell.swift in Sources */,
 				D9B96FDD1F0CBB9D00858360 /* ArticleDetailViewController.swift in Sources */,
 				BF31E9261F0B6229001236D8 /* MediaViewCell.swift in Sources */,
 				BF31E9281F0B7347001236D8 /* SearchViewController.swift in Sources */,
 				D97B350F1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift in Sources */,
+				240B31021F1DAE8B00B2498B /* ViewHistorySource.swift in Sources */,
 				BF390A4F1F01FCE500555B93 /* Logger.swift in Sources */,
 				BF2A1A281F1367A000220853 /* QuestionDetailViewController.swift in Sources */,
 				BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */,
