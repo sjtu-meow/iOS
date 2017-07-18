@@ -44,6 +44,7 @@
 		24F7F4611F04A996001A0FFA /* UserRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4601F04A996001A0FFA /* UserRecordTableViewCell.xib */; };
 		24F7F4651F04FAF8001A0FFA /* PostTypePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4641F04FAF8001A0FFA /* PostTypePicker.xib */; };
 		56B7293EE5F94719A447731F /* Pods_MeowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1186F1CE3D8690900D00F2C5 /* Pods_MeowUITests.framework */; };
+		BF21FFF61F1DA46400D9E7F4 /* MyMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21FFF51F1DA46400D9E7F4 /* MyMomentViewController.swift */; };
 		BF2A1A261F13500D00220853 /* QuestionAnswerPageAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2A1A251F13500D00220853 /* QuestionAnswerPageAnswerCell.swift */; };
 		BF2A1A281F1367A000220853 /* QuestionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2A1A271F1367A000220853 /* QuestionDetailViewController.swift */; };
 		BF31815F1F15ACB600ACB9DD /* SearchResultTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31815E1F15ACB600ACB9DD /* SearchResultTableView.swift */; };
@@ -175,6 +176,7 @@
 		3612EC24166F9C122D5CDCC1 /* Pods_MeowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8858B54026EC68FEB34336F5 /* Pods-MeowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowUITests/Pods-MeowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A08DD2E53506F36693AD12C5 /* Pods-MeowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF21FFF51F1DA46400D9E7F4 /* MyMomentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMomentViewController.swift; sourceTree = "<group>"; };
 		BF2A1A251F13500D00220853 /* QuestionAnswerPageAnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerPageAnswerCell.swift; sourceTree = "<group>"; };
 		BF2A1A271F1367A000220853 /* QuestionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewController.swift; sourceTree = "<group>"; };
 		BF31815E1F15ACB600ACB9DD /* SearchResultTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableView.swift; sourceTree = "<group>"; };
@@ -498,6 +500,7 @@
 				BFBB16191F14C9A900405E92 /* SearchResultViewController.swift */,
 				BF31E9271F0B7347001236D8 /* SearchViewController.swift */,
 				BFF139601F034053006DF489 /* SignupViewController.swift */,
+				BF21FFF51F1DA46400D9E7F4 /* MyMomentViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -933,6 +936,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF21FFF61F1DA46400D9E7F4 /* MyMomentViewController.swift in Sources */,
 				D9B96FDF1F0CC42B00858360 /* ArticleWebView.swift in Sources */,
 				BF4A24301F0F62310004650E /* Comment.swift in Sources */,
 				BF390A491F01704B00555B93 /* NetworkLogger.swift in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 import AVOSCloud
 import Keys
-import Rswift
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         let keys = MeowKeys()
-        
+        login()
         // Initialize Leancloud
         AVOSCloud.setApplicationId(keys.leanCloudAppId, clientKey: keys.leanCloudClientKey)
         
@@ -62,6 +62,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    let disposeBag = DisposeBag()
+    func login() {
+        MeowAPIProvider.shared
+            .request(.login(phone: "13333333333", password: "meow233"))
+            .mapTo(type: Token.self)
+            .subscribe(onNext: {
+                token in
+                token.save()
+                MeowAPIProvider.refresh()
+            })
+            
+            .addDisposableTo(disposeBag)
+    }
 
 }
 

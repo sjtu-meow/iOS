@@ -26,6 +26,7 @@ class ArticleDetailViewController: UIViewController {
     
     var articleId: Int?
     var article: Article?
+    var bottomBar: UIView!
     
     override func viewDidLoad() {
         
@@ -39,6 +40,15 @@ class ArticleDetailViewController: UIViewController {
             self?.scrollView.contentSize.height = height
         }
         
+        
+        bottomBar = R.nib.itemDetailButtomBar.firstView(owner: self)
+        view.addSubview(bottomBar)
+        
+        bottomBar.translatesAutoresizingMaskIntoConstraints = false
+        bottomBar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        bottomBar.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        bottomBar.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive=true
+        bottomBar.topAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive=true
         loadData()
 
     }
