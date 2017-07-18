@@ -44,11 +44,12 @@
 		24F7F4611F04A996001A0FFA /* UserRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4601F04A996001A0FFA /* UserRecordTableViewCell.xib */; };
 		24F7F4651F04FAF8001A0FFA /* PostTypePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4641F04FAF8001A0FFA /* PostTypePicker.xib */; };
 		56B7293EE5F94719A447731F /* Pods_MeowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1186F1CE3D8690900D00F2C5 /* Pods_MeowUITests.framework */; };
+		BF2100021F1DF12000D9E7F4 /* QuestionSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2100011F1DF12000D9E7F4 /* QuestionSummary.swift */; };
 		BF21FFF61F1DA46400D9E7F4 /* MyMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21FFF51F1DA46400D9E7F4 /* MyMomentViewController.swift */; };
 		BF21FFF81F1DAF4800D9E7F4 /* MyArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21FFF71F1DAF4800D9E7F4 /* MyArticleViewController.swift */; };
 		BF21FFFC1F1DB41000D9E7F4 /* ArticleProfilePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21FFFB1F1DB41000D9E7F4 /* ArticleProfilePageTableViewCell.swift */; };
 		BF21FFFE1F1DDD5700D9E7F4 /* MyQuestionAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21FFFD1F1DDD5700D9E7F4 /* MyQuestionAnswerViewController.swift */; };
-		BF2A1A261F13500D00220853 /* QuestionAnswerPageAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2A1A251F13500D00220853 /* QuestionAnswerPageAnswerCell.swift */; };
+		BF2A1A261F13500D00220853 /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2A1A251F13500D00220853 /* AnswerTableViewCell.swift */; };
 		BF2A1A281F1367A000220853 /* QuestionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2A1A271F1367A000220853 /* QuestionDetailViewController.swift */; };
 		BF31815F1F15ACB600ACB9DD /* SearchResultTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31815E1F15ACB600ACB9DD /* SearchResultTableView.swift */; };
 		BF3181611F15B14500ACB9DD /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3181601F15B14500ACB9DD /* Answer.swift */; };
@@ -95,6 +96,7 @@
 		BF9272E51F0F8A6300E601F3 /* ItemDetailButtomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */; };
 		BF9E75DF1F03AB6C00723541 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E75DE1F03AB6C00723541 /* R.generated.swift */; };
 		BFBB161A1F14C9A900405E92 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBB16191F14C9A900405E92 /* SearchResultViewController.swift */; };
+		BFD0A2711F1DF6D700E2282D /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2701F1DF6D700E2282D /* QuestionTableViewCell.swift */; };
 		BFE11D381F010AF200EED963 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
 		BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395E1F02C089006DF489 /* SMSExtention.swift */; };
@@ -179,11 +181,12 @@
 		3612EC24166F9C122D5CDCC1 /* Pods_MeowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8858B54026EC68FEB34336F5 /* Pods-MeowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowUITests/Pods-MeowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A08DD2E53506F36693AD12C5 /* Pods-MeowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF2100011F1DF12000D9E7F4 /* QuestionSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionSummary.swift; sourceTree = "<group>"; };
 		BF21FFF51F1DA46400D9E7F4 /* MyMomentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMomentViewController.swift; sourceTree = "<group>"; };
 		BF21FFF71F1DAF4800D9E7F4 /* MyArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyArticleViewController.swift; sourceTree = "<group>"; };
 		BF21FFFB1F1DB41000D9E7F4 /* ArticleProfilePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleProfilePageTableViewCell.swift; sourceTree = "<group>"; };
 		BF21FFFD1F1DDD5700D9E7F4 /* MyQuestionAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuestionAnswerViewController.swift; sourceTree = "<group>"; };
-		BF2A1A251F13500D00220853 /* QuestionAnswerPageAnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerPageAnswerCell.swift; sourceTree = "<group>"; };
+		BF2A1A251F13500D00220853 /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
 		BF2A1A271F1367A000220853 /* QuestionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewController.swift; sourceTree = "<group>"; };
 		BF31815E1F15ACB600ACB9DD /* SearchResultTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableView.swift; sourceTree = "<group>"; };
 		BF3181601F15B14500ACB9DD /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
@@ -236,6 +239,7 @@
 		BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailButtomBar.xib; sourceTree = "<group>"; };
 		BF9E75DE1F03AB6C00723541 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BFBB16191F14C9A900405E92 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		BFD0A2701F1DF6D700E2282D /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
 		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
 		BFF1395E1F02C089006DF489 /* SMSExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSExtention.swift; sourceTree = "<group>"; };
@@ -406,6 +410,7 @@
 				D97B35011F061C7200BCB027 /* Banner.swift */,
 				D97B35031F06245600BCB027 /* AnswerSummary.swift */,
 				D98EF6DF1F0A1BA300A524AF /* Question.swift */,
+				BF2100011F1DF12000D9E7F4 /* QuestionSummary.swift */,
 				BF4A24291F0CDBA20004650E /* ArticleSummary.swift */,
 				BF3181601F15B14500ACB9DD /* Answer.swift */,
 			);
@@ -584,8 +589,8 @@
 			isa = PBXGroup;
 			children = (
 				D97B350E1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift */,
-				BF2A1A251F13500D00220853 /* QuestionAnswerPageAnswerCell.swift */,
 				BF3181641F1606A400ACB9DD /* QuestionDetailQuestionCell.swift */,
+				BFD0A2701F1DF6D700E2282D /* QuestionTableViewCell.swift */,
 			);
 			name = "Question Cell";
 			sourceTree = "<group>";
@@ -593,6 +598,7 @@
 		D97B35101F0A12FB00BCB027 /* Answer Cell */ = {
 			isa = PBXGroup;
 			children = (
+				BF2A1A251F13500D00220853 /* AnswerTableViewCell.swift */,
 				BF3181621F15F27100ACB9DD /* QuestionDetailAnswerCell.swift */,
 				D97B35111F0A133300BCB027 /* AnswerHomePageTableViewCell.swift */,
 			);
@@ -960,13 +966,14 @@
 				BF4379641F1755CD0008EA66 /* QuestionRecordTableViewCell.swift in Sources */,
 				BF4A24261F0C7C650004650E /* PostArticleViewController.swift in Sources */,
 				BF3181631F15F27100ACB9DD /* QuestionDetailAnswerCell.swift in Sources */,
-				BF2A1A261F13500D00220853 /* QuestionAnswerPageAnswerCell.swift in Sources */,
+				BF2A1A261F13500D00220853 /* AnswerTableViewCell.swift in Sources */,
 				D97B34FA1F05DCC300BCB027 /* Item.swift in Sources */,
 				BF4A24281F0C7CF90004650E /* PostAnswerViewController.swift in Sources */,
 				24EFC6931F0677BC0005A52D /* MomentHomePageTableViewCell.swift in Sources */,
 				BF4A24241F0C7C570004650E /* PostQuestionViewController.swift in Sources */,
 				D97B350A1F0A11C900BCB027 /* ArticleHomePageTableViewCell.swift in Sources */,
 				BF21FFFE1F1DDD5700D9E7F4 /* MyQuestionAnswerViewController.swift in Sources */,
+				BF2100021F1DF12000D9E7F4 /* QuestionSummary.swift in Sources */,
 				D97B35001F061A9100BCB027 /* Article.swift in Sources */,
 				BF390A4D1F01FBFD00555B93 /* GlobalFunctions.swift in Sources */,
 				BF44D3801F06312600A137E6 /* BannerViewCell.swift in Sources */,
@@ -999,6 +1006,7 @@
 				BF2A1A281F1367A000220853 /* QuestionDetailViewController.swift in Sources */,
 				BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */,
 				BF31E92C1F0BACC5001236D8 /* QiniuProvider.swift in Sources */,
+				BFD0A2711F1DF6D700E2282D /* QuestionTableViewCell.swift in Sources */,
 				BF44D3781F05D60900A137E6 /* Media.swift in Sources */,
 				BF21FFFC1F1DB41000D9E7F4 /* ArticleProfilePageTableViewCell.swift in Sources */,
 				BFF139611F034053006DF489 /* SignupViewController.swift in Sources */,

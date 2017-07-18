@@ -30,8 +30,9 @@ class QuestionViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        //tableView.tableFooterView = UIView(frame: CGRect.zero)
         loadData()
+        tableView.register(R.nib.answerTableViewCell)
         tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
     }
@@ -45,7 +46,7 @@ class QuestionViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionAnswerPageAnswerCell.identifier)! as! QuestionAnswerPageAnswerCell
+        let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.answerTableViewCell.identifier)! as! AnswerTableViewCell
         if let answer = self.answers?[indexPath.row]{
             view.configure(model: answer)
             view.delegate = self

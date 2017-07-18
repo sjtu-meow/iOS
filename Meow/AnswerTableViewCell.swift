@@ -12,7 +12,7 @@ protocol AnswerCellDelegate {
     func onTitleTapped(model: AnswerSummary)
 }
  
-class QuestionAnswerPageAnswerCell: UITableViewCell {
+class AnswerTableViewCell: UITableViewCell {
     var model: AnswerSummary?
     var delegate: AnswerCellDelegate?
     

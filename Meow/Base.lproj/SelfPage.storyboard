@@ -311,7 +311,7 @@
         <!--我的问答-->
         <scene sceneID="QjA-EM-82m">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="h05-ZF-xDa" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="h05-ZF-xDa" customClass="MyQuestionAnswerViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zg4-Gn-TSc"/>
                         <viewControllerLayoutGuide type="bottom" id="2o5-9O-3je"/>
@@ -320,18 +320,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mLF-5O-ohV">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mLF-5O-ohV">
                                 <rect key="frame" x="119" y="72" width="137" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Evw-nb-VGi"/>
+                                </constraints>
                                 <segments>
                                     <segment title="我的提问"/>
                                     <segment title="我的回答"/>
                                 </segments>
+                                <connections>
+                                    <action selector="switchContentType:" destination="h05-ZF-xDa" eventType="valueChanged" id="tau-Vj-U16"/>
+                                </connections>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O1C-X2-x9c">
+                                <rect key="frame" x="16" y="108" width="343" height="510"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="O1C-X2-x9c" secondAttribute="trailing" id="Bhy-P4-fLp"/>
+                            <constraint firstItem="mLF-5O-ohV" firstAttribute="top" secondItem="zg4-Gn-TSc" secondAttribute="bottom" constant="8" id="EjM-H1-6gU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mLF-5O-ohV" secondAttribute="trailing" constant="103" id="H6Y-Pt-4x6"/>
+                            <constraint firstItem="mLF-5O-ohV" firstAttribute="top" secondItem="zg4-Gn-TSc" secondAttribute="bottom" constant="8" id="UKn-wV-1GE"/>
+                            <constraint firstItem="O1C-X2-x9c" firstAttribute="top" secondItem="mLF-5O-ohV" secondAttribute="bottom" constant="8" id="jYl-Vi-fA5"/>
+                            <constraint firstItem="2o5-9O-3je" firstAttribute="top" secondItem="O1C-X2-x9c" secondAttribute="bottom" id="ls2-Rz-LnL"/>
+                            <constraint firstItem="mLF-5O-ohV" firstAttribute="leading" secondItem="szm-gB-ZdB" secondAttribute="leadingMargin" constant="103" id="oxR-Ug-8qo"/>
+                            <constraint firstItem="O1C-X2-x9c" firstAttribute="leading" secondItem="szm-gB-ZdB" secondAttribute="leadingMargin" id="qIv-T3-gIO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="我的问答" id="kKi-a7-en4"/>
+                    <connections>
+                        <outlet property="tableView" destination="O1C-X2-x9c" id="noN-Zf-6mZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6s6-hG-aPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
