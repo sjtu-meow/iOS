@@ -32,7 +32,6 @@ class AnswerTableViewCell: UITableViewCell {
         contentLabel.text = model.content
         likeCountLabel.text = "\(model.likeCount ?? 0)"
         commentCountLabel.text = "\(model.commentCount ?? 0)"
-
     }
     
     func onTitleTapped(_ sender: UITapGestureRecognizer) {

@@ -320,8 +320,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mLF-5O-ohV">
-                                <rect key="frame" x="119" y="72" width="137" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" semanticContentAttribute="playback" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mLF-5O-ohV">
+                                <rect key="frame" x="20" y="72" width="335" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="Evw-nb-VGi"/>
                                 </constraints>
@@ -342,11 +342,11 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="O1C-X2-x9c" secondAttribute="trailing" id="Bhy-P4-fLp"/>
                             <constraint firstItem="mLF-5O-ohV" firstAttribute="top" secondItem="zg4-Gn-TSc" secondAttribute="bottom" constant="8" id="EjM-H1-6gU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mLF-5O-ohV" secondAttribute="trailing" constant="103" id="H6Y-Pt-4x6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mLF-5O-ohV" secondAttribute="trailing" constant="4" id="H6Y-Pt-4x6"/>
                             <constraint firstItem="mLF-5O-ohV" firstAttribute="top" secondItem="zg4-Gn-TSc" secondAttribute="bottom" constant="8" id="UKn-wV-1GE"/>
                             <constraint firstItem="O1C-X2-x9c" firstAttribute="top" secondItem="mLF-5O-ohV" secondAttribute="bottom" constant="8" id="jYl-Vi-fA5"/>
                             <constraint firstItem="2o5-9O-3je" firstAttribute="top" secondItem="O1C-X2-x9c" secondAttribute="bottom" id="ls2-Rz-LnL"/>
-                            <constraint firstItem="mLF-5O-ohV" firstAttribute="leading" secondItem="szm-gB-ZdB" secondAttribute="leadingMargin" constant="103" id="oxR-Ug-8qo"/>
+                            <constraint firstItem="mLF-5O-ohV" firstAttribute="leading" secondItem="szm-gB-ZdB" secondAttribute="leadingMargin" constant="4" id="oxR-Ug-8qo"/>
                             <constraint firstItem="O1C-X2-x9c" firstAttribute="leading" secondItem="szm-gB-ZdB" secondAttribute="leadingMargin" id="qIv-T3-gIO"/>
                         </constraints>
                     </view>

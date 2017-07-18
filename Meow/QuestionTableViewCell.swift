@@ -14,4 +14,9 @@ class QuestionTableViewCell: UITableViewCell {
     @IBOutlet weak var answerCountLabel: UILabel!
     @IBOutlet weak var followingCountLabel: UILabel!
     
+    func configure(model: QuestionSummary) {
+        titleLabel.text = model.title
+        answerCountLabel.text = "\(model.answerCount)"
+        
+    }
 }

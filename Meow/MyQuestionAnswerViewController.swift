@@ -24,10 +24,12 @@ class MyQuestionAnswerViewController: UIViewController {
     @IBAction func switchContentType(_ sender: UISegmentedControl) {
         let index = sender.selectedSegmentIndex
         self.contentType = ContentType(rawValue:index)!
+        
         tableView.reloadData()
     }
     
     override func viewDidLoad() {
+        tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
         tableView.register(R.nib.answerTableViewCell)
@@ -78,11 +80,14 @@ extension MyQuestionAnswerViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if self.contentType == .questions {
-            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.answerTableViewCell.identifier)! as! AnswerTableViewCell
-            
+            let question = questions[indexPath.row]
+            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionTableViewCell)! 
+            view.configure(model: question)
             return view
         } else {
-            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionTableViewCell)! as! QuestionTableViewCell
+            let answer = answers[indexPath.row]
+            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.answerTableViewCell)!
+            view.configure(model: answer)
             return view
         }
     }
