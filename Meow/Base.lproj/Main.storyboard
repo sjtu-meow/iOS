@@ -19,8 +19,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="VnB-Lx-9bs" kind="relationship" relationship="viewControllers" id="MAI-1S-IzE"/>
                         <segue destination="gvw-Hl-tVF" kind="relationship" relationship="viewControllers" id="hjh-xB-BRt"/>
+                        <segue destination="VnB-Lx-9bs" kind="relationship" relationship="viewControllers" id="MAI-1S-IzE"/>
                         <segue destination="uD4-7S-PQR" kind="relationship" relationship="viewControllers" id="t2I-KV-xah"/>
                         <segue destination="KyE-FT-7Gb" kind="relationship" relationship="viewControllers" id="F6d-AI-BrE"/>
                     </connections>
@@ -33,7 +33,7 @@
         <scene sceneID="Jsg-ym-w4n">
             <objects>
                 <navigationController title="问答" id="uD4-7S-PQR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="GWH-m2-XgJ"/>
+                    <tabBarItem key="tabBarItem" title="问答" image="QuestionIcon" selectedImage="QuestionIconSelected" id="GWH-m2-XgJ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Suw-2V-JXI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -50,7 +50,7 @@
         <scene sceneID="ODJ-h5-2qG">
             <objects>
                 <navigationController title="我" id="KyE-FT-7Gb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="lfh-hB-swk"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="SelfIcon" selectedImage="SelfIconSelected" id="lfh-hB-swk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A09-Y1-21J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -253,7 +253,7 @@
         <scene sceneID="EXG-Z8-iqB">
             <objects>
                 <navigationController title="文章" id="VnB-Lx-9bs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="UUx-y7-fx0"/>
+                    <tabBarItem key="tabBarItem" title="文章" image="ArticleIcon" selectedImage="ArticleIconSelected" id="UUx-y7-fx0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SSH-fg-p1K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -270,7 +270,7 @@
         <scene sceneID="fXc-1Q-Gqg">
             <objects>
                 <navigationController title="首页" id="gvw-Hl-tVF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="wNX-fw-NL1"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="HomeIcon" selectedImage="HomeIconSelected" id="wNX-fw-NL1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mMf-zb-BP3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -324,4 +324,14 @@
             <point key="canvasLocation" x="-484" y="74"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ArticleIcon" width="25" height="25"/>
+        <image name="ArticleIconSelected" width="25" height="25"/>
+        <image name="HomeIcon" width="25" height="25"/>
+        <image name="HomeIconSelected" width="25" height="25"/>
+        <image name="QuestionIcon" width="25" height="25"/>
+        <image name="QuestionIconSelected" width="25" height="25"/>
+        <image name="SelfIcon" width="25" height="25"/>
+        <image name="SelfIconSelected" width="25" height="25"/>
+    </resources>
 </document>
