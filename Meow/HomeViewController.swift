@@ -142,6 +142,10 @@ class HomeViewController: UITableViewController {
             })
             .addDisposableTo(disposeBag)
     }
+    
+    @IBAction func showPostTypePicker(_ sender: Any) {
+        PostTypeViewController.show(from: self)
+    }
 }
 
 

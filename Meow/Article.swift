@@ -20,9 +20,9 @@ struct Article: ItemProtocol {
     var summary: String?
     var content: String?
     
-    var likeCount: Int?
-    var commentCount: Int?
-    var comments: [Comment]?
+    var likeCount: Int!
+    var commentCount: Int!
+    var comments: [Comment]!
 }
 
 extension Article: JSONConvertible {

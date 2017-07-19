@@ -14,6 +14,7 @@ class ArticleViewController: UITableViewController {
     
     @IBOutlet var articleTableView: UITableView!
     
+
     var articles: [ArticleSummary]?
     
     let disposeBag = DisposeBag()
@@ -33,6 +34,8 @@ class ArticleViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //addPostButton.
         
 //        articleTableView.separatorStyle = .singleLine
 //        articleTableView.separatorColor = UIColor(patternImage: UIImage(named: "AddImagePlaceholder")!)
@@ -69,7 +72,10 @@ class ArticleViewController: UITableViewController {
             
         }
  
-        
+    }
+  
+    @IBAction func showPostTypePicker(_ sender: Any) {
+        PostTypeViewController.show(from: self)
     }
 }
 

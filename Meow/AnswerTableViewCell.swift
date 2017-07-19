@@ -12,7 +12,7 @@ protocol AnswerCellDelegate {
     func onTitleTapped(model: AnswerSummary)
 }
  
-class QuestionAnswerPageAnswerCell: UITableViewCell {
+class AnswerTableViewCell: UITableViewCell {
     var model: AnswerSummary?
     var delegate: AnswerCellDelegate?
     
@@ -32,7 +32,6 @@ class QuestionAnswerPageAnswerCell: UITableViewCell {
         contentLabel.text = model.content
         likeCountLabel.text = "\(model.likeCount ?? 0)"
         commentCountLabel.text = "\(model.commentCount ?? 0)"
-
     }
     
     func onTitleTapped(_ sender: UITapGestureRecognizer) {

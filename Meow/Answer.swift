@@ -17,9 +17,9 @@ struct Answer: ItemProtocol {
     var questionId: Int!
     var content: String!
     
-    var likeCount: Int?
-    var commentCount: Int?
-    var comments: [Comment]?
+    var likeCount: Int!
+    var commentCount: Int!
+    var comments: [Comment]!
 }
 
 extension Answer: JSONConvertible {

@@ -24,6 +24,11 @@ enum MeowAPI  {
     case postArticle(title: String, content: String)
     case postQuestion(title: String, content: String)
     case search(keyword: String)
+    
+    case myMoments
+    case myArticles
+    case myQuestions
+    case myAnswers
 }
 
 extension MeowAPI: TargetType {
@@ -63,6 +68,15 @@ extension MeowAPI: TargetType {
             return "/upload/token"
         case .search:
             return "/search"
+        
+        case .myAnswers:
+            return "/user/answers"
+        case .myQuestions:
+            return "/user/questions"
+        case .myArticles:
+            return "/user/articles"
+        case .myMoments:
+            return "/user/moments"
         }
     }
     
