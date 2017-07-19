@@ -153,6 +153,34 @@
             </objects>
             <point key="canvasLocation" x="-2120" y="2092"/>
         </scene>
+        <!--评论-->
+        <scene sceneID="bio-zc-HOO">
+            <objects>
+                <tableViewController storyboardIdentifier="CommentViewController" id="Y1U-Bh-cZ4" userLabel="评论" customClass="CommentViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="g3I-fs-5Nr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zFc-ov-4vF">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zFc-ov-4vF" id="4eV-gh-6lG">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Y1U-Bh-cZ4" id="g2F-UG-wMs"/>
+                            <outlet property="delegate" destination="Y1U-Bh-cZ4" id="oES-Ml-zWB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5E-bH-d8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2183" y="2635"/>
+        </scene>
         <!--PostQuestionNavigationController-->
         <scene sceneID="RR5-Z4-rtO">
             <objects>

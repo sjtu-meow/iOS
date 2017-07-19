@@ -97,6 +97,7 @@
 		BF9E75DF1F03AB6C00723541 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E75DE1F03AB6C00723541 /* R.generated.swift */; };
 		BFBB161A1F14C9A900405E92 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBB16191F14C9A900405E92 /* SearchResultViewController.swift */; };
 		BFD0A2711F1DF6D700E2282D /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2701F1DF6D700E2282D /* QuestionTableViewCell.swift */; };
+		BFD0A2731F1E0A9F00E2282D /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2721F1E0A9F00E2282D /* CommentViewController.swift */; };
 		BFE11D381F010AF200EED963 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
 		BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395E1F02C089006DF489 /* SMSExtention.swift */; };
@@ -240,6 +241,7 @@
 		BF9E75DE1F03AB6C00723541 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BFBB16191F14C9A900405E92 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		BFD0A2701F1DF6D700E2282D /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		BFD0A2721F1E0A9F00E2282D /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
 		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
 		BFF1395E1F02C089006DF489 /* SMSExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSExtention.swift; sourceTree = "<group>"; };
@@ -514,6 +516,7 @@
 				BF21FFF51F1DA46400D9E7F4 /* MyMomentViewController.swift */,
 				BF21FFF71F1DAF4800D9E7F4 /* MyArticleViewController.swift */,
 				BF21FFFD1F1DDD5700D9E7F4 /* MyQuestionAnswerViewController.swift */,
+				BFD0A2721F1E0A9F00E2282D /* CommentViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -1008,6 +1011,7 @@
 				BF31E92C1F0BACC5001236D8 /* QiniuProvider.swift in Sources */,
 				BFD0A2711F1DF6D700E2282D /* QuestionTableViewCell.swift in Sources */,
 				BF44D3781F05D60900A137E6 /* Media.swift in Sources */,
+				BFD0A2731F1E0A9F00E2282D /* CommentViewController.swift in Sources */,
 				BF21FFFC1F1DB41000D9E7F4 /* ArticleProfilePageTableViewCell.swift in Sources */,
 				BFF139611F034053006DF489 /* SignupViewController.swift in Sources */,
 				BF4A242A1F0CDBA20004650E /* ArticleSummary.swift in Sources */,

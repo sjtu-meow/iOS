@@ -26,7 +26,7 @@ class ArticleDetailViewController: UIViewController {
     
     var articleId: Int?
     var article: Article?
-    var bottomBar: UIView!
+    var bottomBar: UITabBar!
     
     override func viewDidLoad() {
         
@@ -41,7 +41,7 @@ class ArticleDetailViewController: UIViewController {
         }
         
         
-        bottomBar = R.nib.itemDetailButtomBar.firstView(owner: self)
+        bottomBar = R.nib.itemDetailButtomBar.firstView(owner: self) as! UITabBar
         view.addSubview(bottomBar)
         
         bottomBar.translatesAutoresizingMaskIntoConstraints = false
@@ -49,6 +49,8 @@ class ArticleDetailViewController: UIViewController {
         bottomBar.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         bottomBar.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive=true
         bottomBar.topAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive=true
+        
+        bottomBar.delegate = self
         loadData()
 
     }
@@ -94,6 +96,23 @@ class ArticleDetailViewController: UIViewController {
         //webview.load(URLRequest(url:(URL(string:"https://tongqu.me"))!))
     }
     
-   
+    func showCommentView() {
+        let vc =  R.storyboard.main.commentViewController()! 
+        guard let article = self.article else { return }
+        vc.configure(model: article)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension ArticleDetailViewController: UITabBarDelegate {
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        switch tabBar.items!.index(of: item)! {
+        case 1:
+            self.showCommentView()
+        default:
+            return
+        }
+        
+    }
 }
 
