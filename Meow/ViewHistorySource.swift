@@ -41,12 +41,36 @@ struct ViewHistorySource {
     }
     
 }
-
-struct ViewHistoryItem: Equatable {
-    var id: Int!
-    var type: ItemType!
+@objc
+class ViewHistoryItem: NSObject, NSCoding {
+    var id: Int
+    var type: ItemType
+    
     
     public static func ==(lhs: ViewHistoryItem, rhs: ViewHistoryItem) -> Bool {
+        logger.log(lhs.debugDescription)
+        logger.log(rhs.debugDescription)
         return lhs.id == rhs.id && lhs.type == rhs.type
+    }
+    
+    override var hashValue: Int {
+        return type.hashValue + id
+    }
+    func encode(with aCoder: NSCoder) {
+      //  aCoder.encode(id, forKey: "id")
+       // aCoder.encode(type.rawValue, forKey: "type")
+    }
+    
+    init(id: Int, type: ItemType) {
+        self.id = id
+        self.type = type
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.id=1
+        //self.id = aDecoder.decodeInteger(forKey: "id")
+        //let raw = aDecoder.decodeInteger(forKey: "type")
+        //guard let type = ItemType(rawValue: raw) else { return nil }
+        self.type = .article
     }
 }

@@ -44,7 +44,6 @@
 		24F7F45F1F04A87E001A0FFA /* ArticleRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F45E1F04A87E001A0FFA /* ArticleRecordTableViewCell.xib */; };
 		24F7F4611F04A996001A0FFA /* UserRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4601F04A996001A0FFA /* UserRecordTableViewCell.xib */; };
 		24F7F4651F04FAF8001A0FFA /* PostTypePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4641F04FAF8001A0FFA /* PostTypePicker.xib */; };
-		56B7293EE5F94719A447731F /* Pods_MeowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1186F1CE3D8690900D00F2C5 /* Pods_MeowUITests.framework */; };
 		BF2100021F1DF12000D9E7F4 /* QuestionSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2100011F1DF12000D9E7F4 /* QuestionSummary.swift */; };
 		BF21FFF61F1DA46400D9E7F4 /* MyMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21FFF51F1DA46400D9E7F4 /* MyMomentViewController.swift */; };
 		BF21FFF81F1DAF4800D9E7F4 /* MyArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21FFF71F1DAF4800D9E7F4 /* MyArticleViewController.swift */; };
@@ -126,13 +125,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		BF78784E1F00F2C9000FB7C6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BF7878311F00F2C9000FB7C6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF7878381F00F2C9000FB7C6;
-			remoteInfo = Meow;
-		};
-		BF7878591F00F2C9000FB7C6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF7878311F00F2C9000FB7C6 /* Project object */;
 			proxyType = 1;
@@ -233,8 +225,6 @@
 		BF7878481F00F2C9000FB7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF78784D1F00F2C9000FB7C6 /* MeowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7878531F00F2C9000FB7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF7878581F00F2C9000FB7C6 /* MeowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF78785E1F00F2C9000FB7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF78786B1F01007D000FB7C6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BF78786D1F0100D4000FB7C6 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -285,14 +275,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C22E101695374861866E64E5 /* Pods_MeowTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF7878551F00F2C9000FB7C6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				56B7293EE5F94719A447731F /* Pods_MeowUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +420,6 @@
 			children = (
 				BF78783B1F00F2C9000FB7C6 /* Meow */,
 				BF7878501F00F2C9000FB7C6 /* MeowTests */,
-				BF78785B1F00F2C9000FB7C6 /* MeowUITests */,
 				BF78783A1F00F2C9000FB7C6 /* Products */,
 				E5592E69551A053E14EE330B /* Pods */,
 				CF107B246708526B0BB79552 /* Frameworks */,
@@ -450,7 +431,6 @@
 			children = (
 				BF7878391F00F2C9000FB7C6 /* Meow.app */,
 				BF78784D1F00F2C9000FB7C6 /* MeowTests.xctest */,
-				BF7878581F00F2C9000FB7C6 /* MeowUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -490,14 +470,6 @@
 				24A12A971F1E0C64000E4A72 /* ViewHistorySourceTests.swift */,
 			);
 			path = MeowTests;
-			sourceTree = "<group>";
-		};
-		BF78785B1F00F2C9000FB7C6 /* MeowUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BF78785E1F00F2C9000FB7C6 /* Info.plist */,
-			);
-			path = MeowUITests;
 			sourceTree = "<group>";
 		};
 		BF78786A1F010015000FB7C6 /* View Controller */ = {
@@ -669,27 +641,6 @@
 			productReference = BF78784D1F00F2C9000FB7C6 /* MeowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BF7878571F00F2C9000FB7C6 /* MeowUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BF7878671F00F2C9000FB7C6 /* Build configuration list for PBXNativeTarget "MeowUITests" */;
-			buildPhases = (
-				D91974DE7948124C4AD07159 /* [CP] Check Pods Manifest.lock */,
-				BF7878541F00F2C9000FB7C6 /* Sources */,
-				BF7878551F00F2C9000FB7C6 /* Frameworks */,
-				BF7878561F00F2C9000FB7C6 /* Resources */,
-				B3B4C125C2819C6484D1F4FD /* [CP] Embed Pods Frameworks */,
-				ED7FB77C24154327BC0B1ADF /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BF78785A1F00F2C9000FB7C6 /* PBXTargetDependency */,
-			);
-			name = MeowUITests;
-			productName = MeowUITests;
-			productReference = BF7878581F00F2C9000FB7C6 /* MeowUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -705,11 +656,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					BF78784C1F00F2C9000FB7C6 = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = BF7878381F00F2C9000FB7C6;
-					};
-					BF7878571F00F2C9000FB7C6 = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 						TestTargetID = BF7878381F00F2C9000FB7C6;
@@ -731,7 +677,6 @@
 			targets = (
 				BF7878381F00F2C9000FB7C6 /* Meow */,
 				BF78784C1F00F2C9000FB7C6 /* MeowTests */,
-				BF7878571F00F2C9000FB7C6 /* MeowUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -785,13 +730,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BF78784B1F00F2C9000FB7C6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF7878561F00F2C9000FB7C6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -876,21 +814,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Meow/Pods-Meow-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B3B4C125C2819C6484D1F4FD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeowUITests/Pods-MeowUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B9786AFDC0F8A153830B68D4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -919,36 +842,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
-		};
-		D91974DE7948124C4AD07159 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		ED7FB77C24154327BC0B1ADF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeowUITests/Pods-MeowUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1039,13 +932,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF7878541F00F2C9000FB7C6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1053,11 +939,6 @@
 			isa = PBXTargetDependency;
 			target = BF7878381F00F2C9000FB7C6 /* Meow */;
 			targetProxy = BF78784E1F00F2C9000FB7C6 /* PBXContainerItemProxy */;
-		};
-		BF78785A1F00F2C9000FB7C6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BF7878381F00F2C9000FB7C6 /* Meow */;
-			targetProxy = BF7878591F00F2C9000FB7C6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1242,34 +1123,6 @@
 			};
 			name = Release;
 		};
-		BF7878681F00F2C9000FB7C6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3373C17F9AC2E37EA35D5CF /* Pods-MeowUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = MeowUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.sjtumeow.MeowUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Meow;
-			};
-			name = Debug;
-		};
-		BF7878691F00F2C9000FB7C6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8858B54026EC68FEB34336F5 /* Pods-MeowUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = MeowUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.sjtumeow.MeowUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Meow;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1296,15 +1149,6 @@
 			buildConfigurations = (
 				BF7878651F00F2C9000FB7C6 /* Debug */,
 				BF7878661F00F2C9000FB7C6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BF7878671F00F2C9000FB7C6 /* Build configuration list for PBXNativeTarget "MeowUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF7878681F00F2C9000FB7C6 /* Debug */,
-				BF7878691F00F2C9000FB7C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

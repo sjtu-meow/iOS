@@ -23,15 +23,11 @@ target 'Meow' do
   pod 'PKHUD'
   pod 'AlamofireImage'
   pod 'TagListView'
-  
+
   target 'MeowTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'MeowUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
 end
