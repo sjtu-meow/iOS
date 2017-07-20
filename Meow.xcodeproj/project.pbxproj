@@ -103,6 +103,8 @@
 		BFD0A27F1F204B7000E2282D /* AvatarCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A27E1F204B7000E2282D /* AvatarCellDelegate.swift */; };
 		BFD0A2811F2050C900E2282D /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2801F2050C900E2282D /* UserProfileCell.swift */; };
 		BFD0A2831F2053AA00E2282D /* MyFollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2821F2053AA00E2282D /* MyFollowingViewController.swift */; };
+		BFD0A2861F2089A000E2282D /* MyFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2851F2089A000E2282D /* MyFavoriteViewController.swift */; };
+		BFD0A2881F208D0F00E2282D /* ArticleUserPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2871F208D0F00E2282D /* ArticleUserPageTableViewCell.swift */; };
 		BFE11D381F010AF200EED963 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
 		BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395E1F02C089006DF489 /* SMSExtention.swift */; };
@@ -244,6 +246,8 @@
 		BFD0A27E1F204B7000E2282D /* AvatarCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarCellDelegate.swift; sourceTree = "<group>"; };
 		BFD0A2801F2050C900E2282D /* UserProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
 		BFD0A2821F2053AA00E2282D /* MyFollowingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFollowingViewController.swift; sourceTree = "<group>"; };
+		BFD0A2851F2089A000E2282D /* MyFavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFavoriteViewController.swift; sourceTree = "<group>"; };
+		BFD0A2871F208D0F00E2282D /* ArticleUserPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleUserPageTableViewCell.swift; sourceTree = "<group>"; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
 		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
 		BFF1395E1F02C089006DF489 /* SMSExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSExtention.swift; sourceTree = "<group>"; };
@@ -513,6 +517,7 @@
 				BF21FFF51F1DA46400D9E7F4 /* MyMomentViewController.swift */,
 				BF21FFF71F1DAF4800D9E7F4 /* MyArticleViewController.swift */,
 				BF21FFFD1F1DDD5700D9E7F4 /* MyQuestionAnswerViewController.swift */,
+				BFD0A2851F2089A000E2282D /* MyFavoriteViewController.swift */,
 			);
 			name = "My Controller";
 			sourceTree = "<group>";
@@ -533,6 +538,7 @@
 				BF4A242B1F0E19840004650E /* RichTextEditor.swift */,
 				BF31815E1F15ACB600ACB9DD /* SearchResultTableView.swift */,
 				BFD0A2801F2050C900E2282D /* UserProfileCell.swift */,
+				BFD0A2871F208D0F00E2282D /* ArticleUserPageTableViewCell.swift */,
 			);
 			name = "View Model";
 			sourceTree = "<group>";
@@ -546,8 +552,6 @@
 				24F7F44A1F04997F001A0FFA /* Nofication Cell */,
 				24F7F4501F049DC7001A0FFA /* Question Cell */,
 				24F7F4551F04A496001A0FFA /* Record/Search Cell */,
-				2411AD071F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib */,
-				24F7F4641F04FAF8001A0FFA /* PostTypePicker.xib */,
 				24F7F4421F0492B3001A0FFA /* ArticleAnswerCommentTableViewCell.xib */,
 				246E77B51F1F7905001A9E8E /* CommentTableViewCell.xib */,
 				BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */,
@@ -891,6 +895,7 @@
 				BF4A24261F0C7C650004650E /* PostArticleViewController.swift in Sources */,
 				BFD0A2831F2053AA00E2282D /* MyFollowingViewController.swift in Sources */,
 				BF3181631F15F27100ACB9DD /* QuestionDetailAnswerCell.swift in Sources */,
+				BFD0A2881F208D0F00E2282D /* ArticleUserPageTableViewCell.swift in Sources */,
 				BF2A1A261F13500D00220853 /* AnswerTableViewCell.swift in Sources */,
 				BFD0A2811F2050C900E2282D /* UserProfileCell.swift in Sources */,
 				D97B34FA1F05DCC300BCB027 /* Item.swift in Sources */,
@@ -900,6 +905,7 @@
 				D97B350A1F0A11C900BCB027 /* ArticleHomePageTableViewCell.swift in Sources */,
 				BF21FFFE1F1DDD5700D9E7F4 /* MyQuestionAnswerViewController.swift in Sources */,
 				BF2100021F1DF12000D9E7F4 /* QuestionSummary.swift in Sources */,
+				BFD0A2861F2089A000E2282D /* MyFavoriteViewController.swift in Sources */,
 				D97B35001F061A9100BCB027 /* Article.swift in Sources */,
 				BF390A4D1F01FBFD00555B93 /* GlobalFunctions.swift in Sources */,
 				BF44D3801F06312600A137E6 /* BannerViewCell.swift in Sources */,

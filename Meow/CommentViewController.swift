@@ -23,11 +23,13 @@ class CommentViewController: UITableViewController {
     
     override func viewDidLoad() {
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.register(R.nib.commentTableViewCell)
         tableView.estimatedRowHeight = 44
     }
 
     func configure(model: ItemProtocol) {
         self.item = model
+        self.tableView.reloadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,7 +42,9 @@ class CommentViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let comment = comments[indexPath.row]
-        return UITableViewCell()
+        let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.commentTableViewCell)!
+        view.configure(model: comment)
+        return view
     }
     
 }

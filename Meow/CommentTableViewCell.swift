@@ -25,7 +25,7 @@ class CommentTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configrue(model: Comment) {
+    func configure(model: Comment) {
         self.model = model
         
         let profile = model.profile

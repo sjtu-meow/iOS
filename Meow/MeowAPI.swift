@@ -58,6 +58,8 @@ enum MeowAPI  {
     case unlikeArticle(id: Int)
     case unlikeAnswer(id: Int)
     
+    case myFavorite
+    
 }
 
 extension MeowAPI: TargetType {
@@ -113,6 +115,7 @@ extension MeowAPI: TargetType {
             return "/user/following/users"
         case .myFollowingQuestions:
             return "/user/following/questions"
+        
             
         case .herAnswers(let id):
             return "/users/\(id)/answers"
@@ -157,6 +160,8 @@ extension MeowAPI: TargetType {
         case .unlikeArticle(let id):
             return "/articles/\(id)/like"
         
+        case .myFavorite:
+            return "/user/favorite"
         }
     }
     
