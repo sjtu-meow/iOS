@@ -15,7 +15,7 @@ struct Banner {
 
 extension Banner: JSONConvertible {
     static func fromJSON(_ json: JSON) -> Banner? {
-        guard   let url = json["url"].string,
+        guard   let url = json["image"].string,
                 let itemId = json["itemId"].int,
                 let rawType = json["itemType"].int,
                 let itemType = ItemType(rawValue: rawType)

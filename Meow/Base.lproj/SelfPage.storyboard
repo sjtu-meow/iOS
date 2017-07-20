@@ -22,11 +22,11 @@
                         <sections>
                             <tableViewSection id="NI8-VD-4vR" userLabel="用户信息">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="VHW-Tl-Xja" userLabel="用户信息" customClass="UserProfileCell" customModule="Meow" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="VHW-Tl-Xja" userLabel="用户信息" customClass="UserProfileCell" customModule="Meow" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VHW-Tl-Xja" id="M4t-vZ-DaY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gpS-E1-ieB" userLabel="主体">
@@ -78,7 +78,7 @@
                             <tableViewSection id="XiO-pi-rdJ" userLabel="通知">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="DcO-Ol-tQ7" userLabel="我的通知">
-                                        <rect key="frame" x="0.0" y="115" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="151" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DcO-Ol-tQ7" id="bHV-QX-Hfm">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -102,7 +102,7 @@
                             <tableViewSection id="KBA-7t-113" userLabel="我发布的">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="KWK-qu-o13" userLabel="我的动态">
-                                        <rect key="frame" x="0.0" y="195" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="231" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KWK-qu-o13" id="Xek-ig-LmX">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -125,7 +125,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="x01-mT-7Yy" userLabel="我的文章">
-                                        <rect key="frame" x="0.0" y="239" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="275" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x01-mT-7Yy" id="fdk-ZL-3zy">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -148,7 +148,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6jF-KL-SBa" userLabel="我的问答">
-                                        <rect key="frame" x="0.0" y="283" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="319" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6jF-KL-SBa" id="w6Y-HU-Bod">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -175,7 +175,7 @@
                             <tableViewSection id="EjO-WE-qgW" userLabel="我的浏览">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="e9N-iR-wxW" userLabel="最近浏览">
-                                        <rect key="frame" x="0.0" y="363" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="399" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e9N-iR-wxW" id="40m-Jg-Wqn">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -195,7 +195,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="4eL-1n-rVm" userLabel="我的关注">
-                                        <rect key="frame" x="0.0" y="407" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="443" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4eL-1n-rVm" id="dTW-lO-SJi">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -213,9 +213,12 @@
                                                 <constraint firstItem="yUa-WE-ZOY" firstAttribute="centerY" secondItem="dTW-lO-SJi" secondAttribute="centerY" id="zLj-uu-fql"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="fg7-nm-A1c" kind="show" id="lZt-Hq-KVp"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="W6I-G9-7p4" userLabel="我的收藏">
-                                        <rect key="frame" x="0.0" y="451" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="487" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W6I-G9-7p4" id="uYk-D4-Ve6">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -239,7 +242,7 @@
                             <tableViewSection id="Ml8-2C-l2I" userLabel="设置">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Wf0-Ze-brM" userLabel="系统设置">
-                                        <rect key="frame" x="0.0" y="531" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="567" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wf0-Ze-brM" id="5p7-IR-XwR">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -466,7 +469,7 @@
         <!--我的关注-->
         <scene sceneID="XEm-vA-voQ">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="fg7-nm-A1c" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="fg7-nm-A1c" customClass="MyFollowingViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rmr-E9-fWG"/>
                         <viewControllerLayoutGuide type="bottom" id="SvB-1I-yDc"/>
@@ -475,18 +478,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2KM-eI-NcV">
-                                <rect key="frame" x="119" y="72" width="137" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" semanticContentAttribute="playback" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2KM-eI-NcV" userLabel="UI">
+                                <rect key="frame" x="20" y="68" width="335" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="OCT-9X-RW8"/>
+                                </constraints>
                                 <segments>
                                     <segment title="关注用户"/>
                                     <segment title="关注问题"/>
                                 </segments>
+                                <connections>
+                                    <action selector="switchContent:" destination="fg7-nm-A1c" eventType="valueChanged" id="tsP-Y4-yjy"/>
+                                </connections>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nUc-ak-XLA">
+                                <rect key="frame" x="20" y="100" width="335" height="514"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2KM-eI-NcV" firstAttribute="top" secondItem="rmr-E9-fWG" secondAttribute="bottom" constant="4" id="5vR-cT-DcM"/>
+                            <constraint firstItem="SvB-1I-yDc" firstAttribute="top" secondItem="nUc-ak-XLA" secondAttribute="bottom" constant="4" id="E9G-VX-ep0"/>
+                            <constraint firstItem="nUc-ak-XLA" firstAttribute="top" secondItem="2KM-eI-NcV" secondAttribute="bottom" constant="4" id="U0R-Ze-N9P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2KM-eI-NcV" secondAttribute="trailing" constant="4" id="a1i-GS-U69"/>
+                            <constraint firstItem="nUc-ak-XLA" firstAttribute="leading" secondItem="hNX-VK-txv" secondAttribute="leadingMargin" constant="4" id="bDu-JN-4GC"/>
+                            <constraint firstItem="2KM-eI-NcV" firstAttribute="leading" secondItem="hNX-VK-txv" secondAttribute="leadingMargin" constant="4" id="chW-u5-z7M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nUc-ak-XLA" secondAttribute="trailing" constant="4" id="eyN-Pi-DOZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="我的关注" id="9sR-CU-krK"/>
+                    <connections>
+                        <outlet property="tableView" destination="nUc-ak-XLA" id="WZC-f3-513"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhb-Ps-38n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -46,7 +46,6 @@ enum MeowAPI  {
     
     case addFavoriteArticle(id: Int)
     case addFavoriteAnswer(id: Int)
-    
     case removeFavoriteArticle(id: Int)
     case removeFavoriteAnswer(id: Int)
     
@@ -136,7 +135,11 @@ extension MeowAPI: TargetType {
             return "/answers/\(id)/favorite"
         case .addFavoriteArticle(let id):
             return "/articles/\(id)/favorite"
-        
+        case .removeFavoriteAnswer(let id):
+            return "/answers/\(id)/favorite"
+        case .removeFavoriteArticle(let id):
+            return "/articles/\(id)/favorite"
+            
         case .likeMoment(let id):
             return "/moments/\(id)/like"
         case .likeAnswer(let id):
@@ -150,7 +153,7 @@ extension MeowAPI: TargetType {
             return "/answers/\(id)/like"
         case .unlikeArticle(let id):
             return "/articles/\(id)/like"
-            
+        
         }
     }
     

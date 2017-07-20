@@ -32,6 +32,7 @@ class MyArticleViewController: UITableViewController {
         let article = items[indexPath.row]
         let view = tableView.dequeueReusableCell(withIdentifier: R.nib.articleProfilePageTableViewCell.identifier)! as!ArticleProfilePageTableViewCell
         view.configure(model: article)
+
         return view
     }
 
