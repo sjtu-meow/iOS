@@ -555,7 +555,6 @@
 				BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */,
 				24F7F4641F04FAF8001A0FFA /* PostTypePicker.xib */,
 				BF4A242D1F0E1CD30004650E /* RichTextEditor.xib */,
-				2411AD051F052CFB00910051 /* UserProfileTableViewCell.xib */,
 				2411AD071F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib */,
 			);
 			name = View;
