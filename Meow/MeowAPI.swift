@@ -44,11 +44,15 @@ enum MeowAPI  {
     case followQuestion(id: Int)
     case unfollowUser(id: Int)
     case unfollowQuestion(id: Int)
+    case isFollowingUser(id: Int)
+    case isFollowingQuestion(id: Int)
     
     case addFavoriteArticle(id: Int)
     case addFavoriteAnswer(id: Int)
     case removeFavoriteArticle(id: Int)
     case removeFavoriteAnswer(id: Int)
+    case isFavoriteArticle(id: Int)
+    case isFavoriteAnswer(id: Int)
     
     case likeMoment(id: Int)
     case likeArticle(id: Int)
@@ -57,6 +61,10 @@ enum MeowAPI  {
     case unlikeMoment(id: Int)
     case unlikeArticle(id: Int)
     case unlikeAnswer(id: Int)
+    
+    case isLikedMoment(id: Int)
+    case isLikedArticle(id: Int)
+    case isLikedAnswer(id: Int)
     
     case myFavorite
     
@@ -132,11 +140,15 @@ extension MeowAPI: TargetType {
             return "/users/\(id)/follow"
         case .unfollowUser(let id):
             return "/users/\(id)/follow"
+        case .isFollowingUser(let id):
+            return "/users/\(id)/follow"
         case .followQuestion(let id):
             return "/questions/\(id)/follow"
         case .unfollowQuestion(let id):
             return "/questions/\(id)/follow"
-            
+        case .isFollowingQuestion(let id):
+            return "/questions/\(id)/follow"
+
         case .addFavoriteAnswer(let id):
             return "/answers/\(id)/favorite"
         case .addFavoriteArticle(let id):
@@ -145,6 +157,10 @@ extension MeowAPI: TargetType {
             return "/answers/\(id)/favorite"
         case .removeFavoriteArticle(let id):
             return "/articles/\(id)/favorite"
+        case .isFavoriteArticle(let id):
+            return "/articles/\(id)/favorite"
+        case .isFavoriteAnswer(let id):
+            return "/answers/\(id)/favorite"
             
         case .likeMoment(let id):
             return "/moments/\(id)/like"
@@ -160,6 +176,13 @@ extension MeowAPI: TargetType {
         case .unlikeArticle(let id):
             return "/articles/\(id)/like"
         
+        case .isLikedMoment(let id):
+            return "/moments/\(id)/like"
+        case .isLikedAnswer(let id):
+            return "/answers/\(id)/like"
+        case .isLikedArticle(let id):
+            return "/articles/\(id)/like"
+            
         case .myFavorite:
             return "/user/favorite"
         }
@@ -170,7 +193,8 @@ extension MeowAPI: TargetType {
         switch self {
         case .unfollowQuestion, .unfollowUser, .removeFavoriteAnswer, .removeFavoriteArticle, .unlikeAnswer, .unlikeMoment, .unlikeArticle:
             return .delete
-        case .login,.signup, .postMoment, .postArticle, .postQuestion, .postAnswer:
+        
+        case .login,.signup, .postMoment, .postArticle, .postQuestion, .postAnswer, .followQuestion, .followUser, .addFavoriteAnswer, .addFavoriteArticle, .likeAnswer, .likeMoment, .likeArticle:
             return .post
         default:
             return .get
