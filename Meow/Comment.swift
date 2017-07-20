@@ -7,15 +7,26 @@
 //
 
 import SwiftyJSON
-
+import DateToolsSwift
 
 struct Comment {
+    var id: Int!
+    var createTime: Date!
+    var parent: Int!
+    var content: String!
     
-    
+    var profile: Profile!
 }
 
 extension Comment: JSONConvertible {
     static func fromJSON(_ json: JSON) -> Comment? {
-        return nil
+        var comment = Comment()
+        comment.id <- json["id"]
+        comment.createTime <- json["createTime"]
+        comment.parent <- json["parent"]
+        comment.content <- json["content"]
+        let profile = Profile.fromJSON("profile")
+        comment.profile = profile
+        return comment
     }
 }
