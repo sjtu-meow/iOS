@@ -29,6 +29,11 @@ class UserProfileViewController: UITableViewController {
     override func viewDidLoad() {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
+        tableView.register(R.nib.articleUserPageTableViewCell)
+        tableView.register(R.nib.momentHomePageTableViewCell)
+        tableView.register(R.nib.questionRecordTableViewCell)
+        tableView.register(R.nib.answerRecordTableViewCell)
+        
         loadData()
     }
     
@@ -38,7 +43,7 @@ class UserProfileViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 1
+            return profile != nil ? 1: 0
         }
         switch contentType {
         case .article:
@@ -47,6 +52,19 @@ class UserProfileViewController: UITableViewController {
             return moments.count 
         case .questionAnswer:
             return questionAnswers.count 
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            
+            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.userProfileWithButtonsTableViewCell)!
+            view.configure(model: profile!)
+            return view
+        }
+        
+        switch contentType {
+        default: return UITableViewCell()
         }
     }
     

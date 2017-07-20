@@ -6,20 +6,29 @@
 //
 
 import UIKit
-
+import RxSwift
 
 class PostArticleViewController:UIViewController {
-   
+    enum Mode { case answer, article }
+    
+    var mode = Mode.article
+    
 
+    let disposeBag = DisposeBag()
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var editorContainer: UIView!
     var editor: RichTextEditor!
     var question: Question?
     
-    @IBAction func postArticle(_ sender: Any) {
+    @IBAction func postArticle(_ sender: Any) { // FIXME: rename this method
         checkHTML()
-        
+        switch mode {
+        case .article:
+            postArticle()
+        case .answer:
+            postAnswer()
+        }
     }
     
     
@@ -56,6 +65,7 @@ class PostArticleViewController:UIViewController {
     
     func configure(question: Question) {
         self.question = question
+        mode = .answer
         
     }
     
@@ -80,8 +90,32 @@ class PostArticleViewController:UIViewController {
         present(imagePickerController, animated: true, completion: nil)
     }
     
-    func checkHTML() -> Bool{
+    func checkHTML() -> Bool {
         return editor.htmlString.isEmpty
+    }
+    
+    func postArticle() {
+        guard let title = titleTextField.text else { return }
+        let content = editor.htmlString
+        MeowAPIProvider.shared
+            .request(.postArticle(title: title, content: content))
+            .subscribe(onNext: {
+                [weak self] _ in 
+                self?.dismiss(animated: true, completion: nil)
+            })
+        .addDisposableTo(disposeBag)
+        
+    }
+    
+    func postAnswer() {
+        let content = editor.htmlString
+        MeowAPIProvider.shared.request(.postAnswer(questionId: question!.id, content: content))
+            .subscribe(onNext: {
+                [weak self] _ in
+                self?.dismiss(animated: true, completion: nil)
+            })
+            .addDisposableTo(disposeBag)
+
     }
     
 }

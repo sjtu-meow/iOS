@@ -25,7 +25,7 @@ extension Comment: JSONConvertible {
         comment.createTime <- json["createTime"]
         comment.parent <- json["parent"]
         comment.content <- json["content"]
-        let profile = Profile.fromJSON("profile")
+        let profile = Profile.fromJSON(json["profile"])
         comment.profile = profile
         return comment
     }

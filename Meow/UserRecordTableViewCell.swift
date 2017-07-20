@@ -26,7 +26,11 @@ class UserRecordTableViewCell: UITableViewCell {
     @IBOutlet weak var bioLabel: UILabel!
     
     override func awakeFromNib() {
+        
         unfollowButton.addTarget(self, action: #selector(didClickUnfollow), for: UIControlEvents.touchUpInside)
+        
+        avatarImageView.isUserInteractionEnabled = true
+         let tapAvatarRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.didTapAvatar(_:)))
         avatarImageView.addGestureRecognizer(tapAvatarRecognizer)
     }
     
@@ -42,14 +46,14 @@ class UserRecordTableViewCell: UITableViewCell {
         bioLabel.text = model.bio
     }
     
-    let tapAvatarRecognizer = UIGestureRecognizer(target: self, action: #selector(didTapAvatar))
+   
  
     func didClickUnfollow() {
         guard let model = self.model else { return }
         delegate?.didClickUnfollow(profile: model)
     }
     
-    func didTapAvatar() {
+    func didTapAvatar(_ sender: UITapGestureRecognizer) {
         guard let model = self.model else { return }
         delegate?.didTapAvatar(userId: model.userId)
     }

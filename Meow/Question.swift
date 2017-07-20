@@ -18,8 +18,8 @@ struct Question: ItemProtocol {
     var content: String!
     var answers: [Answer]?
     
-    var likeCount: Int?
-    var commentCount: Int?
+    var likeCount: Int!
+    var commentCount: Int!
 }
 
 extension Question: JSONConvertible {

@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -200,13 +201,92 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="iXj-2h-7oN">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserProfileWithButtonsTableViewCell" rowHeight="131" id="c7I-aH-hHM" customClass="UserProfileWithButtonsCell" customModule="Meow" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iXj-2h-7oN" id="2Mp-t2-1eq">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c7I-aH-hHM" id="TMT-wk-tgL">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="130.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="y7h-P4-5yx" userLabel="主体">
+                                            <rect key="frame" x="16" y="20" width="288" height="90.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="0Zh-Ai-hgR" userLabel="行">
+                                                    <rect key="frame" x="45" y="0.0" width="198" height="90.5"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="j9y-s6-bRw" userLabel="头像">
+                                                            <rect key="frame" x="0.0" y="5.5" width="80" height="80"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="80" id="99b-NT-Stc"/>
+                                                                <constraint firstAttribute="width" secondItem="j9y-s6-bRw" secondAttribute="height" multiplier="1:1" id="h0F-FP-9P9"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="40"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="j9V-g8-sX5" userLabel="用户信息">
+                                                            <rect key="frame" x="99" y="8.5" width="99" height="73.5"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Jqd-xd-lyv" userLabel="文字">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="86" height="37.5"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaK-he-xPQ">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="31.5" height="20.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信息系统专家" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26w-ti-rFs">
+                                                                            <rect key="frame" x="0.0" y="20.5" width="86" height="17"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tYI-ER-ES7" userLabel="关注/私信按钮">
+                                                                    <rect key="frame" x="0.0" y="42.5" width="99" height="31"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjZ-en-wTj">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="47" height="31"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                            <state key="normal" title="关注" backgroundImage="ButtonBigOutline">
+                                                                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            </state>
+                                                                        </button>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYX-wW-Gil">
+                                                                            <rect key="frame" x="52" y="0.0" width="47" height="31"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                            <state key="normal" title="私信" backgroundImage="ButtonBigOutline">
+                                                                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            </state>
+                                                                        </button>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="y7h-P4-5yx" firstAttribute="trailing" secondItem="TMT-wk-tgL" secondAttribute="trailing" constant="-16" id="FXm-6S-e8v"/>
+                                        <constraint firstItem="y7h-P4-5yx" firstAttribute="top" secondItem="TMT-wk-tgL" secondAttribute="top" constant="20" id="h7g-wy-AgY"/>
+                                        <constraint firstItem="y7h-P4-5yx" firstAttribute="bottom" secondItem="TMT-wk-tgL" secondAttribute="bottom" constant="-20" id="kOL-xi-fG2"/>
+                                        <constraint firstItem="y7h-P4-5yx" firstAttribute="leading" secondItem="TMT-wk-tgL" secondAttribute="leading" constant="16" id="n6l-V4-yuE"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="j9y-s6-bRw" id="YQC-Dd-D3J"/>
+                                    <outlet property="bioLabel" destination="26w-ti-rFs" id="48R-HD-9DA"/>
+                                    <outlet property="followButton" destination="AjZ-en-wTj" id="dlR-Tj-JdR"/>
+                                    <outlet property="nicknameLabel" destination="qaK-he-xPQ" id="95V-m9-a0p"/>
+                                    <outlet property="sendMessageButton" destination="YYX-wW-Gil" id="IVq-pt-F70"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -383,6 +463,8 @@
     <resources>
         <image name="ArticleIcon" width="25" height="25"/>
         <image name="ArticleIconSelected" width="25" height="25"/>
+        <image name="ButtonBigOutline" width="47" height="31"/>
+        <image name="DefaultAvatar" width="300" height="300"/>
         <image name="HomeIcon" width="25" height="25"/>
         <image name="HomeIconSelected" width="25" height="25"/>
         <image name="QuestionIcon" width="25" height="25"/>
