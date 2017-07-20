@@ -9,6 +9,7 @@
 import UIKit
 import AlamofireImage
 
+
 class MomentHomePageTableViewCell: UITableViewCell {
 
     //MARK: - Property
@@ -29,6 +30,8 @@ class MomentHomePageTableViewCell: UITableViewCell {
     
     var model: Moment?
 
+    var delegate: AvatarCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -48,7 +51,10 @@ class MomentHomePageTableViewCell: UITableViewCell {
         
         if let avatar = profile?.avatar {
             avatarImageView.af_setImage(withURL: avatar)
+            
         }
+        avatarImageView.addGestureRecognizer(avatarTapRecognizer)
+
         nicknameLabel.text = profile?.nickname
         bioLabel.text = profile?.bio
         
@@ -63,13 +69,21 @@ class MomentHomePageTableViewCell: UITableViewCell {
 
         // media
         mediaCollectionView.dataSource = self
+    
     }
     
+    let avatarTapRecognizer = UIGestureRecognizer(target: self, action: #selector(didTapAvatar(_:)) )
+    
+    func didTapAvatar(_ sender: UITapGestureRecognizer) {
+        guard let moment = self.model else { return }
+        delegate?.didTapAvatar(userId: moment.profile.userId)
+    }
     
     // like function
     @IBAction func like(_ sender: UIButton) {
     }
     // comment function
+    
 
 }
 
@@ -93,7 +107,6 @@ extension MomentHomePageTableViewCell: UICollectionViewDataSource {
         view.configure(model: model!.medias![indexPath.row])
         
         return view
-        
     }
     
     

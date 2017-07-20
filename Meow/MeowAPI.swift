@@ -29,6 +29,13 @@ enum MeowAPI  {
     case myArticles
     case myQuestions
     case myAnswers
+    
+    case herMoments(id: Int)
+    case herArticles(id: Int)
+    case herQuestions(id: Int)
+    case herAnswers(id: Int)
+    case herProfile(id: Int)
+    
 }
 
 extension MeowAPI: TargetType {
@@ -77,6 +84,17 @@ extension MeowAPI: TargetType {
             return "/user/articles"
         case .myMoments:
             return "/user/moments"
+            
+        case .herAnswers(let id):
+            return "/users/\(id)/answers"
+        case .herQuestions(let id):
+            return "/users/\(id)/questions"
+        case .herArticles(let id):
+            return "/users/\(id)/articles"
+        case .herMoments(let id):
+            return "/users/\(id)/moments"
+        case .herProfile(let id):
+            return "/users/\(id)/profile"
         }
     }
     
