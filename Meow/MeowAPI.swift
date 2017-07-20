@@ -30,11 +30,33 @@ enum MeowAPI  {
     case myQuestions
     case myAnswers
     
+    case myFollowingUsers
+    case myFollowingQuestions
+    
     case herMoments(id: Int)
     case herArticles(id: Int)
     case herQuestions(id: Int)
     case herAnswers(id: Int)
     case herProfile(id: Int)
+    
+    case followUser(id: Int)
+    case followQuestion(id: Int)
+    case unfollowUser(id: Int)
+    case unfollowQuestion(id: Int)
+    
+    case addFavoriteArticle(id: Int)
+    case addFavoriteAnswer(id: Int)
+    
+    case removeFavoriteArticle(id: Int)
+    case removeFavoriteAnswer(id: Int)
+    
+    case likeMoment(id: Int)
+    case likeArticle(id: Int)
+    case likeAnswer(id: Int)
+    
+    case unlikeMoment(id: Int)
+    case unlikeArticle(id: Int)
+    case unlikeAnswer(id: Int)
     
 }
 
@@ -85,6 +107,11 @@ extension MeowAPI: TargetType {
         case .myMoments:
             return "/user/moments"
             
+        case .myFollowingUsers:
+            return "/user/following/users"
+        case .myFollowingQuestions:
+            return "/user/following/questions"
+            
         case .herAnswers(let id):
             return "/users/\(id)/answers"
         case .herQuestions(let id):
@@ -95,12 +122,43 @@ extension MeowAPI: TargetType {
             return "/users/\(id)/moments"
         case .herProfile(let id):
             return "/users/\(id)/profile"
+        
+        case .followUser(let id):
+            return "/users/\(id)/follow"
+        case .unfollowUser(let id):
+            return "/users/\(id)/follow"
+        case .followQuestion(let id):
+            return "/questions/\(id)/follow"
+        case .unfollowQuestion(let id):
+            return "/questions/\(id)/follow"
+            
+        case .addFavoriteAnswer(let id):
+            return "/answers/\(id)/favorite"
+        case .addFavoriteArticle(let id):
+            return "/articles/\(id)/favorite"
+        
+        case .likeMoment(let id):
+            return "/moments/\(id)/like"
+        case .likeAnswer(let id):
+            return "/answers/\(id)/like"
+        case .likeArticle(let id):
+            return "/articles/\(id)/like"
+            
+        case .unlikeMoment(let id):
+            return "/moments/\(id)/like"
+        case .unlikeAnswer(let id):
+            return "/answers/\(id)/like"
+        case .unlikeArticle(let id):
+            return "/articles/\(id)/like"
+            
         }
     }
     
     /// The HTTP method used in the request.
     var method: Moya.Method {
         switch self {
+        case .unfollowQuestion, .unfollowUser, .removeFavoriteAnswer, .removeFavoriteArticle, .unlikeAnswer, .unlikeMoment, .unlikeArticle:
+            return .delete
         case .login,.signup, .postMoment, .postArticle, .postQuestion:
             return .post
         default:
