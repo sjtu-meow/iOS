@@ -23,6 +23,7 @@ enum MeowAPI  {
     case postMoment(content: String, medias: [Media]?)
     case postArticle(title: String, content: String)
     case postQuestion(title: String, content: String)
+    case postAnswer(questionId: Int, content: String)
     case search(keyword: String)
     
     case myMoments
@@ -82,6 +83,8 @@ extension MeowAPI: TargetType {
             return "/answers"
         case .answer(let id):
             return "/answers/\(id)"
+        case .postAnswer(let id, let _):
+            return "/questions/\(id)/answers"
         case .login:
             return "/auth"
         case .signup:
@@ -162,7 +165,7 @@ extension MeowAPI: TargetType {
         switch self {
         case .unfollowQuestion, .unfollowUser, .removeFavoriteAnswer, .removeFavoriteArticle, .unlikeAnswer, .unlikeMoment, .unlikeArticle:
             return .delete
-        case .login,.signup, .postMoment, .postArticle, .postQuestion:
+        case .login,.signup, .postMoment, .postArticle, .postQuestion, .postAnswer:
             return .post
         default:
             return .get
@@ -195,6 +198,8 @@ extension MeowAPI: TargetType {
             return ["title": title, "content": content]
         case .postQuestion(let title, let content):
             return ["title": title, "content": content]
+        case .postAnswer( _, let content):
+            return ["content": content]
         case .search(let keyword):
             return ["keyword": keyword]
         default:
