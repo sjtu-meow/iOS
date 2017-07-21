@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,14 +18,14 @@
                         <viewControllerLayoutGuide type="bottom" id="Pem-Pz-zQB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="INs-UP-Q60">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JFc-1A-Jjp" userLabel="主体">
-                                <rect key="frame" x="16" y="72" width="343" height="278"/>
+                                <rect key="frame" x="16" y="72" width="568" height="278"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="KfV-Rr-vo4" userLabel="文字输入">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="120"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="fmu-HB-gqo"/>
@@ -37,7 +37,7 @@
                                         </connections>
                                     </textView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qaw-B8-xKI" userLabel="上传图片">
-                                        <rect key="frame" x="0.0" y="128" width="343" height="150"/>
+                                        <rect key="frame" x="0.0" y="128" width="568" height="150"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="IB3-wf-log"/>
@@ -139,14 +139,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wqJ-eE-3qf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nhf-bd-deY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EgK-2i-gI3">
-                                <rect key="frame" x="16" y="74" width="343" height="583"/>
+                                <rect key="frame" x="16" y="74" width="568" height="516"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="文章标题" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IHn-b7-sC8">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="fXu-fi-t2D"/>
                                         </constraints>
@@ -155,7 +155,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ktz-2b-9uD">
-                                        <rect key="frame" x="0.0" y="48" width="343" height="535"/>
+                                        <rect key="frame" x="0.0" y="48" width="568" height="468"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
@@ -199,11 +199,11 @@
                         <viewControllerLayoutGuide type="bottom" id="bzQ-yM-FYy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ico-MZ-w6n">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="问题的题目噢～" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Wh-ch-4Uq">
-                                <rect key="frame" x="32" y="72" width="311" height="30"/>
+                                <rect key="frame" x="36" y="72" width="528" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="bvy-3w-lwS"/>
                                     <constraint firstAttribute="height" constant="30" id="hDa-Cb-chJ"/>
@@ -213,7 +213,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="96S-Mk-DTb">
-                                <rect key="frame" x="32" y="110" width="343" height="549"/>
+                                <rect key="frame" x="36" y="110" width="564" height="482"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -251,6 +251,51 @@
             </objects>
             <point key="canvasLocation" x="-504.80000000000001" y="3529.385307346327"/>
         </scene>
+        <!--发表评论-->
+        <scene sceneID="w6I-kn-TmW">
+            <objects>
+                <viewController storyboardIdentifier="PostCommentController" title="发表评论" id="B7f-k3-ABt" userLabel="发表评论" customClass="PostCommentViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hiw-la-AKw"/>
+                        <viewControllerLayoutGuide type="bottom" id="ubT-gg-XEJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rui-XE-UPN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="在这里输入评论噢" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qkd-10-3j4">
+                                <rect key="frame" x="20" y="68" width="335" height="551"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qkd-10-3j4" secondAttribute="trailing" constant="4" id="AAh-oN-jeS"/>
+                            <constraint firstItem="ubT-gg-XEJ" firstAttribute="top" secondItem="Qkd-10-3j4" secondAttribute="bottom" constant="4" id="GSi-lq-637"/>
+                            <constraint firstItem="Qkd-10-3j4" firstAttribute="leading" secondItem="Rui-XE-UPN" secondAttribute="leadingMargin" constant="4" id="Vf0-nB-Yfb"/>
+                            <constraint firstItem="Qkd-10-3j4" firstAttribute="top" secondItem="hiw-la-AKw" secondAttribute="bottom" constant="4" id="lSh-7Y-Wvx"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="发表评论" id="4LP-2s-bX8">
+                        <barButtonItem key="rightBarButtonItem" title="发送" id="HmZ-1M-mi4">
+                            <connections>
+                                <action selector="postComment:" destination="B7f-k3-ABt" id="CbV-9X-Vw9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="commentTextField" destination="Qkd-10-3j4" id="qk9-pw-pjU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h89-52-CvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2441" y="2848"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="r2e-ET-2uZ">
             <objects>
@@ -278,11 +323,11 @@
                         <viewControllerLayoutGuide type="bottom" id="rWR-86-ILk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9YC-6m-R1Z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQS-W0-QC2">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="回答「四川的猫吃辣吗」" id="9Jz-jz-pTG"/>
@@ -313,38 +358,38 @@
                         <viewControllerLayoutGuide type="bottom" id="chU-0H-Mpa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U5a-kD-slu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hvi-vn-XwR" userLabel="主体">
-                                <rect key="frame" x="0.0" y="64" width="375" height="595"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="528"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Mx-ya-4UM">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="538"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="519"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ZYC-G0-zy9">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZYC-G0-zy9" id="eId-bK-XMt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="spq-Np-d8C" userLabel="评论">
-                                        <rect key="frame" x="0.0" y="538" width="375" height="57"/>
+                                        <rect key="frame" x="0.0" y="519" width="600" height="9"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifj-ph-4lo" userLabel="分割线">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="MHf-rk-oft"/>
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsP-dB-2bw">
-                                                <rect key="frame" x="0.0" y="9" width="375" height="48"/>
+                                                <rect key="frame" x="0.0" y="9" width="600" height="0.0"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>

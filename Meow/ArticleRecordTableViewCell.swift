@@ -9,5 +9,18 @@
 import UIKit
 
 class ArticleRecordTableViewCell: UITableViewCell {
+    @IBOutlet weak var avatarImageView: UIImageView!
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var contentLabel: UILabel!
+    
+    func configure(model: ArticleSummary) {
+      
+        if let url = model.cover{
+            imageView?.af_setImage(withURL: url)
+        }
+        titleLabel.text = model.title
+        contentLabel.text = model.summary
+    }
 }

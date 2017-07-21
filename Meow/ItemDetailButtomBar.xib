@@ -18,7 +18,7 @@
             </constraints>
             <items>
                 <tabBarItem title="赞 (3)" id="nDl-1j-GJF"/>
-                <tabBarItem title="评论 (3)" id="hBZ-Am-QkE"/>
+                <tabBarItem title="评论" id="hBZ-Am-QkE"/>
                 <tabBarItem title="收藏 (3)" id="u9Y-wF-b6k"/>
                 <tabBarItem systemItem="more" id="ECg-FV-ftz"/>
             </items>

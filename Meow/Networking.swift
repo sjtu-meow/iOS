@@ -45,7 +45,7 @@ class MeowAPIProvider {
     func request(_ target: MeowAPI) -> Observable<Any> {
         return delegate.request(target)
             .filterSuccessfulStatusCodes()
-            .mapJSON()
+            .mapJSON(failsOnEmptyData: false)
             .map{json in JSON(json)}
     }
     

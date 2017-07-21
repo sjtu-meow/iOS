@@ -47,4 +47,9 @@ class CommentViewController: UITableViewController {
         return view
     }
     
+    @IBAction func showPostCommentView(_ sender: Any) {
+        let vc = R.storyboard.postPages.postCommentController()!
+        vc.configure(model: self.item)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

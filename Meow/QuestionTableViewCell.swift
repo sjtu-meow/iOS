@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class QuestionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -17,6 +18,6 @@ class QuestionTableViewCell: UITableViewCell {
     func configure(model: QuestionSummary) {
         titleLabel.text = model.title
         answerCountLabel.text = "\(model.answerCount)"
-        
     }
+    
 }

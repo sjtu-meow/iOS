@@ -135,7 +135,7 @@
         <!--Article Detail View Controller-->
         <scene sceneID="mpc-K6-il8">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="Iia-vG-HaK" customClass="ArticleDetailViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticleDetailViewController" hidesBottomBarWhenPushed="YES" id="Iia-vG-HaK" customClass="ArticleDetailViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VLl-CK-PG9"/>
                         <viewControllerLayoutGuide type="bottom" id="bJ3-QH-fWq"/>

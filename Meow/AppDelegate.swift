@@ -23,8 +23,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let keys = MeowKeys()
         login()
+        
         // Initialize Leancloud
         AVOSCloud.setApplicationId(keys.leanCloudAppId, clientKey: keys.leanCloudClientKey)
+        
+        ShareSDK.registerActivePlatforms(
+            [
+                SSDKPlatformType.typeSMS.rawValue,
+                SSDKPlatformType.typeMail.rawValue,
+                SSDKPlatformType.typeCopy.rawValue
+                //SSDKPlatformType.typeQQ.rawValue,
+                //SSDKPlatformType.typeWechat.rawValue,
+                //SSDKPlatformType.typeEvernote.rawValue
+            ],
+            onImport: { (platform : SSDKPlatformType) -> Void in
+                                            // do nothing
+            },
+            onConfiguration: { (platform : SSDKPlatformType , appInfo : NSMutableDictionary?) -> Void in
+                                             // do nothing
+            }
+        )
+    
+        
         
         /* login page */
       /*

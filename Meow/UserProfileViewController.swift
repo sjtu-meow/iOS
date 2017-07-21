@@ -8,10 +8,11 @@
 
 import UIKit
 import RxSwift
+import SwiftyJSON
 
 class UserProfileViewController: UITableViewController {
-    enum ContentType {
-        case article, moment, questionAnswer
+    enum ContentType: Int {
+        case article = 1, moment = 0, questionAnswer = 2
     }
     
     let disposeBag = DisposeBag()
@@ -20,6 +21,8 @@ class UserProfileViewController: UITableViewController {
     
     // var answers = [AnswerSummary]()
     // var questions = [QuestionSummary]()
+    
+    var isFollowing = false
     
     var questionAnswers = [ItemProtocol]()
     var articles = [ArticleSummary]()
@@ -38,11 +41,11 @@ class UserProfileViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
+        if section <= 1 {
             return profile != nil ? 1: 0
         }
         switch contentType {
@@ -55,19 +58,63 @@ class UserProfileViewController: UITableViewController {
         }
     }
     
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             
             let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.userProfileWithButtonsTableViewCell)!
             view.configure(model: profile!)
+            view.delegate = self
+            view.updateFollowingButton(isFollowing: isFollowing)
+            
+                      
+            return view
+        } else if indexPath.section == 1 {
+            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.userProfileContentSwitcherCell)!
+            initContentSwitcher(switcher: view)
             return view
         }
         
         switch contentType {
-        default: return UITableViewCell()
+        case .moment:
+            let item = moments[indexPath.row]
+            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.momentHomePageTableViewCell)!
+            view.configure(model: item)
+            return view
+        case .article:
+            let item = articles[indexPath.row]
+            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.articleUserPageTableViewCell)!
+            view.configure(model: item)
+            return view
+        case .questionAnswer:
+            let item = questionAnswers[indexPath.row]
+            if item is QuestionSummary {
+                let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionRecordTableViewCell)!
+                view.configure(model: item as! QuestionSummary)
+                return view 
+            } else {
+                let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.answerRecordTableViewCell)!
+                view.configure(model: item as! AnswerSummary)
+                return view
+            }
         }
     }
-    
+ 
+    func initContentSwitcher(switcher: UserProfileContentSwitcher) {
+        switcher.momentButton.tag = 0
+        switcher.articleButton.tag = 1
+        switcher.answerButton.tag = 2
+        
+        for button in [switcher.momentButton, switcher.articleButton, switcher.answerButton] {
+        button!.addTarget(self, action: #selector(self.switchContent(_:)), for: .touchUpInside)
+        }
+        
+    }
+    func switchContent(_ sender: UIButton) {
+        let raw = sender.tag
+        contentType = ContentType(rawValue: raw)!
+        tableView.reloadData()
+    }
     func configure(userId: Int) {
         self.userId = userId
     }
@@ -122,10 +169,67 @@ class UserProfileViewController: UITableViewController {
             [weak self] profile in self?.profile = profile
             self?.tableView.reloadData()
         }).addDisposableTo(disposeBag)
+        
+        MeowAPIProvider.shared.request(.isFollowingUser(id: userId))
+            .subscribe(onNext: {
+                [weak self] json in
+                self?.isFollowing = (json as! JSON)["following"].bool!
+                self?.tableView.reloadData()
+            }).addDisposableTo(disposeBag)
     }
     
     func isCurrentContentType(_ type: ContentType) -> Bool {
         return type == self.contentType
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section == 2 else { return }
+        switch contentType {
+        case .article :
+            let article = articles[indexPath.row]
+            let vc = R.storyboard.articlePage.articleDetailViewController()!
+            vc.configure(article: article)
+            navigationController?.pushViewController(vc, animated: true)
+        
+        case .questionAnswer:
+            let item = questionAnswers[indexPath.row]
+            if item.type == .question {
+                let vc = R.storyboard.questionAnswerPage.questionDetailViewController()!
+                vc.configure(questionId: item.id)
+                navigationController?.pushViewController(vc, animated: true)
+            } else {
+                // TODO: Show answer detail
+            }
+        default:
+            break 
+        }
+    }
+    
+}
+
+extension UserProfileViewController: UserProfileCellDelegate {
+    func didTapFollowButton(_ sender: UIButton) {
+        if isFollowing {
+            MeowAPIProvider.shared
+                .request(.unfollowUser(id: userId))
+                .subscribe(onNext: {
+                    [weak self] _ in
+                    self?.isFollowing = false
+                    self?.tableView.reloadData()
+                    }).addDisposableTo(disposeBag)
+        } else {
+            MeowAPIProvider.shared
+                .request(.followUser(id: userId))
+                .subscribe(onNext: {
+                    [weak self]
+                    _ in self?.isFollowing = true
+                    self?.tableView.reloadData()
+                })
+                .addDisposableTo(disposeBag) 
+        }
+    }
+    
+    func didTapSendMessageButton(_ sender: UIButton) {
+        
+    }
 }

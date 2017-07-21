@@ -17,7 +17,7 @@ PODS:
   - Alamofire (4.5.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
-  - AVOSCloud (5.0.2)
+  - AVOSCloud (6.1.1)
   - DateToolsSwift (2.0.3)
   - HappyDNS (0.3.10)
   - ImageSlideshow (1.3.2):
@@ -27,6 +27,7 @@ PODS:
     - ImageSlideshow/Core
   - ImageSlideshow/Core (1.3.2)
   - Keys (1.0.0)
+  - MOBFoundation (3.0.1)
   - Moya/Core (8.0.5):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
@@ -41,7 +42,28 @@ PODS:
     - R.swift.Library (~> 3.0.2)
   - R.swift.Library (3.0.2)
   - Result (3.2.3)
-  - RxSwift (3.5.0)
+  - RxSwift (3.6.0)
+  - ShareSDK3 (4.0.1.1):
+    - MOBFoundation
+    - ShareSDK3/ShareSDK (= 4.0.1.1)
+  - ShareSDK3/ShareSDK (4.0.1.1):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKExtension (4.0.1.1):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/Copy (4.0.1.1):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/Evernote (4.0.1.1):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/Mail (4.0.1.1):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/QQ (4.0.1.1):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/SMS (4.0.1.1):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/WeChat (4.0.1.1):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKUI (4.0.1.1):
+    - MOBFoundation
   - SwiftyJSON (3.1.4)
   - TagListView (1.2.0)
 
@@ -52,36 +74,55 @@ DEPENDENCIES:
   - ImageSlideshow
   - ImageSlideshow/Alamofire
   - Keys (from `Pods/CocoaPodsKeys`)
+  - MOBFoundation
   - Moya/RxSwift
   - PKHUD
   - Qiniu
   - R.swift
+  - ShareSDK3 (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS-Spec.git`)
+  - ShareSDK3/ShareSDKExtension (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS-Spec.git`)
+  - ShareSDK3/ShareSDKPlatforms/Copy (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS-Spec.git`)
+  - ShareSDK3/ShareSDKPlatforms/Evernote (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS-Spec.git`)
+  - ShareSDK3/ShareSDKPlatforms/Mail (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS-Spec.git`)
+  - ShareSDK3/ShareSDKPlatforms/QQ (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS-Spec.git`)
+  - ShareSDK3/ShareSDKPlatforms/SMS (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS-Spec.git`)
+  - ShareSDK3/ShareSDKPlatforms/WeChat (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS-Spec.git`)
+  - ShareSDK3/ShareSDKUI (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS-Spec.git`)
   - SwiftyJSON
   - TagListView
 
 EXTERNAL SOURCES:
   Keys:
     :path: Pods/CocoaPodsKeys
+  ShareSDK3:
+    :git: https://git.oschina.net/MobClub/ShareSDK-for-iOS-Spec.git
+
+CHECKOUT OPTIONS:
+  ShareSDK3:
+    :commit: 7aabe3c566a2bd8b9e2690719c5eb376c667aadd
+    :git: https://git.oschina.net/MobClub/ShareSDK-for-iOS-Spec.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
-  AVOSCloud: 01745f438fb9ef4f2cde2b992783a869cc1291e6
+  AVOSCloud: a21318994cd97adaf9bf19cf0ac38187b3d94f00
   DateToolsSwift: bf69bf9056d9e53c5c03f06e51f219b9b8b02f9e
   HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
   ImageSlideshow: a68a76fc618ebd2b7481ce355ad67d7097203976
   Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
+  MOBFoundation: '08328ccde124b687ac5e4367c2ccfc5b4d0235b7'
   Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
   PKHUD: c7692163a09875cbf15827dc581df3c5cf7f1015
   Qiniu: 77a3dba411556a383d72d17e842345a9d4c83252
   R.swift: bde9704d50ff36820f49e266bc88ef545e1e9b36
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
   Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
-  RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
+  RxSwift: a0925c7fb11fbe60055285f6f2062241aa37a175
+  ShareSDK3: 2531de0a5546f106994c23787f3d2d587c5568d7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TagListView: 999e1df50c0f6b9ca927fae705c86a7e3b6ee9ba
 
-PODFILE CHECKSUM: 0db843e2183dabbd8439c6d2a2df55c008b9977e
+PODFILE CHECKSUM: 99ece6d9687882946a87e9a7b8fe923d0dd11dc9
 
 COCOAPODS: 1.2.1

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		240B31001F1DA66400B2498B /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B30FF1F1DA66400B2498B /* NotificationTableViewController.swift */; };
 		240B31021F1DAE8B00B2498B /* ViewHistorySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B31011F1DAE8B00B2498B /* ViewHistorySource.swift */; };
-		2411AD081F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2411AD071F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib */; };
 		2411AD111F053CA600910051 /* SelfPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2411AD0F1F053CA600910051 /* SelfPage.storyboard */; };
 		2411AD131F053F0900910051 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2411AD121F053F0900910051 /* HomePage.storyboard */; };
 		2411AD151F05406000910051 /* ArticlePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2411AD141F05406000910051 /* ArticlePage.storyboard */; };
@@ -105,6 +104,11 @@
 		BFD0A2831F2053AA00E2282D /* MyFollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2821F2053AA00E2282D /* MyFollowingViewController.swift */; };
 		BFD0A2861F2089A000E2282D /* MyFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2851F2089A000E2282D /* MyFavoriteViewController.swift */; };
 		BFD0A2881F208D0F00E2282D /* ArticleUserPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2871F208D0F00E2282D /* ArticleUserPageTableViewCell.swift */; };
+		BFD0A28A1F20995B00E2282D /* UserProfileWithButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2891F20995B00E2282D /* UserProfileWithButtonsCell.swift */; };
+		BFD0A28D1F20AB4200E2282D /* UserInteractionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A28C1F20AB4200E2282D /* UserInteractionDelegate.swift */; };
+		BFD0A28F1F21099D00E2282D /* UserProfileContentSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A28E1F21099D00E2282D /* UserProfileContentSwitcher.swift */; };
+		BFD0A2911F21126600E2282D /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2901F21126600E2282D /* MeViewController.swift */; };
+		BFD0A2961F21A98100E2282D /* PostCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2951F21A98100E2282D /* PostCommentViewController.swift */; };
 		BFE11D381F010AF200EED963 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
 		BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395E1F02C089006DF489 /* SMSExtention.swift */; };
@@ -145,7 +149,6 @@
 		1F6E60B8501B878CBD0FCF4C /* Pods_Meow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240B30FF1F1DA66400B2498B /* NotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
 		240B31011F1DAE8B00B2498B /* ViewHistorySource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHistorySource.swift; sourceTree = "<group>"; };
-		2411AD071F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProfileWithButtonsTableViewCell.xib; sourceTree = "<group>"; };
 		2411AD101F053CA600910051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SelfPage.storyboard; sourceTree = "<group>"; };
 		2411AD121F053F0900910051 /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		2411AD141F05406000910051 /* ArticlePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ArticlePage.storyboard; sourceTree = "<group>"; };
@@ -154,6 +157,10 @@
 		2411AD1C1F05432900910051 /* LoginSignupPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginSignupPage.storyboard; sourceTree = "<group>"; };
 		2443A6681F02064C0032BEB9 /* MomentHomePageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MomentHomePageTableViewCell.xib; sourceTree = "<group>"; };
 		2443A6741F03530A0032BEB9 /* MomentCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MomentCommentTableViewCell.xib; sourceTree = "<group>"; };
+		24472BC21F21A4C8002C6CB3 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		24472BC41F21A4D9002C6CB3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		24472BC61F21A4E4002C6CB3 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		24472BC81F21A4EC002C6CB3 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		246E77B41F1F7905001A9E8E /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		246E77B51F1F7905001A9E8E /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		24A12A971F1E0C64000E4A72 /* ViewHistorySourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHistorySourceTests.swift; sourceTree = "<group>"; };
@@ -248,6 +255,11 @@
 		BFD0A2821F2053AA00E2282D /* MyFollowingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFollowingViewController.swift; sourceTree = "<group>"; };
 		BFD0A2851F2089A000E2282D /* MyFavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFavoriteViewController.swift; sourceTree = "<group>"; };
 		BFD0A2871F208D0F00E2282D /* ArticleUserPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleUserPageTableViewCell.swift; sourceTree = "<group>"; };
+		BFD0A2891F20995B00E2282D /* UserProfileWithButtonsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileWithButtonsCell.swift; sourceTree = "<group>"; };
+		BFD0A28C1F20AB4200E2282D /* UserInteractionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInteractionDelegate.swift; sourceTree = "<group>"; };
+		BFD0A28E1F21099D00E2282D /* UserProfileContentSwitcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileContentSwitcher.swift; sourceTree = "<group>"; };
+		BFD0A2901F21126600E2282D /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		BFD0A2951F21A98100E2282D /* PostCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCommentViewController.swift; sourceTree = "<group>"; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
 		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
 		BFF1395E1F02C089006DF489 /* SMSExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSExtention.swift; sourceTree = "<group>"; };
@@ -317,6 +329,7 @@
 				BF4A24231F0C7C570004650E /* PostQuestionViewController.swift */,
 				BF4A24251F0C7C650004650E /* PostArticleViewController.swift */,
 				BF4A24271F0C7CF90004650E /* PostAnswerViewController.swift */,
+				BFD0A2951F21A98100E2282D /* PostCommentViewController.swift */,
 			);
 			name = "Post Controller";
 			sourceTree = "<group>";
@@ -472,6 +485,7 @@
 				D9AF48481F13537C00381F67 /* SearchHistorySource.swift */,
 				240B31011F1DAE8B00B2498B /* ViewHistorySource.swift */,
 				D9AF484A1F135D3700381F67 /* UserDefaults+NSCoding.swift */,
+				BFD0A28C1F20AB4200E2282D /* UserInteractionDelegate.swift */,
 			);
 			path = Meow;
 			sourceTree = "<group>";
@@ -518,6 +532,7 @@
 				BF21FFF71F1DAF4800D9E7F4 /* MyArticleViewController.swift */,
 				BF21FFFD1F1DDD5700D9E7F4 /* MyQuestionAnswerViewController.swift */,
 				BFD0A2851F2089A000E2282D /* MyFavoriteViewController.swift */,
+				BFD0A2901F21126600E2282D /* MeViewController.swift */,
 			);
 			name = "My Controller";
 			sourceTree = "<group>";
@@ -537,8 +552,10 @@
 				BF31E9251F0B6229001236D8 /* MediaViewCell.swift */,
 				BF4A242B1F0E19840004650E /* RichTextEditor.swift */,
 				BF31815E1F15ACB600ACB9DD /* SearchResultTableView.swift */,
-				BFD0A2801F2050C900E2282D /* UserProfileCell.swift */,
 				BFD0A2871F208D0F00E2282D /* ArticleUserPageTableViewCell.swift */,
+				BFD0A2801F2050C900E2282D /* UserProfileCell.swift */,
+				BFD0A2891F20995B00E2282D /* UserProfileWithButtonsCell.swift */,
+				BFD0A28E1F21099D00E2282D /* UserProfileContentSwitcher.swift */,
 			);
 			name = "View Model";
 			sourceTree = "<group>";
@@ -559,7 +576,6 @@
 				BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */,
 				24F7F4641F04FAF8001A0FFA /* PostTypePicker.xib */,
 				BF4A242D1F0E1CD30004650E /* RichTextEditor.xib */,
-				2411AD071F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -567,6 +583,10 @@
 		CF107B246708526B0BB79552 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24472BC81F21A4EC002C6CB3 /* JavaScriptCore.framework */,
+				24472BC61F21A4E4002C6CB3 /* libstdc++.tbd */,
+				24472BC41F21A4D9002C6CB3 /* libz.tbd */,
+				24472BC21F21A4C8002C6CB3 /* libicucore.tbd */,
 				1F6E60B8501B878CBD0FCF4C /* Pods_Meow.framework */,
 				3612EC24166F9C122D5CDCC1 /* Pods_MeowTests.framework */,
 				1186F1CE3D8690900D00F2C5 /* Pods_MeowUITests.framework */,
@@ -740,7 +760,6 @@
 				2411AD111F053CA600910051 /* SelfPage.storyboard in Resources */,
 				24A14CF01F03599F00967F45 /* QuestionHomePageTableViewCell.xib in Resources */,
 				24F7F45D1F04A7C4001A0FFA /* MomentRecordTableViewCell.xib in Resources */,
-				2411AD081F052E5D00910051 /* UserProfileWithButtonsTableViewCell.xib in Resources */,
 				24F7F43B1F04894E001A0FFA /* AnswerTableViewCell.xib in Resources */,
 				24F7F4541F049F4A001A0FFA /* ArticleProfilePageTableViewCell.xib in Resources */,
 				24A14CF21F03EA6900967F45 /* AnswerHomePageTableViewCell.xib in Resources */,
@@ -918,6 +937,7 @@
 				24EFC6861F05DE110005A52D /* PostMomentViewController.swift in Sources */,
 				BF9E75DF1F03AB6C00723541 /* R.generated.swift in Sources */,
 				BF4379621F1755BB0008EA66 /* UserRecordTableViewCell.swift in Sources */,
+				BFD0A2961F21A98100E2282D /* PostCommentViewController.swift in Sources */,
 				BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */,
 				BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */,
 				BF43796A1F1756580008EA66 /* ArticleRecordTableViewCell.swift in Sources */,
@@ -929,6 +949,8 @@
 				240B31001F1DA66400B2498B /* NotificationTableViewController.swift in Sources */,
 				BF3181651F1606A400ACB9DD /* QuestionDetailQuestionCell.swift in Sources */,
 				D9B96FDD1F0CBB9D00858360 /* ArticleDetailViewController.swift in Sources */,
+				BFD0A2911F21126600E2282D /* MeViewController.swift in Sources */,
+				BFD0A28F1F21099D00E2282D /* UserProfileContentSwitcher.swift in Sources */,
 				BFD0A27F1F204B7000E2282D /* AvatarCellDelegate.swift in Sources */,
 				BF31E9261F0B6229001236D8 /* MediaViewCell.swift in Sources */,
 				BF31E9281F0B7347001236D8 /* SearchViewController.swift in Sources */,
@@ -937,7 +959,9 @@
 				240B31021F1DAE8B00B2498B /* ViewHistorySource.swift in Sources */,
 				BFD0A2791F1F3FDC00E2282D /* UserProfileViewController.swift in Sources */,
 				BF390A4F1F01FCE500555B93 /* Logger.swift in Sources */,
+				BFD0A28A1F20995B00E2282D /* UserProfileWithButtonsCell.swift in Sources */,
 				BF2A1A281F1367A000220853 /* QuestionDetailViewController.swift in Sources */,
+				BFD0A28D1F20AB4200E2282D /* UserInteractionDelegate.swift in Sources */,
 				BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */,
 				BF31E92C1F0BACC5001236D8 /* QiniuProvider.swift in Sources */,
 				BFD0A2711F1DF6D700E2282D /* QuestionTableViewCell.swift in Sources */,
@@ -1104,6 +1128,14 @@
 			baseConfigurationReference = F7F285DE9E9D46F1E363EF9D /* Pods-Meow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDK/Required",
+					"$(PROJECT_DIR)/SDK/ShareSDK",
+					"$(PROJECT_DIR)/SDK/ShareSDK/Support/Optional",
+					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformConnector",
+					"$(PROJECT_DIR)/SDK/ShareSDK/Support/Required",
+				);
 				INFOPLIST_FILE = Meow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1119,6 +1151,14 @@
 			baseConfigurationReference = F4EAF4C51299AB8CB42357F2 /* Pods-Meow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDK/Required",
+					"$(PROJECT_DIR)/SDK/ShareSDK",
+					"$(PROJECT_DIR)/SDK/ShareSDK/Support/Optional",
+					"$(PROJECT_DIR)/SDK/ShareSDK/Support/PlatformConnector",
+					"$(PROJECT_DIR)/SDK/ShareSDK/Support/Required",
+				);
 				INFOPLIST_FILE = Meow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

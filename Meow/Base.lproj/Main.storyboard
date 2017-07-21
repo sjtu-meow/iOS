@@ -177,6 +177,15 @@
                             <outlet property="delegate" destination="Y1U-Bh-cZ4" id="oES-Ml-zWB"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="1NJ-RO-fm2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1Jl-d0-F2m">
+                            <connections>
+                                <action selector="showPostCommentView:" destination="Y1U-Bh-cZ4" id="bXg-QS-hks"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5E-bH-d8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,6 +265,9 @@
                                                                             <state key="normal" title="关注" backgroundImage="ButtonBigOutline">
                                                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                             </state>
+                                                                            <connections>
+                                                                                <action selector="follow:" destination="c7I-aH-hHM" eventType="touchUpInside" id="dYH-hP-p8j"/>
+                                                                            </connections>
                                                                         </button>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYX-wW-Gil">
                                                                             <rect key="frame" x="52" y="0.0" width="47" height="31"/>
@@ -263,6 +275,9 @@
                                                                             <state key="normal" title="私信" backgroundImage="ButtonBigOutline">
                                                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                             </state>
+                                                                            <connections>
+                                                                                <action selector="sendMessage:" destination="c7I-aH-hHM" eventType="touchUpInside" id="uuh-zj-cdt"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                 </stackView>
@@ -288,6 +303,36 @@
                                     <outlet property="sendMessageButton" destination="YYX-wW-Gil" id="IVq-pt-F70"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserProfileContentSwitcherCell" rowHeight="52" id="BZl-W0-BQ3" customClass="UserProfileContentSwitcher" customModule="Meow" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="159" width="320" height="52"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BZl-W0-BQ3" id="Cu5-RX-saf">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JR2-GR-D61">
+                                            <rect key="frame" x="126" y="12" width="68" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="她的文章"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9V-SB-aNN">
+                                            <rect key="frame" x="202" y="12" width="93" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="她的回答"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ao9-nN-ZCk">
+                                            <rect key="frame" x="36" y="12" width="69" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="她的动态"/>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="answerButton" destination="F9V-SB-aNN" id="td6-Vd-Elb"/>
+                                    <outlet property="articleButton" destination="JR2-GR-D61" id="bNf-qg-Fl7"/>
+                                    <outlet property="momentButton" destination="Ao9-nN-ZCk" id="Qbd-ap-aeF"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="7iq-tw-BTK" id="7D6-cM-7fG"/>
@@ -297,7 +342,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Xk-8S-rFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-971" y="2656"/>
+            <point key="canvasLocation" x="-971.25" y="2655.6338028169016"/>
         </scene>
         <!--搜索-->
         <scene sceneID="s91-PU-0QG">

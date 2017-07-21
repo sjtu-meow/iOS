@@ -10,4 +10,17 @@ import UIKit
 
 class QuestionRecordTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var avatarImageView: UIImageView!
+    
+    func configure(model: QuestionSummary) {
+    
+        titleLabel.text = model.title  
+        if let url = model.profile.avatar {
+            avatarImageView.af_setImage(withURL: url)
+        }
+        
+    }
+    
+    
 }

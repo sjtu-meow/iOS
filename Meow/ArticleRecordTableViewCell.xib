@@ -74,6 +74,11 @@
                     <constraint firstItem="Ne4-7J-baq" firstAttribute="top" secondItem="uik-2G-RiS" secondAttribute="top" constant="10" id="h0P-bP-91T"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="L1X-gK-AqN" id="suf-qo-naj"/>
+                <outlet property="contentLabel" destination="RtS-XX-J6u" id="bFl-XG-lcr"/>
+                <outlet property="titleLabel" destination="5nb-ET-a4L" id="G1k-gZ-18f"/>
+            </connections>
             <point key="canvasLocation" x="83.5" y="-345.5"/>
         </tableViewCell>
     </objects>

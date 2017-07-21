@@ -54,11 +54,26 @@ extension SearchResultViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = self.items![indexPath.row]
-        switch(item.type) {
-        default:
-            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.momentRecordTableViewCell.identifier)! as! MomentRecordTableViewCell
+        switch item.type! {
+        case .moment:
+            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.momentRecordTableViewCell)!
             view.configure(model: item as! Moment)
             return view
+        
+        case .answer:
+            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.answerRecordTableViewCell)!
+            view.configure(model: item as! AnswerSummary)
+            return view
+            
+        case .article:
+            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.articleRecordTableViewCell)!
+            view.configure(model: item as! ArticleSummary)
+            return view
+            
+        case .question:
+            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionRecordTableViewCell)!
+            view.configure(model: item as! QuestionSummary)
+            return view 
         }
     }
 }

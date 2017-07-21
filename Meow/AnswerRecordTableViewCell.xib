@@ -80,6 +80,12 @@
                     <constraint firstAttribute="trailing" secondItem="6L6-te-HUg" secondAttribute="trailing" constant="16" id="lIg-Im-eYs"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="B8l-aJ-S6N" id="k6Z-ht-FEm"/>
+                <outlet property="contentLabel" destination="W0I-AS-JaU" id="LFi-HQ-CWF"/>
+                <outlet property="nicknameLabel" destination="q5v-TW-vdn" id="wp3-oM-K8a"/>
+                <outlet property="titleLabel" destination="qxj-pF-Gwm" id="M8x-aL-ZnB"/>
+            </connections>
             <point key="canvasLocation" x="83.5" y="-367.5"/>
         </tableViewCell>
     </objects>

@@ -53,6 +53,8 @@ class MomentHomePageTableViewCell: UITableViewCell {
             avatarImageView.af_setImage(withURL: avatar)
             
         }
+        let avatarTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.didTapAvatar(_:)) )
+        avatarImageView.isUserInteractionEnabled = true
         avatarImageView.addGestureRecognizer(avatarTapRecognizer)
 
         nicknameLabel.text = profile?.nickname
@@ -72,7 +74,7 @@ class MomentHomePageTableViewCell: UITableViewCell {
     
     }
     
-    let avatarTapRecognizer = UIGestureRecognizer(target: self, action: #selector(didTapAvatar(_:)) )
+    
     
     func didTapAvatar(_ sender: UITapGestureRecognizer) {
         guard let moment = self.model else { return }

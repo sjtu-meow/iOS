@@ -30,6 +30,7 @@ enum MeowAPI  {
     case myArticles
     case myQuestions
     case myAnswers
+    case myProfile
     
     case myFollowingUsers
     case myFollowingQuestions
@@ -68,6 +69,12 @@ enum MeowAPI  {
     
     case myFavorite
     
+    case postReport(id: Int, type: ItemType, reason: String)
+    
+    case updateProfile(profile: Profile)
+    
+    case postComment(item: ItemProtocol, content: String)
+    
 }
 
 extension MeowAPI: TargetType {
@@ -93,7 +100,7 @@ extension MeowAPI: TargetType {
             return "/answers"
         case .answer(let id):
             return "/answers/\(id)"
-        case .postAnswer(let id, let _):
+        case .postAnswer(let id, _):
             return "/questions/\(id)/answers"
         case .login:
             return "/auth"
@@ -118,6 +125,8 @@ extension MeowAPI: TargetType {
             return "/user/articles"
         case .myMoments:
             return "/user/moments"
+        case .myProfile:
+            return "/user/profile"
             
         case .myFollowingUsers:
             return "/user/following/users"
@@ -185,6 +194,25 @@ extension MeowAPI: TargetType {
             
         case .myFavorite:
             return "/user/favorite"
+            
+        case .postReport:
+            return "/reports"
+        
+        case .updateProfile:
+            return "/user/profile"
+            
+        case .postComment(let item, _):
+            switch item.type! {
+            case .article:
+                return "/articles/\(item.id)/comments"
+            case .answer:
+                return "/answers/\(item.id)/comments"
+            case .moment:
+                return "/moments/\(item.id)/comments"
+            default:
+                return ""
+        }
+        
         }
     }
     
@@ -194,13 +222,18 @@ extension MeowAPI: TargetType {
         case .unfollowQuestion, .unfollowUser, .removeFavoriteAnswer, .removeFavoriteArticle, .unlikeAnswer, .unlikeMoment, .unlikeArticle:
             return .delete
         
-        case .login,.signup, .postMoment, .postArticle, .postQuestion, .postAnswer, .followQuestion, .followUser, .addFavoriteAnswer, .addFavoriteArticle, .likeAnswer, .likeMoment, .likeArticle:
+        case .login,.signup, .postMoment, .postArticle, .postQuestion, .postAnswer, .followQuestion, .followUser, .addFavoriteAnswer, .addFavoriteArticle, .likeAnswer, .likeMoment, .likeArticle, .postReport, .postComment:
+            
             return .post
+        case .updateProfile:
+            return .put
+            
         default:
             return .get
         }
     }
 
+        
     public var parameterEncoding: ParameterEncoding {
         switch self {
         case .search:
@@ -224,13 +257,19 @@ extension MeowAPI: TargetType {
             ]}) ?? []
             return ["content": content, "medias": jsonMedias]
         case .postArticle(let title, let content):
-            return ["title": title, "content": content]
+            return ["title": title, "content": content, "cover": "NONE"]
         case .postQuestion(let title, let content):
             return ["title": title, "content": content]
         case .postAnswer( _, let content):
             return ["content": content]
         case .search(let keyword):
             return ["keyword": keyword]
+        case .postReport(let id, let type, let reason):
+            return ["id": id, "type": type.rawValue, "reason": reason]
+        case .updateProfile(let profile):
+            return ["avatar": profile.avatar?.absoluteString ?? "", "nickname": profile.nickname ?? "", "bio": profile.bio ?? ""]
+        case .postComment(_, let content):
+            return ["content": content]
         default:
             return nil
         }

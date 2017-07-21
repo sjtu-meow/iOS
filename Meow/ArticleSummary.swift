@@ -22,8 +22,8 @@ struct ArticleSummary: ItemProtocol {
     var summary: String?
     
     /* like & comment */
-    var likeCount: Int?
-    var commentCount: Int?   //FIXME: not null?
+    var likeCount: Int!
+    var commentCount: Int!   //FIXME: not null?
 }
 
 

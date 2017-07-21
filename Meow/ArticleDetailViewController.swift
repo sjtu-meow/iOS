@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import WebKit
 import RxSwift
+import SwiftyJSON
+import PKHUD
 
 class ArticleDetailViewController: UIViewController {
     let disposeBag = DisposeBag()
@@ -27,6 +29,9 @@ class ArticleDetailViewController: UIViewController {
     var articleId: Int?
     var article: Article?
     var bottomBar: UITabBar!
+    
+    // FIXME
+    var isLiked = false, isFavorite = false
     
     override func viewDidLoad() {
         
@@ -51,6 +56,7 @@ class ArticleDetailViewController: UIViewController {
         bottomBar.topAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive=true
         
         bottomBar.delegate = self
+        initBottomBarStyle()
         loadData()
 
     }
@@ -102,6 +108,89 @@ class ArticleDetailViewController: UIViewController {
         vc.configure(model: article)
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func showMoreMenu() {
+        var alert: UIAlertController!
+        alert = UIAlertController(title: "", message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
+        let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.cancel, handler: nil)
+        let reportAction = UIAlertAction(title: "举报", style: UIAlertActionStyle.default) {
+            _ in
+            self.report()
+        }
+        let shareAction = UIAlertAction(title: "分享", style: UIAlertActionStyle.default) {
+            _ in
+            self.share()
+        }
+
+        alert.addAction(cancelAction)
+        alert.addAction(reportAction)
+        alert.addAction(shareAction)
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func report() {
+        let alert = UIAlertController(title: "举报", message: "请输入举报内容", preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "好", style: .default) { (action) in
+            self.sendReport(message: alert.textFields![0].text!)
+        }
+        alert.addTextField(configurationHandler: nil)
+        ok.isEnabled = true
+        
+        let cancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func sendReport(message: String) {
+        MeowAPIProvider.shared
+            .request(.postReport(id: articleId!, type: .article, reason: message))
+            .subscribe(onNext: { [weak self] _ in
+                 HUD.flash(.labeledSuccess(title: "举报成功", subtitle: nil))
+            }).addDisposableTo(disposeBag)
+    
+    }
+    
+    func share() {
+        didTapShareButton()
+    }
+    
+    func initBottomBarStyle() {
+        bottomBar.tintColor = UIColor.gray
+        MeowAPIProvider.shared
+            .request(.isFavoriteArticle(id: articleId!))
+            .subscribe(onNext: {
+            [weak self]
+            json in
+                self?.isFavorite = (json as! JSON)["favourite"].bool!
+                self?.updateFavoriteLabel()
+            })
+            .addDisposableTo(disposeBag)
+        
+        MeowAPIProvider.shared
+            .request(.isLikedArticle(id: articleId!))
+            .subscribe(onNext: {
+                [weak self]
+                json in
+                self?.isLiked = (json as! JSON)["liked"].bool!
+                self?.updateLikeLabel()
+            
+            })
+            .addDisposableTo(disposeBag)
+        
+    }
+    
+    func updateLikeLabel() {
+        bottomBar.items![0].title = isLiked ? "已赞" : "赞"
+    }
+    
+    func updateFavoriteLabel() {
+        bottomBar.items![2].title = isFavorite ? "已收藏" : "收藏"
+    }
+    
 }
 
 extension ArticleDetailViewController: UITabBarDelegate {
@@ -109,10 +198,47 @@ extension ArticleDetailViewController: UITabBarDelegate {
         switch tabBar.items!.index(of: item)! {
         case 1:
             self.showCommentView()
-        default:
-            return
+        case 0:
+            if !isLiked {
+                MeowAPIProvider.shared.request(.likeArticle(id: articleId!))
+                .subscribe(onNext: { [weak self] _ in self?.isLiked = true}).addDisposableTo(disposeBag)
+            } else {
+                MeowAPIProvider.shared.request(.unlikeArticle(id: articleId!))
+                .subscribe(onNext: { [weak self] _ in self?.isLiked = false}).addDisposableTo(disposeBag)
+            }
+            
+            updateLikeLabel()
+        case 2:
+            if !isFavorite {
+                MeowAPIProvider.shared.request(.addFavoriteArticle(id: articleId!)).subscribe(onNext: {[weak self] _ in self?.isFavorite = true}).addDisposableTo(disposeBag)
+            } else {
+                MeowAPIProvider.shared.request(.removeFavoriteArticle(id: articleId!)).subscribe(onNext: {[weak self] _ in self?.isFavorite = false}).addDisposableTo(disposeBag)
+            }
+            updateFavoriteLabel()
+        case 3:
+            showMoreMenu()
+        default: break
         }
         
+    }
+    
+    func didTapShareButton() {
+        
+        guard let article = self.article else { return }
+        let empty = ""
+        let dict = NSMutableDictionary()
+        let title = "来自喵喵喵的文章：\(article.title!)"
+        dict.ssdkSetupShareParams(
+            byText: title,
+            images: "",
+            url: URL(string: "baidu.com"),
+            title: title,
+            type: SSDKContentType.text)
+        
+        ShareSDK.showShareActionSheet(nil, items: nil, shareParams: dict) { (state, _, _, _, _, _) in
+            print(state)
+        }
+
     }
 }
 

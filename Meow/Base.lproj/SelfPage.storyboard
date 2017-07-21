@@ -13,7 +13,7 @@
         <!--我-->
         <scene sceneID="kkn-4k-bm3">
             <objects>
-                <tableViewController title="我" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zxy-39-uqL" sceneMemberID="viewController">
+                <tableViewController title="我" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zxy-39-uqL" customClass="MeViewController" customModule="Meow" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Jmj-ue-F7R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -22,15 +22,15 @@
                         <sections>
                             <tableViewSection id="NI8-VD-4vR" userLabel="用户信息">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="VHW-Tl-Xja" userLabel="用户信息" customClass="UserProfileCell" customModule="Meow" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="VHW-Tl-Xja" userLabel="用户信息" customClass="UserProfileCell" customModule="Meow" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VHW-Tl-Xja" id="M4t-vZ-DaY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gpS-E1-ieB" userLabel="主体">
-                                                    <rect key="frame" x="16" y="-19" width="185" height="80"/>
+                                                    <rect key="frame" x="16" y="4" width="185" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="mGn-kt-zV9" userLabel="行">
@@ -72,13 +72,18 @@
                                                 </stackView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="dME-sb-lfG" id="ew3-tS-QIs"/>
+                                            <outlet property="bioLabel" destination="9de-6K-E5h" id="Lui-NN-hsj"/>
+                                            <outlet property="nicknameLabel" destination="vLU-Db-qe4" id="33F-n9-v3n"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="XiO-pi-rdJ" userLabel="通知">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="DcO-Ol-tQ7" userLabel="我的通知">
-                                        <rect key="frame" x="0.0" y="151" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="171" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DcO-Ol-tQ7" id="bHV-QX-Hfm">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -102,7 +107,7 @@
                             <tableViewSection id="KBA-7t-113" userLabel="我发布的">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="KWK-qu-o13" userLabel="我的动态">
-                                        <rect key="frame" x="0.0" y="231" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="251" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KWK-qu-o13" id="Xek-ig-LmX">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -125,7 +130,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="x01-mT-7Yy" userLabel="我的文章">
-                                        <rect key="frame" x="0.0" y="275" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="295" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x01-mT-7Yy" id="fdk-ZL-3zy">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -148,7 +153,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6jF-KL-SBa" userLabel="我的问答">
-                                        <rect key="frame" x="0.0" y="319" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="339" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6jF-KL-SBa" id="w6Y-HU-Bod">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -175,7 +180,7 @@
                             <tableViewSection id="EjO-WE-qgW" userLabel="我的浏览">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="e9N-iR-wxW" userLabel="最近浏览">
-                                        <rect key="frame" x="0.0" y="399" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="419" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e9N-iR-wxW" id="40m-Jg-Wqn">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -195,7 +200,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="4eL-1n-rVm" userLabel="我的关注">
-                                        <rect key="frame" x="0.0" y="443" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="463" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4eL-1n-rVm" id="dTW-lO-SJi">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -218,7 +223,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="W6I-G9-7p4" userLabel="我的收藏">
-                                        <rect key="frame" x="0.0" y="487" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="507" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W6I-G9-7p4" id="uYk-D4-Ve6">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -245,7 +250,7 @@
                             <tableViewSection id="Ml8-2C-l2I" userLabel="设置">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Wf0-Ze-brM" userLabel="系统设置">
-                                        <rect key="frame" x="0.0" y="567" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="587" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wf0-Ze-brM" id="5p7-IR-XwR">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -275,6 +280,9 @@
                     <navigationItem key="navigationItem" title="我" id="Mh9-gM-cJ4"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="profileCell" destination="VHW-Tl-Xja" id="Zy2-fW-wkR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dx9-qW-ghy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

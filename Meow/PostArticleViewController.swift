@@ -33,7 +33,7 @@ class PostArticleViewController:UIViewController {
     
     
     @IBAction func cancel(_ sender: Any) {
-        // self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
     
@@ -100,7 +100,8 @@ class PostArticleViewController:UIViewController {
         MeowAPIProvider.shared
             .request(.postArticle(title: title, content: content))
             .subscribe(onNext: {
-                [weak self] _ in 
+                [weak self] _ in
+                
                 self?.dismiss(animated: true, completion: nil)
             })
         .addDisposableTo(disposeBag)
@@ -112,6 +113,9 @@ class PostArticleViewController:UIViewController {
         MeowAPIProvider.shared.request(.postAnswer(questionId: question!.id, content: content))
             .subscribe(onNext: {
                 [weak self] _ in
+                // FIXME
+                self?.navigationController?.popViewController(animated: true)
+                
                 self?.dismiss(animated: true, completion: nil)
             })
             .addDisposableTo(disposeBag)
