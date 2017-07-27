@@ -55,6 +55,6 @@ class UserRecordTableViewCell: UITableViewCell {
     
     func didTapAvatar(_ sender: UITapGestureRecognizer) {
         guard let model = self.model else { return }
-        delegate?.didTapAvatar(userId: model.userId)
+        //delegate?.didTapAvatar()
     }
 }

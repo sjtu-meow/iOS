@@ -31,6 +31,7 @@ class MyFollowingViewController: UIViewController {
     
     override func viewDidLoad() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(R.nib.userRecordTableViewCell)
         tableView.register(R.nib.questionTableViewCell)
         
@@ -94,11 +95,22 @@ extension MyFollowingViewController: UITableViewDataSource {
     }
 }
 
+extension MyFollowingViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if contentType == .question {
+            let question = questions[indexPath.row]
+            QuestionDetailViewController.show(question.id, from: self)
+        }
+        else {
+            let user = users[indexPath.row]
+            UserProfileViewController.show(user, from: self)
+        }
+    }
+}
+
 extension MyFollowingViewController: UserRecordTableViewCellDelegate {
-    func didTapAvatar(userId: Int) {
-        let vc = R.storyboard.main.userProfileViewController()!
-        vc.configure(userId: userId)
-        navigationController?.pushViewController(vc, animated: true)
+    func didTapAvatar(profile: Profile) {
+        UserProfileViewController.show(profile, from: self)
     }
     func didClickUnfollow(profile: Profile) {
         MeowAPIProvider.shared

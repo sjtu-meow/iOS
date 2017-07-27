@@ -58,8 +58,7 @@ class SearchViewController: UIViewController {
         super.viewDidAppear(animated);
         //searchController.isActive = true;
         var result = searchController.searchBar.becomeFirstResponder()
-        SearchHistorySource.addHistory(historyEntry: "meow")
-        SearchHistorySource.addHistory(historyEntry: "???")
+        
         updateTags()
     }
     

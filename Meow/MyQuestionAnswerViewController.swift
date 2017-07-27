@@ -30,6 +30,7 @@ class MyQuestionAnswerViewController: UIViewController {
     
     override func viewDidLoad() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
         tableView.register(R.nib.answerTableViewCell)
@@ -92,4 +93,16 @@ extension MyQuestionAnswerViewController: UITableViewDataSource {
         }
     }
     
+}
+
+extension MyQuestionAnswerViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if self.contentType == .questions {
+            let question = questions[indexPath.row]
+            QuestionDetailViewController.show(question.id, from: self)
+        } else {
+            let answer = answers[indexPath.row]
+            ArticleDetailViewController.show(answer, from: self)
+        }
+    }
 }

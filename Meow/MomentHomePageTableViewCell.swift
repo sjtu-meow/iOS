@@ -9,12 +9,15 @@
 import UIKit
 import AlamofireImage
 
+protocol MomentCellDelegate: AvatarCellDelegate {
+    
+}
 
 class MomentHomePageTableViewCell: UITableViewCell {
 
     //MARK: - Property
     /* user profile info */
-    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var avatarImageView: AvatarImageView!
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
     
@@ -30,11 +33,16 @@ class MomentHomePageTableViewCell: UITableViewCell {
     
     var model: Moment?
 
-    var delegate: AvatarCellDelegate?
+    var delegate: MomentCellDelegate? {
+        didSet {
+            avatarImageView.delegate = delegate
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        avatarImageView.delegate = self.delegate
         mediaCollectionView.register(R.nib.mediaViewCell)
     }
 
@@ -49,14 +57,7 @@ class MomentHomePageTableViewCell: UITableViewCell {
         let moment = model
         let profile = moment.profile
         
-        if let avatar = profile?.avatar {
-            avatarImageView.af_setImage(withURL: avatar)
-            
-        }
-        let avatarTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.didTapAvatar(_:)) )
-        avatarImageView.isUserInteractionEnabled = true
-        avatarImageView.addGestureRecognizer(avatarTapRecognizer)
-
+        avatarImageView.configure(model: profile!)
         nicknameLabel.text = profile?.nickname
         bioLabel.text = profile?.bio
         
@@ -74,12 +75,6 @@ class MomentHomePageTableViewCell: UITableViewCell {
     
     }
     
-    
-    
-    func didTapAvatar(_ sender: UITapGestureRecognizer) {
-        guard let moment = self.model else { return }
-        delegate?.didTapAvatar(userId: moment.profile.userId)
-    }
     
     // like function
     @IBAction func like(_ sender: UIButton) {

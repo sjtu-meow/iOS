@@ -60,9 +60,13 @@ class QuestionViewController: UITableViewController {
 }
 
 extension QuestionViewController: AnswerCellDelegate {
-    func onTitleTapped(model: AnswerSummary) {
+    func onTitleTapped(answer model: AnswerSummary) {
         let vc = R.storyboard.questionAnswerPage.questionDetailViewController()!
         vc.configure(questionId: model.questionId)
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    //func didTapAvatar(profile: Profile) {
+    //    UserProfileViewController.show(profile, from: self)
+    //}
 }

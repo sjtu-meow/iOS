@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AnswerCellDelegate {
-    func onTitleTapped(model: AnswerSummary)
+    func onTitleTapped(answer: AnswerSummary)
 }
  
 class AnswerTableViewCell: UITableViewCell {
@@ -36,7 +36,7 @@ class AnswerTableViewCell: UITableViewCell {
     
     func onTitleTapped(_ sender: UITapGestureRecognizer) {
         guard let model = model else { return }
-        delegate?.onTitleTapped(model: model)
+        delegate?.onTitleTapped(answer: model)
     }
     
     

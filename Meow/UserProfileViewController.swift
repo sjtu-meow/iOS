@@ -11,6 +11,13 @@ import RxSwift
 import SwiftyJSON
 
 class UserProfileViewController: UITableViewController {
+    class func show(_ profile: Profile, from viewController: UIViewController) {
+        let vc = R.storyboard.main.userProfileViewController()!
+        vc.profile = profile
+        vc.userId = profile.userId
+        viewController.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     enum ContentType: Int {
         case article = 1, moment = 0, questionAnswer = 2
     }
@@ -188,7 +195,7 @@ class UserProfileViewController: UITableViewController {
         case .article :
             let article = articles[indexPath.row]
             let vc = R.storyboard.articlePage.articleDetailViewController()!
-            vc.configure(article: article)
+            vc.configure(id: article.id, type: .article)
             navigationController?.pushViewController(vc, animated: true)
         
         case .questionAnswer:
@@ -203,6 +210,12 @@ class UserProfileViewController: UITableViewController {
         default:
             break 
         }
+    }
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if indexPath.section == 0 {
+            return nil 
+        }
+        return indexPath
     }
     
 }

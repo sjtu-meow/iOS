@@ -55,4 +55,9 @@ class MyFavoriteViewController: UITableViewController {
         }
         return UITableViewCell()
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = self.items[indexPath.row]
+        ArticleDetailViewController.show(item, from: self)
+    }
 }

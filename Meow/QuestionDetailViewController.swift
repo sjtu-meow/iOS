@@ -10,6 +10,11 @@ import UIKit
 import RxSwift
 
 class QuestionDetailViewController: UITableViewController {
+    class func show(_ id: Int, from viewController: UIViewController) {
+        let vc = R.storyboard.questionAnswerPage.questionDetailViewController()!
+        vc.questionId = id
+        viewController.navigationController?.pushViewController(vc, animated: true)
+    }
     
     var questionId: Int!
     var question: Question?
@@ -72,7 +77,11 @@ class QuestionDetailViewController: UITableViewController {
         vc.configure(question: question!)
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let question = question, indexPath.section == 1 else { return }
+        let answer = question.answers![indexPath.row]
+        ArticleDetailViewController.show(answer, from: self)
+        
+    }
 }
-
-
-

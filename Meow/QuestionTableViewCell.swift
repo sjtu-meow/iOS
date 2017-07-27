@@ -17,7 +17,7 @@ class QuestionTableViewCell: UITableViewCell {
     
     func configure(model: QuestionSummary) {
         titleLabel.text = model.title
-        answerCountLabel.text = "\(model.answerCount)"
+        answerCountLabel.text = "\(model.answerCount ?? 0)"
     }
     
 }

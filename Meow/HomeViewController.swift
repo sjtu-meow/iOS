@@ -163,10 +163,8 @@ extension HomeViewController: UISearchBarDelegate {
     }
 }
 
-extension HomeViewController: AvatarCellDelegate {
-    func didTapAvatar(userId: Int) {
-        let vc = R.storyboard.main.userProfileViewController()!
-        vc.configure(userId: userId)
-        self.navigationController?.pushViewController(vc, animated: true)
+extension HomeViewController: MomentCellDelegate {
+    func didTapAvatar(profile: Profile) {
+        UserProfileViewController.show(profile, from: self)
     }
 }

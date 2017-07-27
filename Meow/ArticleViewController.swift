@@ -68,7 +68,7 @@ class ArticleViewController: UITableViewController {
         if segue.identifier == R.segue.articleViewController.articleToDetailSegue.identifier {
             //let navController = segue.destination as! UINavigationController,
             //target = navController.topViewController as! ArticleDetailViewController
-            (segue.destination as! ArticleDetailViewController).configure(article: article)
+            (segue.destination as! ArticleDetailViewController).configure(id: article.id, type: .article)
             
         }
  

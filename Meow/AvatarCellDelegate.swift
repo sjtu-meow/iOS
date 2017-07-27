@@ -9,5 +9,5 @@
 import UIKit
 
 protocol AvatarCellDelegate {
-    func didTapAvatar(userId: Int)
+    func didTapAvatar(profile: Profile)
 }

@@ -22,6 +22,8 @@ class SearchResultViewController: UIViewController {
     
     override func viewDidLoad() {
         self.tableView = SearchResultTableView.addTo(superview: self.view)
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44
         tableView.dataSource = self
         tableView.register(R.nib.questionRecordTableViewCell)
         tableView.register(R.nib.answerRecordTableViewCell)
@@ -49,7 +51,7 @@ extension SearchResultViewController: UITableViewDataSource {
         return (self.items != nil) ? 1 : 0
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let count = (self.items != nil) ? self.items!.count : 0
+        let count = self.items?.count ?? 0
         return count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
