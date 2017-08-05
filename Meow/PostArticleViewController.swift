@@ -8,16 +8,20 @@
 import UIKit
 import RxSwift
 
-class PostArticleViewController:UIViewController {
+class PostArticleViewController: UIViewController {
     enum Mode { case answer, article }
     
     var mode = Mode.article
     
-
+    var uploadedImages = [UIImage]()
+    
     let disposeBag = DisposeBag()
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var editorContainer: UIView!
+    
+    var imageCount = 0
+    
     var editor: RichTextEditor!
     var question: Question?
     
@@ -51,6 +55,7 @@ class PostArticleViewController:UIViewController {
     
         // Add editor
         editor = R.nib.richTextEditor.firstView(owner: self)
+        editor.delegate = self
         editorContainer.addSubview(editor)
         
         // Add constraint to editor subview
@@ -83,13 +88,7 @@ class PostArticleViewController:UIViewController {
 //        }
     }
     
-    func addImage() {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.sourceType = .photoLibrary
-        imagePickerController.delegate = self
-        present(imagePickerController, animated: true, completion: nil)
-    }
-    
+
     func checkHTML() -> Bool {
         return editor.htmlString.isEmpty
     }
@@ -125,11 +124,35 @@ class PostArticleViewController:UIViewController {
 }
 
 extension PostArticleViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        let imageCount = self.imageCount
+        self.imageCount += 1
+        
+        QiniuProvider.shared.upload(data: UIImagePNGRepresentation(selectedImage)!)
+            .subscribe(onNext: {
+                [weak self]
+                key in
+                let domain = "http://osg5c99b1.bkt.clouddn.com/" // FIXME
+                let url = URL(string: domain + key)!
+                self?.editor.insertImage(id: "Image\(imageCount)", url: url.absoluteString)
+            }).addDisposableTo(disposeBag)
+        
         dismiss(animated: true, completion: nil)
         
     }
-
-
 }
 
+extension PostArticleViewController: RichTextEditorDelegate {
+    func didTapAddImage() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
+    }
+}

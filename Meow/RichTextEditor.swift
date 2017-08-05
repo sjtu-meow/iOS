@@ -10,13 +10,12 @@ import UIKit
 import RxSwift
 
 protocol RichTextEditorDelegate {
-    func addImage() -> (URL, Observable<URL?>)?
+    func didTapAddImage()
 }
 
 class RichTextEditor: UIView  {
 
     @IBOutlet weak var webview: UIWebView!
-    var images = [(URL,Observable<URL?>)]()
     
     var delegate: RichTextEditorDelegate?
    
@@ -25,10 +24,7 @@ class RichTextEditor: UIView  {
     }
     
     @IBAction func addImage(_ sender: Any) {
-        if let result = delegate?.addImage() {
-            insertImage(id: "\(images.count)", url: result.0.absoluteString)
-            images.append(result)
-        }
+        delegate?.didTapAddImage()
     }
     
     var htmlString: String {

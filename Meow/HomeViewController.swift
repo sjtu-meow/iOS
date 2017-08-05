@@ -104,7 +104,7 @@ class HomeViewController: UITableViewController {
         }
         
         /* items */
-        let item = self.items[indexPath.row]
+        let item = self.items[indexPath.row ]
         
         // FIXME: check whether it is a comment cell
         switch(item.type!) {

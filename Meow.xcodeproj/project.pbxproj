@@ -44,6 +44,7 @@
 		24F7F45F1F04A87E001A0FFA /* ArticleRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F45E1F04A87E001A0FFA /* ArticleRecordTableViewCell.xib */; };
 		24F7F4611F04A996001A0FFA /* UserRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4601F04A996001A0FFA /* UserRecordTableViewCell.xib */; };
 		24F7F4651F04FAF8001A0FFA /* PostTypePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7F4641F04FAF8001A0FFA /* PostTypePicker.xib */; };
+		BF14B97C1F3343BF0085AD51 /* MediaCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14B97B1F3343BF0085AD51 /* MediaCollectionView.swift */; };
 		BF2100021F1DF12000D9E7F4 /* QuestionSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2100011F1DF12000D9E7F4 /* QuestionSummary.swift */; };
 		BF21FFF61F1DA46400D9E7F4 /* MyMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21FFF51F1DA46400D9E7F4 /* MyMomentViewController.swift */; };
 		BF21FFF81F1DAF4800D9E7F4 /* MyArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21FFF71F1DAF4800D9E7F4 /* MyArticleViewController.swift */; };
@@ -57,8 +58,6 @@
 		BF3181651F1606A400ACB9DD /* QuestionDetailQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3181641F1606A400ACB9DD /* QuestionDetailQuestionCell.swift */; };
 		BF31E9201F0A2CBD001236D8 /* UploadToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E91F1F0A2CBD001236D8 /* UploadToken.swift */; };
 		BF31E9221F0A9BFD001236D8 /* BannerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */; };
-		BF31E9241F0B61A7001236D8 /* MediaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */; };
-		BF31E9261F0B6229001236D8 /* MediaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E9251F0B6229001236D8 /* MediaViewCell.swift */; };
 		BF31E9281F0B7347001236D8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E9271F0B7347001236D8 /* SearchViewController.swift */; };
 		BF31E92A1F0B7FCF001236D8 /* PostTypePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E9291F0B7FCF001236D8 /* PostTypePickerViewController.swift */; };
 		BF31E92C1F0BACC5001236D8 /* QiniuProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31E92B1F0BACC5001236D8 /* QiniuProvider.swift */; };
@@ -192,6 +191,7 @@
 		3612EC24166F9C122D5CDCC1 /* Pods_MeowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8858B54026EC68FEB34336F5 /* Pods-MeowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowUITests/Pods-MeowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A08DD2E53506F36693AD12C5 /* Pods-MeowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowTests/Pods-MeowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF14B97B1F3343BF0085AD51 /* MediaCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCollectionView.swift; sourceTree = "<group>"; };
 		BF2100011F1DF12000D9E7F4 /* QuestionSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionSummary.swift; sourceTree = "<group>"; };
 		BF21FFF51F1DA46400D9E7F4 /* MyMomentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMomentViewController.swift; sourceTree = "<group>"; };
 		BF21FFF71F1DAF4800D9E7F4 /* MyArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyArticleViewController.swift; sourceTree = "<group>"; };
@@ -205,8 +205,6 @@
 		BF3181641F1606A400ACB9DD /* QuestionDetailQuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailQuestionCell.swift; sourceTree = "<group>"; };
 		BF31E91F1F0A2CBD001236D8 /* UploadToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadToken.swift; sourceTree = "<group>"; };
 		BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerViewCell.xib; sourceTree = "<group>"; };
-		BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaViewCell.xib; sourceTree = "<group>"; };
-		BF31E9251F0B6229001236D8 /* MediaViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewCell.swift; sourceTree = "<group>"; };
 		BF31E9271F0B7347001236D8 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BF31E9291F0B7FCF001236D8 /* PostTypePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTypePickerViewController.swift; sourceTree = "<group>"; };
 		BF31E92B1F0BACC5001236D8 /* QiniuProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QiniuProvider.swift; sourceTree = "<group>"; };
@@ -551,7 +549,6 @@
 				BF44D37F1F06312600A137E6 /* BannerViewCell.swift */,
 				246E77B41F1F7905001A9E8E /* CommentTableViewCell.swift */,
 				24EFC68C1F05F1560005A52D /* ImagePostCollectionViewCell.swift */,
-				BF31E9251F0B6229001236D8 /* MediaViewCell.swift */,
 				BF4A242B1F0E19840004650E /* RichTextEditor.swift */,
 				BF31815E1F15ACB600ACB9DD /* SearchResultTableView.swift */,
 				BFD0A2871F208D0F00E2282D /* ArticleUserPageTableViewCell.swift */,
@@ -559,6 +556,7 @@
 				BFD0A2891F20995B00E2282D /* UserProfileWithButtonsCell.swift */,
 				BFD0A28E1F21099D00E2282D /* UserProfileContentSwitcher.swift */,
 				BF66F0FE1F2F634D009C99B1 /* AvatarImageView.swift */,
+				BF14B97B1F3343BF0085AD51 /* MediaCollectionView.swift */,
 			);
 			name = "View Model";
 			sourceTree = "<group>";
@@ -576,7 +574,6 @@
 				246E77B51F1F7905001A9E8E /* CommentTableViewCell.xib */,
 				BF31E9211F0A9BFD001236D8 /* BannerViewCell.xib */,
 				BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */,
-				BF31E9231F0B61A7001236D8 /* MediaViewCell.xib */,
 				24F7F4641F04FAF8001A0FFA /* PostTypePicker.xib */,
 				BF4A242D1F0E1CD30004650E /* RichTextEditor.xib */,
 			);
@@ -742,7 +739,6 @@
 				24F7F4521F049EC7001A0FFA /* ArticleUserPageTableViewCell.xib in Resources */,
 				BF7878471F00F2C9000FB7C6 /* LaunchScreen.storyboard in Resources */,
 				2443A6691F02064C0032BEB9 /* MomentHomePageTableViewCell.xib in Resources */,
-				BF31E9241F0B61A7001236D8 /* MediaViewCell.xib in Resources */,
 				24F7F4651F04FAF8001A0FFA /* PostTypePicker.xib in Resources */,
 				D93972401F0C83DD000A02CF /* editor.html in Resources */,
 				2411AD191F05417600910051 /* QuestionAnswerPage.storyboard in Resources */,
@@ -922,6 +918,7 @@
 				BFD0A2811F2050C900E2282D /* UserProfileCell.swift in Sources */,
 				D97B34FA1F05DCC300BCB027 /* Item.swift in Sources */,
 				BF4A24281F0C7CF90004650E /* PostAnswerViewController.swift in Sources */,
+				BF14B97C1F3343BF0085AD51 /* MediaCollectionView.swift in Sources */,
 				24EFC6931F0677BC0005A52D /* MomentHomePageTableViewCell.swift in Sources */,
 				BF4A24241F0C7C570004650E /* PostQuestionViewController.swift in Sources */,
 				D97B350A1F0A11C900BCB027 /* ArticleHomePageTableViewCell.swift in Sources */,
@@ -956,7 +953,6 @@
 				BFD0A2911F21126600E2282D /* MeViewController.swift in Sources */,
 				BFD0A28F1F21099D00E2282D /* UserProfileContentSwitcher.swift in Sources */,
 				BFD0A27F1F204B7000E2282D /* AvatarCellDelegate.swift in Sources */,
-				BF31E9261F0B6229001236D8 /* MediaViewCell.swift in Sources */,
 				BF31E9281F0B7347001236D8 /* SearchViewController.swift in Sources */,
 				BF21FFF81F1DAF4800D9E7F4 /* MyArticleViewController.swift in Sources */,
 				D97B350F1F0A12B100BCB027 /* QuestionHomePageTableViewCell.swift in Sources */,

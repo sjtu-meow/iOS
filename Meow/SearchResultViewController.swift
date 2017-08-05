@@ -22,6 +22,8 @@ class SearchResultViewController: UIViewController {
     
     override func viewDidLoad() {
         self.tableView = SearchResultTableView.addTo(superview: self.view)
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
         tableView.dataSource = self

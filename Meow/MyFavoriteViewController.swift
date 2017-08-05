@@ -14,6 +14,8 @@ class MyFavoriteViewController: UITableViewController {
     var items = [ItemProtocol]()
     
     override func viewDidLoad() {
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
         tableView.register(R.nib.articleUserPageTableViewCell)

@@ -10,7 +10,7 @@ import UIKit
 import Qiniu
 import RxSwift
 
-class PostMomentViewController: UIViewController, UINavigationControllerDelegate {
+class PostMomentViewController: UIViewController {
 
     //MARK: - Properties
     
@@ -22,7 +22,6 @@ class PostMomentViewController: UIViewController, UINavigationControllerDelegate
     
     
     var uploadedImages = [UIImage]()
-    var uploadedImageUrls = [URL]()
     
     
     let addButtonImage: UIImage = #imageLiteral(resourceName: "AddImagePlaceholder")
@@ -79,19 +78,7 @@ class PostMomentViewController: UIViewController, UINavigationControllerDelegate
                 self?.dismiss(animated: true, completion: nil)
             })
             .addDisposableTo(disposeBag)
-        
-        /*
- MeowAPIProvider.shared.request(.uploadToken)
-            .mapTo(type: UploadToken.self)
-            .flatMap {
-                [weak self]
-                (uploadToken) -> Observable<String> in
-                Observable.from(uploadedImageUrls)
-                .map((url)->String(url))
-            }
- */
   
-        
         
     }
     
@@ -102,17 +89,8 @@ class PostMomentViewController: UIViewController, UINavigationControllerDelegate
         dismiss(animated: true, completion: nil)
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
 }
-extension PostMomentViewController: UICollectionViewDataSource {
+extension PostMomentViewController: UICollectionViewDataSource, UINavigationControllerDelegate {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return uploadedImages.count + 1;
     }
@@ -143,19 +121,10 @@ extension PostMomentViewController: UIImagePickerControllerDelegate {
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        // The info dictionary may contain multiple representations of the image. You want to use the original.
-        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
-            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
-        }
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        guard let selectedImageUrl = info[UIImagePickerControllerReferenceURL] as? URL else {
-            fatalError("Failed to retrieve media url")
-        }
-        // Add uploaded image to array
         uploadedImages.append(selectedImage)
-        uploadedImageUrls.append(selectedImageUrl)
-        
-        // Dismiss the picker.
+    
         dismiss(animated: true, completion: nil)
         
         momentImageCollectionView.reloadData()

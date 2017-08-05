@@ -30,6 +30,8 @@ class MyFollowingViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(R.nib.userRecordTableViewCell)

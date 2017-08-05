@@ -23,7 +23,7 @@ class MomentHomePageTableViewCell: UITableViewCell {
     
     /* moment */
     @IBOutlet weak var momentContentLabel: UILabel!
-    @IBOutlet weak var mediaCollectionView: UICollectionView!
+    @IBOutlet weak var mediaCollectionView: MediaCollectionView!
     
     /* like & comment */
     @IBOutlet weak var likeLabel: UILabel!
@@ -42,8 +42,11 @@ class MomentHomePageTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        translatesAutoresizingMaskIntoConstraints = false
         avatarImageView.delegate = self.delegate
-        mediaCollectionView.register(R.nib.mediaViewCell)
+       
+        // mediaCollectionView.heightAnchor.constraint(equalToConstant: mediaCollectionView.contentSize.height).isActive = true
+       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -71,8 +74,10 @@ class MomentHomePageTableViewCell: UITableViewCell {
         // TODO
 
         // media
-        mediaCollectionView.dataSource = self
-    
+        //mediaCollectionView.configure(model: model)
+        mediaCollectionView.configure(model: moment)
+        
+        setNeedsUpdateConstraints()
     }
     
     
@@ -85,26 +90,3 @@ class MomentHomePageTableViewCell: UITableViewCell {
 }
 
 
-extension MomentHomePageTableViewCell: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        if let model = model, let _ = model.medias {
-            return 1
-        }
-        return 0
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let model = model, let medias = model.medias {
-            return medias.count
-        }
-        return 0
-    }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let view = collectionView.dequeueReusableCell(withReuseIdentifier: R.nib.mediaViewCell.identifier, for: indexPath) as! MediaViewCell
-        
-        view.configure(model: model!.medias![indexPath.row])
-        
-        return view
-    }
-    
-    
-}

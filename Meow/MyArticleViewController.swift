@@ -14,6 +14,9 @@ class MyArticleViewController: UITableViewController {
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.register(R.nib.articleProfilePageTableViewCell)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
