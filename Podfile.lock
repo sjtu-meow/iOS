@@ -18,7 +18,37 @@ PODS:
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
   - AVOSCloud (6.1.1)
+  - AVOSCloudIM (6.1.1):
+    - AVOSCloud (= 6.1.1)
+    - AVOSCloudIM/_ARC (= 6.1.1)
+    - AVOSCloudIM/_NOARC (= 6.1.1)
+  - AVOSCloudIM/_ARC (6.1.1):
+    - AVOSCloud (= 6.1.1)
+    - AVOSCloudIM/_NOARC (= 6.1.1)
+  - AVOSCloudIM/_NOARC (6.1.1):
+    - AVOSCloud (= 6.1.1)
+  - Bugly (2.4.8)
+  - ChatKit (0.10.1):
+    - AVOSCloud (~> 6.1.0)
+    - AVOSCloudIM (~> 6.1.0)
+    - CYLDeallocBlockExecutor (~> 1.1.2)
+    - DACircularProgress (~> 2.3.1)
+    - FDStackView (~> 1.0)
+    - FMDB (~> 2.6.2)
+    - Masonry (~> 1.0.1)
+    - MJRefresh (~> 3.1.9)
+    - MLLabel (~> 1.9.2)
+    - MWPhotoBrowser (~> 2.1.2)
+    - pop (~> 1.0.9)
+    - SDWebImage (~> 3.8.0)
+    - UITableView+FDTemplateLayoutCell (~> 1.5.beta)
+  - CYLDeallocBlockExecutor (1.1.2)
+  - DACircularProgress (2.3.1)
   - DateToolsSwift (2.0.3)
+  - FDStackView (1.0)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
   - HappyDNS (0.3.10)
   - ImageSlideshow (1.3.2):
     - ImageSlideshow/Core (= 1.3.2)
@@ -27,22 +57,34 @@ PODS:
     - ImageSlideshow/Core
   - ImageSlideshow/Core (1.3.2)
   - Keys (1.0.0)
-  - MOBFoundation (3.0.1)
+  - Masonry (1.0.2)
+  - MBProgressHUD (0.9.2)
+  - MJRefresh (3.1.12)
+  - MLLabel (1.9.2)
+  - MOBFoundation (3.0.2)
   - Moya/Core (8.0.5):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
   - Moya/RxSwift (8.0.5):
     - Moya/Core
     - RxSwift (~> 3.0)
+  - MWPhotoBrowser (2.1.2):
+    - DACircularProgress (~> 2.3)
+    - MBProgressHUD (~> 0.9)
+    - SDWebImage (!= 3.7.2, ~> 3.7)
   - PKHUD (4.2.3)
-  - Qiniu (7.1.5):
+  - pop (1.0.10)
+  - Qiniu (7.1.6):
     - AFNetworking (~> 3)
     - HappyDNS (~> 0.3)
   - R.swift (3.3.0):
     - R.swift.Library (~> 3.0.2)
   - R.swift.Library (3.0.2)
   - Result (3.2.3)
-  - RxSwift (3.6.0)
+  - RxSwift (3.6.1)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - ShareSDK3 (4.0.1.1):
     - MOBFoundation
     - ShareSDK3/ShareSDK (= 4.0.1.1)
@@ -66,10 +108,13 @@ PODS:
     - MOBFoundation
   - SwiftyJSON (3.1.4)
   - TagListView (1.2.0)
+  - UITableView+FDTemplateLayoutCell (1.6)
 
 DEPENDENCIES:
   - AlamofireImage
   - AVOSCloud
+  - Bugly
+  - ChatKit
   - DateToolsSwift
   - ImageSlideshow
   - ImageSlideshow/Alamofire
@@ -99,7 +144,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   ShareSDK3:
-    :commit: 7aabe3c566a2bd8b9e2690719c5eb376c667aadd
+    :commit: 34e8f21fe28dc7fb021cdf1565c3b4a47350a2e8
     :git: https://git.oschina.net/MobClub/ShareSDK-for-iOS-Spec.git
 
 SPEC CHECKSUMS:
@@ -107,22 +152,37 @@ SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   AVOSCloud: a21318994cd97adaf9bf19cf0ac38187b3d94f00
+  AVOSCloudIM: 5ac1d53078cfd81e193e1eb6a365842d96ad3009
+  Bugly: da3c02408c14838d498429320545a8e439392978
+  ChatKit: 95357364a53d612f3b7977e7c0c2c928aaca34d2
+  CYLDeallocBlockExecutor: ecf39e45dcead9e120f460df5668b8f5093d178e
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   DateToolsSwift: bf69bf9056d9e53c5c03f06e51f219b9b8b02f9e
+  FDStackView: 3a4bbe0ce9c35e974246a585168b9da8c32213f1
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
   ImageSlideshow: a68a76fc618ebd2b7481ce355ad67d7097203976
   Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
-  MOBFoundation: '08328ccde124b687ac5e4367c2ccfc5b4d0235b7'
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  MLLabel: df58127ce0bd1f87890ecc3232db77a85ce4cd97
+  MOBFoundation: d5e27c4638d911d3c7501aa5df458955d4814359
   Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
+  MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
   PKHUD: c7692163a09875cbf15827dc581df3c5cf7f1015
-  Qiniu: 77a3dba411556a383d72d17e842345a9d4c83252
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  Qiniu: 8af94ce9b1611ed5f4350883e41d4a62cabad491
   R.swift: bde9704d50ff36820f49e266bc88ef545e1e9b36
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
   Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
-  RxSwift: a0925c7fb11fbe60055285f6f2062241aa37a175
+  RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
+  SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
   ShareSDK3: 2531de0a5546f106994c23787f3d2d587c5568d7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TagListView: 999e1df50c0f6b9ca927fae705c86a7e3b6ee9ba
+  UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
 
-PODFILE CHECKSUM: 99ece6d9687882946a87e9a7b8fe923d0dd11dc9
+PODFILE CHECKSUM: 89a9406117f6c8ef63d395ca07c8b2103b22beba
 
 COCOAPODS: 1.2.1

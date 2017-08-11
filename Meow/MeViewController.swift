@@ -13,6 +13,12 @@ class MeViewController: UITableViewController {
     var profile: Profile?
     let disposeBag = DisposeBag()
     
+    open class func show(from navigationController: UINavigationController) {
+        let vc = R.storyboard.selfPage.meViewController()!
+        navigationController.pushViewController(vc, animated: true)
+        
+    }
+    
     @IBOutlet weak var profileCell: UserProfileCell!
   
     

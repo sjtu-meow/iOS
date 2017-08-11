@@ -13,4 +13,7 @@
 #import <ShareSDKUI/ShareSDK+SSUI.h>
 #import <ShareSDKUI/SSUIShareActionSheetStyle.h>
 
+#import <ChatKit/LCChatKit.h>
+#import <Bugly/Bugly.h>
+
 #endif /* Meow_Bridge_h */

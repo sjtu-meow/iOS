@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import SwiftyJSON
 
+
 class UserProfileViewController: UITableViewController {
     class func show(_ profile: Profile, from viewController: UIViewController) {
         let vc = R.storyboard.main.userProfileViewController()!
@@ -243,6 +244,9 @@ extension UserProfileViewController: UserProfileCellDelegate {
     }
     
     func didTapSendMessageButton(_ sender: UIButton) {
+        guard let profile = profile else { return }
+        let clientId = "\(profile.userId)"
         
+        ChatManager.openConversationViewController(withPeerId: clientId, from: self.navigationController!)
     }
 }

@@ -24,7 +24,7 @@ class QiniuProvider {
     let manager = QNUploadManager()
     
     init() {
-        if token == nil {
+        if token == nil || token!.isExpired() {
             MeowAPIProvider.shared.request(.uploadToken)
             .mapTo(type: UploadToken.self)
             .subscribe(onNext:{[weak self] token in self?.token = token})

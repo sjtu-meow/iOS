@@ -5,6 +5,7 @@ plugin 'cocoapods-keys', {
   :keys => [
     'LeanCloudAppId',
     'LeanCloudClientKey',
+    'BuglyAppId'
   ]
 }
 target 'Meow' do
@@ -23,6 +24,8 @@ target 'Meow' do
   pod 'PKHUD'
   pod 'AlamofireImage'
   pod 'TagListView'
+  pod 'ChatKit'
+  pod 'Bugly'
 
   # 主模块(必须)
   pod 'ShareSDK3',:git => 'https://git.oschina.net/MobClub/ShareSDK-for-iOS-Spec.git'
