@@ -10,6 +10,8 @@ import XCTest
 @testable import Meow
 
 class ViewHistorySourceTests : XCTestCase {
+    
+    /*
     func testEqual() {
         let item1 = ViewHistoryItem(id: 1, type: .article)
         let item2 = ViewHistoryItem(id: 1, type: .article)
@@ -19,6 +21,7 @@ class ViewHistorySourceTests : XCTestCase {
         XCTAssertNotEqual(item1, item3)
         XCTAssertNotEqual(item1, item4)
     }
+ */
     /*
     func testAddHistory() {
         // item to add
