@@ -24,6 +24,7 @@ class SearchResultViewController: UIViewController {
         self.tableView = SearchResultTableView.addTo(superview: self.view)
         tableView.tableFooterView = UIView(frame: CGRect.zero)
 
+        tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
         tableView.dataSource = self
@@ -46,6 +47,7 @@ class SearchResultViewController: UIViewController {
             self?.tableView.reloadData()
         }).addDisposableTo(disposeBag)
     }
+    
 }
 
 extension SearchResultViewController: UITableViewDataSource {
@@ -79,5 +81,31 @@ extension SearchResultViewController: UITableViewDataSource {
             view.configure(model: item as! QuestionSummary)
             return view 
         }
+    }
+}
+
+extension SearchResultViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = self.items![indexPath.row]
+        switch item.type! {
+        case .article:
+            let vc = R.storyboard.articlePage.articleDetailViewController()!
+            vc.configure(id: item.id, type: .article)
+            navigationController?.pushViewController(vc, animated: true)
+            
+        case .question:
+            let vc = R.storyboard.questionAnswerPage.questionDetailViewController()!
+            vc.configure(questionId: item.id)
+            navigationController?.pushViewController(vc, animated: true)
+            
+        case .answer:
+            let vc = R.storyboard.articlePage.articleDetailViewController()!
+            vc.configure(id: item.id, type: .answer)
+            navigationController?.pushViewController(vc, animated: true)
+        // TODO(xyyu): maybe not safe
+        default:
+            break
+        }
+        
     }
 }
