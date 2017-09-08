@@ -92,8 +92,8 @@ class ArticleDetailViewController: UIViewController {
             self?.updateView()
         }
         
-        if(self.itemType == .article){
-        MeowAPIProvider.shared.request(.article(id: id))
+        if (self.itemType == .article) {
+            MeowAPIProvider.shared.request(.article(id: id))
                 .mapTo(type: Article.self)
                 .subscribe(onNext: observer)
                 .addDisposableTo(disposeBag)
@@ -111,11 +111,14 @@ class ArticleDetailViewController: UIViewController {
     }
 
     func updateView() {
-        var content: String
+        var content: String!
         if itemType! == .article {
-            content = (item as! Article).content!
-        } else {
-            content = (item as! Answer).content!
+            let article = item as! Article
+            content = article.content!
+            self.navigationItem.title = article.title
+        } else if itemType! == .answer {
+            let answer  = item as! Answer
+            content = answer.content!
         }
         webview.presentHTMLString(content)
         
