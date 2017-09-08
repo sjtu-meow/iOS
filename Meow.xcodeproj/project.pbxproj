@@ -97,6 +97,7 @@
 		BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878751F010178000FB7C6 /* LoginViewController.swift */; };
 		BF9272E51F0F8A6300E601F3 /* ItemDetailButtomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */; };
 		BF98C2131F45B8D7002E809B /* ChatKitUser.swfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98C2121F45B8D7002E809B /* ChatKitUser.swfit.swift */; };
+		BF9BB06B1F62833600F5851F /* MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BB06A1F62833600F5851F /* MeUITests.swift */; };
 		BF9E75DF1F03AB6C00723541 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E75DE1F03AB6C00723541 /* R.generated.swift */; };
 		BFBB161A1F14C9A900405E92 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBB16191F14C9A900405E92 /* SearchResultViewController.swift */; };
 		BFC365261F3DCDF3001F5DA8 /* LoginUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC365251F3DCDF3001F5DA8 /* LoginUtils.swift */; };
@@ -261,6 +262,7 @@
 		BF7878751F010178000FB7C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailButtomBar.xib; sourceTree = "<group>"; };
 		BF98C2121F45B8D7002E809B /* ChatKitUser.swfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatKitUser.swfit.swift; sourceTree = "<group>"; };
+		BF9BB06A1F62833600F5851F /* MeUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeUITests.swift; sourceTree = "<group>"; };
 		BF9E75DE1F03AB6C00723541 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BFBB16191F14C9A900405E92 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		BFC365251F3DCDF3001F5DA8 /* LoginUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUtils.swift; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 		BF382FDD1F473BCF0010C567 /* MeowUITests */ = {
 			isa = PBXGroup;
 			children = (
+				BF9BB06A1F62833600F5851F /* MeUITests.swift */,
 				BF382FDE1F473BCF0010C567 /* MeowUITests.swift */,
 				BF382FE01F473BCF0010C567 /* Info.plist */,
 			);
@@ -967,6 +970,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF382FDF1F473BCF0010C567 /* MeowUITests.swift in Sources */,
+				BF9BB06B1F62833600F5851F /* MeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1304,6 +1308,7 @@
 				BF382FE41F473BCF0010C567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF7878341F00F2C9000FB7C6 /* Build configuration list for PBXProject "Meow" */ = {
 			isa = XCConfigurationList;

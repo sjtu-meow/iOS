@@ -30,6 +30,7 @@ class MeowUITests: XCTestCase {
     }
     
     
+
     func testTabSwitchable() {
         let tabBarsQuery = app.tabBars
         
@@ -61,23 +62,7 @@ class MeowUITests: XCTestCase {
         // Assert nothing happens
     }
     
-    func testMePageItemsTappable() {
-        let tabBarsQuery = app.tabBars
-        tabBarsQuery.buttons["我的"].tap()
         
-        app.staticTexts["我的点滴"].tap()
-        XCTAssert(app.navigationBars["我的点滴"].exists)
-        app.navigationBars["我的点滴"].buttons["我"].tap()
-        
-        app.staticTexts["我的文章"].tap()
-        XCTAssert(app.navigationBars["我的文章"].exists)
-        app.navigationBars["我的文章"].buttons["我"].tap()
-        
-        app.staticTexts["我的问答"].tap()
-        XCTAssert(app.navigationBars["我的问答"].exists)
-        app.navigationBars["我的问答"].buttons["我"].tap()
-    }
-    
     
     
 }
