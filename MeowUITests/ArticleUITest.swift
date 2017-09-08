@@ -1,13 +1,14 @@
 //
-//  MeowUITests.swift
-//  MeowUITests
+//  ArticleUITest.swift
+//  Meow
 //
 //  Copyright © 2017年 喵喵喵的伙伴. All rights reserved.
 //
 
 import XCTest
 
-class MeowUITests: XCTestCase {
+class ArticleUITest: XCTestCase {
+    
     var app: XCUIApplication!
     
     override func setUp() {
@@ -20,6 +21,7 @@ class MeowUITests: XCTestCase {
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         app = XCUIApplication()
         app.launch()
+        app.tabBars.buttons["文章"].tap()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -29,35 +31,9 @@ class MeowUITests: XCTestCase {
         super.tearDown()
     }
     
-    
-
-    func testTabSwitchable() {
-        let tabBarsQuery = app.tabBars
-        
-        tabBarsQuery.buttons["文章"].tap()
-        XCTAssert(app.navigationBars["文章"].exists)
-
-        tabBarsQuery.buttons["问答"].tap()
-        XCTAssert(app.navigationBars["问答"].exists)
-
-        tabBarsQuery.buttons["我的"].tap()
-        XCTAssert(app.navigationBars["我"].exists)
-
-        tabBarsQuery.buttons["首页"].tap()
-        XCTAssert(app.navigationBars["首页"].exists)
+    func testArticleListShowArticleOnTap() {
+        app.cells.element(boundBy: 0).tap()
+        XCTAssert(app.navigationBars.element.buttons["文章"].exists)
     }
-    
-    
-    
-    func testDeviceChange() {
-        XCUIDevice.shared().orientation = .faceDown
-        XCUIDevice.shared().orientation = .landscapeLeft
-        XCUIDevice.shared().orientation = .portrait
-        
-        // Assert nothing happens
-    }
-    
-        
-    
     
 }
