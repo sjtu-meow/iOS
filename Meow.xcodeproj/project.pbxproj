@@ -96,7 +96,7 @@
 		BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */; };
 		BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878751F010178000FB7C6 /* LoginViewController.swift */; };
 		BF9272E51F0F8A6300E601F3 /* ItemDetailButtomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */; };
-		BF98C2131F45B8D7002E809B /* ChatKitUser.swfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98C2121F45B8D7002E809B /* ChatKitUser.swfit.swift */; };
+		BF98C2131F45B8D7002E809B /* ChatKitUser.swfit in Sources */ = {isa = PBXBuildFile; fileRef = BF98C2121F45B8D7002E809B /* ChatKitUser.swfit */; };
 		BF9BB06B1F62833600F5851F /* MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BB06A1F62833600F5851F /* MeUITests.swift */; };
 		BF9BB06D1F628F3600F5851F /* ArticleUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BB06C1F628F3600F5851F /* ArticleUITest.swift */; };
 		BF9E75DF1F03AB6C00723541 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E75DE1F03AB6C00723541 /* R.generated.swift */; };
@@ -262,7 +262,7 @@
 		BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		BF7878751F010178000FB7C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailButtomBar.xib; sourceTree = "<group>"; };
-		BF98C2121F45B8D7002E809B /* ChatKitUser.swfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatKitUser.swfit.swift; sourceTree = "<group>"; };
+		BF98C2121F45B8D7002E809B /* ChatKitUser.swfit */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; fileEncoding = 4; path = ChatKitUser.swfit; sourceTree = "<group>"; };
 		BF9BB06A1F62833600F5851F /* MeUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeUITests.swift; sourceTree = "<group>"; };
 		BF9BB06C1F628F3600F5851F /* ArticleUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleUITest.swift; sourceTree = "<group>"; };
 		BF9E75DE1F03AB6C00723541 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -465,7 +465,7 @@
 				BF2100011F1DF12000D9E7F4 /* QuestionSummary.swift */,
 				BF4A24291F0CDBA20004650E /* ArticleSummary.swift */,
 				BF3181601F15B14500ACB9DD /* Answer.swift */,
-				BF98C2121F45B8D7002E809B /* ChatKitUser.swfit.swift */,
+				BF98C2121F45B8D7002E809B /* ChatKitUser.swfit */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1015,7 +1015,7 @@
 				BF390A4D1F01FBFD00555B93 /* GlobalFunctions.swift in Sources */,
 				BF44D3801F06312600A137E6 /* BannerViewCell.swift in Sources */,
 				BF78786E1F0100D4000FB7C6 /* ArticleViewController.swift in Sources */,
-				BF98C2131F45B8D7002E809B /* ChatKitUser.swfit.swift in Sources */,
+				BF98C2131F45B8D7002E809B /* ChatKitUser.swfit in Sources */,
 				BF44D37C1F062AEF00A137E6 /* MainViewController.swift in Sources */,
 				BF31E92A1F0B7FCF001236D8 /* PostTypePickerViewController.swift in Sources */,
 				D97B35041F06245600BCB027 /* AnswerSummary.swift in Sources */,

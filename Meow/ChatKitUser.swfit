@@ -9,12 +9,12 @@ import ChatKit
 
 
 final class ChatKitUser: NSObject,  LCCKUserDelegate {
-    init?(coder aDecoder: NSCoder) {
-        return nil
-    }
-
     func encode(with aCoder: NSCoder) {
         
+    }
+
+    init?(coder aDecoder: NSCoder) {
+    
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
