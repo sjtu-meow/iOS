@@ -181,7 +181,6 @@ extension HomeViewController: MomentCellDelegate {
         let request = isLiked ? MeowAPI.unlikeMoment(id: id) : MeowAPI.likeMoment(id: id)
         MeowAPIProvider.shared.request(request)
             .subscribe(onNext: {
-                [weak self]
                 _ in
                 liked = !isLiked
             })

@@ -57,6 +57,11 @@ class QuestionViewController: UITableViewController {
     @IBAction func showPostTypePicker(_ sender: Any) {
         PostTypeViewController.show(from: self)
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = answers![indexPath.row]
+        ArticleDetailViewController.show(model, from: self)
+    }
 }
 
 extension QuestionViewController: AnswerCellDelegate {

@@ -12,6 +12,7 @@ import SwiftyJSON
 import AlamofireImage
 
 protocol ToggleLikeDelegate {
+    @discardableResult 
     func didToggleLike(id: Int, isLiked: Bool) -> Bool
 }
 
@@ -78,12 +79,7 @@ class MomentHomePageTableViewCell: UITableViewCell {
         
         momentContentLabel.text = moment.content
         
-        if let likes = moment.likeCount {
-            likeLabel.text = String(describing: likes)
-        } else {
-            likeLabel.text = "0"
-        }
-
+        updateLikeCountLabel()
         //likeLabel.text = String(describing: moment.likeCount!)
         // collection?
         
@@ -103,6 +99,10 @@ class MomentHomePageTableViewCell: UITableViewCell {
         
     }
     
+    func updateLikeCountLabel() {
+        likeLabel.text = "\(model!.likeCount ?? 0)"
+    }
+
     func initLikeLabel() {
         MeowAPIProvider.shared
             .request(.isLikedMoment(id: itemId!))
@@ -116,7 +116,8 @@ class MomentHomePageTableViewCell: UITableViewCell {
     }
 
     func updateLikeLabel() {
-        likeButton.titleLabel?.text = isLiked ? "已赞" : "赞"
+        let title = isLiked ? "已赞" : "赞"
+        likeButton.setTitle(title, for: .normal)
     }
     
     @IBAction func toggleLike(_ sender: Any) {
@@ -124,7 +125,10 @@ class MomentHomePageTableViewCell: UITableViewCell {
         isLiked = !isLiked
         self.updateLikeLabel()
         
-        // FIXME: update label upon repsonse
+        if (self.model != nil) {
+            self.model!.likeCount = self.model!.likeCount! + (isLiked ? 1 : -1)
+            self.updateLikeCountLabel()
+        }
 
     }
     

@@ -18,7 +18,7 @@ final class ChatKitUser: NSObject,  LCCKUserDelegate {
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return zone
+        return zone as Any
     }
     
     
