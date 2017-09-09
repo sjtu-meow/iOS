@@ -40,9 +40,13 @@ class ArticleViewController: UITableViewController {
 //        articleTableView.separatorStyle = .singleLine
 //        articleTableView.separatorColor = UIColor(patternImage: UIImage(named: "AddImagePlaceholder")!)
         
+        
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         loadArticles()
-        
-        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
