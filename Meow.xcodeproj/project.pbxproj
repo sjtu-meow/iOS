@@ -96,7 +96,6 @@
 		BF7878701F0100EC000FB7C6 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */; };
 		BF7878761F010178000FB7C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7878751F010178000FB7C6 /* LoginViewController.swift */; };
 		BF9272E51F0F8A6300E601F3 /* ItemDetailButtomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */; };
-		BF98C2131F45B8D7002E809B /* ChatKitUser.swfit in Sources */ = {isa = PBXBuildFile; fileRef = BF98C2121F45B8D7002E809B /* ChatKitUser.swfit */; };
 		BF9BB06B1F62833600F5851F /* MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BB06A1F62833600F5851F /* MeUITests.swift */; };
 		BF9BB06D1F628F3600F5851F /* ArticleUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BB06C1F628F3600F5851F /* ArticleUITest.swift */; };
 		BF9E75DF1F03AB6C00723541 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E75DE1F03AB6C00723541 /* R.generated.swift */; };
@@ -115,6 +114,7 @@
 		BFD0A28F1F21099D00E2282D /* UserProfileContentSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A28E1F21099D00E2282D /* UserProfileContentSwitcher.swift */; };
 		BFD0A2911F21126600E2282D /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2901F21126600E2282D /* MeViewController.swift */; };
 		BFD0A2961F21A98100E2282D /* PostCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2951F21A98100E2282D /* PostCommentViewController.swift */; };
+		BFD1A9121F638E6D00DEE183 /* ChatKitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A9111F638E6D00DEE183 /* ChatKitUser.swift */; };
 		BFE11D381F010AF200EED963 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
 		BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395E1F02C089006DF489 /* SMSExtention.swift */; };
@@ -262,7 +262,6 @@
 		BF78786F1F0100EC000FB7C6 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		BF7878751F010178000FB7C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF9272E41F0F8A6300E601F3 /* ItemDetailButtomBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailButtomBar.xib; sourceTree = "<group>"; };
-		BF98C2121F45B8D7002E809B /* ChatKitUser.swfit */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; fileEncoding = 4; path = ChatKitUser.swfit; sourceTree = "<group>"; };
 		BF9BB06A1F62833600F5851F /* MeUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeUITests.swift; sourceTree = "<group>"; };
 		BF9BB06C1F628F3600F5851F /* ArticleUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleUITest.swift; sourceTree = "<group>"; };
 		BF9E75DE1F03AB6C00723541 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -281,6 +280,7 @@
 		BFD0A28E1F21099D00E2282D /* UserProfileContentSwitcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileContentSwitcher.swift; sourceTree = "<group>"; };
 		BFD0A2901F21126600E2282D /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		BFD0A2951F21A98100E2282D /* PostCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCommentViewController.swift; sourceTree = "<group>"; };
+		BFD1A9111F638E6D00DEE183 /* ChatKitUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatKitUser.swift; sourceTree = "<group>"; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
 		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
 		BFF1395E1F02C089006DF489 /* SMSExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSExtention.swift; sourceTree = "<group>"; };
@@ -465,7 +465,7 @@
 				BF2100011F1DF12000D9E7F4 /* QuestionSummary.swift */,
 				BF4A24291F0CDBA20004650E /* ArticleSummary.swift */,
 				BF3181601F15B14500ACB9DD /* Answer.swift */,
-				BF98C2121F45B8D7002E809B /* ChatKitUser.swfit */,
+				BFD1A9111F638E6D00DEE183 /* ChatKitUser.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -982,6 +982,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD1A9121F638E6D00DEE183 /* ChatKitUser.swift in Sources */,
 				BF7446141F3E0E70006A3496 /* ChatManager.swift in Sources */,
 				BF21FFF61F1DA46400D9E7F4 /* MyMomentViewController.swift in Sources */,
 				D9B96FDF1F0CC42B00858360 /* ArticleWebView.swift in Sources */,
@@ -1015,7 +1016,6 @@
 				BF390A4D1F01FBFD00555B93 /* GlobalFunctions.swift in Sources */,
 				BF44D3801F06312600A137E6 /* BannerViewCell.swift in Sources */,
 				BF78786E1F0100D4000FB7C6 /* ArticleViewController.swift in Sources */,
-				BF98C2131F45B8D7002E809B /* ChatKitUser.swfit in Sources */,
 				BF44D37C1F062AEF00A137E6 /* MainViewController.swift in Sources */,
 				BF31E92A1F0B7FCF001236D8 /* PostTypePickerViewController.swift in Sources */,
 				D97B35041F06245600BCB027 /* AnswerSummary.swift in Sources */,

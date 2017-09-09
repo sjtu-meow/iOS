@@ -12,15 +12,15 @@ final class ChatKitUser: NSObject,  LCCKUserDelegate {
     func encode(with aCoder: NSCoder) {
         
     }
-
-    init?(coder aDecoder: NSCoder) {
     
+    init?(coder aDecoder: NSCoder) {
+        
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
         return zone
     }
-
+    
     
     var userId: String!
     
@@ -53,8 +53,8 @@ final class ChatKitUser: NSObject,  LCCKUserDelegate {
         self.avatarURL = avatarURL
         self.clientId = clientId
     }
-
-  
+    
+    
     required init(clientId: String!) {
         self.userId = clientId
     }
