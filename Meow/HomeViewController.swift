@@ -167,4 +167,18 @@ extension HomeViewController: MomentCellDelegate {
     func didTapAvatar(profile: Profile) {
         UserProfileViewController.show(profile, from: self)
     }
+    
+    func didToggleLike(id: Int, isLiked: Bool) -> Bool {
+        var liked = isLiked
+        let request = isLiked ? MeowAPI.unlikeMoment(id: id) : MeowAPI.likeMoment(id: id)
+        MeowAPIProvider.shared.request(request)
+            .subscribe(onNext: {
+                [weak self]
+                _ in
+                liked = !isLiked
+            })
+            .addDisposableTo(disposeBag)
+        return liked
+    }
+    
 }
