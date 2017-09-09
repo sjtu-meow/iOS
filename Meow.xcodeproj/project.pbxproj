@@ -115,6 +115,7 @@
 		BFD0A2911F21126600E2282D /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2901F21126600E2282D /* MeViewController.swift */; };
 		BFD0A2961F21A98100E2282D /* PostCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2951F21A98100E2282D /* PostCommentViewController.swift */; };
 		BFD1A9121F638E6D00DEE183 /* ChatKitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A9111F638E6D00DEE183 /* ChatKitUser.swift */; };
+		BFD1A9141F638FC900DEE183 /* SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A9131F638FC900DEE183 /* SearchUITests.swift */; };
 		BFE11D381F010AF200EED963 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
 		BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395E1F02C089006DF489 /* SMSExtention.swift */; };
@@ -281,6 +282,7 @@
 		BFD0A2901F21126600E2282D /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		BFD0A2951F21A98100E2282D /* PostCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCommentViewController.swift; sourceTree = "<group>"; };
 		BFD1A9111F638E6D00DEE183 /* ChatKitUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatKitUser.swift; sourceTree = "<group>"; };
+		BFD1A9131F638FC900DEE183 /* SearchUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUITests.swift; sourceTree = "<group>"; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
 		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
 		BFF1395E1F02C089006DF489 /* SMSExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSExtention.swift; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 		BF382FDD1F473BCF0010C567 /* MeowUITests */ = {
 			isa = PBXGroup;
 			children = (
+				BFD1A9131F638FC900DEE183 /* SearchUITests.swift */,
 				BF9BB06C1F628F3600F5851F /* ArticleUITest.swift */,
 				BF9BB06A1F62833600F5851F /* MeUITests.swift */,
 				BF382FDE1F473BCF0010C567 /* MeowUITests.swift */,
@@ -973,6 +976,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF382FDF1F473BCF0010C567 /* MeowUITests.swift in Sources */,
+				BFD1A9141F638FC900DEE183 /* SearchUITests.swift in Sources */,
 				BF9BB06D1F628F3600F5851F /* ArticleUITest.swift in Sources */,
 				BF9BB06B1F62833600F5851F /* MeUITests.swift in Sources */,
 			);
