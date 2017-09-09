@@ -33,8 +33,8 @@ class QuestionDetailAnswerCell: UITableViewCell {
         if let url = profile.avatar {
             avatarImageView.af_setImage(withURL: url)
         }
-        likeCountLabel.text = "\(model.likeCount!)"
-        commentCountLabel.text = "\(model.commentCount!)"
+        likeCountLabel.text = "\(model.likeCount ?? 0)"
+        commentCountLabel.text = "\(model.commentCount ?? 0)"
         summaryLabel.text = model.content
         nicknameLabel.text=profile.nickname
         bioLabel.text = profile.bio

@@ -21,7 +21,19 @@ class ArticleUserPageTableViewCell: UITableViewCell {
         }
         titleLabel.text =  model.title
         contentLabel.text = model.summary
-        likeCountLabel.text = "\(model.likeCount)"
-        commentCountLabel.text = "\(model.commentCount)"
+        
+        if let likeCount = model.likeCount {
+            likeCountLabel.text = "\(likeCount)"
+        } else {
+            likeCountLabel.text = "0"
+        }
+        
+        if let commentCount = model.commentCount {
+            commentCountLabel.text = "\(commentCount)"
+        } else {
+            commentCountLabel.text = "0"
+        }
+        //likeCountLabel.text = "\(model.likeCount)"
+        //commentCountLabel.text = "\(model.commentCount)"
     }
 }

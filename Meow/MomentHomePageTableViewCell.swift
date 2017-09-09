@@ -77,6 +77,14 @@ class MomentHomePageTableViewCell: UITableViewCell {
         bioLabel.text = profile?.bio
         
         momentContentLabel.text = moment.content
+        
+        if let likes = moment.likeCount {
+            likeLabel.text = String(describing: likes)
+        } else {
+            likeLabel.text = "0"
+        }
+
+        //likeLabel.text = String(describing: moment.likeCount!)
         // collection?
         
 //        likeLabel.text = String(describing: moment.like) 

@@ -55,7 +55,7 @@ class ArticleViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.articlePageTableViewCell.identifier)!
-        if let article = self.articles?[indexPath.row]{
+        if let article = self.articles?[indexPath.row] {
             (view as! ArticlePageTableViewCell).configure(model: article)
         }
         return view
