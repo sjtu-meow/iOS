@@ -36,17 +36,9 @@ class ArticlePageTableViewCell: UITableViewCell {
         }
         articleTitleLabel.text = articleSummary.title
         
-        if let likeCount = articleSummary.likeCount {
-            articleLikeLabel.text = "\(likeCount)"
-        } else {
-            articleLikeLabel.text = "0"
-        }
+        articleLikeLabel.text = "\(articleSummary.likeCount ?? 0)"
         
-        if let commentCount = articleSummary.commentCount {
-            articleCommentLabel.text = "\(commentCount)"
-        } else {
-            articleCommentLabel.text = "0"
-        }
+        articleCommentLabel.text = "\(articleSummary.commentCount ?? 0)"
         
     }
 
