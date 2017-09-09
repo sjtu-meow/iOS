@@ -18,7 +18,7 @@ class HomeViewController: UITableViewController {
     
     var currentPage = 0
     
-    var items = [ItemProtocol]()
+    var moments = [Moment]()
     
     let searchBar =  NoCancelButtonSearchBar()
 
@@ -56,6 +56,7 @@ class HomeViewController: UITableViewController {
         tableView.register(R.nib.answerHomePageTableViewCell)
         tableView.register(R.nib.questionHomePageTableViewCell)
         tableView.register(R.nib.articleHomePageTableViewCell)
+        
     }
        
     
@@ -72,11 +73,11 @@ class HomeViewController: UITableViewController {
 
         loadMore()
         MeowAPIProvider.shared.request(.moments)    // FIXME: need to support other item types
-            .mapToItems()
+            .mapTo(arrayOf: Moment.self)
             .subscribe(onNext: {
                 [weak self]
                 (items) in
-                self?.items = items
+                self?.moments = items
                 self?.tableView.reloadData()
             })
             .addDisposableTo(disposeBag)        
@@ -91,7 +92,7 @@ class HomeViewController: UITableViewController {
             return 1
         }
         /* item sections: one cell for each item */
-        return self.items.count
+        return self.moments.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,7 +105,7 @@ class HomeViewController: UITableViewController {
         }
         
         /* items */
-        let item = self.items[indexPath.row ]
+        let item = self.moments[indexPath.row ]
         
         // FIXME: check whether it is a comment cell
         switch(item.type!) {
@@ -138,13 +139,20 @@ class HomeViewController: UITableViewController {
             .mapTo(arrayOf: Moment.self)
             .subscribe(onNext: {
                 [weak self] (items) in
-                self?.items = items // FIXME
+                self?.moments = items // FIXME
                 self?.tableView.reloadData()
                 self?.currentPage += 1
             })
             .addDisposableTo(disposeBag)
     }
     
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let moment = moments[indexPath.row]
+        MomentDetailViewController.show(moment, from: self)
+    }
+
+
+
     @IBAction func showPostTypePicker(_ sender: Any) {
         PostTypeViewController.show(from: self)
     }
