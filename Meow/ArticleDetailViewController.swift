@@ -205,7 +205,6 @@ class ArticleDetailViewController: UIViewController {
                     json in
                     self?.isLiked = (json as! JSON)["liked"].bool!
                     self?.updateLikeLabel()
-
                 })
                 .addDisposableTo(disposeBag)
 
@@ -213,7 +212,7 @@ class ArticleDetailViewController: UIViewController {
 
     func updateLikeLabel() {
         bottomBar.items![0].title = isLiked ? "已赞" : "赞"
-    }
+            }
 
     func updateFavoriteLabel() {
         bottomBar.items![2].title = isFavorite ? "已收藏" : "收藏"
@@ -241,9 +240,14 @@ extension ArticleDetailViewController: UITabBarDelegate {
 
     func toggleFavorite() {
         let isFavorite = self.isFavorite
-        let request = isFavorite ? MeowAPI.addFavoriteArticle(id: itemId!) : MeowAPI.removeFavoriteArticle(id: itemId!)
+        let request = isFavorite ? MeowAPI.removeFavoriteArticle(id: itemId!) :MeowAPI.addFavoriteArticle(id: itemId!)
         MeowAPIProvider.shared.request(request)
-                .subscribe(onNext: { [weak self] _ in self?.isFavorite = !isFavorite })
+                .subscribe(onNext: {
+                    [weak self]
+                    _ in
+                    self?.isFavorite = !isFavorite
+                    self?.updateFavoriteLabel()
+                })
                 .addDisposableTo(disposeBag)
     }
 
@@ -251,7 +255,12 @@ extension ArticleDetailViewController: UITabBarDelegate {
         let isLiked = self.isLiked
         let request = isLiked ? MeowAPI.unlikeArticle(id: itemId!) : MeowAPI.likeArticle(id: itemId!)
         MeowAPIProvider.shared.request(request)
-                .subscribe(onNext: { [weak self] _ in self?.isLiked = !isLiked })
+                .subscribe(onNext: {
+                    [weak self]
+                    _ in
+                    self?.isLiked = !isLiked
+                    self?.updateLikeLabel()
+                })
                 .addDisposableTo(disposeBag)
     }
 
