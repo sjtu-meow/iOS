@@ -12,6 +12,7 @@ import SwiftyJSON
 import AlamofireImage
 
 protocol ToggleLikeDelegate {
+    @discardableResult 
     func didToggleLike(id: Int, isLiked: Bool) -> Bool
 }
 
