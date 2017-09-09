@@ -147,6 +147,9 @@
                                                 <state key="normal" title="评论" backgroundImage="ButtonSmallOutline">
                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="postComment:" destination="N3h-HZ-ZPs" eventType="touchUpInside" id="40v-b9-7yO"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -189,6 +192,7 @@
                 <outlet property="avatarImageView" destination="0No-Px-7NK" id="x9q-dR-ca9"/>
                 <outlet property="bioLabel" destination="e4V-VS-zGA" id="q66-nF-VJO"/>
                 <outlet property="commentLabel" destination="BNi-TV-m6v" id="kV0-2w-nf4"/>
+                <outlet property="commentTextField" destination="3CU-0n-PDq" id="CW8-Mm-bSB"/>
                 <outlet property="likeButton" destination="EIm-aO-Vwk" id="WqW-AU-YNA"/>
                 <outlet property="likeLabel" destination="Dv7-19-qSA" id="Cox-rr-Jyb"/>
                 <outlet property="mediaCollectionView" destination="l1P-fh-CR3" id="s5c-tM-QID"/>

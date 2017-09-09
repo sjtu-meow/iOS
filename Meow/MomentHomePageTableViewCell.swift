@@ -37,6 +37,7 @@ class MomentHomePageTableViewCell: UITableViewCell {
     
     @IBOutlet weak var likeButton: UIButton!
     // comment content
+    @IBOutlet weak var commentTextField: UITextField!
     
     let disposeBag = DisposeBag()
     
@@ -132,6 +133,17 @@ class MomentHomePageTableViewCell: UITableViewCell {
 
     }
     
+    @IBAction func postComment(_ sender: Any) {
+        let content = commentTextField.text
+        MeowAPIProvider.shared.request(.postComment(item: model!, content: content!))
+            .subscribe(onNext:{
+                [weak self]
+                _ in
+                self?.commentTextField.text = ""
+                // TODO(xyyu): comment success
+        }
+        )
+    }
     
     // comment function
 
