@@ -54,7 +54,8 @@ class SearchUITests: XCTestCase {
         app.searchFields.element(boundBy: 0).typeText(keyword)
         app.keyboards.buttons["Search"].tap()
         app.navigationBars.buttons["搜索"].tap()
-        XCTAssert(app.staticTexts[keyword].exists)
+        XCTAssert(app.buttons[keyword].exists)
+        XCTAssert(app.buttons["清空历史记录"].exists)
         app.buttons["清空历史记录"].tap()
         XCTAssertFalse(app.staticTexts[keyword].exists)
         
