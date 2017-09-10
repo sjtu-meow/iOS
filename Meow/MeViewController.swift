@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import ChatKit
 
 class MeViewController: UITableViewController {
     var profile: Profile?
@@ -21,6 +22,13 @@ class MeViewController: UITableViewController {
     
     @IBOutlet weak var profileCell: UserProfileCell!
   
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            let vc = LCCKConversationListViewController()
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     
     override func viewDidLoad() {
         loadData()

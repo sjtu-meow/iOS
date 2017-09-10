@@ -245,7 +245,8 @@ extension UserProfileViewController: UserProfileCellDelegate {
     
     func didTapSendMessageButton(_ sender: UIButton) {
         guard let profile = profile else { return }
-        let clientId = "\(profile.userId)"
+    
+        let clientId = "\(profile.userId!)"
         
         ChatManager.openConversationViewController(withPeerId: clientId, from: self.navigationController!)
     }
