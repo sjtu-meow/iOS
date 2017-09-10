@@ -30,7 +30,7 @@ class UserManager {
         observable.subscribe(onNext: {
             profile in
             UserManager.shared.currentUser = profile
-            ChatManager.didLoginSuccess(withClientId: "\(profile.userId)")
+            ChatManager.didLoginSuccess(withClientId: "\(profile.userId!)")
         }).addDisposableTo(disposeBag)
         
         return observable
