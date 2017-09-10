@@ -13,10 +13,18 @@ class MomentDetailViewController: UITableViewController {
     class func show (_ moment: Moment, from viewController: UIViewController) {
         let vc = R.storyboard.homePage.momentDetailViewController()!
         vc.moment = moment
-        // 
+        viewController.navigationController?.pushViewController(vc, animated: true)
     }
 
-    var moment: Moment?
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+            
+        tableView.register(R.nib.momentHomePageTableViewCell)
+    }
+    var moment: Moment!
 
     var isLiked = false
 
@@ -37,7 +45,7 @@ class MomentDetailViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let moment = moment else { return UITableViewCell() }
+        
         let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.momentHomePageTableViewCell)!
         view.configure(model: moment)
         return view
