@@ -110,7 +110,8 @@ class HomeViewController: UITableViewController {
         // FIXME: check whether it is a comment cell
         switch(item.type!) {
         case .moment:
-            let view = tableView.dequeueReusableCell(withIdentifier: R.nib.momentHomePageTableViewCell)!
+            let view = R.nib.momentHomePageTableViewCell.firstView(owner: nil)!
+            // let view = tableView.dequeueReusableCell(withIdentifier: R.nib.momentHomePageTableViewCell)!
             view.configure(model: item as! Moment)
             view.delegate = self
             

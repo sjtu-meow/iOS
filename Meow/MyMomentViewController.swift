@@ -34,7 +34,9 @@ class MyMomentViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let moment = items[indexPath.row]
-        let view = tableView.dequeueReusableCell(withIdentifier: R.nib.momentHomePageTableViewCell.identifier)! as! MomentHomePageTableViewCell
+        //let view = tableView.dequeueReusableCell(withIdentifier: R.nib.momentHomePageTableViewCell.identifier)! as! MomentHomePageTableViewCell
+        // Reuseable cells incur bug in height calculation
+        let view = R.nib.momentHomePageTableViewCell.firstView(owner: nil)!
         view.configure(model: moment)
         return view
     }
