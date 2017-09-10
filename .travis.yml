@@ -1,12 +1,5 @@
 language: objective-c
-osx_image: xcode8.3
+osx_image: xcode8
 
 script:
-    - security create-keychain -p travis ios-build.keychain
-    - security default-keychain -s ios-build.keychain
-    - security unlock-keychain -p travis ios-build.keychain
-    - security import ./Provisioning/certs/apple.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign
-    - security import ./Provisioning/certs/distribution.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign
-    - security import ./Provisioning/certs/distribution.p12 -k ~/Library/Keychains/ios-build.keychain -P $KEY_PASSWORD -T /usr/bin/codesign
-    - security set-key-partition-list -S apple-tool:,apple: -s -k travis ios-build.keychain
     - xcodebuild test -workspace Meow.xcworkspace -scheme Meow -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0' | xcpretty -c; exit ${PIPESTATUS[0]}
