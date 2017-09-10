@@ -135,6 +135,11 @@ class HomeViewController: UITableViewController {
         loadMore()
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let moment = moments[indexPath.row]
+        MomentDetailViewController.show(moment, from: self)
+    }
+    
     func loadMore() {
         MeowAPIProvider.shared.request(.moments) // FIXME: need to support other item types
             .mapTo(arrayOf: Moment.self)

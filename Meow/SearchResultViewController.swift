@@ -103,6 +103,8 @@ extension SearchResultViewController : UITableViewDelegate {
             vc.configure(id: item.id, type: .answer)
             navigationController?.pushViewController(vc, animated: true)
         // TODO(xyyu): maybe not safe
+        case .moment:
+            MomentDetailViewController.show(item as! Moment, from: self)
         default:
             break
         }
