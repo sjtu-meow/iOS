@@ -189,12 +189,11 @@ extension HomeViewController: MomentCellDelegate {
         return liked
     }
     
-    func didPostComment(moment: Moment, content: String) {
+    func didPostComment(moment: Moment, content: String, from cell: MomentHomePageTableViewCell) {
         MeowAPIProvider.shared.request(.postComment(item: moment, content: content))
             .subscribe(onNext:{
-                [weak self]
                 _ in
-                // TODO(vinx13): comment success, clear text field
+                cell.clearComment()
                 
             })
     }

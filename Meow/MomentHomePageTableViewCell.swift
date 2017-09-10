@@ -17,7 +17,7 @@ protocol ToggleLikeDelegate {
 }
 
 protocol PostCommentDelegate {
-    func didPostComment(moment: Moment, content: String)
+    func didPostComment(moment: Moment, content: String, from cell: MomentHomePageTableViewCell)
 }
 
 protocol MomentCellDelegate: AvatarCellDelegate, ToggleLikeDelegate, PostCommentDelegate {}
@@ -63,6 +63,7 @@ class MomentHomePageTableViewCell: UITableViewCell {
         avatarImageView.delegate = self.delegate
        
         // mediaCollectionView.heightAnchor.constraint(equalToConstant: mediaCollectionView.contentSize.height).isActive = true
+        commentTextField.delegate = self
        
     }
 
@@ -138,13 +139,20 @@ class MomentHomePageTableViewCell: UITableViewCell {
     }
     
     @IBAction func postComment(_ sender: Any) {
-        let content = commentTextField.text
-        delegate?.didPostComment(moment: model!, content: content!)
+        
     }
     
     // comment function
 
-
+    func clearComment() {
+        commentTextField.text = ""
+    }
 }
 
-
+extension MomentHomePageTableViewCell: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let content = commentTextField.text
+        delegate?.didPostComment(moment: model!, content: content!, from: self)
+        return true
+    }
+}
