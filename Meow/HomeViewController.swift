@@ -58,6 +58,11 @@ class HomeViewController: UITableViewController {
         tableView.register(R.nib.articleHomePageTableViewCell)
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
+    }
        
     
 

@@ -42,6 +42,11 @@ class MyQuestionAnswerViewController: UIViewController {
         loadData()
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        loadData()
+//    }
+    
     func loadData() {
         MeowAPIProvider.shared
             .request(.myQuestions)
