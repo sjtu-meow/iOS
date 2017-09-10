@@ -194,6 +194,8 @@ extension HomeViewController: MomentCellDelegate {
             .subscribe(onNext:{
                 _ in
                 cell.clearComment()
+                cell.model!.commentCount! += 1
+                cell.updateCommentCountLabel()
                 
             })
     }

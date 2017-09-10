@@ -86,6 +86,7 @@ class MomentHomePageTableViewCell: UITableViewCell {
         momentContentLabel.text = moment.content
         
         updateLikeCountLabel()
+        updateCommentCountLabel()
         //likeLabel.text = String(describing: moment.likeCount!)
         // collection?
         
@@ -107,6 +108,10 @@ class MomentHomePageTableViewCell: UITableViewCell {
     
     func updateLikeCountLabel() {
         likeLabel.text = "\(model!.likeCount ?? 0)"
+    }
+    
+    func updateCommentCountLabel() {
+        commentLabel.text = "\(model!.commentCount ?? 0)"
     }
 
     func initLikeLabel() {
