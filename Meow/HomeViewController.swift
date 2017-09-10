@@ -197,11 +197,12 @@ extension HomeViewController: MomentCellDelegate {
     func didPostComment(moment: Moment, content: String, from cell: MomentHomePageTableViewCell) {
         MeowAPIProvider.shared.request(.postComment(item: moment, content: content))
             .subscribe(onNext:{
+                [weak self]
                 _ in
                 cell.clearComment()
                 cell.model!.commentCount! += 1
                 cell.updateCommentCountLabel()
-                
+                self?.loadData()
             })
     }
     

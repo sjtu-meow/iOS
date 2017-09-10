@@ -116,6 +116,7 @@
 		BFD0A2961F21A98100E2282D /* PostCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0A2951F21A98100E2282D /* PostCommentViewController.swift */; };
 		BFD1A9121F638E6D00DEE183 /* ChatKitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A9111F638E6D00DEE183 /* ChatKitUser.swift */; };
 		BFD1A9141F638FC900DEE183 /* SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A9131F638FC900DEE183 /* SearchUITests.swift */; };
+		BFD1A9161F656BD700DEE183 /* MomentCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A9151F656BD600DEE183 /* MomentCommentView.swift */; };
 		BFE11D381F010AF200EED963 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
 		BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395E1F02C089006DF489 /* SMSExtention.swift */; };
@@ -284,6 +285,7 @@
 		BFD0A2951F21A98100E2282D /* PostCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCommentViewController.swift; sourceTree = "<group>"; };
 		BFD1A9111F638E6D00DEE183 /* ChatKitUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatKitUser.swift; sourceTree = "<group>"; };
 		BFD1A9131F638FC900DEE183 /* SearchUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUITests.swift; sourceTree = "<group>"; };
+		BFD1A9151F656BD600DEE183 /* MomentCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentCommentView.swift; sourceTree = "<group>"; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
 		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
 		BFF1395E1F02C089006DF489 /* SMSExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSExtention.swift; sourceTree = "<group>"; };
@@ -658,6 +660,7 @@
 			isa = PBXGroup;
 			children = (
 				24EFC6921F0677BC0005A52D /* MomentHomePageTableViewCell.swift */,
+				BFD1A9151F656BD600DEE183 /* MomentCommentView.swift */,
 			);
 			name = "Moment Cell";
 			sourceTree = "<group>";
@@ -1036,6 +1039,7 @@
 				BFD0A2961F21A98100E2282D /* PostCommentViewController.swift in Sources */,
 				BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */,
 				BF66F0FF1F2F634D009C99B1 /* AvatarImageView.swift in Sources */,
+				BFD1A9161F656BD700DEE183 /* MomentCommentView.swift in Sources */,
 				BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */,
 				BF43796A1F1756580008EA66 /* ArticleRecordTableViewCell.swift in Sources */,
 				D9AF48491F13537C00381F67 /* SearchHistorySource.swift in Sources */,

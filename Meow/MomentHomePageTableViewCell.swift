@@ -24,6 +24,7 @@ protocol MomentCellDelegate: AvatarCellDelegate, ToggleLikeDelegate, PostComment
 
 class MomentHomePageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var commentListStackView: UIStackView!
     //MARK: - Property
     /* user profile info */
     @IBOutlet weak var avatarImageView: AvatarImageView!
@@ -87,6 +88,8 @@ class MomentHomePageTableViewCell: UITableViewCell {
         
         updateLikeCountLabel()
         updateCommentCountLabel()
+        updateCommentList()
+        
         //likeLabel.text = String(describing: moment.likeCount!)
         // collection?
         
@@ -104,6 +107,15 @@ class MomentHomePageTableViewCell: UITableViewCell {
         
         initLikeLabel()
         
+    }
+    
+    func updateCommentList() {
+        guard let commnets = model?.comments else { return }
+        for comment in commnets {
+            let view = R.nib.momentCommentTableViewCell.firstView(owner: nil)!
+            view.configure(comment)
+            commentListStackView.addArrangedSubview(view)
+        }
     }
     
     func updateLikeCountLabel() {
