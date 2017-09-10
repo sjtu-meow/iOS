@@ -33,6 +33,37 @@ class CommentViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
+    func reloadComments(model: ItemProtocol) {
+        switch item.type! {
+        case .article:
+            MeowAPIProvider.shared.request(.article(id: item.id))
+                .mapTo(type: Article.self)
+                .subscribe(onNext:{
+                    [weak self]
+                    (article) in
+                    self?.item = article
+                    self?.tableView.reloadData()
+
+                })
+
+        case .answer:
+            MeowAPIProvider.shared.request(.answer(id: item.id))
+                .mapTo(type: Answer.self)
+                .subscribe(onNext:{
+                    [weak self]
+                    (answer) in
+                    self?.item = answer
+                    self?.tableView.reloadData()
+                })
+        default:
+            break
+        }
+            }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        reloadComments(model: item)
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
