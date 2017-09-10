@@ -35,9 +35,10 @@ class ArticlePageTableViewCell: UITableViewCell {
             articleCoverImageView.af_setImage(withURL: coverURL)
         }
         articleTitleLabel.text = articleSummary.title
-        articleLikeLabel.text = "\(articleSummary.likeCount!)"
-        articleCommentLabel.text="\(articleSummary.commentCount!)"
         
+        articleLikeLabel.text = "\(articleSummary.likeCount ?? 0)"
+        
+        articleCommentLabel.text = "\(articleSummary.commentCount ?? 0)"
         
     }
 

@@ -51,4 +51,12 @@ class MyArticleViewController: UITableViewController {
             })
             .addDisposableTo(disposeBag)
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let article = items[indexPath.row]
+        let vc = R.storyboard.articlePage.articleDetailViewController()!
+        vc.configure(id: article.id, type: .article)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
+

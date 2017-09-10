@@ -27,7 +27,7 @@ class PostCommentViewController: UIViewController {
         let content = commentTextField.text
         MeowAPIProvider.shared.request(.postComment(item: item, content: content!)).subscribe(onNext: {
             [weak self] _ in
-            self?.dismiss(animated: true, completion: nil)
+            self?.navigationController?.popViewController(animated: true)
         })
         .addDisposableTo(disposeBag)
     }

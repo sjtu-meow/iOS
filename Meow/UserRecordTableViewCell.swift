@@ -45,8 +45,7 @@ class UserRecordTableViewCell: UITableViewCell {
         nickNameLabel.text = model.nickname
         bioLabel.text = model.bio
     }
-    
-   
+
  
     func didClickUnfollow() {
         guard let model = self.model else { return }

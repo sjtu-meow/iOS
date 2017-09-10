@@ -26,7 +26,7 @@ class PostArticleViewController: UIViewController {
     var question: Question?
     
     @IBAction func postArticle(_ sender: Any) { // FIXME: rename this method
-        checkHTML()
+        // checkHTML()
         switch mode {
         case .article:
             postArticle()

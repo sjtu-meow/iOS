@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="363"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N3h-HZ-ZPs" id="EKX-gd-Qwe">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="363"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="362.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3pi-dc-uSs" userLabel="主体">
@@ -138,7 +138,7 @@
                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="like:" destination="N3h-HZ-ZPs" eventType="touchUpInside" id="ceo-TK-8zb"/>
+                                                    <action selector="toggleLike:" destination="N3h-HZ-ZPs" eventType="touchUpInside" id="GO3-Aw-u3d"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIG-TL-jHv">
@@ -147,6 +147,9 @@
                                                 <state key="normal" title="评论" backgroundImage="ButtonSmallOutline">
                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="postComment:" destination="N3h-HZ-ZPs" eventType="touchUpInside" id="40v-b9-7yO"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -189,6 +192,8 @@
                 <outlet property="avatarImageView" destination="0No-Px-7NK" id="x9q-dR-ca9"/>
                 <outlet property="bioLabel" destination="e4V-VS-zGA" id="q66-nF-VJO"/>
                 <outlet property="commentLabel" destination="BNi-TV-m6v" id="kV0-2w-nf4"/>
+                <outlet property="commentTextField" destination="3CU-0n-PDq" id="CW8-Mm-bSB"/>
+                <outlet property="likeButton" destination="EIm-aO-Vwk" id="WqW-AU-YNA"/>
                 <outlet property="likeLabel" destination="Dv7-19-qSA" id="Cox-rr-Jyb"/>
                 <outlet property="mediaCollectionView" destination="l1P-fh-CR3" id="s5c-tM-QID"/>
                 <outlet property="momentContentLabel" destination="8I5-fQ-TrR" id="nHN-k1-fag"/>

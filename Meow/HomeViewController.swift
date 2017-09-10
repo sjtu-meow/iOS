@@ -18,7 +18,7 @@ class HomeViewController: UITableViewController {
     
     var currentPage = 0
     
-    var items = [ItemProtocol]()
+    var moments = [Moment]()
     
     let searchBar =  NoCancelButtonSearchBar()
 
@@ -56,6 +56,7 @@ class HomeViewController: UITableViewController {
         tableView.register(R.nib.answerHomePageTableViewCell)
         tableView.register(R.nib.questionHomePageTableViewCell)
         tableView.register(R.nib.articleHomePageTableViewCell)
+        
     }
        
     
@@ -72,11 +73,11 @@ class HomeViewController: UITableViewController {
 
         loadMore()
         MeowAPIProvider.shared.request(.moments)    // FIXME: need to support other item types
-            .mapToItems()
+            .mapTo(arrayOf: Moment.self)
             .subscribe(onNext: {
                 [weak self]
                 (items) in
-                self?.items = items
+                self?.moments = items
                 self?.tableView.reloadData()
             })
             .addDisposableTo(disposeBag)        
@@ -91,7 +92,7 @@ class HomeViewController: UITableViewController {
             return 1
         }
         /* item sections: one cell for each item */
-        return self.items.count
+        return self.moments.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,12 +105,13 @@ class HomeViewController: UITableViewController {
         }
         
         /* items */
-        let item = self.items[indexPath.row ]
+        let item = self.moments[indexPath.row ]
         
         // FIXME: check whether it is a comment cell
         switch(item.type!) {
         case .moment:
-            let view = tableView.dequeueReusableCell(withIdentifier: R.nib.momentHomePageTableViewCell)!
+            let view = R.nib.momentHomePageTableViewCell.firstView(owner: nil)!
+            // let view = tableView.dequeueReusableCell(withIdentifier: R.nib.momentHomePageTableViewCell)!
             view.configure(model: item as! Moment)
             view.delegate = self
             
@@ -133,18 +135,30 @@ class HomeViewController: UITableViewController {
         loadMore()
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let moment = moments[indexPath.row]
+        MomentDetailViewController.show(moment, from: self)
+    }
+    
     func loadMore() {
         MeowAPIProvider.shared.request(.moments) // FIXME: need to support other item types
             .mapTo(arrayOf: Moment.self)
             .subscribe(onNext: {
                 [weak self] (items) in
-                self?.items = items // FIXME
+                self?.moments = items // FIXME
                 self?.tableView.reloadData()
                 self?.currentPage += 1
             })
             .addDisposableTo(disposeBag)
     }
     
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let moment = moments[indexPath.row]
+        MomentDetailViewController.show(moment, from: self)
+    }
+
+
+
     @IBAction func showPostTypePicker(_ sender: Any) {
         PostTypeViewController.show(from: self)
     }
@@ -167,4 +181,28 @@ extension HomeViewController: MomentCellDelegate {
     func didTapAvatar(profile: Profile) {
         UserProfileViewController.show(profile, from: self)
     }
+    
+    func didToggleLike(id: Int, isLiked: Bool) -> Bool {
+        var liked = isLiked
+        let request = isLiked ? MeowAPI.unlikeMoment(id: id) : MeowAPI.likeMoment(id: id)
+        MeowAPIProvider.shared.request(request)
+            .subscribe(onNext: {
+                _ in
+                liked = !isLiked
+            })
+            .addDisposableTo(disposeBag)
+        return liked
+    }
+    
+    func didPostComment(moment: Moment, content: String, from cell: MomentHomePageTableViewCell) {
+        MeowAPIProvider.shared.request(.postComment(item: moment, content: content))
+            .subscribe(onNext:{
+                _ in
+                cell.clearComment()
+                cell.model!.commentCount! += 1
+                cell.updateCommentCountLabel()
+                
+            })
+    }
+    
 }

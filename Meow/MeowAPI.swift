@@ -204,11 +204,11 @@ extension MeowAPI: TargetType {
         case .postComment(let item, _):
             switch item.type! {
             case .article:
-                return "/articles/\(item.id)/comments"
+                return "/articles/\(item.id!)/comments"
             case .answer:
-                return "/answers/\(item.id)/comments"
+                return "/answers/\(item.id!)/comments"
             case .moment:
-                return "/moments/\(item.id)/comments"
+                return "/moments/\(item.id!)/comments"
             default:
                 return ""
         }
