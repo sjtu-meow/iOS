@@ -16,7 +16,11 @@ protocol ToggleLikeDelegate {
     func didToggleLike(id: Int, isLiked: Bool) -> Bool
 }
 
-protocol MomentCellDelegate: AvatarCellDelegate, ToggleLikeDelegate {}
+protocol PostCommentDelegate {
+    func didPostComment(moment: Moment, content: String)
+}
+
+protocol MomentCellDelegate: AvatarCellDelegate, ToggleLikeDelegate, PostCommentDelegate {}
 
 class MomentHomePageTableViewCell: UITableViewCell {
 
@@ -135,14 +139,7 @@ class MomentHomePageTableViewCell: UITableViewCell {
     
     @IBAction func postComment(_ sender: Any) {
         let content = commentTextField.text
-        MeowAPIProvider.shared.request(.postComment(item: model!, content: content!))
-            .subscribe(onNext:{
-                [weak self]
-                _ in
-                self?.commentTextField.text = ""
-                // TODO(xyyu): comment success
-        }
-        )
+        delegate?.didPostComment(moment: model!, content: content!)
     }
     
     // comment function
