@@ -252,7 +252,7 @@ extension MeowAPI: TargetType {
             return ["phone": phone, "password": password, "code": validationCode]
         case .postMoment(let content, let medias):
             let jsonMedias = (medias?.map{[
-                "url": $0.url!.absoluteString,
+                "url": $0.url!.absoluteString + "?imageView2/4/w/200/h/200",
                 "type": $0.type!.toInt()
             ]}) ?? []
             return ["content": content, "medias": jsonMedias]
