@@ -58,12 +58,6 @@ class HomeViewController: UITableViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        loadData()
-    }
-       
-    
 
     func loadData() {
        MeowAPIProvider.shared.request(.banners)
