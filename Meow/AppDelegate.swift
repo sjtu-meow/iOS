@@ -52,17 +52,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         )
     
+        QiniuProvider.shared.checkToken()
         
         /* login page */
-      /*
-        if Token.load() == nil || true {
+      
+        if Token.load() == nil {
             let vc = R.storyboard.loginSignupPage.loginSignupController()!
             vc.modalPresentationStyle = .fullScreen
             self.window?.makeKeyAndVisible()
             self.window?.rootViewController?.present(vc, animated: true, completion: nil)
         }
         
-        */
+        
         return true
     }
 

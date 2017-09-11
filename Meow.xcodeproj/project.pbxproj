@@ -117,6 +117,7 @@
 		BFD1A9121F638E6D00DEE183 /* ChatKitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A9111F638E6D00DEE183 /* ChatKitUser.swift */; };
 		BFD1A9141F638FC900DEE183 /* SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A9131F638FC900DEE183 /* SearchUITests.swift */; };
 		BFD1A9161F656BD700DEE183 /* MomentCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A9151F656BD600DEE183 /* MomentCommentView.swift */; };
+		BFD1A9181F6679AE00DEE183 /* UINavigationController+PopTwice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A9171F6679AE00DEE183 /* UINavigationController+PopTwice.swift */; };
 		BFE11D381F010AF200EED963 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
 		BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395E1F02C089006DF489 /* SMSExtention.swift */; };
@@ -286,6 +287,7 @@
 		BFD1A9111F638E6D00DEE183 /* ChatKitUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatKitUser.swift; sourceTree = "<group>"; };
 		BFD1A9131F638FC900DEE183 /* SearchUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUITests.swift; sourceTree = "<group>"; };
 		BFD1A9151F656BD600DEE183 /* MomentCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentCommentView.swift; sourceTree = "<group>"; };
+		BFD1A9171F6679AE00DEE183 /* UINavigationController+PopTwice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+PopTwice.swift"; sourceTree = "<group>"; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
 		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
 		BFF1395E1F02C089006DF489 /* SMSExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSExtention.swift; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 				BFD0A28C1F20AB4200E2282D /* UserInteractionDelegate.swift */,
 				BFC365251F3DCDF3001F5DA8 /* LoginUtils.swift */,
 				BF7446131F3E0E70006A3496 /* ChatManager.swift */,
+				BFD1A9171F6679AE00DEE183 /* UINavigationController+PopTwice.swift */,
 			);
 			path = Meow;
 			sourceTree = "<group>";
@@ -1072,6 +1075,7 @@
 				BF4A242A1F0CDBA20004650E /* ArticleSummary.swift in Sources */,
 				D97B34FC1F05DEF500BCB027 /* Profile.swift in Sources */,
 				D9AF484B1F135D3700381F67 /* UserDefaults+NSCoding.swift in Sources */,
+				BFD1A9181F6679AE00DEE183 /* UINavigationController+PopTwice.swift in Sources */,
 				D97B35021F061C7200BCB027 /* Banner.swift in Sources */,
 				BF390A4B1F01F58500555B93 /* JSONConvertible.swift in Sources */,
 				D97B35121F0A133300BCB027 /* AnswerHomePageTableViewCell.swift in Sources */,

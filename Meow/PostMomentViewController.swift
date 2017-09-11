@@ -49,33 +49,35 @@ class PostMomentViewController: UIViewController {
         
         logger.log("按下发布（点滴）按钮")
         
-        //TODO: Actual send moment post to server
-        
         guard let content = momentContentTextView.text else { return }
         
         
-        Observable.from(uploadedImages)
+        Observable<UIImage>.from(uploadedImages)
             .concatMap {
-                image in
-                QiniuProvider.shared.upload(data: UIImagePNGRepresentation(image)!)
+                (image: UIImage) -> Observable<String> in
+                let result: Observable<String> = QiniuProvider.shared.upload(data: UIImagePNGRepresentation(image)!)
+                return result
             }
             .map {
                 (key) -> Media in
+                logger.log(key)
                 let domain = "http://osg5c99b1.bkt.clouddn.com/" // FIXME
                 return Media(type: .Image, url: URL(string: domain + key))
             }
             .reduce([Media]()) {(medias, media) in
                 var mutableMedias = medias!
                 mutableMedias.append(media)
+                logger.log(mutableMedias.debugDescription)
                 return mutableMedias
             }
             .flatMap {
                 medias in
-                MeowAPIProvider.shared.request(.postMoment(content: content, medias: medias))
+                return MeowAPIProvider.shared.request(.postMoment(content: content, medias: medias))
             }
             .subscribe(onNext:{
                 [weak self] _ in
-                self?.dismiss(animated: true, completion: nil)
+                logger.log("[Success] Post moment.")
+                self?.navigationController!.popTwice(animated: true)
             })
             .addDisposableTo(disposeBag)
   
@@ -86,7 +88,8 @@ class PostMomentViewController: UIViewController {
         
         logger.log("按下取消（发布点滴）按钮")
         
-        dismiss(animated: true, completion: nil)
+        self.navigationController!.popTwice(animated: true)
+        
     }
     
 }

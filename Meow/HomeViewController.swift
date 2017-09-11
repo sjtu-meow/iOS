@@ -23,9 +23,8 @@ class HomeViewController: UITableViewController {
     let searchBar =  NoCancelButtonSearchBar()
 
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         loadData()
