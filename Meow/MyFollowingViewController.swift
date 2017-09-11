@@ -44,7 +44,7 @@ class MyFollowingViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        reloadFollowingQuestions()
+        reloadFollowing()
         self.tableView.reloadData()
     }
     
@@ -70,8 +70,17 @@ class MyFollowingViewController: UIViewController {
         .addDisposableTo(disposeBag)
     }
     
-    // for question reloading
-    func reloadFollowingQuestions() {
+    // for following reloading
+    func reloadFollowing() {
+        MeowAPIProvider.shared.request(.myFollowingUsers)
+            .mapTo(arrayOf: Profile.self)
+            .subscribe(onNext: {
+                [weak self]
+                items in
+                self?.users = items
+                self?.tableView.reloadData()
+            })
+            .addDisposableTo(disposeBag)
         MeowAPIProvider.shared
             .request(.myFollowingQuestions)
             .mapTo(arrayOf: QuestionSummary.self)

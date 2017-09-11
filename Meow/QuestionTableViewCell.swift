@@ -13,7 +13,6 @@ class QuestionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var answerCountLabel: UILabel!
-    @IBOutlet weak var followingCountLabel: UILabel!
     
     func configure(model: QuestionSummary) {
         titleLabel.text = model.title

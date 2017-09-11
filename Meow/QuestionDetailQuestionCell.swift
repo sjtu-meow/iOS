@@ -24,15 +24,9 @@ class QuestionDetailQuestionCell: UITableViewCell {
     let disposeBag = DisposeBag()
     
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var contentLabel: UILabel!
-
     @IBOutlet weak var answerCountLabel: UILabel!
-    
-    @IBOutlet weak var followingCountLabel: UILabel!
-    
     @IBOutlet weak var addAnswerButton: UIButton!
-    
     @IBOutlet weak var followButton: UIButton!
     
     func configure(model: Question) {

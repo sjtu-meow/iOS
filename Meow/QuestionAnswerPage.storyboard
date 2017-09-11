@@ -78,7 +78,7 @@
                                                     <rect key="frame" x="0.0" y="159.5" width="343" height="31"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMx-k2-afn" userLabel="回答/关注统计">
-                                                            <rect key="frame" x="0.0" y="16.5" width="107.5" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="16.5" width="48.5" height="14.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ir7-nE-PQR">
                                                                     <rect key="frame" x="0.0" y="0.0" width="8" height="14.5"/>
@@ -86,20 +86,8 @@
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 个回答 · " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQq-67-vUf">
-                                                                    <rect key="frame" x="8" y="0.0" width="51" height="14.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLA-0M-LWD">
-                                                                    <rect key="frame" x="59" y="0.0" width="8" height="14.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 人关注" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFO-lc-3Za">
-                                                                    <rect key="frame" x="67" y="0.0" width="40.5" height="14.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 个回答" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQq-67-vUf" userLabel="个回答">
+                                                                    <rect key="frame" x="8" y="0.0" width="40.5" height="14.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -152,7 +140,6 @@
                                     <outlet property="answerCountLabel" destination="ir7-nE-PQR" id="hQA-mE-3bx"/>
                                     <outlet property="contentLabel" destination="1pS-T1-ie5" id="E99-6q-7dY"/>
                                     <outlet property="followButton" destination="sC7-NP-yMm" id="qfd-lu-4au"/>
-                                    <outlet property="followingCountLabel" destination="QLA-0M-LWD" id="mxa-Kc-hrj"/>
                                     <outlet property="titleLabel" destination="LZ8-Wi-68J" id="eKU-KR-t5b"/>
                                 </connections>
                             </tableViewCell>
