@@ -110,8 +110,8 @@ class MomentHomePageTableViewCell: UITableViewCell {
     }
     
     func updateCommentList() {
-        guard let commnets = model?.comments else { return }
-        for comment in commnets {
+        guard let commets = model?.comments else { return }
+        for comment in commets {
             let view = R.nib.momentCommentTableViewCell.firstView(owner: nil)!
             view.configure(comment)
             commentListStackView.addArrangedSubview(view)

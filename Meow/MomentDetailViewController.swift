@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 
+
 class MomentDetailViewController: UITableViewController {
     class func show (_ moment: Moment, from viewController: UIViewController) {
         let vc = R.storyboard.homePage.momentDetailViewController()!
@@ -27,10 +28,26 @@ class MomentDetailViewController: UITableViewController {
     var moment: Moment!
 
     var isLiked = false
+    
+    let disposeBag = DisposeBag()
 
     func configure(moment: Moment) {
         self.moment = moment
     }
+    
+    func loadMoment() {
+        MeowAPIProvider.shared.request(.moment(id: moment.id))
+            .mapTo(type: Moment.self)
+            .subscribe(onNext:{
+                [weak self]
+                (item) in
+                self?.moment = item
+                self?.tableView.reloadData()
+            })
+            .addDisposableTo(disposeBag)
+    }
+    
+    
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,9 +62,45 @@ class MomentDetailViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.momentHomePageTableViewCell)!
+        let view = R.nib.momentHomePageTableViewCell.firstView(owner: nil)!
+        // let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.momentHomePageTableViewCell)!
         view.configure(model: moment)
+        view.delegate = self
         return view
     }
+}
+
+extension MomentDetailViewController : MomentCellDelegate {
+    func didTapAvatar(profile: Profile) {
+        if let userId = UserManager.shared.currentUser?.userId, userId == profile.userId {
+            MeViewController.show(from: navigationController!)
+        } else {
+            UserProfileViewController.show(profile, from: self)
+        }
+    }
+    
+    func didToggleLike(id: Int, isLiked: Bool) -> Bool {
+        var liked = isLiked
+        let request = isLiked ? MeowAPI.unlikeMoment(id: id) : MeowAPI.likeMoment(id: id)
+        MeowAPIProvider.shared.request(request)
+            .subscribe(onNext: {
+                _ in
+                liked = !isLiked
+            })
+            .addDisposableTo(disposeBag)
+        return liked
+    }
+    
+    func didPostComment(moment: Moment, content: String, from cell: MomentHomePageTableViewCell) {
+        MeowAPIProvider.shared.request(.postComment(item: moment, content: content))
+            .subscribe(onNext:{
+                [weak self]
+                _ in
+                cell.clearComment()
+                cell.model!.commentCount! += 1
+                cell.updateCommentCountLabel()
+                self?.loadMoment()
+            })
+    }
+
 }
