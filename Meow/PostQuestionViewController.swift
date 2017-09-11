@@ -19,7 +19,7 @@ class PostQuestionViewController: UIViewController {
         contentTextField.textContainer.lineBreakMode = .byWordWrapping
     }
     @IBAction func cancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        navigationController?.popTwice(animated: true)
     }
     @IBAction func postQuestion(_ sender: Any) {
         guard let title = titleTextField.text, let content = contentTextField.text
@@ -28,7 +28,7 @@ class PostQuestionViewController: UIViewController {
             .subscribe(onNext: {
                 [weak self]
                 _ in
-                self?.dismiss(animated: true, completion: nil)
+                self?.navigationController!.popTwice(animated: true)
             })
         .addDisposableTo(disposeBag)
     }

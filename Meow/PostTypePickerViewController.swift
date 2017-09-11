@@ -15,4 +15,19 @@ class PostTypeViewController: UIViewController {
  
         viewController.navigationController?.pushViewController(vc, animated: true)
     }
+    @IBAction func postMoment(_ sender: Any) {
+        let vc = R.storyboard.postPages.postMomentController()!
+        navigationController!.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func postArticle(_ sender: Any) {
+        let vc = R.storyboard.postPages.postArticleController()!
+        navigationController!.pushViewController(vc, animated: true)
+    } 
+    
+    @IBAction func postQuestion(_ sender: Any) {
+        let vc = R.storyboard.postPages.postQuestionController()!
+        navigationController!.pushViewController(vc, animated: true)
+    }
+    
 }

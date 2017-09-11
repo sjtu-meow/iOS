@@ -21,14 +21,22 @@ class QiniuProvider {
     
     var token: UploadToken?
     
-    let manager = QNUploadManager()
+    let manager: QNUploadManager = QNUploadManager()
     
     init() {
+    }
+    
+    func checkToken() {
         if token == nil || token!.isExpired() {
             MeowAPIProvider.shared.request(.uploadToken)
-            .mapTo(type: UploadToken.self)
-            .subscribe(onNext:{[weak self] token in self?.token = token})
-            .addDisposableTo(disposeBag)
+                .mapTo(type: UploadToken.self)
+                .subscribe(onNext:{
+                    [weak self]
+                    token in
+                    self?.token = token
+                    logger.log("Token: \(token)")
+                })
+                .addDisposableTo(disposeBag)
         }
     }
     
@@ -36,8 +44,8 @@ class QiniuProvider {
         return Observable<String>.create{
             (observer) in
             
-            self.manager?.put(data, key: nil,
-                                  token: self.token?.token,
+            self.manager.put(data, key: nil,
+                                  token: self.token!.token,
                                   complete: {
                                     (info, key, response) in
                                     if info!.isOK {
@@ -57,7 +65,7 @@ class QiniuProvider {
         return Observable<String>.create{
             (observer) in
             
-            self.manager?.putFile(path, key: nil,
+            self.manager.putFile(path, key: nil,
                              token: self.token?.token,
                              complete: {
                                 (info, key, response) in

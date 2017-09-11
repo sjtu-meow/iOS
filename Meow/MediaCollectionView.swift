@@ -43,7 +43,7 @@ class MediaCollectionView: UICollectionView {
         self.moment = model
         guard let medias = self.moment?.medias else { return }
         
-        let numberOfRows = medias.count / 2
+        let numberOfRows = medias.count / 2 + medias.count % 2
         
         let height = CGFloat(numberOfRows) * MediaCollectionView.cellHeight + CGFloat(numberOfRows - 1) * MediaCollectionView.minLineSpacing + 15.0
         heightConstraint.constant = height

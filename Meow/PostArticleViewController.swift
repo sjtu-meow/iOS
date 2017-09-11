@@ -37,8 +37,7 @@ class PostArticleViewController: UIViewController {
     
     
     @IBAction func cancel(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
+        self.navigationController!.popTwice(animated: true)
     }
     
     override func viewDidLoad() {
@@ -101,7 +100,7 @@ class PostArticleViewController: UIViewController {
             .subscribe(onNext: {
                 [weak self] _ in
                 
-                self?.dismiss(animated: true, completion: nil)
+                self?.navigationController?.popTwice(animated: true)
             })
         .addDisposableTo(disposeBag)
         
@@ -112,10 +111,7 @@ class PostArticleViewController: UIViewController {
         MeowAPIProvider.shared.request(.postAnswer(questionId: question!.id, content: content))
             .subscribe(onNext: {
                 [weak self] _ in
-                // FIXME
-                self?.navigationController?.popViewController(animated: true)
-                
-                self?.dismiss(animated: true, completion: nil)
+                self?.navigationController?.popTwice(animated: true)
             })
             .addDisposableTo(disposeBag)
 
@@ -138,9 +134,11 @@ extension PostArticleViewController: UIImagePickerControllerDelegate, UINavigati
             .subscribe(onNext: {
                 [weak self]
                 key in
+                logger.log(key)
                 let domain = "http://osg5c99b1.bkt.clouddn.com/" // FIXME
                 let url = URL(string: domain + key)!
-                self?.editor.insertImage(id: "Image\(imageCount)", url: url.absoluteString)
+                logger.log("Insert image \(key) @ \(imageCount)")
+                self?.editor.insertImage(id: "Image\(imageCount)", url: url.absoluteString + "?imageView2/4/w/200/h/200")
             }).addDisposableTo(disposeBag)
         
         dismiss(animated: true, completion: nil)

@@ -95,7 +95,7 @@
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="aDU-nL-wWN" kind="show" id="2xx-VW-YmQ"/>
+                                                    <action selector="postMoment:" destination="Ifh-OG-Rav" eventType="touchUpInside" id="5NP-gE-Z5g"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmD-aF-ZTS">
@@ -105,7 +105,7 @@
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="sgS-nM-GkL" kind="show" id="8qn-am-gIu"/>
+                                                    <action selector="postArticle:" destination="Ifh-OG-Rav" eventType="touchUpInside" id="ffc-lD-e8I"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMT-Le-oig">
@@ -115,7 +115,7 @@
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="KGr-nD-Dlf" kind="show" id="V5S-3Z-dFe"/>
+                                                    <action selector="postQuestion:" destination="Ifh-OG-Rav" eventType="touchUpInside" id="8RJ-7n-S0M"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -135,24 +135,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmF-a2-1wp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2141" y="1546"/>
-        </scene>
-        <!--PostMomentNavigationController-->
-        <scene sceneID="yDM-YI-fuP">
-            <objects>
-                <viewControllerPlaceholder storyboardName="PostPages" referencedIdentifier="PostMomentNavigationController" id="aDU-nL-wWN" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6EE-lY-mQ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2593" y="2092"/>
-        </scene>
-        <!--PostArticleNavigationController-->
-        <scene sceneID="7i8-G1-3kW">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="PostArticleNavigationController" storyboardName="PostPages" referencedIdentifier="PostArticleNavigationController" id="sgS-nM-GkL" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="c1Q-Vl-oAY"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Egr-p0-Lmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2120" y="2092"/>
         </scene>
         <!--评论-->
         <scene sceneID="bio-zc-HOO">
@@ -190,16 +172,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5E-bH-d8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2183" y="2635"/>
-        </scene>
-        <!--PostQuestionNavigationController-->
-        <scene sceneID="RR5-Z4-rtO">
-            <objects>
-                <viewControllerPlaceholder storyboardName="PostPages" referencedIdentifier="PostQuestionNavigationController" id="KGr-nD-Dlf" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="NJO-NE-LOv"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2so-3x-Jhm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1636" y="2092"/>
         </scene>
         <!--用户主页-->
         <scene sceneID="aNg-2G-ORs">
