@@ -62,8 +62,8 @@ class QuestionDetailViewController: UITableViewController {
         if indexPath.section == 0 {
             let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionDetailQuestionCell)!
             view.addAnswerButton.addTarget(self, action: #selector(addAnswer(_:)), for: .touchUpInside)
-            
             view.configure(model: question)
+            view.delegate = self
             return view
         } else {
             let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionDetailAnswerCell, for: indexPath)!
@@ -83,5 +83,20 @@ class QuestionDetailViewController: UITableViewController {
         let answer = question.answers![indexPath.row]
         ArticleDetailViewController.show(answer, from: self)
         
+    }
+}
+
+extension QuestionDetailViewController : QuestionDetailQuestionCellDelegate {
+    
+    func didToggleFollowQuestion(question: Question, from cell: QuestionDetailQuestionCell) {
+        let request = cell.isFollowed ? MeowAPI.unfollowQuestion(id: question.id) : MeowAPI.followQuestion(id: question.id)
+        MeowAPIProvider.shared.request(request)
+            .subscribe(onNext:{
+                [weak self]
+                _ in
+                cell.isFollowed = !cell.isFollowed
+                cell.updateFollowButton()
+            })
+            .addDisposableTo(disposeBag)
     }
 }
