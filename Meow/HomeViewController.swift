@@ -184,7 +184,11 @@ extension HomeViewController: UISearchBarDelegate {
 
 extension HomeViewController: MomentCellDelegate {
     func didTapAvatar(profile: Profile) {
-        UserProfileViewController.show(profile, from: self)
+        if let userId = UserManager.shared.currentUser?.userId, userId == profile.userId {
+            MeViewController.show(from: navigationController!)
+        } else {
+            UserProfileViewController.show(profile, from: self)
+        }
     }
     
     func didToggleLike(id: Int, isLiked: Bool) -> Bool {
@@ -202,11 +206,12 @@ extension HomeViewController: MomentCellDelegate {
     func didPostComment(moment: Moment, content: String, from cell: MomentHomePageTableViewCell) {
         MeowAPIProvider.shared.request(.postComment(item: moment, content: content))
             .subscribe(onNext:{
+                [weak self]
                 _ in
                 cell.clearComment()
                 cell.model!.commentCount! += 1
                 cell.updateCommentCountLabel()
-                
+                self?.loadData()
             })
     }
     

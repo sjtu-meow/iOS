@@ -49,8 +49,12 @@ class ChatManager {
 
                 completionHandler?(nil, error)
             }
-            
+        }
         
+        LCChatKit.sharedInstance().didSelectConversationsListCellBlock = {
+            (indexPath, conversation, controller) in
+            let vc = LCCKConversationViewController(conversationId: conversation!.conversationId)!
+            controller?.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

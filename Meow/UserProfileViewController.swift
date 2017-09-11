@@ -41,7 +41,7 @@ class UserProfileViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
         tableView.register(R.nib.articleUserPageTableViewCell)
-        tableView.register(R.nib.momentHomePageTableViewCell)
+        // tableView.register(R.nib.momentHomePageTableViewCell)
         tableView.register(R.nib.questionRecordTableViewCell)
         tableView.register(R.nib.answerRecordTableViewCell)
         
@@ -86,7 +86,9 @@ class UserProfileViewController: UITableViewController {
         switch contentType {
         case .moment:
             let item = moments[indexPath.row]
-            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.momentHomePageTableViewCell)!
+            //let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.momentHomePageTableViewCell)!
+            let view = R.nib.momentHomePageTableViewCell.firstView(owner: nil)!
+        
             view.configure(model: item)
             return view
         case .article:
@@ -206,7 +208,7 @@ class UserProfileViewController: UITableViewController {
                 vc.configure(questionId: item.id)
                 navigationController?.pushViewController(vc, animated: true)
             } else {
-                // TODO: Show answer detail
+                ArticleDetailViewController.show(item, from: self)
             }
         default:
             break 
@@ -245,7 +247,8 @@ extension UserProfileViewController: UserProfileCellDelegate {
     
     func didTapSendMessageButton(_ sender: UIButton) {
         guard let profile = profile else { return }
-        let clientId = "\(profile.userId)"
+    
+        let clientId = "\(profile.userId!)"
         
         ChatManager.openConversationViewController(withPeerId: clientId, from: self.navigationController!)
     }
