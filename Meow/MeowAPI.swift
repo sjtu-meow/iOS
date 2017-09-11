@@ -13,6 +13,7 @@ enum MeowAPI  {
     case login(phone: String, password: String)
     case banners
     case homepage // api?
+    case moment(id: Int)
     case articles
     case article(id: Int)
     case questions
@@ -90,6 +91,8 @@ extension MeowAPI: TargetType {
         switch self {
         case .homepage:
             return "/homepage"
+        case .moment(let id):
+            return "/moments/\(id)"
         case .moments, .postMoment:
             return "/moments"
         case .questions, .postQuestion:

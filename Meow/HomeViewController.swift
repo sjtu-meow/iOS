@@ -97,8 +97,13 @@ class HomeViewController: UITableViewController {
         
         /* banners */
         if indexPath.section == 0 {
-            let view = tableView.dequeueReusableCell(withIdentifier: R.nib.bannerViewCell.identifier)!
-            (view as! BannerViewCell).configure(banners: self.banners)
+            let view = tableView.dequeueReusableCell(withIdentifier: R.nib.bannerViewCell)!
+            view.configure(banners: self.banners)
+            view.onTapBanner = {
+                [weak self] banner in
+                self?.onTapBanner(banner!)
+            }
+            
             return view
         }
         
@@ -161,6 +166,37 @@ class HomeViewController: UITableViewController {
         PostTypeViewController.show(from: self)
     }
     
+    func onTapBanner(_ banner: Banner) {
+        let type = banner.itemType!
+        switch type {
+        case .moment:
+            MeowAPIProvider.shared.request(.moment(id: banner.itemId)).mapTo(type: Moment.self).subscribe(onNext: {
+                [weak self] moment in
+                if let self_ = self {
+                    MomentDetailViewController.show(moment, from: self_)
+                }
+            }).addDisposableTo(disposeBag)
+        case .article:
+            MeowAPIProvider.shared.request(.article(id: banner.itemId)).mapTo(type: Article.self).subscribe (onNext: {
+                [weak self] article in
+                if let self_ = self {
+                    ArticleDetailViewController.show(article, from: self_)
+                }
+            }).addDisposableTo(disposeBag)
+        case .answer:
+            MeowAPIProvider.shared.request(.answer(id: banner.itemId)).mapTo(type: Answer.self).subscribe (onNext: {
+                [weak self] answer in
+                if let self_ = self {
+                    ArticleDetailViewController.show(answer, from: self_)
+                }
+            }).addDisposableTo(disposeBag)
+        default: break
+        }
+        
+        
+        
+        
+    }
 }
 
 
