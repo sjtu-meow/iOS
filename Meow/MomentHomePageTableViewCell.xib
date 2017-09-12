@@ -129,7 +129,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Yry-xz-Mjf" userLabel="赞/评论按钮">
-                                        <rect key="frame" x="268" y="0.0" width="75" height="21"/>
+                                        <rect key="frame" x="308" y="0.0" width="35" height="21"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIm-aO-Vwk">
                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="21"/>
@@ -139,16 +139,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="toggleLike:" destination="N3h-HZ-ZPs" eventType="touchUpInside" id="GO3-Aw-u3d"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIG-TL-jHv">
-                                                <rect key="frame" x="40" y="0.0" width="35" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="评论" backgroundImage="ButtonSmallOutline">
-                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="postComment:" destination="N3h-HZ-ZPs" eventType="touchUpInside" id="40v-b9-7yO"/>
                                                 </connections>
                                             </button>
                                         </subviews>
