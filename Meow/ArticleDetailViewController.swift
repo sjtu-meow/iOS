@@ -290,6 +290,10 @@ extension ArticleDetailViewController: UITabBarDelegate {
 
 extension ArticleDetailViewController: AvatarCellDelegate {
     func didTapAvatar(profile: Profile) {
-        UserProfileViewController.show(profile, from: self)
+        if let userId = UserManager.shared.currentUser?.userId, userId == profile.userId {
+            MeViewController.show(from: navigationController!)
+        } else {
+            UserProfileViewController.show(profile, from: self)
+        }
     }
 }
