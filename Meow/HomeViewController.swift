@@ -97,7 +97,7 @@ class HomeViewController: UITableViewController {
         
         /* banners */
         if indexPath.section == 0 {
-            let view = tableView.dequeueReusableCell(withIdentifier: R.nib.bannerViewCell)!
+            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.bannerViewCell)!
             view.configure(banners: self.banners)
             view.onTapBanner = {
                 [weak self] banner in
