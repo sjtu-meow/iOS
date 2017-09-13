@@ -265,26 +265,39 @@ extension ArticleDetailViewController: UITabBarDelegate {
     }
 
     func didTapShareButton() {
-// TODO
-        /*
-        guard let article = self.item else {
-            return
-        }
-        let empty = ""
         
+        guard let item = self.item else { return }
         let dict = NSMutableDictionary()
-        let title = "来自喵喵喵的文章：\(article.title!)"
-        dict.ssdkSetupShareParams(
+        if item.type! == .article {
+            let article = item as! Article
+            let title = "来自喵喵喵的文章：\(article.title!)"
+            var images: [URL] = []
+            if let cover = article.cover {
+                images.append(cover)
+            }
+            dict.ssdkSetupShareParams(
                 byText: title,
-                images: "",
-                url: URL(string: "baidu.com"),
+                images: images,
+                url: URL(string: "http://106.14.156.19"),
                 title: title,
-                type: SSDKContentType.text)
-
+                type: SSDKContentType.text
+            )
+        } else { // .answer 
+            let answer = item as! Answer
+            
+            dict.ssdkSetupShareParams(
+                byText: title,
+                images: [],
+                url: URL(string: "http://106.14.156.19"),
+                title: title,
+                type: SSDKContentType.text
+            )
+        }
+        
+        
         ShareSDK.showShareActionSheet(nil, items: nil, shareParams: dict) { (state, _, _, _, _, _) in
             print(state)
         }
-*/
     }
 }
 
