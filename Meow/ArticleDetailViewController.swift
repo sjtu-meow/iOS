@@ -49,7 +49,7 @@ class ArticleDetailViewController: UIViewController {
 
         webview.heightChangingHandler = {
             [weak self] height in
-            self?.scrollView.contentSize.height = height
+            self?.scrollView.contentSize.height = height + 50
         }
 
 

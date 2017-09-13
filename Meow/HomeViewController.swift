@@ -190,6 +190,10 @@ class HomeViewController: UITableViewController {
                     ArticleDetailViewController.show(answer, from: self_)
                 }
             }).addDisposableTo(disposeBag)
+        case .question:
+            let vc = R.storyboard.questionAnswerPage.questionDetailViewController()!
+            vc.configure(questionId: banner.itemId)
+            navigationController?.pushViewController(vc, animated: true)
         default: break
         }
         

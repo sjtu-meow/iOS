@@ -21,7 +21,7 @@ class BannerViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     
-        slideShow.contentScaleMode = .scaleToFill
+        slideShow.contentScaleMode = .scaleAspectFill
         slideShow.slideshowInterval = 5
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTapBanner))

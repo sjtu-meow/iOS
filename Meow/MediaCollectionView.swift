@@ -96,6 +96,7 @@ class MediaCollectionViewCell: UICollectionViewCell {
         
         imageView.layer.cornerRadius = 5.0
         imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
     }
     
     func configure(model: Media) {

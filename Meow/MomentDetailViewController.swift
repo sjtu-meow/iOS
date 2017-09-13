@@ -24,6 +24,7 @@ class MomentDetailViewController: UITableViewController {
         tableView.tableFooterView = UIView(frame: CGRect.zero)
             
         tableView.register(R.nib.momentHomePageTableViewCell)
+        tableView.allowsSelection = false
     }
     var moment: Moment!
 
