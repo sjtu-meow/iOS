@@ -27,6 +27,7 @@ class CommentViewController: UITableViewController {
         tableView.estimatedRowHeight = 44
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.allowsSelection = false
+        tableView.separatorInset = .init(top: 0, left: 16, bottom: 0, right: 16)
     }
 
     func configure(model: ItemProtocol) {

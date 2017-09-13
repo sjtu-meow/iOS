@@ -18,7 +18,7 @@ class ArticleRecordTableViewCell: UITableViewCell {
     func configure(model: ArticleSummary) {
       
         if let url = model.cover{
-            imageView?.af_setImage(withURL: url)
+            avatarImageView?.af_setImage(withURL: url)
         }
         titleLabel.text = model.title
         contentLabel.text = model.summary
