@@ -24,7 +24,9 @@ class LoginViewController: UIViewController {
         
         
         //dismiss(animated: true, completion: nil )
-        UserManager.shared.login(phone: username, password: password)
+        UserManager.shared.login(phone: username, password: password) {
+            [weak self] _ in self?.dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func signup(_ sender: Any) {

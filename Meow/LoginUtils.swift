@@ -16,7 +16,7 @@ class UserManager {
     var currentUser: Profile?
     
     @discardableResult
-    func login(phone: String, password: String) -> Observable<Profile> {
+    func login(phone: String, password: String, cont: (()->())? = nil) -> Observable<Profile> {
         let observable = MeowAPIProvider.shared
             .request(.login(phone: phone, password: password))
             .mapTo(type: Token.self)
@@ -32,6 +32,9 @@ class UserManager {
             profile in
             UserManager.shared.currentUser = profile
             ChatManager.didLoginSuccess(withClientId: "\(profile.userId!)")
+            if let cont = cont {
+                cont() 
+            }
         }, onError: {
             e in
             HUD.flash(.labeledError(title: "用户名或密码错误", subtitle: nil), delay: 1)
