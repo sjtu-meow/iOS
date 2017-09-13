@@ -24,28 +24,8 @@ class LoginViewController: UIViewController {
         
         
         //dismiss(animated: true, completion: nil )
-        
-        MeowAPIProvider.shared.request(.login(phone: username, password: password))
-            .mapTo(type:Token.self)
-            .subscribe(onNext: {
-                [weak self]
-                token in
-                token.save()
-                MeowAPIProvider.refresh()
-                self?.dismiss(animated: true, completion: nil )
-                }, onError: {
-                    [weak self]
-                    e in
-                    let alert = UIAlertController(title: "登录失败", message: "用户名或密码错误", preferredStyle: UIAlertControllerStyle.alert)
-                    let alertAction = UIAlertAction(title: "好", style: UIAlertActionStyle.default)
-                    {
-                        (UIAlertAction) -> Void in
-                    }
-                    alert.addAction(alertAction)
-                    self?.present(alert, animated: false, completion: nil)
-            })
-            .addDisposableTo(disposeBag)
-        }
+        UserManager.shared.login(phone: username, password: password)
+    }
     
     @IBAction func signup(_ sender: Any) {
         

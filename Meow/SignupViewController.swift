@@ -91,6 +91,7 @@ class SignupViewController: UIViewController {
                 [weak self]
                 _ in
                 self?.dismiss(animated: true, completion: nil)
+                UserManager.shared.login(phone: phone, password: password)
             })
         .addDisposableTo(disposeBag)
         
