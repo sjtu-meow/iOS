@@ -33,6 +33,16 @@ class LoginViewController: UIViewController {
                 token.save()
                 MeowAPIProvider.refresh()
                 self?.dismiss(animated: true, completion: nil )
+                }, onError: {
+                    [weak self]
+                    e in
+                    let alert = UIAlertController(title: "登录失败", message: "用户名或密码错误", preferredStyle: UIAlertControllerStyle.alert)
+                    let alertAction = UIAlertAction(title: "好", style: UIAlertActionStyle.default)
+                    {
+                        (UIAlertAction) -> Void in
+                    }
+                    alert.addAction(alertAction)
+                    self?.present(alert, animated: false, completion: nil)
             })
             .addDisposableTo(disposeBag)
         }
