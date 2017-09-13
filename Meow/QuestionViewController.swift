@@ -39,7 +39,7 @@ class QuestionViewController: UITableViewController {
                     self!.allQuestionsAnswers.append(answer)
                 }
                 
-                self!.allQuestionsAnswers.shuffle()
+                self!.allQuestionsAnswers.sort(by: {$0.createTime > $1.createTime})
                 self!.tableView.reloadData()
             })
             .addDisposableTo(disposeBag)
@@ -51,6 +51,7 @@ class QuestionViewController: UITableViewController {
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         loadData()
         tableView.register(R.nib.answerTableViewCell)
+        tableView.register(R.nib.questionTableViewCell)
         tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
     }
@@ -70,17 +71,21 @@ class QuestionViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = allQuestionsAnswers[indexPath.row]
-        let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.answerTableViewCell.identifier)! as! AnswerTableViewCell
-        view.delegate = self
         
         if item.type == .answer {
+            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.answerTableViewCell)!
+        
             view.configure(model: item as! AnswerSummary)
+            view.delegate = self
+            return view
         } else {
             let question = item as! QuestionSummary
-            view.titleLabel.text = question.title
+            let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionTableViewCell)!
+            view.configure(model: question)
+            return view
+
         }
         
-        return view
     }
     
     @IBAction func showPostTypePicker(_ sender: Any) {
