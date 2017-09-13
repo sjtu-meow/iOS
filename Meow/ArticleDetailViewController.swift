@@ -39,6 +39,7 @@ class ArticleDetailViewController: UIViewController {
     var itemId: Int?
     var itemType: ItemType?
     var item: ItemProtocol?
+    var question: Question?
     var bottomBar: UITabBar!
 
     // FIXME
@@ -85,24 +86,34 @@ class ArticleDetailViewController: UIViewController {
             return
         }
 
-        let observer = {
-            [weak self]
-            (item:ItemProtocol) -> Void in
-            self?.item = item
-            self?.updateView()
-        }
         
         if (self.itemType == .article) {
             MeowAPIProvider.shared.request(.article(id: id))
                 .mapTo(type: Article.self)
-                .subscribe(onNext: observer)
+                .subscribe(onNext: {
+                    [weak self]
+                    (item:ItemProtocol) -> Void in
+                    self?.item = item
+                    self?.updateView()
+                })
                 .addDisposableTo(disposeBag)
         } else { // answer
             MeowAPIProvider.shared.request(.answer(id: id))
-            .mapTo(type: Answer.self)
-                .subscribe(onNext: observer)
+                .mapTo(type: Answer.self)
+                .flatMap {
+                    [weak self]
+                    (item:ItemProtocol) -> Observable<Any> in
+                    self?.item = item
+                    return MeowAPIProvider.shared.request(.question(id: (item as! Answer).questionId))
+                }
+                .mapTo(type: Question.self)
+                .subscribe(onNext: {
+                    [weak self]
+                    question in
+                    self?.question = question
+                    self?.updateView()
+                })
                 .addDisposableTo(disposeBag)
-
         }
     }
 
@@ -119,6 +130,7 @@ class ArticleDetailViewController: UIViewController {
         } else if itemType! == .answer {
             let answer  = item as! Answer
             content = answer.content!
+            navigationItem.title = question?.title
         }
         webview.presentHTMLString(content)
         
@@ -284,6 +296,7 @@ extension ArticleDetailViewController: UITabBarDelegate {
             )
         } else { // .answer 
             let answer = item as! Answer
+            let title = "来自喵喵喵用户\(item.profile.nickname!)的回答:" + (question?.title ?? "")
             
             dict.ssdkSetupShareParams(
                 byText: title,
