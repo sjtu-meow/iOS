@@ -32,14 +32,17 @@ class QuestionViewController: UITableViewController {
                 questions in
                 guard self != nil else { return }
                 self!.questions = questions.filter({$0.answerCount == 0})
+                
+                var items = [ItemProtocol]()
                 for question in self!.questions! {
-                    self!.allQuestionsAnswers.append(question)
+                    items.append(question)
                 }
                 for answer in self!.answers! {
-                    self!.allQuestionsAnswers.append(answer)
+                    items.append(answer)
                 }
                 
-                self!.allQuestionsAnswers.sort(by: {$0.createTime > $1.createTime})
+                items.sort(by: {$0.createTime > $1.createTime})
+                self!.allQuestionsAnswers = items
                 self!.tableView.reloadData()
             })
             .addDisposableTo(disposeBag)
@@ -79,11 +82,9 @@ class QuestionViewController: UITableViewController {
             view.delegate = self
             return view
         } else {
-            let question = item as! QuestionSummary
             let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionTableViewCell)!
-            view.configure(model: question)
+            view.configure(model: item as! QuestionSummary)
             return view
-
         }
         
     }

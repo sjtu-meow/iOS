@@ -59,6 +59,18 @@ class ChatManager {
             let vc = LCCKConversationViewController(conversationId: conversation!.conversationId)!
             controller?.navigationController?.pushViewController(vc, animated: true)
         }
+        LCChatKit.sharedInstance().openProfileBlock = {
+            userId, user, parentController in
+            guard let userId = userId, let currentUser = UserManager.shared.currentUser else { return }
+            if currentUser.userId == Int(userId) {
+                let vc = R.storyboard.selfPage.meViewController()!
+                parentController?.navigationController?.pushViewController(vc, animated: true)
+            } else {
+                let vc = R.storyboard.main.userProfileViewController()!
+                vc.configure(userId: Int(userId))
+                parentController?.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
     
     
