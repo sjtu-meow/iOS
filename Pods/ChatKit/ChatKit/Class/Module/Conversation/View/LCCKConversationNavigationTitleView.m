@@ -125,7 +125,7 @@ static void * const LCCKConversationViewControllerMembersCountContext = (void*)&
     if (!_conversationNameView) {
         UILabel *conversationNameView = [[UILabel alloc] initWithFrame:CGRectZero];
         conversationNameView.font = [UIFont boldSystemFontOfSize:kLCCKTitleFontSize];
-        conversationNameView.textColor = [UIColor whiteColor];
+        //conversationNameView.textColor = [UIColor whiteColor];
         conversationNameView.textAlignment = NSTextAlignmentCenter;
         [conversationNameView sizeToFit];
         conversationNameView.lineBreakMode = NSLineBreakByTruncatingTail;

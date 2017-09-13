@@ -31,7 +31,7 @@ final class ChatKitUser: NSObject,  LCCKUserDelegate {
     var clientId: String!
     
     open class func from(profile: Profile) -> ChatKitUser {
-        let id = "\(profile.userId)"
+        let id = "\(profile.userId!)"
         let user = ChatKitUser(userId: id, name: profile.nickname, avatarURL: profile.avatar)
         return user
     }
@@ -45,6 +45,7 @@ final class ChatKitUser: NSObject,  LCCKUserDelegate {
         self.userId = userId
         self.name = name
         self.avatarURL = avatarURL
+        self.clientId = userId
     }
     
     required init(userId: String!, name: String!, avatarURL: URL!, clientId: String!) {
@@ -57,5 +58,6 @@ final class ChatKitUser: NSObject,  LCCKUserDelegate {
     
     required init(clientId: String!) {
         self.userId = clientId
+        self.clientId = clientId
     }
 }
