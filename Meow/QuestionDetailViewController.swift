@@ -43,7 +43,14 @@ class QuestionDetailViewController: UITableViewController {
             })
         .addDisposableTo(disposeBag)
     }
-
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if indexPath.section == 0 {
+            return nil
+        }
+        return indexPath
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }

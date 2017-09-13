@@ -19,9 +19,7 @@ class MomentRecordTableViewCell: UITableViewCell {
         if let url = model.profile.avatar {
             avatarImageView.af_setImage(withURL: url)
         }
-        
         contentLabel.text = model.content
-        nicknameLabel.text = model.content
-        
+        nicknameLabel.text = model.profile.nickname
     }
 }
