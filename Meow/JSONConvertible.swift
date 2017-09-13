@@ -90,7 +90,7 @@ extension Date : JSONConvertible {
             formats:
                 ["yyyy-MM-dd'T'HH:mm:ssZ", //2014-09-27T17:40:00Z
                  "yyyy-MM-dd HH:mm", //2014-09-27 17:40
-                 "yyyy-MM-dd HH:mm:ss", //2014-09-27 17:40:59
+                 "yyyy-MM-dd HH:mm:ss.S", //2014-09-27 17:40:59.0
             ])
     }
     

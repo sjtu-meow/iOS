@@ -27,10 +27,12 @@ class MomentHomePageTableViewCell: UITableViewCell {
     @IBOutlet weak var commentListStackView: UIStackView!
     //MARK: - Property
     /* user profile info */
+    
     @IBOutlet weak var avatarImageView: AvatarImageView!
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
     
+    @IBOutlet weak var createTimeLabel: UILabel!
     /* moment */
     @IBOutlet weak var momentContentLabel: UILabel!
     @IBOutlet weak var mediaCollectionView: MediaCollectionView!
@@ -107,6 +109,7 @@ class MomentHomePageTableViewCell: UITableViewCell {
         
         initLikeLabel()
         
+        createTimeLabel.text = moment.createTime!.toString()
     }
     
     func updateCommentList() {

@@ -39,6 +39,7 @@ extension Moment: JSONConvertible {
         
         moment.likeCount <- json["likeCount"]
         moment.commentCount <- json["commentCount"]
+        
         return moment
     }
 }
