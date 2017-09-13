@@ -87,6 +87,7 @@
 		BF4A24301F0F62310004650E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A242F1F0F62310004650E /* Comment.swift */; };
 		BF66F0FF1F2F634D009C99B1 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66F0FE1F2F634D009C99B1 /* AvatarImageView.swift */; };
 		BF670B9A1F68E77C00E5810B /* Date+toString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF670B991F68E77C00E5810B /* Date+toString.swift */; };
+		BF670B9C1F695FE600E5810B /* Array+shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF670B9B1F695FE600E5810B /* Array+shuffle.swift */; };
 		BF7446141F3E0E70006A3496 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7446131F3E0E70006A3496 /* ChatManager.swift */; };
 		BF78783D1F00F2C9000FB7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */; };
 		BF7878421F00F2C9000FB7C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7878401F00F2C9000FB7C6 /* Main.storyboard */; };
@@ -255,6 +256,7 @@
 		BF4A242F1F0F62310004650E /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		BF66F0FE1F2F634D009C99B1 /* AvatarImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		BF670B991F68E77C00E5810B /* Date+toString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+toString.swift"; sourceTree = "<group>"; };
+		BF670B9B1F695FE600E5810B /* Array+shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+shuffle.swift"; sourceTree = "<group>"; };
 		BF7446131F3E0E70006A3496 /* ChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		BF7878391F00F2C9000FB7C6 /* Meow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF78783C1F00F2C9000FB7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -545,6 +547,7 @@
 				BF7446131F3E0E70006A3496 /* ChatManager.swift */,
 				BFD1A9171F6679AE00DEE183 /* UINavigationController+PopTwice.swift */,
 				BF670B991F68E77C00E5810B /* Date+toString.swift */,
+				BF670B9B1F695FE600E5810B /* Array+shuffle.swift */,
 			);
 			path = Meow;
 			sourceTree = "<group>";
@@ -1020,6 +1023,7 @@
 				BF4A24261F0C7C650004650E /* PostArticleViewController.swift in Sources */,
 				BFD0A2831F2053AA00E2282D /* MyFollowingViewController.swift in Sources */,
 				BF3181631F15F27100ACB9DD /* QuestionDetailAnswerCell.swift in Sources */,
+				BF670B9C1F695FE600E5810B /* Array+shuffle.swift in Sources */,
 				BFD0A2881F208D0F00E2282D /* ArticleUserPageTableViewCell.swift in Sources */,
 				BF2A1A261F13500D00220853 /* AnswerTableViewCell.swift in Sources */,
 				BFD0A2811F2050C900E2282D /* UserProfileCell.swift in Sources */,

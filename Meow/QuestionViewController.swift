@@ -12,17 +12,35 @@ import RxSwift
 class QuestionViewController: UITableViewController {
 
     var answers: [AnswerSummary]?
+    var questions: [QuestionSummary]?
+    var allQuestionsAnswers: [ItemProtocol] = [ItemProtocol]()
     
     let disposeBag = DisposeBag()
     
     private func loadData(){
         MeowAPIProvider.shared.request(.answers).mapTo(arrayOf: AnswerSummary.self)
+            .flatMap {
+                [weak self]
+                (answers: [AnswerSummary]) -> Observable<Any>
+                in
+                self?.answers = answers
+                return MeowAPIProvider.shared.request(.questions)
+            }
+            .mapTo(arrayOf: QuestionSummary.self)
             .subscribe(onNext:{
                 [weak self]
-                (answers) in
+                questions in
+                guard self != nil else { return }
+                self!.questions = questions.filter({$0.answerCount == 0})
+                for question in self!.questions! {
+                    self!.allQuestionsAnswers.append(question)
+                }
+                for answer in self!.answers! {
+                    self!.allQuestionsAnswers.append(answer)
+                }
                 
-                self?.answers = answers 
-                self?.tableView.reloadData()
+                self!.allQuestionsAnswers.shuffle()
+                self!.tableView.reloadData()
             })
             .addDisposableTo(disposeBag)
     }
@@ -30,7 +48,7 @@ class QuestionViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableView.tableFooterView = UIView(frame: CGRect.zero)
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         loadData()
         tableView.register(R.nib.answerTableViewCell)
         tableView.estimatedRowHeight = 44
@@ -47,15 +65,21 @@ class QuestionViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.answers?.count ?? 0
+        return allQuestionsAnswers.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = allQuestionsAnswers[indexPath.row]
         let view = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.answerTableViewCell.identifier)! as! AnswerTableViewCell
-        if let answer = self.answers?[indexPath.row]{
-            view.configure(model: answer)
-            view.delegate = self
+        view.delegate = self
+        
+        if item.type == .answer {
+            view.configure(model: item as! AnswerSummary)
+        } else {
+            let question = item as! QuestionSummary
+            view.titleLabel.text = question.title
         }
+        
         return view
     }
     
@@ -64,10 +88,17 @@ class QuestionViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let model = answers![indexPath.row]
-        ArticleDetailViewController.show(model, from: self)
+        let item = allQuestionsAnswers[indexPath.row]
+        if item.type == .answer {
+            ArticleDetailViewController.show(item as! AnswerSummary, from: self)
+        } else {
+            let vc = R.storyboard.questionAnswerPage.questionDetailViewController()!
+            vc.configure(questionId: item.id)
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
+
 
 extension QuestionViewController: AnswerCellDelegate {
     func onTitleTapped(answer model: AnswerSummary) {
