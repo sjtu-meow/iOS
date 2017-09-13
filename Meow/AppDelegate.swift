@@ -55,8 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         QiniuProvider.shared.checkToken()
         
         /* login page */
-      
-        if Token.load() == nil {
+        
+        if true || Token.load() == nil {
             let vc = R.storyboard.loginSignupPage.loginSignupController()!
             vc.modalPresentationStyle = .fullScreen
             self.window?.makeKeyAndVisible()
@@ -98,7 +98,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func login() {
-        UserManager.shared.login(phone: "13333333333", password: "meow233")
+        // UserManager.shared.login(phone: "13333333333", password: "meow233")
     }
 
 }
