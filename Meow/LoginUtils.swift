@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import PKHUD
 
 class UserManager {
     open static var shared = UserManager()
@@ -15,11 +16,11 @@ class UserManager {
     var currentUser: Profile?
     
     @discardableResult
-    func login(phone: String, password: String) -> Observable<Profile> {
+    func login(phone: String, password: String, cont: (()->())? = nil) -> Observable<Profile> {
         let observable = MeowAPIProvider.shared
             .request(.login(phone: phone, password: password))
             .mapTo(type: Token.self)
-            .flatMap() {
+            .flatMap {
                 token -> Observable<Any> in
                 token.save()
                 MeowAPIProvider.refresh()
@@ -31,6 +32,12 @@ class UserManager {
             profile in
             UserManager.shared.currentUser = profile
             ChatManager.didLoginSuccess(withClientId: "\(profile.userId!)")
+            if let cont = cont {
+                cont() 
+            }
+        }, onError: {
+            e in
+            HUD.flash(.labeledError(title: "用户名或密码错误", subtitle: nil), delay: 1)
         }).addDisposableTo(disposeBag)
         
         return observable
