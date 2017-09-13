@@ -118,6 +118,7 @@
 		BFD1A9141F638FC900DEE183 /* SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A9131F638FC900DEE183 /* SearchUITests.swift */; };
 		BFD1A9161F656BD700DEE183 /* MomentCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A9151F656BD600DEE183 /* MomentCommentView.swift */; };
 		BFD1A9181F6679AE00DEE183 /* UINavigationController+PopTwice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A9171F6679AE00DEE183 /* UINavigationController+PopTwice.swift */; };
+		BFD1A91C1F66854500DEE183 /* JsonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1A91B1F66854500DEE183 /* JsonTests.swift */; };
 		BFE11D381F010AF200EED963 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		BFF139591F025163006DF489 /* Observable+MapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF139581F025163006DF489 /* Observable+MapTo.swift */; };
 		BFF1395F1F02C089006DF489 /* SMSExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1395E1F02C089006DF489 /* SMSExtention.swift */; };
@@ -288,6 +289,7 @@
 		BFD1A9131F638FC900DEE183 /* SearchUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUITests.swift; sourceTree = "<group>"; };
 		BFD1A9151F656BD600DEE183 /* MomentCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentCommentView.swift; sourceTree = "<group>"; };
 		BFD1A9171F6679AE00DEE183 /* UINavigationController+PopTwice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+PopTwice.swift"; sourceTree = "<group>"; };
+		BFD1A91B1F66854500DEE183 /* JsonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonTests.swift; sourceTree = "<group>"; };
 		BFF139581F025163006DF489 /* Observable+MapTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MapTo.swift"; sourceTree = "<group>"; };
 		BFF1395B1F02ADCA006DF489 /* Meow-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Bridge.h"; sourceTree = "<group>"; };
 		BFF1395E1F02C089006DF489 /* SMSExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSExtention.swift; sourceTree = "<group>"; };
@@ -547,6 +549,7 @@
 		BF7878501F00F2C9000FB7C6 /* MeowTests */ = {
 			isa = PBXGroup;
 			children = (
+				BFD1A91B1F66854500DEE183 /* JsonTests.swift */,
 				BF7878531F00F2C9000FB7C6 /* Info.plist */,
 				BF390A541F021A5C00555B93 /* TokenTests.swift */,
 				D9CA874C1F1474680018F63A /* SearchHistorySourceTests.swift */,
@@ -1093,6 +1096,7 @@
 				BF390A551F021A5C00555B93 /* TokenTests.swift in Sources */,
 				D9CA874D1F1474680018F63A /* SearchHistorySourceTests.swift in Sources */,
 				24A12A981F1E0C64000E4A72 /* ViewHistorySourceTests.swift in Sources */,
+				BFD1A91C1F66854500DEE183 /* JsonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
