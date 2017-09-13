@@ -18,6 +18,8 @@ class QuestionViewController: UITableViewController {
     let disposeBag = DisposeBag()
     
     private func loadData(){
+        allQuestionsAnswers.removeAll()
+        
         MeowAPIProvider.shared.request(.answers).mapTo(arrayOf: AnswerSummary.self)
             .flatMap {
                 [weak self]
