@@ -31,7 +31,7 @@ class MyFavoriteViewController: UITableViewController {
             .subscribe(onNext: {
                 [weak self]
                 items in
-                self?.items.append(contentsOf: items)
+                self?.items.append(contentsOf: items.filter({$0.type == .article || $0.type == .answer}))
                 self?.tableView.reloadData()
             })
             .addDisposableTo(disposeBag)
