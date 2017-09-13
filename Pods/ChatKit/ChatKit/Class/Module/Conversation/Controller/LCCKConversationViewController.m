@@ -222,7 +222,7 @@ NSString *const LCCKConversationViewControllerErrorDomain = @"LCCKConversationVi
         self.user = user;
     }];
     [self.chatViewModel setDefaultBackgroundImage];
-    self.navigationItem.title = LCCKLocalizedStrings(@"Chat");//@"聊天";
+    self.navigationItem.title = LCCKLocalizedStrings(@"私信");//@"聊天";
     !self.viewDidLoadBlock ?: self.viewDidLoadBlock(self);
 }
 
@@ -444,6 +444,7 @@ NSString *const LCCKConversationViewControllerErrorDomain = @"LCCKConversationVi
         frame.size.height = containerViewHeight;
         frame;
     });
+    
     self.navigationItem.titleView = navigationItemTitle;
 }
 

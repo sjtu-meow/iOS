@@ -56,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /* login page */
         
-        if true || Token.load() == nil {
+        if false && Token.load() == nil {
             let vc = R.storyboard.loginSignupPage.loginSignupController()!
             vc.modalPresentationStyle = .fullScreen
             self.window?.makeKeyAndVisible()
@@ -98,7 +98,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func login() {
-        // UserManager.shared.login(phone: "13333333333", password: "meow233")
+         UserManager.shared.login(phone: "13333333333", password: "meow233")
     }
 
 }

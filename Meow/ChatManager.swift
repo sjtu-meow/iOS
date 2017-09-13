@@ -29,10 +29,12 @@ class ChatManager {
             userIds, completionHandler in
             if (userIds!.count == 0) {
                 let error = NSError()
-                
+                completionHandler?(nil, error)
+            } else {
                 Observable.from(userIds!).concatMap({ userId in
                     return MeowAPIProvider.shared.request(.herProfile(id: Int(userId)!))
                 })
+                .mapTo(type: Profile.self)
                 .map({ profile in
                     return ChatKitUser.from(profile: profile as! Profile)
                 })
@@ -45,9 +47,10 @@ class ChatManager {
                 .subscribe(onNext: {
                     users in
                     completionHandler?(users, nil)
+                }, onError: {
+                    e in
+                    completionHandler?(nil, e)
                 })
-
-                completionHandler?(nil, error)
             }
         }
         
