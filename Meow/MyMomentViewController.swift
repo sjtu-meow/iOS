@@ -38,6 +38,7 @@ class MyMomentViewController: UITableViewController {
         // Reuseable cells incur bug in height calculation
         let view = R.nib.momentHomePageTableViewCell.firstView(owner: nil)!
         view.configure(model: moment)
+        view.delegate = self
         return view
     }
     
@@ -48,12 +49,47 @@ class MyMomentViewController: UITableViewController {
             .subscribe(onNext:{
                 [weak self]
                 items in
-                self?.items.append(contentsOf: items)
+                self?.items = items
+                //self?.items.append(contentsOf: items)
                 self?.tableView.reloadData()
             })
             .addDisposableTo(disposeBag)
     }
+}
 
-
+extension MyMomentViewController: MomentCellDelegate {
+    func didTapAvatar(profile: Profile) {
+        if let userId = UserManager.shared.currentUser?.userId, userId == profile.userId {
+            MeViewController.show(from: navigationController!)
+        } else {
+            UserProfileViewController.show(profile, from: self)
+        }
+    }
+    
+    func didToggleLike(id: Int, isLiked: Bool) -> Bool {
+        var liked = isLiked
+        let request = isLiked ? MeowAPI.unlikeMoment(id: id) : MeowAPI.likeMoment(id: id)
+        MeowAPIProvider.shared.request(request)
+            .subscribe(onNext: {
+                _ in
+                liked = !isLiked
+            })
+            .addDisposableTo(disposeBag)
+        return liked
+    }
+    
+    func didPostComment(moment: Moment, content: String, from cell: MomentHomePageTableViewCell) {
+        MeowAPIProvider.shared.request(.postComment(item: moment, content: content))
+            .subscribe(onNext:{
+                [weak self]
+                _ in
+                cell.clearComment()
+                cell.model!.commentCount! += 1
+                cell.updateCommentCountLabel()
+                self?.loadData()
+            })
+    }
     
 }
+
+
