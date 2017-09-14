@@ -95,8 +95,9 @@ class PostArticleViewController: UIViewController {
     func postArticle() {
         guard let title = titleTextField.text else { return }
         let content = editor.htmlString
+        let cover = "https://i.ytimg.com/vi/2fb-g_V-UT4/hqdefault.jpg"
         MeowAPIProvider.shared
-            .request(.postArticle(title: title, content: content))
+            .request(.postArticle(title: title, content: content, cover:cover))
             .subscribe(onNext: {
                 [weak self] _ in
                 
