@@ -22,7 +22,7 @@ enum MeowAPI  {
     case answer(id: Int)
     case uploadToken
     case postMoment(content: String, medias: [Media]?)
-    case postArticle(title: String, content: String)
+    case postArticle(title: String, content: String, cover:String)
     case postQuestion(title: String, content: String)
     case postAnswer(questionId: Int, content: String)
     case search(keyword: String)
@@ -259,8 +259,8 @@ extension MeowAPI: TargetType {
                 "type": $0.type!.toInt()
             ]}) ?? []
             return ["content": content, "medias": jsonMedias]
-        case .postArticle(let title, let content):
-            return ["title": title, "content": content, "cover": "NONE"]
+        case .postArticle(let title, let content, let cover):
+            return ["title": title, "content": content, "cover": cover]
         case .postQuestion(let title, let content):
             return ["title": title, "content": content]
         case .postAnswer( _, let content):
