@@ -16,6 +16,7 @@ class ArticlePageTableViewCell: UITableViewCell {
     @IBOutlet weak var articleTitleLabel: UILabel!
     @IBOutlet weak var articleLikeLabel: UILabel!
     @IBOutlet weak var articleCommentLabel: UILabel!
+    @IBOutlet weak var articleSummaryLabel: UILabel!
     // TODO: readCount, createTime
     
     override func awakeFromNib() {
@@ -40,6 +41,7 @@ class ArticlePageTableViewCell: UITableViewCell {
         
         articleCommentLabel.text = "\(articleSummary.commentCount ?? 0)"
         
+        articleSummaryLabel.text = articleSummary.summary
     }
 
 

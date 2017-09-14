@@ -26,7 +26,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="292.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bck-md-W1m" userLabel="主体">
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bck-md-W1m" userLabel="主体">
                                             <rect key="frame" x="16" y="10" width="343" height="272"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-fx-RUn" userLabel="封面图">
@@ -42,23 +42,18 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="eRq-KD-KC9" userLabel="内容">
-                                                    <rect key="frame" x="0.0" y="208" width="343" height="56"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="文章的标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bua-o1-vyW" userLabel="标题">
-                                                            <rect key="frame" x="0.0" y="0.0" width="87" height="0.0"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VyW-cs-R9E" userLabel="简介">
-                                                            <rect key="frame" x="0.0" y="4" width="343" height="52"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="文章的标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bua-o1-vyW" userLabel="标题">
+                                                    <rect key="frame" x="0.0" y="204" width="87" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VyW-cs-R9E" userLabel="简介">
+                                                    <rect key="frame" x="0.0" y="208" width="343" height="60"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fc-Ry-UIu" userLabel="赞/评论">
                                                     <rect key="frame" x="0.0" y="272" width="107.5" height="0.0"/>
                                                     <subviews>
@@ -106,6 +101,7 @@
                                     <outlet property="articleCommentLabel" destination="1DJ-tx-FwF" id="wEv-dE-nJ3"/>
                                     <outlet property="articleCoverImageView" destination="0IW-fx-RUn" id="IT9-tu-OKh"/>
                                     <outlet property="articleLikeLabel" destination="3vM-NC-vuX" id="oTe-bi-usJ"/>
+                                    <outlet property="articleSummaryLabel" destination="VyW-cs-R9E" id="Thi-fE-iKR"/>
                                     <outlet property="articleTitleLabel" destination="bua-o1-vyW" id="enw-FO-F1Q"/>
                                     <segue destination="Iia-vG-HaK" kind="show" identifier="articleToDetailSegue" id="aQo-XD-B23"/>
                                 </connections>
