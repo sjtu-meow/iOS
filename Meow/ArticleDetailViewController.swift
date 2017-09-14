@@ -252,7 +252,8 @@ extension ArticleDetailViewController: UITabBarDelegate {
 
     func toggleFavorite() {
         let isFavorite = self.isFavorite
-        let request = isFavorite ? MeowAPI.removeFavoriteArticle(id: itemId!) :MeowAPI.addFavoriteArticle(id: itemId!)
+        let request = itemType == .article ? (isFavorite ? MeowAPI.removeFavoriteArticle(id: itemId!) :MeowAPI.addFavoriteArticle(id: itemId!)) : (isFavorite ? MeowAPI.removeFavoriteAnswer(id: itemId!) : MeowAPI.addFavoriteAnswer(id: itemId!)
+        )
         MeowAPIProvider.shared.request(request)
                 .subscribe(onNext: {
                     [weak self]
@@ -265,7 +266,9 @@ extension ArticleDetailViewController: UITabBarDelegate {
 
     func toggleLike() {
         let isLiked = self.isLiked
-        let request = isLiked ? MeowAPI.unlikeArticle(id: itemId!) : MeowAPI.likeArticle(id: itemId!)
+        
+        let request = itemType == .article ? (isLiked ? MeowAPI.unlikeArticle(id: itemId!) : MeowAPI.likeArticle(id: itemId!)) :
+            (isLiked ? MeowAPI.unlikeAnswer(id: itemId!) : MeowAPI.likeAnswer(id: itemId!))
         MeowAPIProvider.shared.request(request)
                 .subscribe(onNext: {
                     [weak self]
